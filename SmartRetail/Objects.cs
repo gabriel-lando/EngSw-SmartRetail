@@ -16,7 +16,6 @@ namespace SmartRetail
     }
     class Fornecedor {
         public string senha;
-        public Produto[] produtos;
         public InfoBasica info = new InfoBasica();
     }
     class Cliente
@@ -30,7 +29,7 @@ namespace SmartRetail
     }
     class Produto
     {
-        public int productID;
+        public int productID, fornecedorID;
         public string nome;
         public float preco;
     }

@@ -96,7 +96,7 @@
             this.TabCtrl.Controls.Add(this.GerenteTab);
             this.TabCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabCtrl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.TabCtrl.ItemSize = new System.Drawing.Size(5, 5);
+            this.TabCtrl.ItemSize = new System.Drawing.Size(0, 1);
             this.TabCtrl.Location = new System.Drawing.Point(0, 0);
             this.TabCtrl.Margin = new System.Windows.Forms.Padding(0);
             this.TabCtrl.Name = "TabCtrl";
@@ -248,10 +248,10 @@
             // GerenteTab
             // 
             this.GerenteTab.Controls.Add(this.GerenteCtrl);
-            this.GerenteTab.Location = new System.Drawing.Point(4, 9);
+            this.GerenteTab.Location = new System.Drawing.Point(4, 5);
             this.GerenteTab.Margin = new System.Windows.Forms.Padding(0);
             this.GerenteTab.Name = "GerenteTab";
-            this.GerenteTab.Size = new System.Drawing.Size(276, 498);
+            this.GerenteTab.Size = new System.Drawing.Size(276, 502);
             this.GerenteTab.TabIndex = 1;
             this.GerenteTab.Text = "GerenteTab";
             this.GerenteTab.UseVisualStyleBackColor = true;
@@ -267,7 +267,7 @@
             this.GerenteCtrl.Multiline = true;
             this.GerenteCtrl.Name = "GerenteCtrl";
             this.GerenteCtrl.SelectedIndex = 0;
-            this.GerenteCtrl.Size = new System.Drawing.Size(276, 498);
+            this.GerenteCtrl.Size = new System.Drawing.Size(276, 502);
             this.GerenteCtrl.TabIndex = 0;
             // 
             // GerenteCtrlHome
@@ -277,7 +277,7 @@
             this.GerenteCtrlHome.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlHome.Margin = new System.Windows.Forms.Padding(0);
             this.GerenteCtrlHome.Name = "GerenteCtrlHome";
-            this.GerenteCtrlHome.Size = new System.Drawing.Size(249, 490);
+            this.GerenteCtrlHome.Size = new System.Drawing.Size(249, 494);
             this.GerenteCtrlHome.TabIndex = 0;
             this.GerenteCtrlHome.Text = "Home";
             // 

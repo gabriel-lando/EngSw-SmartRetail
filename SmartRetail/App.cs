@@ -29,10 +29,10 @@ namespace SmartRetail
 
         private void LimparBtn_Click(object sender, EventArgs e)
         {
-            //EmailTextBox.Text = "Email";
-            //PwdTextBox.Text = "Password";
-            EmailTextBox.Text = "admin@admin.com";
-            PwdTextBox.Text = "admin";
+            EmailTextBox.Text = "Email";
+            PwdTextBox.Text = "Password";
+            //EmailTextBox.Text = "admin@admin.com";
+            //PwdTextBox.Text = "admin";
             ErrorLoginTextBox.Visible = false;
         }
 
@@ -47,16 +47,15 @@ namespace SmartRetail
 
             if (valida > 0)
             {
+                LimparBtn_Click(null, null);
                 TabCtrl.SelectedIndex = valida;
                 GerCtrlCad_ComboBox.SelectedIndex = 0;
-                //LoginPanelDock.Visible = false;
             }
             else
             {
                 ErrorLoginTextBox.Visible = true;
                 ErrorLoginTextBox.Text = "Usuário ou senha incorretos!";
             }
-            //this.LoginPanelDock.Visible = false;
         }
 
         private void GerCtrlCad_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -142,7 +141,7 @@ namespace SmartRetail
                     {
                         GerCtrlCad_ErrorTextBox.Visible = true;
                         GerCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-                        GerCtrlCad_ErrorTextBox.Text = "Erro ao armazenar os dados!";
+                        GerCtrlCad_ErrorTextBox.Text = "Erro ao realizar o cadastro!";
                     }
                 }
                 else
@@ -190,15 +189,27 @@ namespace SmartRetail
             else
             {
                 SQLConnect sql = new SQLConnect();
-                sql.RemoverUsuario(GerCtrlRem_Email.Text.ToString(), GerCtrlRem_ComboBox.SelectedIndex);
-                GerCtrlRem_ErrorTextBox.ForeColor = System.Drawing.Color.Green;
-                GerCtrlRem_ErrorTextBox.Text = "Acho que foi!";
+                if (sql.RemoverUsuario(GerCtrlRem_Email.Text.ToString(), GerCtrlRem_ComboBox.SelectedIndex))
+                {
+                    GerCtrlRem_ErrorTextBox.Visible = true;
+                    GerCtrlRem_ErrorTextBox.ForeColor = System.Drawing.Color.Green;
+                    GerCtrlRem_ErrorTextBox.Text = "Gerente removido com sucesso!";
+                }
+                else
+                {
+                    GerCtrlRem_ErrorTextBox.Visible = true;
+                    GerCtrlRem_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+                    GerCtrlRem_ErrorTextBox.Text = "Erro ao remover Gerente!";
+                }
+                
             }
 
         }
 
         private void LogoffGerBtn_Click(object sender, EventArgs e)
         {
+            GerCtrlCad_ClearBtn_Click(null, null);
+            GerCtrlRem_ClearBtn_Click(null, null);
             TabCtrl.SelectedIndex = 0;
         }
     }

@@ -58,12 +58,54 @@ namespace SmartRetail
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro ao encerrar a conexão com o servidor MySQL! Código: " + ex.Message);
+                MessageBox.Show("Erro ao encerrar a conexão com o servidor MySQL! Código: " + ex.Number);
                 return false;
             }
         }
 
         public bool InserirGerente(Gerente gerente)
+        {
+            string queryInfo = @"INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao)
+                                SELECT @nome, @cadastro, @email, @telefone, @funcao
+                                WHERE NOT EXISTS (SELECT * from InfoBasica WHERE email = @email); SELECT SCOPE_IDENTITY();";
+
+            if (AbrirConexao())
+            {
+                SqlCommand cmdInfo = new SqlCommand(queryInfo, connection);
+                cmdInfo.Parameters.AddWithValue("@nome", gerente.info.nome);
+                cmdInfo.Parameters.AddWithValue("@cadastro", gerente.info.cadastro);
+                cmdInfo.Parameters.AddWithValue("@email", gerente.info.email);
+                cmdInfo.Parameters.AddWithValue("@telefone", gerente.info.telefone);
+                cmdInfo.Parameters.AddWithValue("@funcao", gerente.info.funcao);
+
+                int infoID;
+                try
+                {
+                    string str_infoID = cmdInfo.ExecuteScalar().ToString();
+                    infoID = int.Parse(str_infoID);
+                }
+                catch
+                {
+                    return false;
+                }
+
+                //int infoID = int.Parse(cmdInfo.ExecuteScalar().ToString());
+
+                if (infoID > 0)
+                {
+                    string queryGerente = "INSERT INTO Gerente (infoID, senha) VALUES (" + infoID + ", '" + gerente.senha + "');";
+                    SqlCommand cmdGerente = new SqlCommand(queryGerente, connection);
+                    if (cmdGerente.ExecuteNonQuery() > 0)
+                    {
+                        FecharConexao();
+                        return true;
+                    }
+                }
+                FecharConexao();
+            }
+            return false;
+        }
+        public bool InserirFornecedor(Gerente gerente)
         {
             string queryInfo = @"INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao)
                                 SELECT @nome, @cadastro, @email, @telefone, @funcao
@@ -97,51 +139,58 @@ namespace SmartRetail
 
         public bool RemoverUsuario(string email, int funcao)
         {
-            MessageBox.Show(email + " " + funcao.ToString());
-            //string queryInfo = @"INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao) VALUES (@nome, @cadastro, @email, @telefone, @funcao) WHERE NOT EXISTS (SELECT * from InfoBasica WHERE email = @email);";
             string queryInfo = @"SELECT infoID FROM InfoBasica WHERE email = @email AND funcao = @funcao; DELETE FROM InfoBasica WHERE email = @email AND funcao = @funcao;";
-            //string queryInfo = @"SELECT infoID FROM InfoBasica WHERE email = @email AND funcao = @funcao; SELECT SCOPE_IDENTITY();";
-
+            
             if (AbrirConexao())
             {
                 SqlCommand cmdInfo = new SqlCommand(queryInfo, connection);
                 cmdInfo.Parameters.AddWithValue("@email", email);
                 cmdInfo.Parameters.AddWithValue("@funcao", funcao);
 
-                string str_infoID = null;
-                int infoID = 0;
-
+                int infoID;
                 try
                 {
-                    str_infoID = cmdInfo.ExecuteScalar().ToString();
+                    string str_infoID = cmdInfo.ExecuteScalar().ToString();
                     infoID = int.Parse(str_infoID);
                 }
                 catch
                 {
                     return false;
                 }
-                //string str_infoID = cmdInfo.ExecuteScalar().ToString();
-                
-
-                //if(str_infoID != null)
-                //{
-                //    infoID = int.Parse(str_infoID);
-                //}
-                // = int.Parse(cmdInfo.ExecuteScalar().ToString()); //TODO: Corrigir erro aqui
-
-                MessageBox.Show(infoID.ToString());
 
                 if (infoID > 0)
                 {
-                    //TODO: Implementar a remoção das outras tabelas: Gerente, Fornecedor e Produtos
+                    switch (funcao)
+                    {
+                        case 0:
+                            return true;
+                        case 1:
+                            string queryProdFornecedor = "DELETE FROM Produto WHERE fornecedorID = @fornecedorID;";
+                            SqlCommand cmdProdFornecedor = new SqlCommand(queryProdFornecedor, connection);
+                            cmdProdFornecedor.Parameters.AddWithValue("@fornecedorID", infoID);
 
-                    //string queryGerente = "INSERT INTO Gerente (infoID, senha) VALUES (" + infoID + ", '" + gerente.senha + "');";
-                    //SqlCommand cmdGerente = new SqlCommand(queryGerente, connection);
-                    //if (cmdGerente.ExecuteNonQuery() > 0)
-                    //{
-                    //    FecharConexao();
-                    //    return true;
-                    //}
+                            string queryFornecedor = "DELETE FROM Fornecedor WHERE infoID = @infoID;";
+                            SqlCommand cmdFornecedor = new SqlCommand(queryFornecedor, connection);
+                            cmdFornecedor.Parameters.AddWithValue("@infoID", infoID);
+
+                            if (cmdProdFornecedor.ExecuteNonQuery() > 0 && cmdFornecedor.ExecuteNonQuery() > 0)
+                            {
+                                FecharConexao();
+                                return true;
+                            }
+                            break;
+
+                        case 2:
+                            string queryGerente = "DELETE FROM Gerente WHERE infoID = @infoID;";
+                            SqlCommand cmdGerente = new SqlCommand(queryGerente, connection);
+                            cmdGerente.Parameters.AddWithValue("@infoID", infoID);
+                            if (cmdGerente.ExecuteNonQuery() > 0)
+                            {
+                                FecharConexao();
+                                return true;
+                            }
+                            break;
+                    }
                 }
                 FecharConexao();
             }
