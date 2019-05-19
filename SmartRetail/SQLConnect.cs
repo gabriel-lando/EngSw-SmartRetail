@@ -65,7 +65,10 @@ namespace SmartRetail
 
         public bool InserirGerente(Gerente gerente)
         {
-            string queryInfo = "INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao) VALUES (@nome, @cadastro, @email, @telefone, @funcao) WHERE NOT EXISTS (SELECT * from InfoBasica WHERE email = @email);";
+            //string queryInfo = @"INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao) VALUES (@nome, @cadastro, @email, @telefone, @funcao) WHERE NOT EXISTS (SELECT * from InfoBasica WHERE email = @email);";
+            string queryInfo = @"INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao)
+                                SELECT @nome, @cadastro, @email, @telefone, @funcao
+                                WHERE NOT EXISTS (SELECT * from InfoBasica WHERE email = @email); SELECT SCOPE_IDENTITY();";
 
             if (AbrirConexao())
             {
@@ -76,15 +79,49 @@ namespace SmartRetail
                 cmdInfo.Parameters.AddWithValue("@telefone", gerente.info.telefone);
                 cmdInfo.Parameters.AddWithValue("@funcao", gerente.info.funcao);
 
-                if (cmdInfo.ExecuteNonQuery() > 0)
+                int infoID = int.Parse(cmdInfo.ExecuteScalar().ToString());
+
+                if (infoID > 0)
                 {
-                    string queryGerente = "INSERT INTO Gerente (infoID, senha) VALUES ((SELECT SCOPE_IDENTITY()), '" + gerente.senha + "');";
+                    string queryGerente = "INSERT INTO Gerente (infoID, senha) VALUES (" + infoID + ", '" + gerente.senha + "');";
                     SqlCommand cmdGerente = new SqlCommand(queryGerente, connection);
                     if (cmdGerente.ExecuteNonQuery() > 0)
                     {
                         FecharConexao();
                         return true;
                     }
+                }
+                FecharConexao();
+            }
+            return false;
+        }
+
+        public bool RemoverUsuario(string email, int funcao)
+        {
+            //string queryInfo = @"INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao) VALUES (@nome, @cadastro, @email, @telefone, @funcao) WHERE NOT EXISTS (SELECT * from InfoBasica WHERE email = @email);";
+            string queryInfo = @"DELETE FROM InfoBasica WHERE email = @email AND funcao = @funcao; SELECT SCOPE_IDENTITY();";
+
+            if (AbrirConexao())
+            {
+                SqlCommand cmdInfo = new SqlCommand(queryInfo, connection);
+                cmdInfo.Parameters.AddWithValue("@email", email);
+                cmdInfo.Parameters.AddWithValue("@funcao", funcao);
+
+                int infoID = int.Parse(cmdInfo.ExecuteScalar().ToString()); //TODO: Corrigir erro aqui
+
+                MessageBox.Show(infoID.ToString());
+
+                if (infoID > 0)
+                {
+                    //TODO: Implementar a remoção das outras tabelas: Gerente, Fornecedor e Produtos
+
+                    //string queryGerente = "INSERT INTO Gerente (infoID, senha) VALUES (" + infoID + ", '" + gerente.senha + "');";
+                    //SqlCommand cmdGerente = new SqlCommand(queryGerente, connection);
+                    //if (cmdGerente.ExecuteNonQuery() > 0)
+                    //{
+                    //    FecharConexao();
+                    //    return true;
+                    //}
                 }
                 FecharConexao();
             }

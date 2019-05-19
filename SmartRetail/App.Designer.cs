@@ -66,6 +66,15 @@
             this.GerCtrlCad_Label1 = new System.Windows.Forms.Label();
             this.GerCtrlCad_ComboBox = new System.Windows.Forms.ComboBox();
             this.GerenteCtrlRemover = new System.Windows.Forms.TabPage();
+            this.GerCtrlRem_Label3 = new System.Windows.Forms.Label();
+            this.GerCtrlRem_Email = new System.Windows.Forms.TextBox();
+            this.GerCtrlRem_Label2 = new System.Windows.Forms.Label();
+            this.GerCtrlRem_EmailRep = new System.Windows.Forms.TextBox();
+            this.GerCtrlRem_Label1 = new System.Windows.Forms.Label();
+            this.GerCtrlRem_ComboBox = new System.Windows.Forms.ComboBox();
+            this.GerCtrlRem_ErrorTextBox = new System.Windows.Forms.TextBox();
+            this.GerCtrlRem_RemoverBtn = new System.Windows.Forms.Button();
+            this.GerCtrlRem_ClearBtn = new System.Windows.Forms.Button();
             this.TabCtrl.SuspendLayout();
             this.LoginPageTab.SuspendLayout();
             this.FornecedorTab.SuspendLayout();
@@ -73,6 +82,7 @@
             this.GerenteCtrl.SuspendLayout();
             this.GerenteCtrlCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).BeginInit();
+            this.GerenteCtrlRemover.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabCtrl
@@ -103,10 +113,10 @@
             this.LoginPageTab.Controls.Add(this.EmailTextBox);
             this.LoginPageTab.Controls.Add(this.LimparBtn);
             this.LoginPageTab.Controls.Add(this.PwdTextBox);
-            this.LoginPageTab.Location = new System.Drawing.Point(4, 5);
+            this.LoginPageTab.Location = new System.Drawing.Point(4, 14);
             this.LoginPageTab.Margin = new System.Windows.Forms.Padding(0);
             this.LoginPageTab.Name = "LoginPageTab";
-            this.LoginPageTab.Size = new System.Drawing.Size(276, 502);
+            this.LoginPageTab.Size = new System.Drawing.Size(276, 493);
             this.LoginPageTab.TabIndex = 2;
             this.LoginPageTab.Text = "FornecedorTab";
             this.LoginPageTab.UseVisualStyleBackColor = true;
@@ -119,7 +129,7 @@
             this.ErrorLoginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ErrorLoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorLoginTextBox.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 379);
+            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 374);
             this.ErrorLoginTextBox.Name = "ErrorLoginTextBox";
             this.ErrorLoginTextBox.ReadOnly = true;
             this.ErrorLoginTextBox.Size = new System.Drawing.Size(260, 15);
@@ -153,7 +163,7 @@
             this.MessageLoginPage.DetectUrls = false;
             this.MessageLoginPage.Enabled = false;
             this.MessageLoginPage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MessageLoginPage.Location = new System.Drawing.Point(8, 121);
+            this.MessageLoginPage.Location = new System.Drawing.Point(8, 116);
             this.MessageLoginPage.Name = "MessageLoginPage";
             this.MessageLoginPage.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MessageLoginPage.Size = new System.Drawing.Size(260, 105);
@@ -165,7 +175,7 @@
             // 
             this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.Location = new System.Drawing.Point(185, 464);
+            this.LoginBtn.Location = new System.Drawing.Point(185, 455);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(83, 30);
             this.LoginBtn.TabIndex = 4;
@@ -177,7 +187,7 @@
             // 
             this.EmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTextBox.Location = new System.Drawing.Point(8, 279);
+            this.EmailTextBox.Location = new System.Drawing.Point(8, 274);
             this.EmailTextBox.MaxLength = 50;
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(260, 24);
@@ -190,7 +200,7 @@
             // 
             this.LimparBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LimparBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LimparBtn.Location = new System.Drawing.Point(8, 464);
+            this.LimparBtn.Location = new System.Drawing.Point(8, 455);
             this.LimparBtn.Name = "LimparBtn";
             this.LimparBtn.Size = new System.Drawing.Size(83, 30);
             this.LimparBtn.TabIndex = 3;
@@ -202,7 +212,7 @@
             // 
             this.PwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PwdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PwdTextBox.Location = new System.Drawing.Point(8, 322);
+            this.PwdTextBox.Location = new System.Drawing.Point(8, 317);
             this.PwdTextBox.MaxLength = 32;
             this.PwdTextBox.Name = "PwdTextBox";
             this.PwdTextBox.Size = new System.Drawing.Size(260, 24);
@@ -234,10 +244,10 @@
             // GerenteTab
             // 
             this.GerenteTab.Controls.Add(this.GerenteCtrl);
-            this.GerenteTab.Location = new System.Drawing.Point(4, 14);
+            this.GerenteTab.Location = new System.Drawing.Point(4, 5);
             this.GerenteTab.Margin = new System.Windows.Forms.Padding(0);
             this.GerenteTab.Name = "GerenteTab";
-            this.GerenteTab.Size = new System.Drawing.Size(276, 493);
+            this.GerenteTab.Size = new System.Drawing.Size(276, 502);
             this.GerenteTab.TabIndex = 1;
             this.GerenteTab.Text = "GerenteTab";
             this.GerenteTab.UseVisualStyleBackColor = true;
@@ -253,7 +263,7 @@
             this.GerenteCtrl.Multiline = true;
             this.GerenteCtrl.Name = "GerenteCtrl";
             this.GerenteCtrl.SelectedIndex = 0;
-            this.GerenteCtrl.Size = new System.Drawing.Size(276, 493);
+            this.GerenteCtrl.Size = new System.Drawing.Size(276, 502);
             this.GerenteCtrl.TabIndex = 0;
             // 
             // GerenteCtrlHome
@@ -291,7 +301,7 @@
             this.GerenteCtrlCadastrar.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlCadastrar.Name = "GerenteCtrlCadastrar";
             this.GerenteCtrlCadastrar.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlCadastrar.Size = new System.Drawing.Size(249, 485);
+            this.GerenteCtrlCadastrar.Size = new System.Drawing.Size(249, 494);
             this.GerenteCtrlCadastrar.TabIndex = 1;
             this.GerenteCtrlCadastrar.Text = "Cadastrar";
             // 
@@ -304,7 +314,7 @@
             this.GerCtrlCad_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.GerCtrlCad_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GerCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.GerCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(6, 435);
+            this.GerCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(6, 444);
             this.GerCtrlCad_ErrorTextBox.Name = "GerCtrlCad_ErrorTextBox";
             this.GerCtrlCad_ErrorTextBox.ReadOnly = true;
             this.GerCtrlCad_ErrorTextBox.Size = new System.Drawing.Size(237, 15);
@@ -315,7 +325,7 @@
             // GerCtrlCad_CadastrarBtn
             // 
             this.GerCtrlCad_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GerCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(168, 456);
+            this.GerCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(168, 465);
             this.GerCtrlCad_CadastrarBtn.Name = "GerCtrlCad_CadastrarBtn";
             this.GerCtrlCad_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlCad_CadastrarBtn.TabIndex = 17;
@@ -326,7 +336,7 @@
             // GerCtrlCad_ClearBtn
             // 
             this.GerCtrlCad_ClearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GerCtrlCad_ClearBtn.Location = new System.Drawing.Point(6, 456);
+            this.GerCtrlCad_ClearBtn.Location = new System.Drawing.Point(6, 465);
             this.GerCtrlCad_ClearBtn.Name = "GerCtrlCad_ClearBtn";
             this.GerCtrlCad_ClearBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlCad_ClearBtn.TabIndex = 16;
@@ -503,12 +513,116 @@
             // 
             // GerenteCtrlRemover
             // 
+            this.GerenteCtrlRemover.BackColor = System.Drawing.SystemColors.Control;
+            this.GerenteCtrlRemover.Controls.Add(this.GerCtrlRem_ErrorTextBox);
+            this.GerenteCtrlRemover.Controls.Add(this.GerCtrlRem_RemoverBtn);
+            this.GerenteCtrlRemover.Controls.Add(this.GerCtrlRem_ClearBtn);
+            this.GerenteCtrlRemover.Controls.Add(this.GerCtrlRem_Label3);
+            this.GerenteCtrlRemover.Controls.Add(this.GerCtrlRem_Email);
+            this.GerenteCtrlRemover.Controls.Add(this.GerCtrlRem_Label2);
+            this.GerenteCtrlRemover.Controls.Add(this.GerCtrlRem_EmailRep);
+            this.GerenteCtrlRemover.Controls.Add(this.GerCtrlRem_Label1);
+            this.GerenteCtrlRemover.Controls.Add(this.GerCtrlRem_ComboBox);
             this.GerenteCtrlRemover.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlRemover.Name = "GerenteCtrlRemover";
+            this.GerenteCtrlRemover.Padding = new System.Windows.Forms.Padding(3);
             this.GerenteCtrlRemover.Size = new System.Drawing.Size(249, 494);
             this.GerenteCtrlRemover.TabIndex = 2;
             this.GerenteCtrlRemover.Text = "Remover";
-            this.GerenteCtrlRemover.UseVisualStyleBackColor = true;
+            // 
+            // GerCtrlRem_Label3
+            // 
+            this.GerCtrlRem_Label3.AutoSize = true;
+            this.GerCtrlRem_Label3.Location = new System.Drawing.Point(6, 95);
+            this.GerCtrlRem_Label3.Name = "GerCtrlRem_Label3";
+            this.GerCtrlRem_Label3.Size = new System.Drawing.Size(81, 13);
+            this.GerCtrlRem_Label3.TabIndex = 17;
+            this.GerCtrlRem_Label3.Text = "Confirmar email:";
+            // 
+            // GerCtrlRem_Email
+            // 
+            this.GerCtrlRem_Email.Location = new System.Drawing.Point(6, 72);
+            this.GerCtrlRem_Email.MaxLength = 50;
+            this.GerCtrlRem_Email.Name = "GerCtrlRem_Email";
+            this.GerCtrlRem_Email.Size = new System.Drawing.Size(237, 20);
+            this.GerCtrlRem_Email.TabIndex = 16;
+            // 
+            // GerCtrlRem_Label2
+            // 
+            this.GerCtrlRem_Label2.AutoSize = true;
+            this.GerCtrlRem_Label2.Location = new System.Drawing.Point(6, 56);
+            this.GerCtrlRem_Label2.Name = "GerCtrlRem_Label2";
+            this.GerCtrlRem_Label2.Size = new System.Drawing.Size(35, 13);
+            this.GerCtrlRem_Label2.TabIndex = 15;
+            this.GerCtrlRem_Label2.Text = "Email:";
+            // 
+            // GerCtrlRem_EmailRep
+            // 
+            this.GerCtrlRem_EmailRep.Location = new System.Drawing.Point(6, 111);
+            this.GerCtrlRem_EmailRep.MaxLength = 50;
+            this.GerCtrlRem_EmailRep.Name = "GerCtrlRem_EmailRep";
+            this.GerCtrlRem_EmailRep.Size = new System.Drawing.Size(237, 20);
+            this.GerCtrlRem_EmailRep.TabIndex = 14;
+            // 
+            // GerCtrlRem_Label1
+            // 
+            this.GerCtrlRem_Label1.AutoSize = true;
+            this.GerCtrlRem_Label1.Location = new System.Drawing.Point(6, 16);
+            this.GerCtrlRem_Label1.Name = "GerCtrlRem_Label1";
+            this.GerCtrlRem_Label1.Size = new System.Drawing.Size(85, 13);
+            this.GerCtrlRem_Label1.TabIndex = 10;
+            this.GerCtrlRem_Label1.Text = "Tipo de Usuário:";
+            // 
+            // GerCtrlRem_ComboBox
+            // 
+            this.GerCtrlRem_ComboBox.FormattingEnabled = true;
+            this.GerCtrlRem_ComboBox.Items.AddRange(new object[] {
+            "Cliente",
+            "Fornecedor",
+            "Gerente"});
+            this.GerCtrlRem_ComboBox.Location = new System.Drawing.Point(6, 32);
+            this.GerCtrlRem_ComboBox.Name = "GerCtrlRem_ComboBox";
+            this.GerCtrlRem_ComboBox.Size = new System.Drawing.Size(237, 21);
+            this.GerCtrlRem_ComboBox.TabIndex = 9;
+            // 
+            // GerCtrlRem_ErrorTextBox
+            // 
+            this.GerCtrlRem_ErrorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GerCtrlRem_ErrorTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.GerCtrlRem_ErrorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GerCtrlRem_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GerCtrlRem_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GerCtrlRem_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+            this.GerCtrlRem_ErrorTextBox.Location = new System.Drawing.Point(9, 431);
+            this.GerCtrlRem_ErrorTextBox.Name = "GerCtrlRem_ErrorTextBox";
+            this.GerCtrlRem_ErrorTextBox.ReadOnly = true;
+            this.GerCtrlRem_ErrorTextBox.Size = new System.Drawing.Size(231, 15);
+            this.GerCtrlRem_ErrorTextBox.TabIndex = 21;
+            this.GerCtrlRem_ErrorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.GerCtrlRem_ErrorTextBox.Visible = false;
+            // 
+            // GerCtrlRem_RemoverBtn
+            // 
+            this.GerCtrlRem_RemoverBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.GerCtrlRem_RemoverBtn.Location = new System.Drawing.Point(168, 465);
+            this.GerCtrlRem_RemoverBtn.Name = "GerCtrlRem_RemoverBtn";
+            this.GerCtrlRem_RemoverBtn.Size = new System.Drawing.Size(75, 23);
+            this.GerCtrlRem_RemoverBtn.TabIndex = 20;
+            this.GerCtrlRem_RemoverBtn.Text = "Remover";
+            this.GerCtrlRem_RemoverBtn.UseVisualStyleBackColor = true;
+            this.GerCtrlRem_RemoverBtn.Click += new System.EventHandler(this.GerCtrlRem_RemoverBtn_Click);
+            // 
+            // GerCtrlRem_ClearBtn
+            // 
+            this.GerCtrlRem_ClearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GerCtrlRem_ClearBtn.Location = new System.Drawing.Point(6, 465);
+            this.GerCtrlRem_ClearBtn.Name = "GerCtrlRem_ClearBtn";
+            this.GerCtrlRem_ClearBtn.Size = new System.Drawing.Size(75, 23);
+            this.GerCtrlRem_ClearBtn.TabIndex = 19;
+            this.GerCtrlRem_ClearBtn.Text = "Limpar";
+            this.GerCtrlRem_ClearBtn.UseVisualStyleBackColor = true;
+            this.GerCtrlRem_ClearBtn.Click += new System.EventHandler(this.GerCtrlRem_ClearBtn_Click);
             // 
             // App
             // 
@@ -531,6 +645,8 @@
             this.GerenteCtrlCadastrar.ResumeLayout(false);
             this.GerenteCtrlCadastrar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).EndInit();
+            this.GerenteCtrlRemover.ResumeLayout(false);
+            this.GerenteCtrlRemover.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -575,6 +691,15 @@
         private System.Windows.Forms.Button GerCtrlCad_CadastrarBtn;
         private System.Windows.Forms.Button GerCtrlCad_ClearBtn;
         private System.Windows.Forms.TextBox GerCtrlCad_ErrorTextBox;
+        private System.Windows.Forms.TextBox GerCtrlRem_ErrorTextBox;
+        private System.Windows.Forms.Button GerCtrlRem_RemoverBtn;
+        private System.Windows.Forms.Button GerCtrlRem_ClearBtn;
+        private System.Windows.Forms.Label GerCtrlRem_Label3;
+        private System.Windows.Forms.TextBox GerCtrlRem_Email;
+        private System.Windows.Forms.Label GerCtrlRem_Label2;
+        private System.Windows.Forms.TextBox GerCtrlRem_EmailRep;
+        private System.Windows.Forms.Label GerCtrlRem_Label1;
+        private System.Windows.Forms.ComboBox GerCtrlRem_ComboBox;
     }
 }
 

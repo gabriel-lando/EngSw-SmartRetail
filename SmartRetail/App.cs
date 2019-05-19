@@ -29,8 +29,10 @@ namespace SmartRetail
 
         private void LimparBtn_Click(object sender, EventArgs e)
         {
-            EmailTextBox.Text = "Email";
-            PwdTextBox.Text = "Password";
+            //EmailTextBox.Text = "Email";
+            //PwdTextBox.Text = "Password";
+            EmailTextBox.Text = "admin@admin.com";
+            PwdTextBox.Text = "admin";
             ErrorLoginTextBox.Visible = false;
         }
 
@@ -117,11 +119,12 @@ namespace SmartRetail
             else if (GerCtrlCad_ComboBox.SelectedIndex == 2)
             {
                 Gerente gerente = new Gerente();
-                if (gerente.info.ValidaEmail(gerente.info.email))
+                gerente.info.email = GerCtrlCad_Email.Text;
+
+                if (gerente.info.ValidaEmail())
                 {
                     gerente.info.nome = GerCtrlCad_Nome.Text;
                     gerente.info.cadastro = long.Parse(GerCtrlCad_Cadastro.Text);
-                    gerente.info.email = GerCtrlCad_Email.Text;
                     gerente.info.telefone = long.Parse(GerCtrlCad_Telefone.Text);
                     gerente.info.funcao = GerCtrlCad_ComboBox.SelectedIndex;
                     gerente.senha = GerCtrlCad_Senha.Text;
@@ -133,7 +136,7 @@ namespace SmartRetail
                     {
                         GerCtrlCad_ErrorTextBox.Visible = true;
                         GerCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Green;
-                        GerCtrlCad_ErrorTextBox.Text = "Dados inseridos com sicesso!";
+                        GerCtrlCad_ErrorTextBox.Text = "Dados inseridos com sucesso!";
                     }
                     else
                     {
@@ -150,6 +153,10 @@ namespace SmartRetail
                 }
                 
             }
+            else if (GerCtrlCad_ComboBox.SelectedIndex == 1)
+            {
+                //TODO ESSA CARALHA
+            }
         }
 
         private void GerCtrlCad_ClearBtn_Click(object sender, EventArgs e)
@@ -162,6 +169,32 @@ namespace SmartRetail
             GerCtrlCad_Telefone.Text = "";
             GerCtrlCad_Senha.Text = "";
             GerCtrlCad_SenhaRep.Text = "";
+        }
+
+        private void GerCtrlRem_ClearBtn_Click(object sender, EventArgs e)
+        {
+            GerCtrlCad_ComboBox.SelectedIndex = -1;
+            GerCtrlRem_ErrorTextBox.Visible = false;
+            GerCtrlRem_Email.Text = "";
+            GerCtrlRem_EmailRep.Text = "";
+        }
+
+        private void GerCtrlRem_RemoverBtn_Click(object sender, EventArgs e)
+        {
+            if (GerCtrlRem_Email.Text != GerCtrlRem_EmailRep.Text || GerCtrlRem_Email.Text == "")
+            {
+                GerCtrlRem_ErrorTextBox.Visible = true;
+                GerCtrlRem_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+                GerCtrlRem_ErrorTextBox.Text = "Emails preenchidos incorretamente!";
+            }
+            else
+            {
+                SQLConnect sql = new SQLConnect();
+                sql.RemoverUsuario(GerCtrlRem_Email.Text.ToString(), GerCtrlCad_ComboBox.SelectedIndex);
+                GerCtrlRem_ErrorTextBox.ForeColor = System.Drawing.Color.Green;
+                GerCtrlRem_ErrorTextBox.Text = "Acho que foi!";
+            }
+
         }
     }
 }
