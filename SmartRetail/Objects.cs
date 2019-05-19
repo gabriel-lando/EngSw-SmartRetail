@@ -29,7 +29,7 @@ namespace SmartRetail
     }
     class Produto
     {
-        public int productID, fornecedorID;
+        public int fornecedorID, quantidade;
         public string nome;
         public float preco;
     }

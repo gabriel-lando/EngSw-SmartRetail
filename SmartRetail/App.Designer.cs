@@ -38,7 +38,6 @@
             this.LimparBtn = new System.Windows.Forms.Button();
             this.PwdTextBox = new System.Windows.Forms.TextBox();
             this.FornecedorTab = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.GerenteTab = new System.Windows.Forms.TabPage();
             this.GerenteCtrl = new System.Windows.Forms.TabControl();
             this.GerenteCtrlHome = new System.Windows.Forms.TabPage();
@@ -76,6 +75,10 @@
             this.GerCtrlRem_Email = new System.Windows.Forms.TextBox();
             this.GerCtrlRem_Label1 = new System.Windows.Forms.Label();
             this.GerCtrlRem_ComboBox = new System.Windows.Forms.ComboBox();
+            this.FornecedorCtrl = new System.Windows.Forms.TabControl();
+            this.FornecedorCtrlHome = new System.Windows.Forms.TabPage();
+            this.FornecedorCtrlCadastrar = new System.Windows.Forms.TabPage();
+            this.LogoffForBtn = new System.Windows.Forms.PictureBox();
             this.TabCtrl.SuspendLayout();
             this.LoginPageTab.SuspendLayout();
             this.FornecedorTab.SuspendLayout();
@@ -86,6 +89,9 @@
             this.GerenteCtrlCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).BeginInit();
             this.GerenteCtrlRemover.SuspendLayout();
+            this.FornecedorCtrl.SuspendLayout();
+            this.FornecedorCtrlHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // TabCtrl
@@ -121,7 +127,7 @@
             this.LoginPageTab.Name = "LoginPageTab";
             this.LoginPageTab.Size = new System.Drawing.Size(276, 498);
             this.LoginPageTab.TabIndex = 2;
-            this.LoginPageTab.Text = "FornecedorTab";
+            this.LoginPageTab.Text = "LoginPageTab";
             this.LoginPageTab.UseVisualStyleBackColor = true;
             // 
             // ErrorLoginTextBox
@@ -228,30 +234,22 @@
             // 
             // FornecedorTab
             // 
-            this.FornecedorTab.Controls.Add(this.textBox2);
-            this.FornecedorTab.Location = new System.Drawing.Point(4, 9);
+            this.FornecedorTab.Controls.Add(this.FornecedorCtrl);
+            this.FornecedorTab.Location = new System.Drawing.Point(4, 5);
             this.FornecedorTab.Margin = new System.Windows.Forms.Padding(0);
             this.FornecedorTab.Name = "FornecedorTab";
-            this.FornecedorTab.Size = new System.Drawing.Size(276, 498);
+            this.FornecedorTab.Size = new System.Drawing.Size(276, 502);
             this.FornecedorTab.TabIndex = 0;
             this.FornecedorTab.Text = "FornecedorTab";
             this.FornecedorTab.UseVisualStyleBackColor = true;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(82, 154);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.Text = "Fornecedor";
-            // 
             // GerenteTab
             // 
             this.GerenteTab.Controls.Add(this.GerenteCtrl);
-            this.GerenteTab.Location = new System.Drawing.Point(4, 5);
+            this.GerenteTab.Location = new System.Drawing.Point(4, 9);
             this.GerenteTab.Margin = new System.Windows.Forms.Padding(0);
             this.GerenteTab.Name = "GerenteTab";
-            this.GerenteTab.Size = new System.Drawing.Size(276, 502);
+            this.GerenteTab.Size = new System.Drawing.Size(276, 498);
             this.GerenteTab.TabIndex = 1;
             this.GerenteTab.Text = "GerenteTab";
             this.GerenteTab.UseVisualStyleBackColor = true;
@@ -267,7 +265,7 @@
             this.GerenteCtrl.Multiline = true;
             this.GerenteCtrl.Name = "GerenteCtrl";
             this.GerenteCtrl.SelectedIndex = 0;
-            this.GerenteCtrl.Size = new System.Drawing.Size(276, 502);
+            this.GerenteCtrl.Size = new System.Drawing.Size(276, 498);
             this.GerenteCtrl.TabIndex = 0;
             // 
             // GerenteCtrlHome
@@ -275,16 +273,16 @@
             this.GerenteCtrlHome.BackColor = System.Drawing.SystemColors.Control;
             this.GerenteCtrlHome.Controls.Add(this.LogoffGerBtn);
             this.GerenteCtrlHome.Location = new System.Drawing.Point(23, 4);
-            this.GerenteCtrlHome.Margin = new System.Windows.Forms.Padding(0);
             this.GerenteCtrlHome.Name = "GerenteCtrlHome";
-            this.GerenteCtrlHome.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlHome.Padding = new System.Windows.Forms.Padding(3);
+            this.GerenteCtrlHome.Size = new System.Drawing.Size(249, 490);
             this.GerenteCtrlHome.TabIndex = 0;
             this.GerenteCtrlHome.Text = "Home";
             // 
             // LogoffGerBtn
             // 
             this.LogoffGerBtn.Image = global::SmartRetail.Properties.Resources.Logoff;
-            this.LogoffGerBtn.Location = new System.Drawing.Point(219, 3);
+            this.LogoffGerBtn.Location = new System.Drawing.Point(217, 6);
             this.LogoffGerBtn.Name = "LogoffGerBtn";
             this.LogoffGerBtn.Size = new System.Drawing.Size(26, 26);
             this.LogoffGerBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -371,6 +369,7 @@
             this.GerCtrlCad_ProdTable.Name = "GerCtrlCad_ProdTable";
             this.GerCtrlCad_ProdTable.Size = new System.Drawing.Size(237, 122);
             this.GerCtrlCad_ProdTable.TabIndex = 15;
+            this.GerCtrlCad_ProdTable.Visible = false;
             // 
             // GerCadProd_Nome
             // 
@@ -640,6 +639,51 @@
             this.GerCtrlRem_ComboBox.Size = new System.Drawing.Size(237, 21);
             this.GerCtrlRem_ComboBox.TabIndex = 9;
             // 
+            // FornecedorCtrl
+            // 
+            this.FornecedorCtrl.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.FornecedorCtrl.Controls.Add(this.FornecedorCtrlHome);
+            this.FornecedorCtrl.Controls.Add(this.FornecedorCtrlCadastrar);
+            this.FornecedorCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FornecedorCtrl.Location = new System.Drawing.Point(0, 0);
+            this.FornecedorCtrl.Multiline = true;
+            this.FornecedorCtrl.Name = "FornecedorCtrl";
+            this.FornecedorCtrl.SelectedIndex = 0;
+            this.FornecedorCtrl.Size = new System.Drawing.Size(276, 502);
+            this.FornecedorCtrl.TabIndex = 0;
+            // 
+            // FornecedorCtrlHome
+            // 
+            this.FornecedorCtrlHome.BackColor = System.Drawing.SystemColors.Control;
+            this.FornecedorCtrlHome.Controls.Add(this.LogoffForBtn);
+            this.FornecedorCtrlHome.Location = new System.Drawing.Point(23, 4);
+            this.FornecedorCtrlHome.Name = "FornecedorCtrlHome";
+            this.FornecedorCtrlHome.Padding = new System.Windows.Forms.Padding(3);
+            this.FornecedorCtrlHome.Size = new System.Drawing.Size(249, 494);
+            this.FornecedorCtrlHome.TabIndex = 0;
+            this.FornecedorCtrlHome.Text = "Home";
+            // 
+            // FornecedorCtrlCadastrar
+            // 
+            this.FornecedorCtrlCadastrar.BackColor = System.Drawing.SystemColors.Control;
+            this.FornecedorCtrlCadastrar.Location = new System.Drawing.Point(23, 4);
+            this.FornecedorCtrlCadastrar.Name = "FornecedorCtrlCadastrar";
+            this.FornecedorCtrlCadastrar.Padding = new System.Windows.Forms.Padding(3);
+            this.FornecedorCtrlCadastrar.Size = new System.Drawing.Size(249, 490);
+            this.FornecedorCtrlCadastrar.TabIndex = 1;
+            this.FornecedorCtrlCadastrar.Text = "Cadastrar";
+            // 
+            // LogoffForBtn
+            // 
+            this.LogoffForBtn.Image = global::SmartRetail.Properties.Resources.Logoff;
+            this.LogoffForBtn.Location = new System.Drawing.Point(217, 6);
+            this.LogoffForBtn.Name = "LogoffForBtn";
+            this.LogoffForBtn.Size = new System.Drawing.Size(26, 26);
+            this.LogoffForBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LogoffForBtn.TabIndex = 1;
+            this.LogoffForBtn.TabStop = false;
+            this.LogoffForBtn.Click += new System.EventHandler(this.LogoffForBtn_Click);
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -655,7 +699,6 @@
             this.LoginPageTab.ResumeLayout(false);
             this.LoginPageTab.PerformLayout();
             this.FornecedorTab.ResumeLayout(false);
-            this.FornecedorTab.PerformLayout();
             this.GerenteTab.ResumeLayout(false);
             this.GerenteCtrl.ResumeLayout(false);
             this.GerenteCtrlHome.ResumeLayout(false);
@@ -665,6 +708,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).EndInit();
             this.GerenteCtrlRemover.ResumeLayout(false);
             this.GerenteCtrlRemover.PerformLayout();
+            this.FornecedorCtrl.ResumeLayout(false);
+            this.FornecedorCtrlHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -682,7 +728,6 @@
         private System.Windows.Forms.TabPage GerenteTab;
         private System.Windows.Forms.TabPage FornecedorTab;
         private System.Windows.Forms.TextBox ErrorLoginTextBox;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TabControl GerenteCtrl;
         private System.Windows.Forms.TabPage GerenteCtrlHome;
         private System.Windows.Forms.TabPage GerenteCtrlCadastrar;
@@ -719,6 +764,10 @@
         private System.Windows.Forms.Label GerCtrlRem_Label1;
         private System.Windows.Forms.ComboBox GerCtrlRem_ComboBox;
         private System.Windows.Forms.PictureBox LogoffGerBtn;
+        private System.Windows.Forms.TabControl FornecedorCtrl;
+        private System.Windows.Forms.TabPage FornecedorCtrlHome;
+        private System.Windows.Forms.PictureBox LogoffForBtn;
+        private System.Windows.Forms.TabPage FornecedorCtrlCadastrar;
     }
 }
 

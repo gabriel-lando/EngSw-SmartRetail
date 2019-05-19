@@ -89,8 +89,6 @@ namespace SmartRetail
                     return false;
                 }
 
-                //int infoID = int.Parse(cmdInfo.ExecuteScalar().ToString());
-
                 if (infoID > 0)
                 {
                     string queryGerente = "INSERT INTO Gerente (infoID, senha) VALUES (" + infoID + ", '" + gerente.senha + "');";
@@ -105,29 +103,57 @@ namespace SmartRetail
             }
             return false;
         }
-        public bool InserirFornecedor(Gerente gerente)
+        public bool InserirFornecedor(Fornecedor fornecedor, Produto[] produtos)
         {
             string queryInfo = @"INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao)
                                 SELECT @nome, @cadastro, @email, @telefone, @funcao
                                 WHERE NOT EXISTS (SELECT * from InfoBasica WHERE email = @email); SELECT SCOPE_IDENTITY();";
 
+            string queryFornecedor = "INSERT INTO Fornecedor (infoID, senha) VALUES (@infoID, @senha);";
+
+            string queryProdutos = "INSERT INTO Produto (nome, preco, fornecedorID, quantidade) VALUES (@nome, @preco, @fornecedorID, @quantidade);";
+
             if (AbrirConexao())
             {
                 SqlCommand cmdInfo = new SqlCommand(queryInfo, connection);
-                cmdInfo.Parameters.AddWithValue("@nome", gerente.info.nome);
-                cmdInfo.Parameters.AddWithValue("@cadastro", gerente.info.cadastro);
-                cmdInfo.Parameters.AddWithValue("@email", gerente.info.email);
-                cmdInfo.Parameters.AddWithValue("@telefone", gerente.info.telefone);
-                cmdInfo.Parameters.AddWithValue("@funcao", gerente.info.funcao);
+                cmdInfo.Parameters.AddWithValue("@nome", fornecedor.info.nome);
+                cmdInfo.Parameters.AddWithValue("@cadastro", fornecedor.info.cadastro);
+                cmdInfo.Parameters.AddWithValue("@email", fornecedor.info.email);
+                cmdInfo.Parameters.AddWithValue("@telefone", fornecedor.info.telefone);
+                cmdInfo.Parameters.AddWithValue("@funcao", fornecedor.info.funcao);
 
-                int infoID = int.Parse(cmdInfo.ExecuteScalar().ToString());
+                int infoID;
+                try
+                {
+                    string str_infoID = cmdInfo.ExecuteScalar().ToString();
+                    infoID = int.Parse(str_infoID);
+                }
+                catch
+                {
+                    return false;
+                }
 
                 if (infoID > 0)
                 {
-                    string queryGerente = "INSERT INTO Gerente (infoID, senha) VALUES (" + infoID + ", '" + gerente.senha + "');";
-                    SqlCommand cmdGerente = new SqlCommand(queryGerente, connection);
-                    if (cmdGerente.ExecuteNonQuery() > 0)
+                    SqlCommand cmdFornecedor = new SqlCommand(queryFornecedor, connection);
+                    cmdFornecedor.Parameters.AddWithValue("@infoID", infoID);
+                    cmdFornecedor.Parameters.AddWithValue("@senha", fornecedor.senha);
+
+                    if (cmdFornecedor.ExecuteNonQuery() > 0)
                     {
+                        foreach (Produto singleProduct in produtos)
+                        {
+                            SqlCommand cmdProdutos = new SqlCommand(queryProdutos, connection);
+                            cmdProdutos.Parameters.AddWithValue("@nome", singleProduct.nome);
+                            cmdProdutos.Parameters.AddWithValue("@preco", singleProduct.preco);
+                            cmdProdutos.Parameters.AddWithValue("@quantidade", singleProduct.quantidade);
+                            cmdProdutos.Parameters.AddWithValue("@fornecedorID", infoID);
+                            if (cmdProdutos.ExecuteNonQuery() == 0)
+                            {
+                                return false;
+                            }
+                        }
+                        
                         FecharConexao();
                         return true;
                     }
