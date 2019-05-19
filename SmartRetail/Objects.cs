@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace SmartRetail
+{
+    class LoginData {
+        public string senha, email;
+    }
+    class Gerente {
+        public string senha;
+        public InfoBasica info;
+    }
+    class Fornecedor {
+        public string senha;
+        public Produto[] produtos;
+        public InfoBasica info;
+    }
+    class Cliente
+    {
+        public string facial_data, endereco_cobranca;
+        public int infoID;
+        public long nro_carta_de_credito;
+        public bool onStore;
+        public Carrinho carrinho;
+        public InfoBasica info;
+    }
+    class Produto
+    {
+        public int productID;
+        public string nome;
+        public float preco;
+    }
+    class Carrinho
+    {
+        public int carrinhoID;
+        public Produto[] produtos;
+        public float preco_total;
+    }
+
+    class InfoBasica {
+        public string nome, email;
+        public long cadastro, telefone;
+        public int funcao;
+
+        public bool ValidaEmail(string email)
+        {
+            Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
+
+            if (rg.IsMatch(email))
+                return true;
+            else
+                return false;
+        }
+
+    }
+}
