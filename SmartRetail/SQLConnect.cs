@@ -65,7 +65,6 @@ namespace SmartRetail
 
         public bool InserirGerente(Gerente gerente)
         {
-            //string queryInfo = @"INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao) VALUES (@nome, @cadastro, @email, @telefone, @funcao) WHERE NOT EXISTS (SELECT * from InfoBasica WHERE email = @email);";
             string queryInfo = @"INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao)
                                 SELECT @nome, @cadastro, @email, @telefone, @funcao
                                 WHERE NOT EXISTS (SELECT * from InfoBasica WHERE email = @email); SELECT SCOPE_IDENTITY();";
@@ -98,8 +97,10 @@ namespace SmartRetail
 
         public bool RemoverUsuario(string email, int funcao)
         {
+            MessageBox.Show(email + " " + funcao.ToString());
             //string queryInfo = @"INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao) VALUES (@nome, @cadastro, @email, @telefone, @funcao) WHERE NOT EXISTS (SELECT * from InfoBasica WHERE email = @email);";
-            string queryInfo = @"DELETE FROM InfoBasica WHERE email = @email AND funcao = @funcao; SELECT SCOPE_IDENTITY();";
+            string queryInfo = @"SELECT infoID FROM InfoBasica WHERE email = @email AND funcao = @funcao; DELETE FROM InfoBasica WHERE email = @email AND funcao = @funcao;";
+            //string queryInfo = @"SELECT infoID FROM InfoBasica WHERE email = @email AND funcao = @funcao; SELECT SCOPE_IDENTITY();";
 
             if (AbrirConexao())
             {
@@ -107,7 +108,26 @@ namespace SmartRetail
                 cmdInfo.Parameters.AddWithValue("@email", email);
                 cmdInfo.Parameters.AddWithValue("@funcao", funcao);
 
-                int infoID = int.Parse(cmdInfo.ExecuteScalar().ToString()); //TODO: Corrigir erro aqui
+                string str_infoID = null;
+                int infoID = 0;
+
+                try
+                {
+                    str_infoID = cmdInfo.ExecuteScalar().ToString();
+                    infoID = int.Parse(str_infoID);
+                }
+                catch
+                {
+                    return false;
+                }
+                //string str_infoID = cmdInfo.ExecuteScalar().ToString();
+                
+
+                //if(str_infoID != null)
+                //{
+                //    infoID = int.Parse(str_infoID);
+                //}
+                // = int.Parse(cmdInfo.ExecuteScalar().ToString()); //TODO: Corrigir erro aqui
 
                 MessageBox.Show(infoID.ToString());
 

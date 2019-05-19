@@ -175,13 +175,13 @@ namespace SmartRetail
         {
             GerCtrlCad_ComboBox.SelectedIndex = -1;
             GerCtrlRem_ErrorTextBox.Visible = false;
-            GerCtrlRem_Email.Text = "";
             GerCtrlRem_EmailRep.Text = "";
+            GerCtrlRem_Email.Text = "";
         }
 
         private void GerCtrlRem_RemoverBtn_Click(object sender, EventArgs e)
         {
-            if (GerCtrlRem_Email.Text != GerCtrlRem_EmailRep.Text || GerCtrlRem_Email.Text == "")
+            if (GerCtrlRem_EmailRep.Text != GerCtrlRem_Email.Text || GerCtrlRem_EmailRep.Text == "")
             {
                 GerCtrlRem_ErrorTextBox.Visible = true;
                 GerCtrlRem_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
@@ -190,11 +190,16 @@ namespace SmartRetail
             else
             {
                 SQLConnect sql = new SQLConnect();
-                sql.RemoverUsuario(GerCtrlRem_Email.Text.ToString(), GerCtrlCad_ComboBox.SelectedIndex);
+                sql.RemoverUsuario(GerCtrlRem_Email.Text.ToString(), GerCtrlRem_ComboBox.SelectedIndex);
                 GerCtrlRem_ErrorTextBox.ForeColor = System.Drawing.Color.Green;
                 GerCtrlRem_ErrorTextBox.Text = "Acho que foi!";
             }
 
+        }
+
+        private void LogoffGerBtn_Click(object sender, EventArgs e)
+        {
+            TabCtrl.SelectedIndex = 0;
         }
     }
 }
