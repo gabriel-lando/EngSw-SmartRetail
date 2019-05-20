@@ -7,7 +7,7 @@ O trabalho é dividido em duas principais partes:
 - **DEVELOPER:** O grupo recebeu a especificação de um produto de software (Etapa 1) que outro grupo especificou e deverá desenvolver um sistema de software que implemente as funcionalidades especificadas na forma de um simulador.
 
 #### TODO:
-Muida coisa!!!
+Muita coisa!!!
 
 #### Programação:
 - Linguagem utilizada: C#
