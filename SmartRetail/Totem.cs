@@ -12,9 +12,22 @@ namespace SmartRetail
 {
     public partial class Totem : Form
     {
+        private FacialRecognition facialRec = new FacialRecognition();
+
         public Totem()
         {
             InitializeComponent();
+        }
+        private void Totem_DragEnter(object sender, DragEventArgs e)
+        {
+            facialRec.OnDragEnter(sender, e);
+        }
+
+        private void Totem_DragDrop(object sender, DragEventArgs e)
+        {
+            Image image = facialRec.OnDragDrop(sender, e);
+
+            FacialRecPictureBox.Image = image;
         }
     }
 }

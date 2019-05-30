@@ -12,9 +12,22 @@ namespace SmartRetail
 {
     public partial class Caixa : Form
     {
+        private FacialRecognition facialRec = new FacialRecognition();
+
         public Caixa()
         {
             InitializeComponent();
+        }
+        private void Caixa_DragEnter(object sender, DragEventArgs e)
+        {
+            facialRec.OnDragEnter(sender, e);
+        }
+
+        private void Caixa_DragDrop(object sender, DragEventArgs e)
+        {
+            Image image = facialRec.OnDragDrop(sender, e);
+
+            FacialRecPictureBox.Image = image;
         }
     }
 }

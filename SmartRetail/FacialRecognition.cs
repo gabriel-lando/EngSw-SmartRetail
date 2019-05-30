@@ -33,7 +33,7 @@ namespace SmartRetail
         protected Image image;
         protected Thread getImageThread;
 
-        private void Form_DragEnter(object sender, DragEventArgs e)
+        public void OnDragEnter(object sender, DragEventArgs e)
         {
             validData = GetFilename(out string filename, e);
             if (validData)
@@ -67,7 +67,7 @@ namespace SmartRetail
             }
             return ret;
         }
-        public Image Form_DragDrop(object sender, DragEventArgs e)
+        public Image OnDragDrop(object sender, DragEventArgs e)
         {
             if (validData)
             {
