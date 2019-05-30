@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,12 +12,46 @@ namespace SmartRetail
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
+
+	    static void ThreadCaixa()
+        {
+            Caixa caixaForm = new Caixa();
+            Application.Run(caixaForm);
+        }
+
+        static void ThreadTotem()
+        {
+            Totem totemForm = new Totem();
+            Application.Run(totemForm);
+        }
+
+        static void ThreadApp()
+        {
+            App appForm = new App();
+            Application.Run(appForm);
+        }
+
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new App());
+
+            //Caixa Caixa = new Caixa();
+
+            Thread caixaThread = new Thread(new ThreadStart(ThreadCaixa));
+            Thread totemThread = new Thread(new ThreadStart(ThreadTotem));
+            Thread appThread = new Thread(new ThreadStart(ThreadApp));
+
+            caixaThread.SetApartmentState(ApartmentState.STA);
+            totemThread.SetApartmentState(ApartmentState.STA);
+            appThread.SetApartmentState(ApartmentState.STA);
+
+            caixaThread.Start();
+            totemThread.Start();
+            appThread.Start();
+
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.LoginPageTab = new System.Windows.Forms.TabPage();
             this.ErrorLoginTextBox = new System.Windows.Forms.TextBox();
@@ -40,12 +41,15 @@
             this.FornecedorTab = new System.Windows.Forms.TabPage();
             this.FornecedorCtrl = new System.Windows.Forms.TabControl();
             this.FornecedorCtrlHome = new System.Windows.Forms.TabPage();
-            this.LogoffForBtn = new System.Windows.Forms.PictureBox();
             this.FornecedorCtrlCadastrar = new System.Windows.Forms.TabPage();
             this.GerenteTab = new System.Windows.Forms.TabPage();
             this.GerenteCtrl = new System.Windows.Forms.TabControl();
             this.GerenteCtrlHome = new System.Windows.Forms.TabPage();
-            this.LogoffGerBtn = new System.Windows.Forms.PictureBox();
+            this.GerenteCtrlGerProd = new System.Windows.Forms.TabPage();
+            this.GerenteCtrlConsDados = new System.Windows.Forms.TabPage();
+            this.GerCtrlCons_Label1 = new System.Windows.Forms.Label();
+            this.GerCtrlCons_ComboBox = new System.Windows.Forms.ComboBox();
+            this.GerenteCtrlGerOfertas = new System.Windows.Forms.TabPage();
             this.GerenteCtrlCadastrar = new System.Windows.Forms.TabPage();
             this.GerCtrlCad_ErrorTextBox = new System.Windows.Forms.TextBox();
             this.GerCtrlCad_CadastrarBtn = new System.Windows.Forms.Button();
@@ -79,19 +83,23 @@
             this.GerCtrlRem_Email = new System.Windows.Forms.TextBox();
             this.GerCtrlRem_Label1 = new System.Windows.Forms.Label();
             this.GerCtrlRem_ComboBox = new System.Windows.Forms.ComboBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.LogoffForBtn = new System.Windows.Forms.PictureBox();
+            this.LogoffGerBtn = new System.Windows.Forms.PictureBox();
             this.TabCtrl.SuspendLayout();
             this.LoginPageTab.SuspendLayout();
             this.FornecedorTab.SuspendLayout();
             this.FornecedorCtrl.SuspendLayout();
             this.FornecedorCtrlHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).BeginInit();
             this.GerenteTab.SuspendLayout();
             this.GerenteCtrl.SuspendLayout();
             this.GerenteCtrlHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).BeginInit();
+            this.GerenteCtrlConsDados.SuspendLayout();
             this.GerenteCtrlCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).BeginInit();
             this.GerenteCtrlRemover.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // TabCtrl
@@ -138,7 +146,7 @@
             this.ErrorLoginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ErrorLoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorLoginTextBox.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 372);
+            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 370);
             this.ErrorLoginTextBox.Name = "ErrorLoginTextBox";
             this.ErrorLoginTextBox.ReadOnly = true;
             this.ErrorLoginTextBox.Size = new System.Drawing.Size(260, 15);
@@ -173,7 +181,7 @@
             this.MessageLoginPage.DetectUrls = false;
             this.MessageLoginPage.Enabled = false;
             this.MessageLoginPage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MessageLoginPage.Location = new System.Drawing.Point(8, 114);
+            this.MessageLoginPage.Location = new System.Drawing.Point(8, 112);
             this.MessageLoginPage.Name = "MessageLoginPage";
             this.MessageLoginPage.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MessageLoginPage.Size = new System.Drawing.Size(260, 105);
@@ -185,7 +193,7 @@
             // 
             this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.Location = new System.Drawing.Point(185, 451);
+            this.LoginBtn.Location = new System.Drawing.Point(185, 447);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(83, 30);
             this.LoginBtn.TabIndex = 4;
@@ -197,7 +205,7 @@
             // 
             this.EmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTextBox.Location = new System.Drawing.Point(8, 272);
+            this.EmailTextBox.Location = new System.Drawing.Point(8, 270);
             this.EmailTextBox.MaxLength = 50;
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(260, 24);
@@ -210,7 +218,7 @@
             // 
             this.LimparBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LimparBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LimparBtn.Location = new System.Drawing.Point(8, 451);
+            this.LimparBtn.Location = new System.Drawing.Point(8, 447);
             this.LimparBtn.Name = "LimparBtn";
             this.LimparBtn.Size = new System.Drawing.Size(83, 30);
             this.LimparBtn.TabIndex = 3;
@@ -222,7 +230,7 @@
             // 
             this.PwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PwdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PwdTextBox.Location = new System.Drawing.Point(8, 315);
+            this.PwdTextBox.Location = new System.Drawing.Point(8, 313);
             this.PwdTextBox.MaxLength = 32;
             this.PwdTextBox.Name = "PwdTextBox";
             this.PwdTextBox.Size = new System.Drawing.Size(260, 24);
@@ -267,17 +275,6 @@
             this.FornecedorCtrlHome.TabIndex = 0;
             this.FornecedorCtrlHome.Text = "Home";
             // 
-            // LogoffForBtn
-            // 
-            this.LogoffForBtn.Image = global::SmartRetail.Properties.Resources.Logoff;
-            this.LogoffForBtn.Location = new System.Drawing.Point(217, 6);
-            this.LogoffForBtn.Name = "LogoffForBtn";
-            this.LogoffForBtn.Size = new System.Drawing.Size(26, 26);
-            this.LogoffForBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LogoffForBtn.TabIndex = 1;
-            this.LogoffForBtn.TabStop = false;
-            this.LogoffForBtn.Click += new System.EventHandler(this.LogoffForBtn_Click);
-            // 
             // FornecedorCtrlCadastrar
             // 
             this.FornecedorCtrlCadastrar.BackColor = System.Drawing.SystemColors.Control;
@@ -303,6 +300,9 @@
             // 
             this.GerenteCtrl.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.GerenteCtrl.Controls.Add(this.GerenteCtrlHome);
+            this.GerenteCtrl.Controls.Add(this.GerenteCtrlGerProd);
+            this.GerenteCtrl.Controls.Add(this.GerenteCtrlConsDados);
+            this.GerenteCtrl.Controls.Add(this.GerenteCtrlGerOfertas);
             this.GerenteCtrl.Controls.Add(this.GerenteCtrlCadastrar);
             this.GerenteCtrl.Controls.Add(this.GerenteCtrlRemover);
             this.GerenteCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -324,16 +324,58 @@
             this.GerenteCtrlHome.TabIndex = 0;
             this.GerenteCtrlHome.Text = "Home";
             // 
-            // LogoffGerBtn
+            // GerenteCtrlGerProd
             // 
-            this.LogoffGerBtn.Image = global::SmartRetail.Properties.Resources.Logoff;
-            this.LogoffGerBtn.Location = new System.Drawing.Point(217, 6);
-            this.LogoffGerBtn.Name = "LogoffGerBtn";
-            this.LogoffGerBtn.Size = new System.Drawing.Size(26, 26);
-            this.LogoffGerBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LogoffGerBtn.TabIndex = 0;
-            this.LogoffGerBtn.TabStop = false;
-            this.LogoffGerBtn.Click += new System.EventHandler(this.LogoffGerBtn_Click);
+            this.GerenteCtrlGerProd.BackColor = System.Drawing.SystemColors.Control;
+            this.GerenteCtrlGerProd.Location = new System.Drawing.Point(23, 4);
+            this.GerenteCtrlGerProd.Name = "GerenteCtrlGerProd";
+            this.GerenteCtrlGerProd.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlGerProd.TabIndex = 3;
+            this.GerenteCtrlGerProd.Text = "Produtos";
+            // 
+            // GerenteCtrlConsDados
+            // 
+            this.GerenteCtrlConsDados.BackColor = System.Drawing.SystemColors.Control;
+            this.GerenteCtrlConsDados.Controls.Add(this.GerCtrlCons_Label1);
+            this.GerenteCtrlConsDados.Controls.Add(this.GerCtrlCons_ComboBox);
+            this.GerenteCtrlConsDados.Location = new System.Drawing.Point(23, 4);
+            this.GerenteCtrlConsDados.Name = "GerenteCtrlConsDados";
+            this.GerenteCtrlConsDados.Padding = new System.Windows.Forms.Padding(3);
+            this.GerenteCtrlConsDados.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlConsDados.TabIndex = 4;
+            this.GerenteCtrlConsDados.Text = "Consultar";
+            // 
+            // GerCtrlCons_Label1
+            // 
+            this.GerCtrlCons_Label1.AutoSize = true;
+            this.GerCtrlCons_Label1.Location = new System.Drawing.Point(6, 15);
+            this.GerCtrlCons_Label1.Name = "GerCtrlCons_Label1";
+            this.GerCtrlCons_Label1.Size = new System.Drawing.Size(57, 13);
+            this.GerCtrlCons_Label1.TabIndex = 1;
+            this.GerCtrlCons_Label1.Text = "Selecione:";
+            // 
+            // GerCtrlCons_ComboBox
+            // 
+            this.GerCtrlCons_ComboBox.FormattingEnabled = true;
+            this.GerCtrlCons_ComboBox.Items.AddRange(new object[] {
+            "Vendas",
+            "Estoque",
+            "Fornecimento",
+            "Clientes",
+            "Gastos"});
+            this.GerCtrlCons_ComboBox.Location = new System.Drawing.Point(6, 31);
+            this.GerCtrlCons_ComboBox.Name = "GerCtrlCons_ComboBox";
+            this.GerCtrlCons_ComboBox.Size = new System.Drawing.Size(237, 21);
+            this.GerCtrlCons_ComboBox.TabIndex = 0;
+            // 
+            // GerenteCtrlGerOfertas
+            // 
+            this.GerenteCtrlGerOfertas.BackColor = System.Drawing.SystemColors.Control;
+            this.GerenteCtrlGerOfertas.Location = new System.Drawing.Point(23, 4);
+            this.GerenteCtrlGerOfertas.Name = "GerenteCtrlGerOfertas";
+            this.GerenteCtrlGerOfertas.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlGerOfertas.TabIndex = 5;
+            this.GerenteCtrlGerOfertas.Text = "Ofertas";
             // 
             // GerenteCtrlCadastrar
             // 
@@ -371,12 +413,12 @@
             this.GerCtrlCad_ErrorTextBox.BackColor = System.Drawing.SystemColors.Control;
             this.GerCtrlCad_ErrorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GerCtrlCad_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GerCtrlCad_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GerCtrlCad_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GerCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
             this.GerCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(6, 444);
             this.GerCtrlCad_ErrorTextBox.Name = "GerCtrlCad_ErrorTextBox";
             this.GerCtrlCad_ErrorTextBox.ReadOnly = true;
-            this.GerCtrlCad_ErrorTextBox.Size = new System.Drawing.Size(237, 15);
+            this.GerCtrlCad_ErrorTextBox.Size = new System.Drawing.Size(237, 13);
             this.GerCtrlCad_ErrorTextBox.TabIndex = 18;
             this.GerCtrlCad_ErrorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.GerCtrlCad_ErrorTextBox.Visible = false;
@@ -684,6 +726,33 @@
             this.GerCtrlRem_ComboBox.Size = new System.Drawing.Size(237, 21);
             this.GerCtrlRem_ComboBox.TabIndex = 9;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // LogoffForBtn
+            // 
+            this.LogoffForBtn.Image = global::SmartRetail.Properties.Resources.Logoff;
+            this.LogoffForBtn.Location = new System.Drawing.Point(217, 6);
+            this.LogoffForBtn.Name = "LogoffForBtn";
+            this.LogoffForBtn.Size = new System.Drawing.Size(26, 26);
+            this.LogoffForBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LogoffForBtn.TabIndex = 1;
+            this.LogoffForBtn.TabStop = false;
+            this.LogoffForBtn.Click += new System.EventHandler(this.LogoffForBtn_Click);
+            // 
+            // LogoffGerBtn
+            // 
+            this.LogoffGerBtn.Image = global::SmartRetail.Properties.Resources.Logoff;
+            this.LogoffGerBtn.Location = new System.Drawing.Point(217, 6);
+            this.LogoffGerBtn.Name = "LogoffGerBtn";
+            this.LogoffGerBtn.Size = new System.Drawing.Size(26, 26);
+            this.LogoffGerBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LogoffGerBtn.TabIndex = 0;
+            this.LogoffGerBtn.TabStop = false;
+            this.LogoffGerBtn.Click += new System.EventHandler(this.LogoffGerBtn_Click);
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -692,7 +761,6 @@
             this.Controls.Add(this.TabCtrl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "App";
             this.Text = "App";
             this.TabCtrl.ResumeLayout(false);
@@ -701,16 +769,18 @@
             this.FornecedorTab.ResumeLayout(false);
             this.FornecedorCtrl.ResumeLayout(false);
             this.FornecedorCtrlHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).EndInit();
             this.GerenteTab.ResumeLayout(false);
             this.GerenteCtrl.ResumeLayout(false);
             this.GerenteCtrlHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).EndInit();
+            this.GerenteCtrlConsDados.ResumeLayout(false);
+            this.GerenteCtrlConsDados.PerformLayout();
             this.GerenteCtrlCadastrar.ResumeLayout(false);
             this.GerenteCtrlCadastrar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).EndInit();
             this.GerenteCtrlRemover.ResumeLayout(false);
             this.GerenteCtrlRemover.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -768,6 +838,12 @@
         private System.Windows.Forms.TabPage FornecedorCtrlHome;
         private System.Windows.Forms.PictureBox LogoffForBtn;
         private System.Windows.Forms.TabPage FornecedorCtrlCadastrar;
+        private System.Windows.Forms.TabPage GerenteCtrlGerProd;
+        private System.Windows.Forms.TabPage GerenteCtrlConsDados;
+        private System.Windows.Forms.ComboBox GerCtrlCons_ComboBox;
+        private System.Windows.Forms.TabPage GerenteCtrlGerOfertas;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label GerCtrlCons_Label1;
     }
 }
 
