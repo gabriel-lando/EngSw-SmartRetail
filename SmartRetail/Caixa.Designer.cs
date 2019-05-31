@@ -76,6 +76,7 @@
             this.TabCtrl.Padding = new System.Drawing.Point(0, 0);
             this.TabCtrl.SelectedIndex = 0;
             this.TabCtrl.Size = new System.Drawing.Size(800, 430);
+            this.TabCtrl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabCtrl.TabIndex = 6;
             // 
             // CaixaClienteSaida
