@@ -27,7 +27,11 @@ namespace SmartRetail
         {
             Image image = facialRec.OnDragDrop(sender, e);
 
-            FacialRecPictureBox.Image = image;
+            if (image != null)
+            {
+                TabCtrl.SelectedIndex = 3;
+                FacialRecPictureBox.Image = image;
+            }
         }
     }
 }
