@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.CaixaWelcomeTab = new System.Windows.Forms.TabPage();
             this.CaixaLogoLabel = new System.Windows.Forms.Label();
@@ -41,8 +41,8 @@
             this.CaixaClienteSaida = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.FacialRecPictureBox = new System.Windows.Forms.PictureBox();
+            this.ClientInfoTextSaida = new System.Windows.Forms.RichTextBox();
+            this.FacialRecPictureBoxSaida = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.ClienteCarrinhoTotalValue = new System.Windows.Forms.Label();
@@ -53,19 +53,46 @@
             this.ClienteCarrinhoProdPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClienteCarrinhoProdQtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.FacialRecPictureBoxCadastro = new System.Windows.Forms.PictureBox();
+            this.FacialRecPictureBoxEntrada = new System.Windows.Forms.PictureBox();
+            this.ClientInfoTextEntrada = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CadastroNomeLabel = new System.Windows.Forms.Label();
+            this.CadastroNomeText = new System.Windows.Forms.TextBox();
+            this.CadastroCPFText = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CadastroEmailText = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CadastroTelefoneText = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.CadastroEnderecoText = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CadastroCartaoText = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ErrorCadastroTextBox = new System.Windows.Forms.TextBox();
+            this.CadastroLimparBtn = new System.Windows.Forms.Button();
+            this.CadastroSubmitBtn = new System.Windows.Forms.Button();
+            this.CadastroCancelarBtn = new System.Windows.Forms.Button();
             this.TabCtrl.SuspendLayout();
             this.CaixaWelcomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CamLogoPictureBox)).BeginInit();
+            this.CaixaClienteEntrada.SuspendLayout();
+            this.CaixaCadastroCliente.SuspendLayout();
             this.CaixaClienteSaida.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxSaida)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteCarrinhoTable)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxCadastro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxEntrada)).BeginInit();
             this.SuspendLayout();
             // 
             // TabCtrl
@@ -121,7 +148,7 @@
             this.CamLogoPictureBox.InitialImage = null;
             this.CamLogoPictureBox.Location = new System.Drawing.Point(210, 100);
             this.CamLogoPictureBox.Name = "CamLogoPictureBox";
-            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 226);
+            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 222);
             this.CamLogoPictureBox.TabIndex = 2;
             this.CamLogoPictureBox.TabStop = false;
             // 
@@ -139,18 +166,41 @@
             // 
             // CaixaClienteEntrada
             // 
-            this.CaixaClienteEntrada.Location = new System.Drawing.Point(4, 9);
+            this.CaixaClienteEntrada.Controls.Add(this.CadastroCancelarBtn);
+            this.CaixaClienteEntrada.Controls.Add(this.CadastroSubmitBtn);
+            this.CaixaClienteEntrada.Controls.Add(this.CadastroLimparBtn);
+            this.CaixaClienteEntrada.Controls.Add(this.ErrorCadastroTextBox);
+            this.CaixaClienteEntrada.Controls.Add(this.CadastroCartaoText);
+            this.CaixaClienteEntrada.Controls.Add(this.label8);
+            this.CaixaClienteEntrada.Controls.Add(this.CadastroEnderecoText);
+            this.CaixaClienteEntrada.Controls.Add(this.label7);
+            this.CaixaClienteEntrada.Controls.Add(this.CadastroTelefoneText);
+            this.CaixaClienteEntrada.Controls.Add(this.label6);
+            this.CaixaClienteEntrada.Controls.Add(this.CadastroEmailText);
+            this.CaixaClienteEntrada.Controls.Add(this.label5);
+            this.CaixaClienteEntrada.Controls.Add(this.CadastroCPFText);
+            this.CaixaClienteEntrada.Controls.Add(this.label4);
+            this.CaixaClienteEntrada.Controls.Add(this.CadastroNomeText);
+            this.CaixaClienteEntrada.Controls.Add(this.CadastroNomeLabel);
+            this.CaixaClienteEntrada.Controls.Add(this.label3);
+            this.CaixaClienteEntrada.Controls.Add(this.richTextBox3);
+            this.CaixaClienteEntrada.Controls.Add(this.FacialRecPictureBoxCadastro);
+            this.CaixaClienteEntrada.Location = new System.Drawing.Point(4, 5);
             this.CaixaClienteEntrada.Name = "CaixaClienteEntrada";
-            this.CaixaClienteEntrada.Size = new System.Drawing.Size(792, 417);
+            this.CaixaClienteEntrada.Size = new System.Drawing.Size(792, 421);
             this.CaixaClienteEntrada.TabIndex = 2;
             this.CaixaClienteEntrada.Text = "tabPage1";
             this.CaixaClienteEntrada.UseVisualStyleBackColor = true;
             // 
             // CaixaCadastroCliente
             // 
-            this.CaixaCadastroCliente.Location = new System.Drawing.Point(4, 9);
+            this.CaixaCadastroCliente.Controls.Add(this.richTextBox1);
+            this.CaixaCadastroCliente.Controls.Add(this.label2);
+            this.CaixaCadastroCliente.Controls.Add(this.ClientInfoTextEntrada);
+            this.CaixaCadastroCliente.Controls.Add(this.FacialRecPictureBoxEntrada);
+            this.CaixaCadastroCliente.Location = new System.Drawing.Point(4, 14);
             this.CaixaCadastroCliente.Name = "CaixaCadastroCliente";
-            this.CaixaCadastroCliente.Size = new System.Drawing.Size(792, 417);
+            this.CaixaCadastroCliente.Size = new System.Drawing.Size(792, 412);
             this.CaixaCadastroCliente.TabIndex = 3;
             this.CaixaCadastroCliente.Text = "tabPage1";
             this.CaixaCadastroCliente.UseVisualStyleBackColor = true;
@@ -158,10 +208,10 @@
             // CaixaClienteSaida
             // 
             this.CaixaClienteSaida.Controls.Add(this.tableLayoutPanel1);
-            this.CaixaClienteSaida.Location = new System.Drawing.Point(4, 5);
+            this.CaixaClienteSaida.Location = new System.Drawing.Point(4, 14);
             this.CaixaClienteSaida.Margin = new System.Windows.Forms.Padding(0);
             this.CaixaClienteSaida.Name = "CaixaClienteSaida";
-            this.CaixaClienteSaida.Size = new System.Drawing.Size(792, 421);
+            this.CaixaClienteSaida.Size = new System.Drawing.Size(792, 412);
             this.CaixaClienteSaida.TabIndex = 0;
             this.CaixaClienteSaida.UseVisualStyleBackColor = true;
             // 
@@ -180,40 +230,40 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(792, 421);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(792, 412);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.FacialRecPictureBox);
+            this.panel1.Controls.Add(this.ClientInfoTextSaida);
+            this.panel1.Controls.Add(this.FacialRecPictureBoxSaida);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 421);
+            this.panel1.Size = new System.Drawing.Size(150, 412);
             this.panel1.TabIndex = 0;
             // 
-            // richTextBox1
+            // ClientInfoTextSaida
             // 
-            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 213);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(150, 200);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.ClientInfoTextSaida.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ClientInfoTextSaida.Location = new System.Drawing.Point(0, 204);
+            this.ClientInfoTextSaida.Name = "ClientInfoTextSaida";
+            this.ClientInfoTextSaida.Size = new System.Drawing.Size(150, 200);
+            this.ClientInfoTextSaida.TabIndex = 4;
+            this.ClientInfoTextSaida.Text = "";
             // 
-            // FacialRecPictureBox
+            // FacialRecPictureBoxSaida
             // 
-            this.FacialRecPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.FacialRecPictureBox.BackColor = System.Drawing.Color.PaleGreen;
-            this.FacialRecPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FacialRecPictureBox.Location = new System.Drawing.Point(0, 3);
-            this.FacialRecPictureBox.Name = "FacialRecPictureBox";
-            this.FacialRecPictureBox.Size = new System.Drawing.Size(150, 200);
-            this.FacialRecPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.FacialRecPictureBox.TabIndex = 0;
-            this.FacialRecPictureBox.TabStop = false;
+            this.FacialRecPictureBoxSaida.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.FacialRecPictureBoxSaida.BackColor = System.Drawing.Color.PaleGreen;
+            this.FacialRecPictureBoxSaida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FacialRecPictureBoxSaida.Location = new System.Drawing.Point(0, 3);
+            this.FacialRecPictureBoxSaida.Name = "FacialRecPictureBoxSaida";
+            this.FacialRecPictureBoxSaida.Size = new System.Drawing.Size(150, 200);
+            this.FacialRecPictureBoxSaida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FacialRecPictureBoxSaida.TabIndex = 0;
+            this.FacialRecPictureBoxSaida.TabStop = false;
             // 
             // panel2
             // 
@@ -222,7 +272,7 @@
             this.panel2.Location = new System.Drawing.Point(150, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 421);
+            this.panel2.Size = new System.Drawing.Size(321, 412);
             this.panel2.TabIndex = 1;
             // 
             // panel4
@@ -235,14 +285,14 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(321, 421);
+            this.panel4.Size = new System.Drawing.Size(321, 412);
             this.panel4.TabIndex = 5;
             // 
             // ClienteCarrinhoTotalValue
             // 
             this.ClienteCarrinhoTotalValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ClienteCarrinhoTotalValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteCarrinhoTotalValue.Location = new System.Drawing.Point(194, 387);
+            this.ClienteCarrinhoTotalValue.Location = new System.Drawing.Point(194, 378);
             this.ClienteCarrinhoTotalValue.Name = "ClienteCarrinhoTotalValue";
             this.ClienteCarrinhoTotalValue.Size = new System.Drawing.Size(124, 31);
             this.ClienteCarrinhoTotalValue.TabIndex = 3;
@@ -266,7 +316,7 @@
             this.ClienteCarrinhoTotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ClienteCarrinhoTotalLabel.AutoSize = true;
             this.ClienteCarrinhoTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteCarrinhoTotalLabel.Location = new System.Drawing.Point(3, 387);
+            this.ClienteCarrinhoTotalLabel.Location = new System.Drawing.Point(3, 378);
             this.ClienteCarrinhoTotalLabel.Name = "ClienteCarrinhoTotalLabel";
             this.ClienteCarrinhoTotalLabel.Size = new System.Drawing.Size(110, 31);
             this.ClienteCarrinhoTotalLabel.TabIndex = 2;
@@ -289,8 +339,8 @@
             // ClienteCarrinhoProdNome
             // 
             this.ClienteCarrinhoProdNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle16;
             this.ClienteCarrinhoProdNome.FillWeight = 180F;
             this.ClienteCarrinhoProdNome.HeaderText = "Produto";
             this.ClienteCarrinhoProdNome.Name = "ClienteCarrinhoProdNome";
@@ -299,8 +349,8 @@
             // ClienteCarrinhoProdPreco
             // 
             this.ClienteCarrinhoProdPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle17;
             this.ClienteCarrinhoProdPreco.FillWeight = 80F;
             this.ClienteCarrinhoProdPreco.HeaderText = "Preço";
             this.ClienteCarrinhoProdPreco.Name = "ClienteCarrinhoProdPreco";
@@ -309,8 +359,8 @@
             // ClienteCarrinhoProdQtde
             // 
             this.ClienteCarrinhoProdQtde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle18;
             this.ClienteCarrinhoProdQtde.FillWeight = 40F;
             this.ClienteCarrinhoProdQtde.HeaderText = "Qtde";
             this.ClienteCarrinhoProdQtde.Name = "ClienteCarrinhoProdQtde";
@@ -324,19 +374,8 @@
             this.panel3.Location = new System.Drawing.Point(471, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(321, 421);
+            this.panel3.Size = new System.Drawing.Size(321, 412);
             this.panel3.TabIndex = 2;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(35, 174);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(253, 195);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "Obrigado pela\n  preferência\n \nVolte Sempre";
             // 
             // label1
             // 
@@ -348,6 +387,244 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Compra finalizada";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Enabled = false;
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.Location = new System.Drawing.Point(35, 174);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(253, 195);
+            this.richTextBox2.TabIndex = 0;
+            this.richTextBox2.Text = "Obrigado pela\n  preferência\n \nVolte Sempre";
+            // 
+            // FacialRecPictureBoxCadastro
+            // 
+            this.FacialRecPictureBoxCadastro.BackColor = System.Drawing.Color.PaleGreen;
+            this.FacialRecPictureBoxCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FacialRecPictureBoxCadastro.Location = new System.Drawing.Point(3, 3);
+            this.FacialRecPictureBoxCadastro.Name = "FacialRecPictureBoxCadastro";
+            this.FacialRecPictureBoxCadastro.Size = new System.Drawing.Size(150, 200);
+            this.FacialRecPictureBoxCadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FacialRecPictureBoxCadastro.TabIndex = 0;
+            this.FacialRecPictureBoxCadastro.TabStop = false;
+            // 
+            // FacialRecPictureBoxEntrada
+            // 
+            this.FacialRecPictureBoxEntrada.BackColor = System.Drawing.Color.PaleGreen;
+            this.FacialRecPictureBoxEntrada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FacialRecPictureBoxEntrada.Location = new System.Drawing.Point(3, 3);
+            this.FacialRecPictureBoxEntrada.Name = "FacialRecPictureBoxEntrada";
+            this.FacialRecPictureBoxEntrada.Size = new System.Drawing.Size(150, 200);
+            this.FacialRecPictureBoxEntrada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FacialRecPictureBoxEntrada.TabIndex = 1;
+            this.FacialRecPictureBoxEntrada.TabStop = false;
+            // 
+            // ClientInfoTextEntrada
+            // 
+            this.ClientInfoTextEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ClientInfoTextEntrada.Location = new System.Drawing.Point(3, 209);
+            this.ClientInfoTextEntrada.Name = "ClientInfoTextEntrada";
+            this.ClientInfoTextEntrada.Size = new System.Drawing.Size(150, 200);
+            this.ClientInfoTextEntrada.TabIndex = 2;
+            this.ClientInfoTextEntrada.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label2.Location = new System.Drawing.Point(174, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(592, 64);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Bem Vindo de Volta :)";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox1.Enabled = false;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(185, 302);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(581, 90);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "Dica: use os Totens para verificar\n as ofertas exclusivas para você!";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox3.Enabled = false;
+            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox3.Location = new System.Drawing.Point(3, 218);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(150, 200);
+            this.richTextBox3.TabIndex = 1;
+            this.richTextBox3.Text = "\n\n   Seja bem \n    vindo ao \n Smart Retail";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(191, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(409, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Antes de entrar na loja, é preciso realizar o seu cadastro:";
+            // 
+            // CadastroNomeLabel
+            // 
+            this.CadastroNomeLabel.AutoSize = true;
+            this.CadastroNomeLabel.Location = new System.Drawing.Point(192, 50);
+            this.CadastroNomeLabel.Name = "CadastroNomeLabel";
+            this.CadastroNomeLabel.Size = new System.Drawing.Size(84, 13);
+            this.CadastroNomeLabel.TabIndex = 3;
+            this.CadastroNomeLabel.Text = "Nome completo:";
+            // 
+            // CadastroNomeText
+            // 
+            this.CadastroNomeText.Location = new System.Drawing.Point(195, 66);
+            this.CadastroNomeText.MaxLength = 50;
+            this.CadastroNomeText.Name = "CadastroNomeText";
+            this.CadastroNomeText.Size = new System.Drawing.Size(243, 20);
+            this.CadastroNomeText.TabIndex = 4;
+            // 
+            // CadastroCPFText
+            // 
+            this.CadastroCPFText.Location = new System.Drawing.Point(505, 66);
+            this.CadastroCPFText.MaxLength = 50;
+            this.CadastroCPFText.Name = "CadastroCPFText";
+            this.CadastroCPFText.Size = new System.Drawing.Size(243, 20);
+            this.CadastroCPFText.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(502, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "CPF:";
+            // 
+            // CadastroEmailText
+            // 
+            this.CadastroEmailText.Location = new System.Drawing.Point(195, 133);
+            this.CadastroEmailText.MaxLength = 50;
+            this.CadastroEmailText.Name = "CadastroEmailText";
+            this.CadastroEmailText.Size = new System.Drawing.Size(243, 20);
+            this.CadastroEmailText.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(192, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Email:";
+            // 
+            // CadastroTelefoneText
+            // 
+            this.CadastroTelefoneText.Location = new System.Drawing.Point(505, 133);
+            this.CadastroTelefoneText.MaxLength = 50;
+            this.CadastroTelefoneText.Name = "CadastroTelefoneText";
+            this.CadastroTelefoneText.Size = new System.Drawing.Size(243, 20);
+            this.CadastroTelefoneText.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(502, 117);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Telefone:";
+            // 
+            // CadastroEnderecoText
+            // 
+            this.CadastroEnderecoText.Location = new System.Drawing.Point(195, 204);
+            this.CadastroEnderecoText.MaxLength = 150;
+            this.CadastroEnderecoText.Name = "CadastroEnderecoText";
+            this.CadastroEnderecoText.Size = new System.Drawing.Size(243, 20);
+            this.CadastroEnderecoText.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(192, 188);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(119, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Endereço de cobrança:";
+            // 
+            // CadastroCartaoText
+            // 
+            this.CadastroCartaoText.Location = new System.Drawing.Point(505, 204);
+            this.CadastroCartaoText.MaxLength = 50;
+            this.CadastroCartaoText.Name = "CadastroCartaoText";
+            this.CadastroCartaoText.Size = new System.Drawing.Size(243, 20);
+            this.CadastroCartaoText.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(502, 188);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(145, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Numero do cartão de crédito:";
+            // 
+            // ErrorCadastroTextBox
+            // 
+            this.ErrorCadastroTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ErrorCadastroTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ErrorCadastroTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.ErrorCadastroTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorCadastroTextBox.ForeColor = System.Drawing.Color.Red;
+            this.ErrorCadastroTextBox.Location = new System.Drawing.Point(195, 273);
+            this.ErrorCadastroTextBox.Multiline = true;
+            this.ErrorCadastroTextBox.Name = "ErrorCadastroTextBox";
+            this.ErrorCadastroTextBox.ReadOnly = true;
+            this.ErrorCadastroTextBox.Size = new System.Drawing.Size(553, 41);
+            this.ErrorCadastroTextBox.TabIndex = 15;
+            this.ErrorCadastroTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ErrorCadastroTextBox.Visible = false;
+            this.ErrorCadastroTextBox.WordWrap = false;
+            // 
+            // CadastroLimparBtn
+            // 
+            this.CadastroLimparBtn.Location = new System.Drawing.Point(422, 347);
+            this.CadastroLimparBtn.Name = "CadastroLimparBtn";
+            this.CadastroLimparBtn.Size = new System.Drawing.Size(98, 31);
+            this.CadastroLimparBtn.TabIndex = 16;
+            this.CadastroLimparBtn.Text = "Limpar";
+            this.CadastroLimparBtn.UseVisualStyleBackColor = true;
+            this.CadastroLimparBtn.Click += new System.EventHandler(this.CadastroLimparBtn_Click);
+            // 
+            // CadastroSubmitBtn
+            // 
+            this.CadastroSubmitBtn.Location = new System.Drawing.Point(650, 347);
+            this.CadastroSubmitBtn.Name = "CadastroSubmitBtn";
+            this.CadastroSubmitBtn.Size = new System.Drawing.Size(98, 31);
+            this.CadastroSubmitBtn.TabIndex = 17;
+            this.CadastroSubmitBtn.Text = "Cadastrar";
+            this.CadastroSubmitBtn.UseVisualStyleBackColor = true;
+            this.CadastroSubmitBtn.Click += new System.EventHandler(this.CadastroSubmitBtn_Click);
+            // 
+            // CadastroCancelarBtn
+            // 
+            this.CadastroCancelarBtn.Location = new System.Drawing.Point(195, 347);
+            this.CadastroCancelarBtn.Name = "CadastroCancelarBtn";
+            this.CadastroCancelarBtn.Size = new System.Drawing.Size(98, 31);
+            this.CadastroCancelarBtn.TabIndex = 18;
+            this.CadastroCancelarBtn.Text = "Cancelar";
+            this.CadastroCancelarBtn.UseVisualStyleBackColor = true;
+            this.CadastroCancelarBtn.Click += new System.EventHandler(this.CadastroCancelarBtn_Click);
             // 
             // Caixa
             // 
@@ -365,15 +642,21 @@
             this.TabCtrl.ResumeLayout(false);
             this.CaixaWelcomeTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CamLogoPictureBox)).EndInit();
+            this.CaixaClienteEntrada.ResumeLayout(false);
+            this.CaixaClienteEntrada.PerformLayout();
+            this.CaixaCadastroCliente.ResumeLayout(false);
+            this.CaixaCadastroCliente.PerformLayout();
             this.CaixaClienteSaida.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxSaida)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteCarrinhoTable)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxCadastro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxEntrada)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -389,8 +672,8 @@
         private System.Windows.Forms.Label CaixaLogoLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.PictureBox FacialRecPictureBox;
+        private System.Windows.Forms.RichTextBox ClientInfoTextSaida;
+        private System.Windows.Forms.PictureBox FacialRecPictureBoxSaida;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label ClienteCarrinhoTotalValue;
@@ -403,5 +686,28 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.PictureBox FacialRecPictureBoxCadastro;
+        private System.Windows.Forms.PictureBox FacialRecPictureBoxEntrada;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox ClientInfoTextEntrada;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox CadastroCartaoText;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox CadastroEnderecoText;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox CadastroTelefoneText;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox CadastroEmailText;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox CadastroCPFText;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox CadastroNomeText;
+        private System.Windows.Forms.Label CadastroNomeLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.TextBox ErrorCadastroTextBox;
+        private System.Windows.Forms.Button CadastroLimparBtn;
+        private System.Windows.Forms.Button CadastroSubmitBtn;
+        private System.Windows.Forms.Button CadastroCancelarBtn;
     }
 }

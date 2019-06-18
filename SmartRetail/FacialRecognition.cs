@@ -10,16 +10,17 @@ namespace SmartRetail
     {
         protected bool validData;
 
-        string path;
+        string path, file;
         protected Image image;
         protected Thread getImageThread;
 
         public void OnDragEnter(object sender, DragEventArgs e)
         {
-            validData = GetFilename(out string filename, e);
+            validData = GetFilename(out string filename, out string filepath, e);
             if (validData)
             {
-                path = filename;
+                path = filepath;
+                file = filename;
                 getImageThread = new Thread(new ThreadStart(LoadImage));
                 getImageThread.Start();
                 e.Effect = DragDropEffects.Copy;
@@ -27,9 +28,10 @@ namespace SmartRetail
             else
                 e.Effect = DragDropEffects.None;
         }
-        private bool GetFilename(out string filename, DragEventArgs e)
+        private bool GetFilename(out string filename, out string filepath, DragEventArgs e)
         {
             bool ret = false;
+            filepath = String.Empty;
             filename = String.Empty;
             if ((e.AllowedEffect & DragDropEffects.Copy) == DragDropEffects.Copy)
             {
@@ -37,8 +39,9 @@ namespace SmartRetail
                 {
                     if ((data.Length == 1) && (data.GetValue(0) is String))
                     {
-                        filename = ((string[])data)[0];
-                        string ext = Path.GetExtension(filename).ToLower();
+                        filepath = ((string[])data)[0];
+                        filename = Path.GetFileName(filepath);
+                        string ext = Path.GetExtension(filepath).ToLower();
                         if ((ext == ".jpg") || (ext == ".png") || (ext == ".bmp"))
                         {
                             ret = true;
@@ -64,6 +67,11 @@ namespace SmartRetail
         protected void LoadImage()
         {
             image = new Bitmap(path);
+        }
+
+        public string RetFilename()
+        {
+            return file;
         }
 
     }

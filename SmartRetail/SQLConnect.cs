@@ -188,8 +188,16 @@ namespace SmartRetail
                 {
                     switch (funcao)
                     {
-                        case 0:
-                            return true;
+                        case 0: //TODO: Remover Carrinho e afins
+                            string queryCliente = "DELETE FROM Cliente WHERE infoID = @infoID;";
+                            SqlCommand cmdCliente = new SqlCommand(queryCliente, connection);
+                            cmdCliente.Parameters.AddWithValue("@infoID", infoID);
+                            if (cmdCliente.ExecuteNonQuery() > 0)
+                            {
+                                FecharConexao();
+                                return true;
+                            }
+                            break;
                         case 1:
                             string queryProdFornecedor = "DELETE FROM Produto WHERE fornecedorID = @fornecedorID;";
                             SqlCommand cmdProdFornecedor = new SqlCommand(queryProdFornecedor, connection);
@@ -223,8 +231,9 @@ namespace SmartRetail
             return false;
         }
 
-        public int ValidarLogin(LoginData login)
+        public int ValidarLogin(out int retID, LoginData login)
         {
+            retID = 0;
             string queryEmail = "SELECT * FROM InfoBasica WHERE email = '" + login.email + "';";
 
             if (AbrirConexao())
@@ -246,6 +255,7 @@ namespace SmartRetail
 
                         if (readerSenha.HasRows)
                         {
+                            retID = infoID;
                             return funcao;
                         }
                     }
@@ -255,15 +265,113 @@ namespace SmartRetail
             return 0;
         }
 
-        //Update statement
-        public void Update()
+        public int ValidaCliente(string filename)
         {
+            string queryFacial = "SELECT * FROM Cliente WHERE facial_data = @facial;";
+
+            if (AbrirConexao())
+            {
+                SqlCommand cmdFacial = new SqlCommand(queryFacial, connection);
+                cmdFacial.Parameters.AddWithValue("@facial", filename);
+                SqlDataReader readerFacial = cmdFacial.ExecuteReader();
+
+                if (readerFacial.Read()) // Se não encontrar, retorna -1, para efetuar o cadastro.
+                {
+                    int infoID = int.Parse(readerFacial["infoID"].ToString());
+                    bool onStore = bool.Parse(readerFacial["onStore"].ToString());
+                    readerFacial.Close();
+
+                    if (onStore) // Se onStore = true, marca que ele saiu da loja e retorna a infoID do cliente. Se onStore = false, então marca que ele entrou na loja e retorna 0.
+                    {
+                        string queryOnStore = "UPDATE Cliente SET onStore = 0 WHERE infoID = " + infoID + ";";
+                        SqlCommand cmdOnStore = new SqlCommand(queryOnStore, connection);
+
+                        if (cmdOnStore.ExecuteNonQuery() > 0)
+                        {
+                            return infoID;
+                        }
+                    }
+
+                    else
+                    {
+                        string queryOnStore = "UPDATE Cliente SET onStore = 1 WHERE infoID = " + infoID + ";";
+                        SqlCommand cmdOnStore = new SqlCommand(queryOnStore, connection);
+
+                        if (cmdOnStore.ExecuteNonQuery() > 0)
+                        {
+                            return 0;
+                        }
+                    }
+                }
+                FecharConexao();
+                return -1;
+            }
+            return -2;
         }
 
-        //Delete statement
-        public void Delete()
+        public bool InserirCliente(Cliente cliente)
         {
+            string queryInfo = @"INSERT INTO InfoBasica (nome, cadastro, email, telefone, funcao)
+                                SELECT @nome, @cadastro, @email, @telefone, @funcao
+                                WHERE NOT EXISTS (SELECT * from Cliente WHERE facial_data = @facial); SELECT SCOPE_IDENTITY();";
+
+            string queryCliente = @"INSERT INTO Cliente (infoID, facial_data, endereco_cobranca, nro_cartao_de_credito, onStore)
+                                    SELECT @infoID, @facial, @endereco, @cartao, @onStore"; //Sem Carrinho
+
+            //string queryCliente = @"INSERT INTO Cliente (infoID, facial_data, endereco_cobranca, nro_cartao_de_credito, carrinhoID, onStore)
+            //                        SELECT @infoID, @facial, @endereco, @cartao, @carrinhoID, @onStore";
+
+            if (AbrirConexao())
+            {
+                SqlCommand cmdInfo = new SqlCommand(queryInfo, connection);
+                cmdInfo.Parameters.AddWithValue("@nome", cliente.info.nome);
+                cmdInfo.Parameters.AddWithValue("@cadastro", cliente.info.cadastro);
+                cmdInfo.Parameters.AddWithValue("@email", cliente.info.email);
+                cmdInfo.Parameters.AddWithValue("@telefone", cliente.info.telefone);
+                cmdInfo.Parameters.AddWithValue("@funcao", cliente.info.funcao);
+                cmdInfo.Parameters.AddWithValue("@facial", cliente.facial_data);
+
+                int infoID;
+                try
+                {
+                    string str_infoID = cmdInfo.ExecuteScalar().ToString();
+                    infoID = int.Parse(str_infoID);
+                }
+                catch
+                {
+                    return false;
+                }
+
+                if (infoID > 0)
+                {
+                    SqlCommand cmdCliente = new SqlCommand(queryCliente, connection);
+                    cmdCliente.Parameters.AddWithValue("@infoID", infoID);
+                    cmdCliente.Parameters.AddWithValue("@facial", cliente.facial_data);
+                    cmdCliente.Parameters.AddWithValue("@endereco", cliente.endereco_cobranca);
+                    cmdCliente.Parameters.AddWithValue("@cartao", cliente.nro_carta_de_credito);
+                    //cmdCliente.Parameters.AddWithValue("@carrinhoID", null); //Modificar aqui
+                    cmdCliente.Parameters.AddWithValue("@onStore", 1);
+
+                    if (cmdCliente.ExecuteNonQuery() > 0)
+                    {
+                        FecharConexao();
+                        return true;
+                    }
+                }
+                FecharConexao();
+            }
+            return false;
         }
+
+        ////Update statement
+        //public void Update()
+        //{
+        //}
+
+        ////Delete statement
+        //public void Delete()
+        //{
+        //}
 
         ////Select statement
         //public List<string>[] Select()

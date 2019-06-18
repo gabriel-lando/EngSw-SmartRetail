@@ -12,6 +12,7 @@ namespace SmartRetail
 {
     public partial class App : Form
     {
+        private int infoID;
         public App()
         {
             InitializeComponent();
@@ -45,16 +46,18 @@ namespace SmartRetail
             };
 
             SQLConnect sql = new SQLConnect();
-            int valida = sql.ValidarLogin(login);
+            int valida = sql.ValidarLogin(out int retID, login);
 
             if (valida > 0)
             {
+                infoID = retID;
                 LimparBtn_Click(null, null);
                 TabCtrl.SelectedIndex = valida;
                 GerCtrlCad_ComboBox.SelectedIndex = 0;
             }
             else
             {
+                infoID = 0;
                 ErrorLoginTextBox.Visible = true;
                 ErrorLoginTextBox.Text = "Usuário ou senha incorretos!";
             }
