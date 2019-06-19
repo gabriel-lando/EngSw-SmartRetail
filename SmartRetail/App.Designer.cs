@@ -783,8 +783,10 @@
             this.ClientSize = new System.Drawing.Size(284, 511);
             this.Controls.Add(this.TabCtrl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Location = new System.Drawing.Point(816, 263);
             this.MaximizeBox = false;
             this.Name = "App";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "App";
             this.TabCtrl.ResumeLayout(false);
             this.LoginPageTab.ResumeLayout(false);

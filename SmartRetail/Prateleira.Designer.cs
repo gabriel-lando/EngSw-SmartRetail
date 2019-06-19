@@ -234,8 +234,10 @@
             this.ClientSize = new System.Drawing.Size(596, 224);
             this.Controls.Add(this.TabCtrl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Location = new System.Drawing.Point(816, 0);
             this.MaximizeBox = false;
             this.Name = "Prateleira";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Prateleira";
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Prateleira_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Prateleira_DragEnter);

@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.TotemWelcomeTab = new System.Windows.Forms.TabPage();
             this.TotemLogoLabel = new System.Windows.Forms.Label();
-            this.CamLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.TotemWelcomeLabel = new System.Windows.Forms.Label();
             this.TotemCliente = new System.Windows.Forms.TabPage();
             this.ClienteTableLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -44,13 +43,8 @@
             this.ClienteLabelOfertas = new System.Windows.Forms.Label();
             this.ClienteOfertaPanel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.ClienteOfertaPic1 = new System.Windows.Forms.PictureBox();
             this.ClienteOfertaPanel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.ClienteOfertaPic2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.FacialRecPictureBox = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ClienteCarrinhoTotalValue = new System.Windows.Forms.Label();
             this.ClienteLabelCarrinho = new System.Windows.Forms.Label();
@@ -59,22 +53,28 @@
             this.ClienteCarrinhoProdNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClienteCarrinhoProdPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClienteCarrinhoProdQtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.CamLogoPictureBox = new System.Windows.Forms.PictureBox();
+            this.ClienteOfertaPic1 = new System.Windows.Forms.PictureBox();
+            this.ClienteOfertaPic2 = new System.Windows.Forms.PictureBox();
+            this.FacialRecPictureBox = new System.Windows.Forms.PictureBox();
             this.TabCtrl.SuspendLayout();
             this.TotemWelcomeTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CamLogoPictureBox)).BeginInit();
             this.TotemCliente.SuspendLayout();
             this.ClienteTableLayout.SuspendLayout();
             this.ClienteCarrinhoPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.ClienteOfertaPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic1)).BeginInit();
             this.ClienteOfertaPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic2)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBox)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteCarrinhoTable)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CamLogoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // TabCtrl
@@ -117,21 +117,6 @@
             this.TotemLogoLabel.Text = "Smart Retail";
             this.TotemLogoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // CamLogoPictureBox
-            // 
-            this.CamLogoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CamLogoPictureBox.BackgroundImage = global::SmartRetail.Properties.Resources.CamPicture;
-            this.CamLogoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CamLogoPictureBox.ErrorImage = null;
-            this.CamLogoPictureBox.InitialImage = null;
-            this.CamLogoPictureBox.Location = new System.Drawing.Point(210, 100);
-            this.CamLogoPictureBox.Name = "CamLogoPictureBox";
-            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 230);
-            this.CamLogoPictureBox.TabIndex = 1;
-            this.CamLogoPictureBox.TabStop = false;
-            // 
             // TotemWelcomeLabel
             // 
             this.TotemWelcomeLabel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -147,10 +132,10 @@
             // TotemCliente
             // 
             this.TotemCliente.Controls.Add(this.ClienteTableLayout);
-            this.TotemCliente.Location = new System.Drawing.Point(4, 9);
+            this.TotemCliente.Location = new System.Drawing.Point(4, 5);
             this.TotemCliente.Margin = new System.Windows.Forms.Padding(0);
             this.TotemCliente.Name = "TotemCliente";
-            this.TotemCliente.Size = new System.Drawing.Size(792, 417);
+            this.TotemCliente.Size = new System.Drawing.Size(792, 421);
             this.TotemCliente.TabIndex = 0;
             this.TotemCliente.UseVisualStyleBackColor = true;
             // 
@@ -169,7 +154,7 @@
             this.ClienteTableLayout.Name = "ClienteTableLayout";
             this.ClienteTableLayout.RowCount = 1;
             this.ClienteTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ClienteTableLayout.Size = new System.Drawing.Size(792, 417);
+            this.ClienteTableLayout.Size = new System.Drawing.Size(792, 421);
             this.ClienteTableLayout.TabIndex = 5;
             // 
             // ClienteCarrinhoPanel
@@ -179,7 +164,7 @@
             this.ClienteCarrinhoPanel.Location = new System.Drawing.Point(160, 0);
             this.ClienteCarrinhoPanel.Margin = new System.Windows.Forms.Padding(0);
             this.ClienteCarrinhoPanel.Name = "ClienteCarrinhoPanel";
-            this.ClienteCarrinhoPanel.Size = new System.Drawing.Size(316, 417);
+            this.ClienteCarrinhoPanel.Size = new System.Drawing.Size(316, 421);
             this.ClienteCarrinhoPanel.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -196,7 +181,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(316, 417);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(316, 421);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // panel1
@@ -227,7 +212,7 @@
             this.ClienteOfertaPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClienteOfertaPanel1.Location = new System.Drawing.Point(3, 33);
             this.ClienteOfertaPanel1.Name = "ClienteOfertaPanel1";
-            this.ClienteOfertaPanel1.Size = new System.Drawing.Size(310, 187);
+            this.ClienteOfertaPanel1.Size = new System.Drawing.Size(310, 189);
             this.ClienteOfertaPanel1.TabIndex = 1;
             // 
             // label1
@@ -239,24 +224,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Foto Oferta 1";
             // 
-            // ClienteOfertaPic1
-            // 
-            this.ClienteOfertaPic1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ClienteOfertaPic1.Location = new System.Drawing.Point(14, 14);
-            this.ClienteOfertaPic1.Name = "ClienteOfertaPic1";
-            this.ClienteOfertaPic1.Size = new System.Drawing.Size(114, 156);
-            this.ClienteOfertaPic1.TabIndex = 0;
-            this.ClienteOfertaPic1.TabStop = false;
-            // 
             // ClienteOfertaPanel2
             // 
             this.ClienteOfertaPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ClienteOfertaPanel2.Controls.Add(this.label2);
             this.ClienteOfertaPanel2.Controls.Add(this.ClienteOfertaPic2);
             this.ClienteOfertaPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ClienteOfertaPanel2.Location = new System.Drawing.Point(3, 226);
+            this.ClienteOfertaPanel2.Location = new System.Drawing.Point(3, 228);
             this.ClienteOfertaPanel2.Name = "ClienteOfertaPanel2";
-            this.ClienteOfertaPanel2.Size = new System.Drawing.Size(310, 188);
+            this.ClienteOfertaPanel2.Size = new System.Drawing.Size(310, 190);
             this.ClienteOfertaPanel2.TabIndex = 2;
             // 
             // label2
@@ -268,46 +244,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Foto Oferta 2";
             // 
-            // ClienteOfertaPic2
-            // 
-            this.ClienteOfertaPic2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ClienteOfertaPic2.Location = new System.Drawing.Point(14, 15);
-            this.ClienteOfertaPic2.Name = "ClienteOfertaPic2";
-            this.ClienteOfertaPic2.Size = new System.Drawing.Size(114, 156);
-            this.ClienteOfertaPic2.TabIndex = 1;
-            this.ClienteOfertaPic2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.richTextBox1);
-            this.panel2.Controls.Add(this.FacialRecPictureBox);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(160, 417);
-            this.panel2.TabIndex = 3;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.richTextBox1.Location = new System.Drawing.Point(3, 209);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(150, 200);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
-            // 
-            // FacialRecPictureBox
-            // 
-            this.FacialRecPictureBox.BackColor = System.Drawing.Color.PaleGreen;
-            this.FacialRecPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FacialRecPictureBox.Location = new System.Drawing.Point(3, 3);
-            this.FacialRecPictureBox.Name = "FacialRecPictureBox";
-            this.FacialRecPictureBox.Size = new System.Drawing.Size(150, 200);
-            this.FacialRecPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.FacialRecPictureBox.TabIndex = 0;
-            this.FacialRecPictureBox.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.ClienteCarrinhoTotalValue);
@@ -318,14 +254,14 @@
             this.panel3.Location = new System.Drawing.Point(476, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(316, 417);
+            this.panel3.Size = new System.Drawing.Size(316, 421);
             this.panel3.TabIndex = 4;
             // 
             // ClienteCarrinhoTotalValue
             // 
             this.ClienteCarrinhoTotalValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ClienteCarrinhoTotalValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteCarrinhoTotalValue.Location = new System.Drawing.Point(189, 383);
+            this.ClienteCarrinhoTotalValue.Location = new System.Drawing.Point(189, 387);
             this.ClienteCarrinhoTotalValue.Name = "ClienteCarrinhoTotalValue";
             this.ClienteCarrinhoTotalValue.Size = new System.Drawing.Size(124, 31);
             this.ClienteCarrinhoTotalValue.TabIndex = 3;
@@ -349,7 +285,7 @@
             this.ClienteCarrinhoTotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ClienteCarrinhoTotalLabel.AutoSize = true;
             this.ClienteCarrinhoTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteCarrinhoTotalLabel.Location = new System.Drawing.Point(3, 383);
+            this.ClienteCarrinhoTotalLabel.Location = new System.Drawing.Point(3, 387);
             this.ClienteCarrinhoTotalLabel.Name = "ClienteCarrinhoTotalLabel";
             this.ClienteCarrinhoTotalLabel.Size = new System.Drawing.Size(110, 31);
             this.ClienteCarrinhoTotalLabel.TabIndex = 2;
@@ -372,8 +308,8 @@
             // ClienteCarrinhoProdNome
             // 
             this.ClienteCarrinhoProdNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle13;
             this.ClienteCarrinhoProdNome.FillWeight = 180F;
             this.ClienteCarrinhoProdNome.HeaderText = "Produto";
             this.ClienteCarrinhoProdNome.Name = "ClienteCarrinhoProdNome";
@@ -382,8 +318,8 @@
             // ClienteCarrinhoProdPreco
             // 
             this.ClienteCarrinhoProdPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle14;
             this.ClienteCarrinhoProdPreco.FillWeight = 80F;
             this.ClienteCarrinhoProdPreco.HeaderText = "Preço";
             this.ClienteCarrinhoProdPreco.Name = "ClienteCarrinhoProdPreco";
@@ -392,12 +328,76 @@
             // ClienteCarrinhoProdQtde
             // 
             this.ClienteCarrinhoProdQtde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle15;
             this.ClienteCarrinhoProdQtde.FillWeight = 40F;
             this.ClienteCarrinhoProdQtde.HeaderText = "Qtde";
             this.ClienteCarrinhoProdQtde.Name = "ClienteCarrinhoProdQtde";
             this.ClienteCarrinhoProdQtde.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Controls.Add(this.FacialRecPictureBox);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(160, 421);
+            this.panel2.TabIndex = 3;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.richTextBox1.Location = new System.Drawing.Point(3, 213);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(150, 200);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
+            // 
+            // CamLogoPictureBox
+            // 
+            this.CamLogoPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CamLogoPictureBox.BackgroundImage = global::SmartRetail.Properties.Resources.CamPicture;
+            this.CamLogoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CamLogoPictureBox.ErrorImage = null;
+            this.CamLogoPictureBox.InitialImage = null;
+            this.CamLogoPictureBox.Location = new System.Drawing.Point(210, 100);
+            this.CamLogoPictureBox.Name = "CamLogoPictureBox";
+            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 230);
+            this.CamLogoPictureBox.TabIndex = 1;
+            this.CamLogoPictureBox.TabStop = false;
+            // 
+            // ClienteOfertaPic1
+            // 
+            this.ClienteOfertaPic1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ClienteOfertaPic1.Location = new System.Drawing.Point(14, 14);
+            this.ClienteOfertaPic1.Name = "ClienteOfertaPic1";
+            this.ClienteOfertaPic1.Size = new System.Drawing.Size(114, 156);
+            this.ClienteOfertaPic1.TabIndex = 0;
+            this.ClienteOfertaPic1.TabStop = false;
+            // 
+            // ClienteOfertaPic2
+            // 
+            this.ClienteOfertaPic2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ClienteOfertaPic2.Location = new System.Drawing.Point(14, 15);
+            this.ClienteOfertaPic2.Name = "ClienteOfertaPic2";
+            this.ClienteOfertaPic2.Size = new System.Drawing.Size(114, 156);
+            this.ClienteOfertaPic2.TabIndex = 1;
+            this.ClienteOfertaPic2.TabStop = false;
+            // 
+            // FacialRecPictureBox
+            // 
+            this.FacialRecPictureBox.BackColor = System.Drawing.Color.PaleGreen;
+            this.FacialRecPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FacialRecPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.FacialRecPictureBox.Name = "FacialRecPictureBox";
+            this.FacialRecPictureBox.Size = new System.Drawing.Size(150, 200);
+            this.FacialRecPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FacialRecPictureBox.TabIndex = 0;
+            this.FacialRecPictureBox.TabStop = false;
             // 
             // Totem
             // 
@@ -407,14 +407,15 @@
             this.ClientSize = new System.Drawing.Size(800, 430);
             this.Controls.Add(this.TabCtrl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Location = new System.Drawing.Point(0, 469);
             this.MaximizeBox = false;
             this.Name = "Totem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Totem";
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Totem_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Totem_DragEnter);
             this.TabCtrl.ResumeLayout(false);
             this.TotemWelcomeTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CamLogoPictureBox)).EndInit();
             this.TotemCliente.ResumeLayout(false);
             this.ClienteTableLayout.ResumeLayout(false);
             this.ClienteCarrinhoPanel.ResumeLayout(false);
@@ -422,15 +423,16 @@
             this.panel1.ResumeLayout(false);
             this.ClienteOfertaPanel1.ResumeLayout(false);
             this.ClienteOfertaPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic1)).EndInit();
             this.ClienteOfertaPanel2.ResumeLayout(false);
             this.ClienteOfertaPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteCarrinhoTable)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CamLogoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
