@@ -738,6 +738,7 @@
             // 
             // GerCadProd_Nome
             // 
+            this.GerCadProd_Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.GerCadProd_Nome.HeaderText = "Nome";
             this.GerCadProd_Nome.MaxInputLength = 50;
             this.GerCadProd_Nome.Name = "GerCadProd_Nome";
@@ -745,6 +746,7 @@
             // 
             // GerCadProd_Preco
             // 
+            this.GerCadProd_Preco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.GerCadProd_Preco.HeaderText = "Preço";
             this.GerCadProd_Preco.MaxInputLength = 10;
             this.GerCadProd_Preco.Name = "GerCadProd_Preco";
@@ -752,6 +754,7 @@
             // 
             // GerCadProd_Qtd
             // 
+            this.GerCadProd_Qtd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.GerCadProd_Qtd.HeaderText = "Qtde";
             this.GerCadProd_Qtd.MaxInputLength = 8;
             this.GerCadProd_Qtd.Name = "GerCadProd_Qtd";
@@ -759,17 +762,19 @@
             // 
             // GerCadProd_Prateleira
             // 
+            this.GerCadProd_Prateleira.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.GerCadProd_Prateleira.HeaderText = "Prateleira";
             this.GerCadProd_Prateleira.MaxInputLength = 8;
             this.GerCadProd_Prateleira.Name = "GerCadProd_Prateleira";
-            this.GerCadProd_Prateleira.Width = 48;
+            this.GerCadProd_Prateleira.Width = 60;
             // 
             // GerCadProd_Validade
             // 
+            this.GerCadProd_Validade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.GerCadProd_Validade.HeaderText = "Validade";
             this.GerCadProd_Validade.MaxInputLength = 12;
             this.GerCadProd_Validade.Name = "GerCadProd_Validade";
-            this.GerCadProd_Validade.Width = 50;
+            this.GerCadProd_Validade.Width = 80;
             // 
             // App
             // 
