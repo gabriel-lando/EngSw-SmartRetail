@@ -81,6 +81,7 @@ namespace SmartRetail
             QtdeComboBox.SelectedIndex = 0;
 
             DetailsTextBox.Text = "";
+            ResultTextBox.Visible = false;
         }
 
         private bool CarregaPrateleiras()
@@ -105,11 +106,20 @@ namespace SmartRetail
                         prev = produto.prateleira;
                     }
                 }
-
                 return true;
-
             }
             return false;
+        }
+
+        private void AtualizarProdutos()
+        {
+            SQLConnect sql = new SQLConnect();
+
+            if (sql.LoadAllProducts(out List<Produto> produtosDB))
+            {
+                List<Produto> produtoSort = produtosDB.OrderBy(o => o.prateleira).ToList();
+                produtos = produtoSort;
+            }
         }
 
         private void CarregaProdutos(int prateleira)
@@ -148,19 +158,6 @@ namespace SmartRetail
             }
         }
 
-        private void CancelarBtn_Click(object sender, EventArgs e)
-        {
-            ClearComboBox();
-            IdleTab();
-        }
-        private void AddBtn_Click(object sender, EventArgs e) // TODO: Adicionar itens no carrinho da pessoa
-        {
-            if (PrateleiraComboBox.Enabled && ProdutoComboBox.Enabled && QtdeComboBox.Enabled)
-            {
-                MessageBox.Show("Cliente " + infoID.ToString() + " adicionou " + ProdutoComboBox.SelectedItem.ToString().Trim() + ". Qtde: " + QtdeComboBox.SelectedItem.ToString() + ".");
-            }
-        }
-
         private void PrateleiraComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (PrateleiraComboBox.Enabled)
@@ -190,9 +187,44 @@ namespace SmartRetail
                         DetailsTextBox.Text = String.Format("Produto:\t{0} \n\nValidade:\t{1:dd/MM/yyyy} \n\nValor un:\tR$ {2:F2} \n\nTotal:\t\tR$ {3:F2}", produto.nome, produto.validade, produto.preco, produto.preco * qtde);
                     }
                 }
-                
             }
-            
+        }
+
+        private void CancelarBtn_Click(object sender, EventArgs e)
+        {
+            ClearComboBox();
+            IdleTab();
+        }
+        private void AddBtn_Click(object sender, EventArgs e) // TODO: Adicionar itens no carrinho da pessoa
+        {
+            if (PrateleiraComboBox.Enabled && ProdutoComboBox.Enabled && QtdeComboBox.Enabled) // Enviar infoID do cliente, productID e quantidade
+            {
+                Produto[] produtosArray = produtos.ToArray();
+
+                foreach (Produto produto in produtosArray)
+                {
+                    if (ProdutoComboBox.SelectedItem.ToString() == produto.nome)
+                    {
+                        SQLConnect sql = new SQLConnect();
+                        int qtde = int.Parse(QtdeComboBox.SelectedItem.ToString());
+
+                        if (sql.AddProdutoCarrinho(infoID, produto, qtde))
+                        {
+                            ResultTextBox.Visible = true;
+                            ResultTextBox.ForeColor = System.Drawing.Color.Green;
+                            ResultTextBox.Text = "Produto adicionado!";
+
+                            AtualizarProdutos();
+                        }
+                        else
+                        {
+                            ResultTextBox.Visible = true;
+                            ResultTextBox.ForeColor = System.Drawing.Color.Red;
+                            ResultTextBox.Text = "Erro ao adicionar!";
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -297,9 +297,22 @@ namespace SmartRetail
 
                     else
                     {
-                        string queryOnStore = "UPDATE Cliente SET onStore = 1 WHERE infoID = " + infoID + ";";
-                        SqlCommand cmdOnStore = new SqlCommand(queryOnStore, connection);
+                        string queryNewCart = @"INSERT INTO Carrinho (infoID, preco_total) VALUES (" + infoID + ", 0); SELECT SCOPE_IDENTITY();";
+                        SqlCommand cmdNewCart = new SqlCommand(queryNewCart, connection);
 
+                        int carrinhoID;
+                        try
+                        {
+                            carrinhoID = int.Parse(cmdNewCart.ExecuteScalar().ToString());
+                        }
+                        catch
+                        {
+                            return -2;
+                        }
+
+                        string queryOnStore = "UPDATE Cliente SET onStore = 1, carrinhoID = " + carrinhoID + " WHERE infoID = " + infoID + ";";
+                        SqlCommand cmdOnStore = new SqlCommand(queryOnStore, connection);
+                        
                         if (cmdOnStore.ExecuteNonQuery() > 0)
                         {
                             return 0;
@@ -318,11 +331,11 @@ namespace SmartRetail
                                 SELECT @nome, @cadastro, @email, @telefone, @funcao
                                 WHERE NOT EXISTS (SELECT * from Cliente WHERE facial_data = @facial); SELECT SCOPE_IDENTITY();";
 
-            string queryCliente = @"INSERT INTO Cliente (infoID, facial_data, endereco_cobranca, nro_cartao_de_credito, onStore)
-                                    SELECT @infoID, @facial, @endereco, @cartao, @onStore"; //Sem Carrinho
+            //string queryCliente = @"INSERT INTO Cliente (infoID, facial_data, endereco_cobranca, nro_cartao_de_credito, onStore)
+            //                        SELECT @infoID, @facial, @endereco, @cartao, @onStore"; //Sem Carrinho
 
-            //string queryCliente = @"INSERT INTO Cliente (infoID, facial_data, endereco_cobranca, nro_cartao_de_credito, carrinhoID, onStore)
-            //                        SELECT @infoID, @facial, @endereco, @cartao, @carrinhoID, @onStore";
+            string queryCliente = @"INSERT INTO Cliente (infoID, facial_data, endereco_cobranca, nro_cartao_de_credito, carrinhoID, onStore)
+                                    SELECT @infoID, @facial, @endereco, @cartao, @carrinhoID, @onStore";
 
             if (AbrirConexao())
             {
@@ -347,12 +360,25 @@ namespace SmartRetail
 
                 if (infoID > 0)
                 {
+                    string queryNewCart = @"INSERT INTO Carrinho (infoID, preco_total) VALUES (" + infoID + ", 0); SELECT SCOPE_IDENTITY();";
+                    SqlCommand cmdNewCart = new SqlCommand(queryNewCart, connection);
+
+                    int carrinhoID;
+                    try
+                    {
+                        carrinhoID = int.Parse(cmdNewCart.ExecuteScalar().ToString());
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+
                     SqlCommand cmdCliente = new SqlCommand(queryCliente, connection);
                     cmdCliente.Parameters.AddWithValue("@infoID", infoID);
                     cmdCliente.Parameters.AddWithValue("@facial", cliente.facial_data);
                     cmdCliente.Parameters.AddWithValue("@endereco", cliente.endereco_cobranca);
                     cmdCliente.Parameters.AddWithValue("@cartao", cliente.nro_carta_de_credito);
-                    //cmdCliente.Parameters.AddWithValue("@carrinhoID", null); //Modificar aqui
+                    cmdCliente.Parameters.AddWithValue("@carrinhoID", carrinhoID);
                     cmdCliente.Parameters.AddWithValue("@onStore", 1);
 
                     if (cmdCliente.ExecuteNonQuery() > 0)
@@ -411,14 +437,19 @@ namespace SmartRetail
                     int prateleira = int.Parse(readerProducts["prateleira"].ToString());
                     DateTime validade = DateTime.Parse(readerProducts["validade"].ToString()).Date;
 
-                    produtosDB.Add(new Produto() {productID = productID,
-                                                nome = nome,
-                                                fornecedorID = fornecedorID,
-                                                preco = preco,
-                                                validade = validade,
-                                                prateleira = prateleira,
-                                                quantidade = qtde });
-
+                    if (qtde > 0)
+                    {
+                        produtosDB.Add(new Produto()
+                        {
+                            productID = productID,
+                            nome = nome,
+                            fornecedorID = fornecedorID,
+                            preco = preco,
+                            validade = validade,
+                            prateleira = prateleira,
+                            quantidade = qtde
+                        });
+                    }
                 }
                 if (produtosDB.Count() > 0)
                 {
@@ -430,34 +461,43 @@ namespace SmartRetail
             return false;
         }
 
-        ////Update statement
-        //public void Update()
-        //{
-        //}
+        public bool AddProdutoCarrinho(int infoID, Produto produto, int qtde) // Buscar carrinhoID, criar Sacola com carrinhoID, productID e quantidade, subtrair quantidade do productID 
+        {
+            string queryCarrinhoID = "SELECT * FROM Cliente WHERE infoID = @infoID;";
 
-        ////Delete statement
-        //public void Delete()
-        //{
-        //}
+            if (AbrirConexao())
+            {
+                SqlCommand cmdCarrinhoID = new SqlCommand(queryCarrinhoID, connection);
+                cmdCarrinhoID.Parameters.AddWithValue("@infoID", infoID);
+                SqlDataReader readerCarrinhoID = cmdCarrinhoID.ExecuteReader();
 
-        ////Select statement
-        //public List<string>[] Select()
-        //{
-        //}
+                if (readerCarrinhoID.Read()) // Se não encontrar, retorna -1, para efetuar o cadastro.
+                {
+                    int carrinhoID = int.Parse(readerCarrinhoID["carrinhoID"].ToString());
+                    readerCarrinhoID.Close();
 
-        ////Count statement
-        //public int Count()
-        //{
-        //}
+                    if (carrinhoID > 0) // Se existir carrinho, cria uma sacola com o produto e subtrai a qtde
+                    {
+                        string queryUpdateQtde = "UPDATE Produto SET quantidade = quantidade - " + qtde + " WHERE productID = " + produto.productID + ";";
+                        string queryUpdateCarrinho = "UPDATE Carrinho SET preco_total = preco_total + " + qtde * produto.preco + " WHERE carrinhoID = " + carrinhoID + ";";
+                        string queryAddSacola = "INSERT INTO Sacola (carrinhoID, productID, quantidade) SELECT @carrinhoID, @productID, @quantidade";
 
-        ////Backup
-        //public void Backup()
-        //{
-        //}
+                        SqlCommand cmdUpdateQtde = new SqlCommand(queryUpdateQtde, connection);
+                        SqlCommand cmdUpdateCarrinho = new SqlCommand(queryUpdateCarrinho, connection);
+                        SqlCommand cmdAddSacola = new SqlCommand(queryAddSacola, connection);
+                        cmdAddSacola.Parameters.AddWithValue("@carrinhoID", carrinhoID);
+                        cmdAddSacola.Parameters.AddWithValue("@productID", produto.productID);
+                        cmdAddSacola.Parameters.AddWithValue("@quantidade", qtde);
 
-        ////Restore
-        //public void Restore()
-        //{
-        //}
+                        if (cmdUpdateQtde.ExecuteNonQuery() > 0 && cmdAddSacola.ExecuteNonQuery() > 0 && cmdUpdateCarrinho.ExecuteNonQuery() > 0)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                FecharConexao();
+            }
+            return false;
+        }
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.CaixaWelcomeTab = new System.Windows.Forms.TabPage();
             this.CaixaLogoLabel = new System.Windows.Forms.Label();
@@ -119,10 +119,10 @@
             this.CaixaWelcomeTab.Controls.Add(this.CaixaLogoLabel);
             this.CaixaWelcomeTab.Controls.Add(this.CamLogoPictureBox);
             this.CaixaWelcomeTab.Controls.Add(this.CaixaWelcomeLabel);
-            this.CaixaWelcomeTab.Location = new System.Drawing.Point(4, 5);
+            this.CaixaWelcomeTab.Location = new System.Drawing.Point(4, 9);
             this.CaixaWelcomeTab.Name = "CaixaWelcomeTab";
             this.CaixaWelcomeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CaixaWelcomeTab.Size = new System.Drawing.Size(792, 421);
+            this.CaixaWelcomeTab.Size = new System.Drawing.Size(792, 417);
             this.CaixaWelcomeTab.TabIndex = 1;
             this.CaixaWelcomeTab.UseVisualStyleBackColor = true;
             // 
@@ -130,7 +130,7 @@
             // 
             this.CaixaLogoLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CaixaLogoLabel.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CaixaLogoLabel.Location = new System.Drawing.Point(3, 344);
+            this.CaixaLogoLabel.Location = new System.Drawing.Point(3, 340);
             this.CaixaLogoLabel.Name = "CaixaLogoLabel";
             this.CaixaLogoLabel.Size = new System.Drawing.Size(786, 74);
             this.CaixaLogoLabel.TabIndex = 3;
@@ -148,7 +148,7 @@
             this.CamLogoPictureBox.InitialImage = null;
             this.CamLogoPictureBox.Location = new System.Drawing.Point(210, 100);
             this.CamLogoPictureBox.Name = "CamLogoPictureBox";
-            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 230);
+            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 226);
             this.CamLogoPictureBox.TabIndex = 2;
             this.CamLogoPictureBox.TabStop = false;
             // 
@@ -185,9 +185,9 @@
             this.CaixaClienteEntrada.Controls.Add(this.label3);
             this.CaixaClienteEntrada.Controls.Add(this.richTextBox3);
             this.CaixaClienteEntrada.Controls.Add(this.FacialRecPictureBoxCadastro);
-            this.CaixaClienteEntrada.Location = new System.Drawing.Point(4, 15);
+            this.CaixaClienteEntrada.Location = new System.Drawing.Point(4, 5);
             this.CaixaClienteEntrada.Name = "CaixaClienteEntrada";
-            this.CaixaClienteEntrada.Size = new System.Drawing.Size(792, 411);
+            this.CaixaClienteEntrada.Size = new System.Drawing.Size(792, 421);
             this.CaixaClienteEntrada.TabIndex = 2;
             this.CaixaClienteEntrada.Text = "tabPage1";
             this.CaixaClienteEntrada.UseVisualStyleBackColor = true;
@@ -380,9 +380,9 @@
             this.CaixaCadastroCliente.Controls.Add(this.label2);
             this.CaixaCadastroCliente.Controls.Add(this.ClientInfoTextEntrada);
             this.CaixaCadastroCliente.Controls.Add(this.FacialRecPictureBoxEntrada);
-            this.CaixaCadastroCliente.Location = new System.Drawing.Point(4, 15);
+            this.CaixaCadastroCliente.Location = new System.Drawing.Point(4, 9);
             this.CaixaCadastroCliente.Name = "CaixaCadastroCliente";
-            this.CaixaCadastroCliente.Size = new System.Drawing.Size(792, 411);
+            this.CaixaCadastroCliente.Size = new System.Drawing.Size(792, 417);
             this.CaixaCadastroCliente.TabIndex = 3;
             this.CaixaCadastroCliente.Text = "tabPage1";
             this.CaixaCadastroCliente.UseVisualStyleBackColor = true;
@@ -414,7 +414,7 @@
             // ClientInfoTextEntrada
             // 
             this.ClientInfoTextEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ClientInfoTextEntrada.Location = new System.Drawing.Point(3, 199);
+            this.ClientInfoTextEntrada.Location = new System.Drawing.Point(3, 195);
             this.ClientInfoTextEntrada.Name = "ClientInfoTextEntrada";
             this.ClientInfoTextEntrada.Size = new System.Drawing.Size(150, 200);
             this.ClientInfoTextEntrada.TabIndex = 2;
@@ -434,10 +434,10 @@
             // CaixaClienteSaida
             // 
             this.CaixaClienteSaida.Controls.Add(this.tableLayoutPanel1);
-            this.CaixaClienteSaida.Location = new System.Drawing.Point(4, 15);
+            this.CaixaClienteSaida.Location = new System.Drawing.Point(4, 9);
             this.CaixaClienteSaida.Margin = new System.Windows.Forms.Padding(0);
             this.CaixaClienteSaida.Name = "CaixaClienteSaida";
-            this.CaixaClienteSaida.Size = new System.Drawing.Size(792, 411);
+            this.CaixaClienteSaida.Size = new System.Drawing.Size(792, 417);
             this.CaixaClienteSaida.TabIndex = 0;
             this.CaixaClienteSaida.UseVisualStyleBackColor = true;
             // 
@@ -456,7 +456,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(792, 411);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(792, 417);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // panel1
@@ -467,13 +467,13 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 411);
+            this.panel1.Size = new System.Drawing.Size(150, 417);
             this.panel1.TabIndex = 0;
             // 
             // ClientInfoTextSaida
             // 
             this.ClientInfoTextSaida.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ClientInfoTextSaida.Location = new System.Drawing.Point(0, 203);
+            this.ClientInfoTextSaida.Location = new System.Drawing.Point(0, 209);
             this.ClientInfoTextSaida.Name = "ClientInfoTextSaida";
             this.ClientInfoTextSaida.Size = new System.Drawing.Size(150, 200);
             this.ClientInfoTextSaida.TabIndex = 4;
@@ -498,7 +498,7 @@
             this.panel2.Location = new System.Drawing.Point(150, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 411);
+            this.panel2.Size = new System.Drawing.Size(321, 417);
             this.panel2.TabIndex = 1;
             // 
             // panel4
@@ -511,14 +511,14 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(321, 411);
+            this.panel4.Size = new System.Drawing.Size(321, 417);
             this.panel4.TabIndex = 5;
             // 
             // ClienteCarrinhoTotalValue
             // 
             this.ClienteCarrinhoTotalValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ClienteCarrinhoTotalValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteCarrinhoTotalValue.Location = new System.Drawing.Point(194, 377);
+            this.ClienteCarrinhoTotalValue.Location = new System.Drawing.Point(194, 383);
             this.ClienteCarrinhoTotalValue.Name = "ClienteCarrinhoTotalValue";
             this.ClienteCarrinhoTotalValue.Size = new System.Drawing.Size(124, 31);
             this.ClienteCarrinhoTotalValue.TabIndex = 3;
@@ -542,7 +542,7 @@
             this.ClienteCarrinhoTotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ClienteCarrinhoTotalLabel.AutoSize = true;
             this.ClienteCarrinhoTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteCarrinhoTotalLabel.Location = new System.Drawing.Point(3, 377);
+            this.ClienteCarrinhoTotalLabel.Location = new System.Drawing.Point(3, 383);
             this.ClienteCarrinhoTotalLabel.Name = "ClienteCarrinhoTotalLabel";
             this.ClienteCarrinhoTotalLabel.Size = new System.Drawing.Size(110, 31);
             this.ClienteCarrinhoTotalLabel.TabIndex = 2;
@@ -565,8 +565,8 @@
             // ClienteCarrinhoProdNome
             // 
             this.ClienteCarrinhoProdNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle4;
             this.ClienteCarrinhoProdNome.FillWeight = 180F;
             this.ClienteCarrinhoProdNome.HeaderText = "Produto";
             this.ClienteCarrinhoProdNome.Name = "ClienteCarrinhoProdNome";
@@ -575,8 +575,8 @@
             // ClienteCarrinhoProdPreco
             // 
             this.ClienteCarrinhoProdPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle5;
             this.ClienteCarrinhoProdPreco.FillWeight = 80F;
             this.ClienteCarrinhoProdPreco.HeaderText = "Preço";
             this.ClienteCarrinhoProdPreco.Name = "ClienteCarrinhoProdPreco";
@@ -585,8 +585,8 @@
             // ClienteCarrinhoProdQtde
             // 
             this.ClienteCarrinhoProdQtde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle6;
             this.ClienteCarrinhoProdQtde.FillWeight = 40F;
             this.ClienteCarrinhoProdQtde.HeaderText = "Qtde";
             this.ClienteCarrinhoProdQtde.Name = "ClienteCarrinhoProdQtde";
@@ -600,7 +600,7 @@
             this.panel3.Location = new System.Drawing.Point(471, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(321, 411);
+            this.panel3.Size = new System.Drawing.Size(321, 417);
             this.panel3.TabIndex = 2;
             // 
             // label1
