@@ -36,9 +36,12 @@ namespace SmartRetail
     }
     class Carrinho
     {
-        public int carrinhoID;
-        public Produto[] produtos;
+        public int carrinhoID, infoID;
         public float preco_total;
+    }
+    class Sacola
+    {
+        public int sacolaID, carrinhoID, quantidade, productID;
     }
 
     class InfoBasica {

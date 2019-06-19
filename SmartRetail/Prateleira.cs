@@ -57,6 +57,7 @@ namespace SmartRetail
             TabCtrl.SelectedIndex = 1;
             FacialRecPictureBoxPrateleira.Image = image;
 
+            ClearDetailsTextBox();
             ClearComboBox();
 
             if (CarregaPrateleiras())
@@ -80,6 +81,12 @@ namespace SmartRetail
             ProdutoComboBox.SelectedIndex = 0;
             QtdeComboBox.SelectedIndex = 0;
 
+            DetailsTextBox.Text = "";
+            ResultTextBox.Visible = false;
+        }
+
+        private void ClearDetailsTextBox()
+        {
             DetailsTextBox.Text = "";
             ResultTextBox.Visible = false;
         }
@@ -108,19 +115,23 @@ namespace SmartRetail
                 }
                 return true;
             }
+            else
+            {
+                ClearComboBox();
+            }
             return false;
         }
 
-        private void AtualizarProdutos()
-        {
-            SQLConnect sql = new SQLConnect();
+        //private void AtualizarProdutos()
+        //{
+        //    SQLConnect sql = new SQLConnect();
 
-            if (sql.LoadAllProducts(out List<Produto> produtosDB))
-            {
-                List<Produto> produtoSort = produtosDB.OrderBy(o => o.prateleira).ToList();
-                produtos = produtoSort;
-            }
-        }
+        //    if (sql.LoadAllProducts(out List<Produto> produtosDB))
+        //    {
+        //        List<Produto> produtoSort = produtosDB.OrderBy(o => o.prateleira).ToList();
+        //        produtos = produtoSort;
+        //    }
+        //}
 
         private void CarregaProdutos(int prateleira)
         {
@@ -193,6 +204,7 @@ namespace SmartRetail
         private void CancelarBtn_Click(object sender, EventArgs e)
         {
             ClearComboBox();
+            ClearDetailsTextBox();
             IdleTab();
         }
         private void AddBtn_Click(object sender, EventArgs e) // TODO: Adicionar itens no carrinho da pessoa
@@ -214,7 +226,7 @@ namespace SmartRetail
                             ResultTextBox.ForeColor = System.Drawing.Color.Green;
                             ResultTextBox.Text = "Produto adicionado!";
 
-                            AtualizarProdutos();
+                            CarregaPrateleiras();
                         }
                         else
                         {

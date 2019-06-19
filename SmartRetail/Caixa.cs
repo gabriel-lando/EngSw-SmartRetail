@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,6 +7,8 @@ namespace SmartRetail
 {
     public partial class Caixa : Form
     {
+        private int infoID = 0;
+
         private FacialRecognition facialRec = new FacialRecognition();
         public Caixa()
         {
@@ -34,6 +37,7 @@ namespace SmartRetail
                 }
                 else if (valida > 0)
                 {
+                    infoID = valida;
                     SaidaTab(image);
                 }
 
@@ -41,7 +45,7 @@ namespace SmartRetail
             }
         }
 
-        public void Wait(int time)
+        private void Wait(int time)
         {
             System.Threading.Thread thread = new System.Threading.Thread(delegate ()
             {
@@ -77,6 +81,20 @@ namespace SmartRetail
         {
             TabCtrl.SelectedIndex = 3;
             FacialRecPictureBoxSaida.Image = image;
+
+            SQLConnect sql = new SQLConnect();
+
+            if (sql.ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, infoID))
+            {
+                Produto[] produtosArray = produtosSacola.ToArray();
+
+                foreach (Produto produto in produtosArray)
+                {
+                    //ClienteCarrinhoTable
+                }
+
+                ClienteCarrinhoTotalValue.Text = String.Format("{0:F2}", preco_total);
+            }
 
             Wait(5000); // Delay para leitura da tela antes de voltar pra Idle
             IdleTab();

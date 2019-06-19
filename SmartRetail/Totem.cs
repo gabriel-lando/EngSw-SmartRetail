@@ -12,6 +12,8 @@ namespace SmartRetail
 {
     public partial class Totem : Form
     {
+        private int infoID = 0;
+
         private FacialRecognition facialRec = new FacialRecognition();
 
         public Totem()
@@ -29,9 +31,66 @@ namespace SmartRetail
 
             if (image != null)
             {
-                TabCtrl.SelectedIndex = 1;
-                FacialRecPictureBox.Image = image;
+                SQLConnect sql = new SQLConnect();
+                int cliente = sql.DetectaCliente(facialRec.RetFilename());
+
+                if (cliente > 0)
+                {
+                    infoID = cliente;
+                    TotemTab(image);
+                }
+                else
+                {
+                    IdleTab();
+                }
             }
+        }
+
+        private void Wait(int time)
+        {
+            System.Threading.Thread thread = new System.Threading.Thread(delegate ()
+            {
+                System.Threading.Thread.Sleep(time);
+            });
+            thread.Start();
+            while (thread.IsAlive)
+                Application.DoEvents();
+        }
+
+        private void IdleTab()
+        {
+            TabCtrl.SelectedIndex = 0;
+        }
+        private void TotemTab(Image image)
+        {
+            TabCtrl.SelectedIndex = 1;
+            FacialRecPictureBox.Image = image;
+
+            ClearTable();
+            //ClearComboBox(); // Limpar ofertas
+
+            SQLConnect sql = new SQLConnect();
+
+            if (sql.ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, infoID))
+            {
+                Produto[] produtosArray = produtosSacola.ToArray();
+
+                foreach (Produto produto in produtosArray)
+                {
+                    //ClienteCarrinhoTable
+                }
+
+                ClienteCarrinhoTotalValue.Text = String.Format("{0:F2}", preco_total);
+            }
+
+            Wait(5000);
+            IdleTab();
+        }
+
+        private void ClearTable()
+        {
+            ClienteCarrinhoTable.Rows.Clear();
+            ClienteCarrinhoTotalValue.Text = "0,00";
         }
     }
 }
