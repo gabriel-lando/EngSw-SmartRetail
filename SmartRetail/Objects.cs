@@ -29,9 +29,10 @@ namespace SmartRetail
     }
     class Produto
     {
-        public int fornecedorID, quantidade;
+        public int fornecedorID, quantidade, productID, prateleira;
         public string nome;
         public float preco;
+        public DateTime validade;
     }
     class Carrinho
     {

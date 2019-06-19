@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -111,7 +112,7 @@ namespace SmartRetail
 
             string queryFornecedor = "INSERT INTO Fornecedor (infoID, senha) VALUES (@infoID, @senha);";
 
-            string queryProdutos = "INSERT INTO Produto (nome, preco, fornecedorID, quantidade) VALUES (@nome, @preco, @fornecedorID, @quantidade);";
+            string queryProdutos = "INSERT INTO Produto (nome, preco, fornecedorID, quantidade, prateleira, validade) VALUES (@nome, @preco, @fornecedorID, @quantidade, @prateleira, @validade);";
 
             if (AbrirConexao())
             {
@@ -148,6 +149,8 @@ namespace SmartRetail
                             cmdProdutos.Parameters.AddWithValue("@preco", singleProduct.preco);
                             cmdProdutos.Parameters.AddWithValue("@quantidade", singleProduct.quantidade);
                             cmdProdutos.Parameters.AddWithValue("@fornecedorID", infoID);
+                            cmdProdutos.Parameters.AddWithValue("@prateleira", singleProduct.prateleira);
+                            cmdProdutos.Parameters.AddWithValue("@validade", singleProduct.validade.Date);
                             if (cmdProdutos.ExecuteNonQuery() == 0)
                             {
                                 return false;
@@ -360,6 +363,70 @@ namespace SmartRetail
                 }
                 FecharConexao();
             }
+            return false;
+        }
+
+        public int DetectaCliente(string filename)
+        {
+            string queryFacial = "SELECT * FROM Cliente WHERE facial_data = @facial;";
+
+            if (AbrirConexao())
+            {
+                SqlCommand cmdFacial = new SqlCommand(queryFacial, connection);
+                cmdFacial.Parameters.AddWithValue("@facial", filename);
+                SqlDataReader readerFacial = cmdFacial.ExecuteReader();
+
+                if (readerFacial.Read())
+                {
+                    int infoID = int.Parse(readerFacial["infoID"].ToString());
+                    bool onStore = bool.Parse(readerFacial["onStore"].ToString());
+                    readerFacial.Close();
+
+                    if (onStore) // Se onStore = true, retorna a infoID do cliente.
+                    {
+                        return infoID;
+                    }
+                }
+                FecharConexao();
+            }
+            return 0;
+        }
+
+        public bool LoadAllProducts(out List<Produto> produtosDB)
+        {
+            produtosDB = new List<Produto>();
+            string queryProducts = "SELECT * FROM Produto;";
+            if (AbrirConexao())
+            {
+                SqlCommand cmdProducts = new SqlCommand(queryProducts, connection);
+                SqlDataReader readerProducts = cmdProducts.ExecuteReader();
+
+                while (readerProducts.Read())
+                {
+                    int productID = int.Parse(readerProducts["productID"].ToString());
+                    string nome = readerProducts["nome"].ToString();
+                    float preco = float.Parse(readerProducts["preco"].ToString());
+                    int fornecedorID = int.Parse(readerProducts["fornecedorID"].ToString());
+                    int qtde = int.Parse(readerProducts["quantidade"].ToString());
+                    int prateleira = int.Parse(readerProducts["prateleira"].ToString());
+                    DateTime validade = DateTime.Parse(readerProducts["validade"].ToString()).Date;
+
+                    produtosDB.Add(new Produto() {productID = productID,
+                                                nome = nome,
+                                                fornecedorID = fornecedorID,
+                                                preco = preco,
+                                                validade = validade,
+                                                prateleira = prateleira,
+                                                quantidade = qtde });
+
+                }
+                if (produtosDB.Count() > 0)
+                {
+                    return true;
+                }
+                FecharConexao();
+            }
+
             return false;
         }
 

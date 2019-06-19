@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="FacialRecognition.cs" />
     <Compile Include="Objects.cs" />
+    <Compile Include="Prateleira.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prateleira.Designer.cs">
+      <DependentUpon>Prateleira.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLConnect.cs" />
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Caixa.resx">
       <DependentUpon>Caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prateleira.resx">
+      <DependentUpon>Prateleira.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

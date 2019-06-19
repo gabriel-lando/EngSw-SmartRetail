@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,6 +40,8 @@ namespace SmartRetail
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
+            HashAlgorithm sha = new SHA1CryptoServiceProvider();
+
             LoginData login = new LoginData
             {
                 email = EmailTextBox.Text,
@@ -194,12 +197,18 @@ namespace SmartRetail
 
                     foreach (DataGridViewRow Datarow in GerCtrlCad_ProdTable.Rows)
                     {
-                        if (Datarow.Cells[0].Value != null && Datarow.Cells[1].Value != null && Datarow.Cells[2].Value != null)
+                        if (Datarow.Cells[0].Value != null && Datarow.Cells[1].Value != null && Datarow.Cells[2].Value != null && Datarow.Cells[3].Value != null && Datarow.Cells[4].Value != null)
                         {
                             string nomeGrid = Datarow.Cells[0].Value.ToString();
                             float precoGrid = float.Parse(Datarow.Cells[1].Value.ToString());
                             int qtdeGrid = int.Parse(Datarow.Cells[2].Value.ToString());
-                            list.Add(new Produto() { nome = nomeGrid, preco = precoGrid, quantidade = qtdeGrid });
+                            int prateleiraGrid = int.Parse(Datarow.Cells[3].Value.ToString());
+                            DateTime validadeGrid = DateTime.Parse(Datarow.Cells[4].Value.ToString());
+                            list.Add(new Produto() { nome = nomeGrid,
+                                                    preco = precoGrid,
+                                                    prateleira = prateleiraGrid,
+                                                    validade = validadeGrid,
+                                                    quantidade = qtdeGrid });
                         }
                     }
                     if (list != null)

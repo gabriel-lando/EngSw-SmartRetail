@@ -7,7 +7,6 @@ namespace SmartRetail
     public partial class Caixa : Form
     {
         private FacialRecognition facialRec = new FacialRecognition();
-
         public Caixa()
         {
             InitializeComponent();
@@ -16,18 +15,6 @@ namespace SmartRetail
         {
             facialRec.OnDragEnter(sender, e);
         }
-
-        public void Wait(int time)
-        {
-            System.Threading.Thread thread = new System.Threading.Thread(delegate ()
-            {
-                System.Threading.Thread.Sleep(time);
-            });
-            thread.Start();
-            while (thread.IsAlive)
-                Application.DoEvents();
-        }
-
         private void Caixa_DragDrop(object sender, DragEventArgs e)
         {
             Image image = facialRec.OnDragDrop(sender, e);
@@ -52,6 +39,17 @@ namespace SmartRetail
 
                 //ClientInfoTextSaida.Text = facialRec.RetFilename();
             }
+        }
+
+        public void Wait(int time)
+        {
+            System.Threading.Thread thread = new System.Threading.Thread(delegate ()
+            {
+                System.Threading.Thread.Sleep(time);
+            });
+            thread.Start();
+            while (thread.IsAlive)
+                Application.DoEvents();
         }
 
         private void IdleTab()

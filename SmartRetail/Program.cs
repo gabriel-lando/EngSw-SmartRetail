@@ -18,17 +18,20 @@ namespace SmartRetail
             Caixa caixaForm = new Caixa();
             Application.Run(caixaForm);
         }
-
         static void ThreadTotem()
         {
             Totem totemForm = new Totem();
             Application.Run(totemForm);
         }
-
         static void ThreadApp()
         {
             App appForm = new App();
             Application.Run(appForm);
+        }
+        static void ThreadPrateleira()
+        {
+            Prateleira prateleiraForm = new Prateleira();
+            Application.Run(prateleiraForm);
         }
 
 
@@ -43,14 +46,17 @@ namespace SmartRetail
             Thread caixaThread = new Thread(new ThreadStart(ThreadCaixa));
             Thread totemThread = new Thread(new ThreadStart(ThreadTotem));
             Thread appThread = new Thread(new ThreadStart(ThreadApp));
+            Thread prateleiraThread = new Thread(new ThreadStart(ThreadPrateleira));
 
             caixaThread.SetApartmentState(ApartmentState.STA);
             totemThread.SetApartmentState(ApartmentState.STA);
             appThread.SetApartmentState(ApartmentState.STA);
+            prateleiraThread.SetApartmentState(ApartmentState.STA);
 
             caixaThread.Start();
             totemThread.Start();
             appThread.Start();
+            prateleiraThread.Start();
 
         }
     }
