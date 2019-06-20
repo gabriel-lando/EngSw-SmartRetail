@@ -69,8 +69,9 @@ CREATE TABLE Sacola
 CREATE TABLE Oferta
 (
 	productID int PRIMARY KEY FOREIGN KEY REFERENCES dbo.Produto(productID),
-	desconto float,
-	duracao date
+	nome varchar(50) NOT NULL,
+	desconto float NOT NULL,,
+	duracao date NOT NULL,
 )
 
 CREATE TABLE Venda

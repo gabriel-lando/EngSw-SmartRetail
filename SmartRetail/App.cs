@@ -39,10 +39,10 @@ namespace SmartRetail
 
         private void LimparBtn_Click(object sender, EventArgs e)
         {
-            EmailTextBox.Text = "Email";
-            PwdTextBox.Text = "Password";
-            //EmailTextBox.Text = "admin@admin.com";
-            //PwdTextBox.Text = "admin";
+            //EmailTextBox.Text = "Email";
+            //PwdTextBox.Text = "Password";
+            EmailTextBox.Text = "admin@admin.com";
+            PwdTextBox.Text = "admin";
             ErrorLoginTextBox.Visible = false;
         }
 
@@ -404,12 +404,119 @@ namespace SmartRetail
 
         private void CarregaProdutos()
         {
+            ClearTables();
 
+            SQLConnect sql = new SQLConnect();
+            if (sql.LoadAllProducts(out List<Produto> produtosDB))
+            {
+                Produto[] produtosArray = produtosDB.ToArray();
+
+                foreach (Produto produto in produtosArray)
+                {
+                    string[] tmpRow = new string[] { produto.nome, String.Format("{0:F2}", produto.preco), produto.quantidade.ToString(), produto.prateleira.ToString(), produto.fornecedorID.ToString(), produto.validade.ToString("dd/MM/yyyy") };
+                    GerCtrlProd_ProdTable.Rows.Add(tmpRow);
+                }
+            }
         }
 
         private void CarregaOfertas()
         {
+            ClearTables();
 
+            SQLConnect sql = new SQLConnect();
+            if (sql.LoadAllProducts(out List<Produto> produtosDB))
+            {
+                if (sql.LoadAllOffers(out List<Oferta> ofertasDB))
+                {
+                    Produto[] produtosArray = produtosDB.ToArray();
+                    Oferta[] ofertasArray = ofertasDB.ToArray();
+
+                    foreach (Oferta oferta in ofertasArray)
+                    {
+                        string[] tmpRow = new string[] { oferta.productID.ToString(), oferta.nome, String.Format("{0:F1}", oferta.desconto), oferta.duracao.ToString("dd/MM/yyyy") };
+                        GerCtrlOfer_OferTable.Rows.Add(tmpRow);
+                    }
+
+                    foreach (Produto produto in produtosArray)
+                    {
+                        bool add = true;
+
+                        foreach (Oferta oferta in ofertasArray)
+                        {
+                            if (oferta.productID == produto.productID)
+                            {
+                                add = false;
+                                break;
+                            }
+                        }
+                        if (add)
+                        {
+                            string[] tmpRow = new string[] { produto.productID.ToString(), produto.nome };
+                            GerCtrlOfer_OferTable.Rows.Add(tmpRow);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void CadastraOfertas()
+        {
+            List<Oferta> list = new List<Oferta>();
+
+            foreach (DataGridViewRow Datarow in GerCtrlOfer_OferTable.Rows)
+            {
+                if (Datarow.Cells[2].Value != null && Datarow.Cells[3].Value != null)
+                {
+                    try
+                    {
+                        int productIDGrid = int.Parse(Datarow.Cells[0].Value.ToString());
+                        string nomeGrid = Datarow.Cells[1].Value.ToString();
+                        float descontoGrid = float.Parse(Datarow.Cells[2].Value.ToString());
+                        DateTime duracaoGrid = DateTime.Parse(Datarow.Cells[3].Value.ToString());
+
+                        if (!(descontoGrid > 0 && descontoGrid <= 100))
+                        {
+                            throw new Exception();
+                        }
+
+                        list.Add(new Oferta()
+                        {
+                            productID = productIDGrid,
+                            nome = nomeGrid,
+                            desconto = descontoGrid,
+                            duracao = duracaoGrid
+                        });
+                    }
+                    catch
+                    {
+                        GerCtrlOfer_ErrorTextBox.Visible = true;
+                        GerCtrlOfer_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+                        GerCtrlOfer_ErrorTextBox.Text = "Verificar dados inseridos!";
+                        return;
+                    }
+                }
+            }
+
+            SQLConnect sql = new SQLConnect();
+
+            if (sql.SaveOffers(list))
+            {
+                GerCtrlOfer_ErrorTextBox.Visible = true;
+                GerCtrlOfer_ErrorTextBox.ForeColor = System.Drawing.Color.Green;
+                GerCtrlOfer_ErrorTextBox.Text = "Ofertas atualizadas com sucesso!";
+
+                return;
+            }
+            GerCtrlOfer_ErrorTextBox.Visible = true;
+            GerCtrlOfer_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+            GerCtrlOfer_ErrorTextBox.Text = "Erro ao atualizar ofertas!";
+        }
+
+        private void ClearTables()
+        {
+            GerCtrlProd_ProdTable.Rows.Clear();
+            GerCtrlOfer_OferTable.Rows.Clear();
+            GerCtrlOfer_ErrorTextBox.Visible = false;
         }
 
         private void GerenteCtrl_SelectedIndexChanged(object sender, EventArgs e)
@@ -422,6 +529,16 @@ namespace SmartRetail
             {
                 CarregaOfertas();
             }
+        }
+
+        private void GerCtrlOfer_CancelBtn_Click(object sender, EventArgs e)
+        {
+            CarregaOfertas();
+        }
+
+        private void GerCtrlOfer_CadastrarBtn_Click(object sender, EventArgs e)
+        {
+            CadastraOfertas();
         }
     }
 }

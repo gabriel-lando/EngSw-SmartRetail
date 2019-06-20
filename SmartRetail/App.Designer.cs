@@ -29,6 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.LoginPageTab = new System.Windows.Forms.TabPage();
             this.ErrorLoginTextBox = new System.Windows.Forms.TextBox();
@@ -47,11 +62,6 @@
             this.ForCtrlCad_CadastrarBtn = new System.Windows.Forms.Button();
             this.ForCtrlCad_CancelBtn = new System.Windows.Forms.Button();
             this.ForCtrlCad_ProdTable = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GerenteTab = new System.Windows.Forms.TabPage();
             this.GerenteCtrl = new System.Windows.Forms.TabControl();
             this.GerenteCtrlHome = new System.Windows.Forms.TabPage();
@@ -98,19 +108,25 @@
             this.GerCtrlRem_ComboBox = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.GerCtrlOfer_OferTable = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GerCtrlOfer_ErrorTextBox = new System.Windows.Forms.TextBox();
+            this.GerCtrlOfer_CadastrarBtn = new System.Windows.Forms.Button();
+            this.GerCtrlOfer_CancelBtn = new System.Windows.Forms.Button();
+            this.GerCtrlProd_ProdTable = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabCtrl.SuspendLayout();
             this.LoginPageTab.SuspendLayout();
             this.FornecedorTab.SuspendLayout();
@@ -130,7 +146,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).BeginInit();
             this.GerenteCtrlRemover.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlOfer_OferTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlProd_ProdTable)).BeginInit();
             this.SuspendLayout();
             // 
             // TabCtrl
@@ -386,46 +402,6 @@
             this.ForCtrlCad_ProdTable.Size = new System.Drawing.Size(249, 439);
             this.ForCtrlCad_ProdTable.TabIndex = 16;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn1.MaxInputLength = 50;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 98;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
-            this.dataGridViewTextBoxColumn2.MaxInputLength = 10;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 48;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Qtde";
-            this.dataGridViewTextBoxColumn3.MaxInputLength = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 48;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Prateleira";
-            this.dataGridViewTextBoxColumn4.MaxInputLength = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Validade";
-            this.dataGridViewTextBoxColumn5.MaxInputLength = 12;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 80;
-            // 
             // GerenteTab
             // 
             this.GerenteTab.Controls.Add(this.GerenteCtrl);
@@ -480,7 +456,7 @@
             // GerenteCtrlGerProd
             // 
             this.GerenteCtrlGerProd.BackColor = System.Drawing.SystemColors.Control;
-            this.GerenteCtrlGerProd.Controls.Add(this.dataGridView1);
+            this.GerenteCtrlGerProd.Controls.Add(this.GerCtrlProd_ProdTable);
             this.GerenteCtrlGerProd.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlGerProd.Name = "GerenteCtrlGerProd";
             this.GerenteCtrlGerProd.Size = new System.Drawing.Size(249, 490);
@@ -525,9 +501,9 @@
             // GerenteCtrlGerOfertas
             // 
             this.GerenteCtrlGerOfertas.BackColor = System.Drawing.SystemColors.Control;
-            this.GerenteCtrlGerOfertas.Controls.Add(this.textBox1);
-            this.GerenteCtrlGerOfertas.Controls.Add(this.button1);
-            this.GerenteCtrlGerOfertas.Controls.Add(this.button2);
+            this.GerenteCtrlGerOfertas.Controls.Add(this.GerCtrlOfer_ErrorTextBox);
+            this.GerenteCtrlGerOfertas.Controls.Add(this.GerCtrlOfer_CadastrarBtn);
+            this.GerenteCtrlGerOfertas.Controls.Add(this.GerCtrlOfer_CancelBtn);
             this.GerenteCtrlGerOfertas.Controls.Add(this.GerCtrlOfer_OferTable);
             this.GerenteCtrlGerOfertas.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlGerOfertas.Name = "GerenteCtrlGerOfertas";
@@ -914,8 +890,11 @@
             // 
             // GerCtrlOfer_OferTable
             // 
+            this.GerCtrlOfer_OferTable.AllowUserToAddRows = false;
+            this.GerCtrlOfer_OferTable.AllowUserToDeleteRows = false;
             this.GerCtrlOfer_OferTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GerCtrlOfer_OferTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn10});
@@ -926,87 +905,70 @@
             this.GerCtrlOfer_OferTable.Size = new System.Drawing.Size(249, 438);
             this.GerCtrlOfer_OferTable.TabIndex = 17;
             // 
-            // textBox1
+            // GerCtrlOfer_ErrorTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.GerCtrlOfer_ErrorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(4, 444);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(241, 13);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.Visible = false;
+            this.GerCtrlOfer_ErrorTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.GerCtrlOfer_ErrorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GerCtrlOfer_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GerCtrlOfer_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GerCtrlOfer_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+            this.GerCtrlOfer_ErrorTextBox.Location = new System.Drawing.Point(4, 444);
+            this.GerCtrlOfer_ErrorTextBox.Name = "GerCtrlOfer_ErrorTextBox";
+            this.GerCtrlOfer_ErrorTextBox.ReadOnly = true;
+            this.GerCtrlOfer_ErrorTextBox.Size = new System.Drawing.Size(241, 13);
+            this.GerCtrlOfer_ErrorTextBox.TabIndex = 24;
+            this.GerCtrlOfer_ErrorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.GerCtrlOfer_ErrorTextBox.Visible = false;
             // 
-            // button1
+            // GerCtrlOfer_CadastrarBtn
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(171, 463);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.GerCtrlOfer_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.GerCtrlOfer_CadastrarBtn.Location = new System.Drawing.Point(171, 463);
+            this.GerCtrlOfer_CadastrarBtn.Name = "GerCtrlOfer_CadastrarBtn";
+            this.GerCtrlOfer_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
+            this.GerCtrlOfer_CadastrarBtn.TabIndex = 23;
+            this.GerCtrlOfer_CadastrarBtn.Text = "Atualizar";
+            this.GerCtrlOfer_CadastrarBtn.UseVisualStyleBackColor = true;
+            this.GerCtrlOfer_CadastrarBtn.Click += new System.EventHandler(this.GerCtrlOfer_CadastrarBtn_Click);
             // 
-            // button2
+            // GerCtrlOfer_CancelBtn
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.Location = new System.Drawing.Point(3, 463);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.GerCtrlOfer_CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GerCtrlOfer_CancelBtn.Location = new System.Drawing.Point(3, 463);
+            this.GerCtrlOfer_CancelBtn.Name = "GerCtrlOfer_CancelBtn";
+            this.GerCtrlOfer_CancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.GerCtrlOfer_CancelBtn.TabIndex = 22;
+            this.GerCtrlOfer_CancelBtn.Text = "Cancelar";
+            this.GerCtrlOfer_CancelBtn.UseVisualStyleBackColor = true;
+            this.GerCtrlOfer_CancelBtn.Click += new System.EventHandler(this.GerCtrlOfer_CancelBtn_Click);
             // 
-            // dataGridViewTextBoxColumn6
+            // GerCtrlProd_ProdTable
             // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Produto";
-            this.dataGridViewTextBoxColumn6.MaxInputLength = 50;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.FillWeight = 80F;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Desconto";
-            this.dataGridViewTextBoxColumn7.MaxInputLength = 10;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn10.FillWeight = 80F;
-            this.dataGridViewTextBoxColumn10.HeaderText = "Duração";
-            this.dataGridViewTextBoxColumn10.MaxInputLength = 12;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GerCtrlProd_ProdTable.AllowUserToAddRows = false;
+            this.GerCtrlProd_ProdTable.AllowUserToDeleteRows = false;
+            this.GerCtrlProd_ProdTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GerCtrlProd_ProdTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
             this.Column1,
             this.dataGridViewTextBoxColumn13});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(249, 490);
-            this.dataGridView1.TabIndex = 17;
+            this.GerCtrlProd_ProdTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GerCtrlProd_ProdTable.Location = new System.Drawing.Point(0, 0);
+            this.GerCtrlProd_ProdTable.Name = "GerCtrlProd_ProdTable";
+            this.GerCtrlProd_ProdTable.ReadOnly = true;
+            this.GerCtrlProd_ProdTable.RowHeadersVisible = false;
+            this.GerCtrlProd_ProdTable.Size = new System.Drawing.Size(249, 490);
+            this.GerCtrlProd_ProdTable.TabIndex = 17;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle61;
             this.dataGridViewTextBoxColumn8.HeaderText = "Nome";
             this.dataGridViewTextBoxColumn8.MaxInputLength = 50;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
@@ -1016,6 +978,8 @@
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle62;
             this.dataGridViewTextBoxColumn9.HeaderText = "Preço";
             this.dataGridViewTextBoxColumn9.MaxInputLength = 10;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
@@ -1025,6 +989,8 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle63;
             this.dataGridViewTextBoxColumn11.HeaderText = "Qtde";
             this.dataGridViewTextBoxColumn11.MaxInputLength = 8;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
@@ -1034,6 +1000,8 @@
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle64;
             this.dataGridViewTextBoxColumn12.HeaderText = "Prateleira";
             this.dataGridViewTextBoxColumn12.MaxInputLength = 8;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
@@ -1043,6 +1011,8 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle65;
             this.Column1.HeaderText = "Fornecedor";
             this.Column1.MaxInputLength = 8;
             this.Column1.Name = "Column1";
@@ -1052,11 +1022,103 @@
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle66;
             this.dataGridViewTextBoxColumn13.HeaderText = "Validade";
             this.dataGridViewTextBoxColumn13.MaxInputLength = 10;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
             this.dataGridViewTextBoxColumn13.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle67;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn1.MaxInputLength = 50;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 98;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle68;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
+            this.dataGridViewTextBoxColumn2.MaxInputLength = 10;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle69;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Qtde";
+            this.dataGridViewTextBoxColumn3.MaxInputLength = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle70;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Prateleira";
+            this.dataGridViewTextBoxColumn4.MaxInputLength = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle71;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Validade";
+            this.dataGridViewTextBoxColumn5.MaxInputLength = 12;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 80;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle72;
+            this.Column2.HeaderText = "prodID";
+            this.Column2.MaxInputLength = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle73;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Produto";
+            this.dataGridViewTextBoxColumn6.MaxInputLength = 50;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle74;
+            this.dataGridViewTextBoxColumn7.FillWeight = 80F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Desconto";
+            this.dataGridViewTextBoxColumn7.MaxInputLength = 10;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle75;
+            this.dataGridViewTextBoxColumn10.FillWeight = 80F;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Duração";
+            this.dataGridViewTextBoxColumn10.MaxInputLength = 12;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // App
             // 
@@ -1095,7 +1157,7 @@
             this.GerenteCtrlRemover.ResumeLayout(false);
             this.GerenteCtrlRemover.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlOfer_OferTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlProd_ProdTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1165,22 +1227,23 @@
         private System.Windows.Forms.TextBox ForCtrlCad_ErrorTextBox;
         private System.Windows.Forms.Button ForCtrlCad_CadastrarBtn;
         private System.Windows.Forms.Button ForCtrlCad_CancelBtn;
+        private System.Windows.Forms.DataGridView GerCtrlProd_ProdTable;
+        private System.Windows.Forms.TextBox GerCtrlOfer_ErrorTextBox;
+        private System.Windows.Forms.Button GerCtrlOfer_CadastrarBtn;
+        private System.Windows.Forms.Button GerCtrlOfer_CancelBtn;
+        private System.Windows.Forms.DataGridView GerCtrlOfer_OferTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView GerCtrlOfer_OferTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;

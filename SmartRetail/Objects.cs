@@ -43,6 +43,13 @@ namespace SmartRetail
     {
         public int sacolaID, carrinhoID, quantidade, productID;
     }
+    class Oferta
+    {
+        public int productID;
+        public string nome;
+        public float desconto;
+        public DateTime duracao;
+    }
 
     class InfoBasica {
         public string nome, email;

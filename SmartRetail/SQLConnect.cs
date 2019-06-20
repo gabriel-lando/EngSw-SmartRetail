@@ -474,6 +474,73 @@ namespace SmartRetail
             return false;
         }
 
+        public bool LoadAllOffers(out List<Oferta> ofertasDB)
+        {
+            ofertasDB = new List<Oferta>();
+            string queryOffers = "SELECT * FROM Oferta;";
+            if (AbrirConexao())
+            {
+                SqlCommand cmdOffers = new SqlCommand(queryOffers, connection);
+                SqlDataReader readerOffers = cmdOffers.ExecuteReader();
+
+                while (readerOffers.Read())
+                {
+                    int productID = int.Parse(readerOffers["productID"].ToString());
+                    string nome = readerOffers["nome"].ToString();
+                    float desconto = float.Parse(readerOffers["desconto"].ToString());
+                    DateTime duracao = DateTime.Parse(readerOffers["duracao"].ToString()).Date;
+
+                    ofertasDB.Add(new Oferta()
+                    {
+                        productID = productID,
+                        nome = nome,
+                        desconto = desconto,
+                        duracao = duracao
+                    });
+                }
+
+                FecharConexao();
+
+                if (ofertasDB.Count() >= 0)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool SaveOffers(List<Oferta> ofertasDB)
+        {
+            string queryDelOffers = "DELETE FROM Oferta WHERE productID >= 0; ";
+            if (AbrirConexao())
+            {
+                SqlCommand cmdDelOffers = new SqlCommand(queryDelOffers, connection);
+                cmdDelOffers.ExecuteNonQuery();
+
+                Oferta[] ofertasArray = ofertasDB.ToArray();
+
+                foreach (Oferta oferta in ofertasArray)
+                {
+                    string queryInsOffer = "INSERT INTO Oferta (productID, nome, desconto, duracao) VALUES (@productID, @nome, @desconto, @duracao);";
+
+                    SqlCommand cmdInsOffer = new SqlCommand(queryInsOffer, connection);
+                    cmdInsOffer.Parameters.AddWithValue("@productID", oferta.productID);
+                    cmdInsOffer.Parameters.AddWithValue("@nome", oferta.nome);
+                    cmdInsOffer.Parameters.AddWithValue("@desconto", oferta.desconto);
+                    cmdInsOffer.Parameters.AddWithValue("@duracao", oferta.duracao.Date);
+                    if (cmdInsOffer.ExecuteNonQuery() == 0)
+                    {
+                        return false;
+                    }
+                }
+
+                FecharConexao();
+
+                return true;
+            }
+            return false;
+        }
+
         public bool AddProdutoCarrinho(int infoID, Produto produto, int qtde) // Buscar carrinhoID, criar Sacola com carrinhoID, productID e quantidade, subtrair quantidade do productID 
         {
             string queryCarrinhoID = "SELECT * FROM Cliente WHERE infoID = @infoID;";
