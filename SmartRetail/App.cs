@@ -89,7 +89,7 @@ namespace SmartRetail
 
                 foreach (Produto produto in produtosArray)
                 {
-                    string[] tmpRow = new string[] {produto.nome, String.Format("{0:F2}", produto.preco), produto.quantidade.ToString(), produto.prateleira.ToString(), produto.validade.ToString("dd/MM/yyyy")};
+                    string[] tmpRow = new string[] { produto.productID.ToString(), produto.nome, String.Format("{0:F2}", produto.preco), produto.quantidade.ToString(), produto.prateleira.ToString(), produto.validade.ToString("dd/MM/yyyy")};
                     ForCtrlCad_ProdTable.Rows.Add(tmpRow);
                 }
             }
@@ -352,21 +352,26 @@ namespace SmartRetail
 
         private void ForCtrlCad_CadastrarBtn_Click(object sender, EventArgs e)
         {
-            List<Produto> list = new List<Produto>();
+            List<Produto> listUpdate = new List<Produto>();
+            List<Produto> listInsert = new List<Produto>();
+            List<Produto> listRemove = new List<Produto>();
 
             foreach (DataGridViewRow Datarow in ForCtrlCad_ProdTable.Rows)
             {
-                if (Datarow.Cells[0].Value != null && Datarow.Cells[1].Value != null && Datarow.Cells[2].Value != null && Datarow.Cells[3].Value != null && Datarow.Cells[4].Value != null)
+                if (Datarow.Cells[0].Value != null && Datarow.Cells[1].Value != null && Datarow.Cells[2].Value != null && Datarow.Cells[3].Value != null && Datarow.Cells[4].Value != null && Datarow.Cells[5].Value != null) // Atualiza produto existente
                 {
                     try
                     {
-                        string nomeGrid = Datarow.Cells[0].Value.ToString();
-                        float precoGrid = float.Parse(Datarow.Cells[1].Value.ToString());
-                        int qtdeGrid = int.Parse(Datarow.Cells[2].Value.ToString());
-                        int prateleiraGrid = int.Parse(Datarow.Cells[3].Value.ToString());
-                        DateTime validadeGrid = DateTime.Parse(Datarow.Cells[4].Value.ToString());
-                        list.Add(new Produto()
+                        int prodIDGrid = int.Parse(Datarow.Cells[0].Value.ToString());
+                        string nomeGrid = Datarow.Cells[1].Value.ToString();
+                        float precoGrid = float.Parse(Datarow.Cells[2].Value.ToString());
+                        int qtdeGrid = int.Parse(Datarow.Cells[3].Value.ToString());
+                        int prateleiraGrid = int.Parse(Datarow.Cells[4].Value.ToString());
+                        DateTime validadeGrid = DateTime.Parse(Datarow.Cells[5].Value.ToString());
+
+                        listUpdate.Add(new Produto()
                         {
+                            productID = prodIDGrid,
                             nome = nomeGrid,
                             preco = precoGrid,
                             prateleira = prateleiraGrid,
@@ -382,24 +387,96 @@ namespace SmartRetail
                         return;
                     }
                 }
+                else if (Datarow.Cells[1].Value != null && Datarow.Cells[2].Value != null && Datarow.Cells[3].Value != null && Datarow.Cells[4].Value != null && Datarow.Cells[5].Value != null) // Add novo produto
+                {
+                    try
+                    {
+                        string nomeGrid = Datarow.Cells[1].Value.ToString();
+                        float precoGrid = float.Parse(Datarow.Cells[2].Value.ToString());
+                        int qtdeGrid = int.Parse(Datarow.Cells[3].Value.ToString());
+                        int prateleiraGrid = int.Parse(Datarow.Cells[4].Value.ToString());
+                        DateTime validadeGrid = DateTime.Parse(Datarow.Cells[5].Value.ToString());
+
+                        listInsert.Add(new Produto()
+                        {
+                            nome = nomeGrid,
+                            preco = precoGrid,
+                            prateleira = prateleiraGrid,
+                            validade = validadeGrid,
+                            quantidade = qtdeGrid,
+                            fornecedorID = infoID
+                        });
+                    }
+                    catch
+                    {
+                        ForCtrlCad_ErrorTextBox.Visible = true;
+                        ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+                        ForCtrlCad_ErrorTextBox.Text = "Verificar produtos!";
+                        return;
+                    }
+                }
+                else if (Datarow.Cells[0].Value != null) // Remove produto existente
+                {
+                    try
+                    {
+                        int prodIDGrid = int.Parse(Datarow.Cells[0].Value.ToString());
+
+                        listRemove.Add(new Produto()
+                        {
+                            productID = prodIDGrid
+                        });
+                    }
+                    catch
+                    {
+                        ForCtrlCad_ErrorTextBox.Visible = true;
+                        ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+                        ForCtrlCad_ErrorTextBox.Text = "Verificar produtos!";
+                        return;
+                    }
+                }
             }
 
             SQLConnect sql = new SQLConnect();
 
-            if (sql.RemoveProductsFornecedor(infoID))
+            if (listUpdate.Count() > 0) // Atualiza
             {
-                if (sql.SaveProductsFornecedor(infoID, list))
+                if (!sql.UpdateProductsFornecedor(listUpdate))
                 {
                     ForCtrlCad_ErrorTextBox.Visible = true;
-                    ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Green;
-                    ForCtrlCad_ErrorTextBox.Text = "Dados inseridos com sucesso!";
+                    ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+                    ForCtrlCad_ErrorTextBox.Text = "Erro ao atualizar produtos!";
 
                     return;
                 }
             }
+
+            if (listInsert.Count() > 0) // Insere
+            {
+                if (!sql.InsertProductsFornecedor(listInsert))
+                {
+                    ForCtrlCad_ErrorTextBox.Visible = true;
+                    ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+                    ForCtrlCad_ErrorTextBox.Text = "Erro ao inserir produtos!";
+
+                    return;
+                }
+            }
+
+            if (listRemove.Count() > 0) // Remove
+            {
+                if (!sql.RemoveProductsFornecedor(listRemove))
+                {
+                    ForCtrlCad_ErrorTextBox.Visible = true;
+                    ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+                    ForCtrlCad_ErrorTextBox.Text = "Erro ao remover produtos!";
+
+                    return;
+                }
+            }
+
             ForCtrlCad_ErrorTextBox.Visible = true;
-            ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            ForCtrlCad_ErrorTextBox.Text = "Erro ao atualizar produtos!";
+            ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Green;
+            ForCtrlCad_ErrorTextBox.Text = "Dados inseridos com sucesso!";
         }
 
         private void CarregaProdutos()

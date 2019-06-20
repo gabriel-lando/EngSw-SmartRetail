@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.TotemWelcomeTab = new System.Windows.Forms.TabPage();
             this.TotemLogoLabel = new System.Windows.Forms.Label();
@@ -333,8 +333,8 @@
             // ClienteCarrinhoProdNome
             // 
             this.ClienteCarrinhoProdNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle9;
             this.ClienteCarrinhoProdNome.FillWeight = 180F;
             this.ClienteCarrinhoProdNome.HeaderText = "Produto";
             this.ClienteCarrinhoProdNome.Name = "ClienteCarrinhoProdNome";
@@ -344,8 +344,8 @@
             // ClienteCarrinhoProdPreco
             // 
             this.ClienteCarrinhoProdPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle10;
             this.ClienteCarrinhoProdPreco.FillWeight = 80F;
             this.ClienteCarrinhoProdPreco.HeaderText = "Preço";
             this.ClienteCarrinhoProdPreco.Name = "ClienteCarrinhoProdPreco";
@@ -355,8 +355,8 @@
             // ClienteCarrinhoProdQtde
             // 
             this.ClienteCarrinhoProdQtde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle11;
             this.ClienteCarrinhoProdQtde.FillWeight = 60F;
             this.ClienteCarrinhoProdQtde.HeaderText = "Qtde";
             this.ClienteCarrinhoProdQtde.Name = "ClienteCarrinhoProdQtde";
@@ -366,8 +366,8 @@
             // ClienteCarrinhoProdTotal
             // 
             this.ClienteCarrinhoProdTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdTotal.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdTotal.DefaultCellStyle = dataGridViewCellStyle12;
             this.ClienteCarrinhoProdTotal.FillWeight = 80F;
             this.ClienteCarrinhoProdTotal.HeaderText = "Total";
             this.ClienteCarrinhoProdTotal.Name = "ClienteCarrinhoProdTotal";
@@ -390,6 +390,7 @@
             this.ClienteDetailsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ClienteDetailsTextBox.Location = new System.Drawing.Point(3, 213);
             this.ClienteDetailsTextBox.Name = "ClienteDetailsTextBox";
+            this.ClienteDetailsTextBox.ReadOnly = true;
             this.ClienteDetailsTextBox.Size = new System.Drawing.Size(150, 200);
             this.ClienteDetailsTextBox.TabIndex = 4;
             this.ClienteDetailsTextBox.Text = "";

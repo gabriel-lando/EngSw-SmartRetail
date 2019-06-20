@@ -711,23 +711,70 @@ namespace SmartRetail
             return false;
         }
 
-        public bool RemoveProductsFornecedor(int infoID)
+        public bool RemoveProductsFornecedor(List<Produto> produtosDB)
         {
             if (AbrirConexao())
             {
-                string queryProdFornecedor = "DELETE FROM Produto WHERE fornecedorID = @fornecedorID;";
-                SqlCommand cmdProdFornecedor = new SqlCommand(queryProdFornecedor, connection);
-                cmdProdFornecedor.Parameters.AddWithValue("@fornecedorID", infoID);
+                Produto[] produtosArray = produtosDB.ToArray();
 
-                cmdProdFornecedor.ExecuteNonQuery();
+                foreach (Produto singleProduct in produtosArray)
+                {
+                    string queryProdFornecedor = "DELETE FROM Oferta WHERE productID = @productID; DELETE FROM Sacola WHERE productID = @productID; DELETE FROM Produto WHERE productID = @productID;";
+                    SqlCommand cmdProdFornecedor = new SqlCommand(queryProdFornecedor, connection);
+                    cmdProdFornecedor.Parameters.AddWithValue("@productID", singleProduct.productID);
+
+                    cmdProdFornecedor.ExecuteNonQuery();
+                }
+
                 FecharConexao();
                 return true;
             }
-
             return false;
         }
 
-        public bool SaveProductsFornecedor(int infoID, List<Produto> produtosDB)
+        public bool UpdateProductsFornecedor(List<Produto> produtosDB)
+        {
+            if (AbrirConexao())
+            {
+                Produto[] produtosArray = produtosDB.ToArray();
+
+                foreach (Produto singleProduct in produtosArray)
+                {
+                    string queryProdFornecedor = "UPDATE Oferta SET nome = @nome WHERE productID = @productID; UPDATE Produto SET nome = @nome, preco = @preco, quantidade = @quantidade, prateleira = @prateleira, validade = @validade WHERE productID = @productID";
+                    SqlCommand cmdProdutos = new SqlCommand(queryProdFornecedor, connection);
+                    cmdProdutos.Parameters.AddWithValue("@productID", singleProduct.productID);
+                    cmdProdutos.Parameters.AddWithValue("@nome", singleProduct.nome);
+                    cmdProdutos.Parameters.AddWithValue("@preco", singleProduct.preco);
+                    cmdProdutos.Parameters.AddWithValue("@quantidade", singleProduct.quantidade);
+                    cmdProdutos.Parameters.AddWithValue("@prateleira", singleProduct.prateleira);
+                    cmdProdutos.Parameters.AddWithValue("@validade", singleProduct.validade.Date);
+
+                    cmdProdutos.ExecuteNonQuery();
+                }
+
+                FecharConexao();
+                return true;
+            }
+            return false;
+        }
+
+        //public bool RemoveProductsFornecedor(int infoID)
+        //{
+        //    if (AbrirConexao())
+        //    {
+        //        string queryProdFornecedor = "DELETE FROM Produto WHERE fornecedorID = @fornecedorID;";
+        //        SqlCommand cmdProdFornecedor = new SqlCommand(queryProdFornecedor, connection);
+        //        cmdProdFornecedor.Parameters.AddWithValue("@fornecedorID", infoID);
+
+        //        cmdProdFornecedor.ExecuteNonQuery();
+        //        FecharConexao();
+        //        return true;
+        //    }
+
+        //    return false;
+        //}
+
+        public bool InsertProductsFornecedor(List<Produto> produtosDB)
         {
             if (AbrirConexao())
             {
@@ -741,7 +788,7 @@ namespace SmartRetail
                     cmdProdutos.Parameters.AddWithValue("@nome", singleProduct.nome);
                     cmdProdutos.Parameters.AddWithValue("@preco", singleProduct.preco);
                     cmdProdutos.Parameters.AddWithValue("@quantidade", singleProduct.quantidade);
-                    cmdProdutos.Parameters.AddWithValue("@fornecedorID", infoID);
+                    cmdProdutos.Parameters.AddWithValue("@fornecedorID", singleProduct.fornecedorID);
                     cmdProdutos.Parameters.AddWithValue("@prateleira", singleProduct.prateleira);
                     cmdProdutos.Parameters.AddWithValue("@validade", singleProduct.validade.Date);
                     if (cmdProdutos.ExecuteNonQuery() == 0)
