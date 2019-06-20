@@ -521,6 +521,92 @@ namespace SmartRetail
             return false;
         }
 
+        public bool ReturnProductsFornecedor(out List<Produto> produtosDB, int infoID)
+        {
+            produtosDB = new List<Produto>();
+
+            string queryProducts = "SELECT * FROM Produto WHERE fornecedorID = @fornecedorID;";
+            if (AbrirConexao())
+            {
+                SqlCommand cmdProducts = new SqlCommand(queryProducts, connection);
+                cmdProducts.Parameters.AddWithValue("@fornecedorID", infoID);
+                SqlDataReader readerProducts = cmdProducts.ExecuteReader();
+
+                while (readerProducts.Read())
+                {
+                    int productID = int.Parse(readerProducts["productID"].ToString());
+                    string nome = readerProducts["nome"].ToString();
+                    float preco = float.Parse(readerProducts["preco"].ToString());
+                    int fornecedorID = int.Parse(readerProducts["fornecedorID"].ToString());
+                    int qtde = int.Parse(readerProducts["quantidade"].ToString());
+                    int prateleira = int.Parse(readerProducts["prateleira"].ToString());
+                    DateTime validade = DateTime.Parse(readerProducts["validade"].ToString()).Date;
+
+                    produtosDB.Add(new Produto()
+                    {
+                        productID = productID,
+                        nome = nome,
+                        fornecedorID = fornecedorID,
+                        preco = preco,
+                        validade = validade,
+                        prateleira = prateleira,
+                        quantidade = qtde
+                    });
+                }
+                if (produtosDB.Count() > 0)
+                {
+                    return true;
+                }
+                FecharConexao();
+            }
+
+            return false;
+        }
+
+        public bool RemoveProductsFornecedor(int infoID)
+        {
+            if (AbrirConexao())
+            {
+                string queryProdFornecedor = "DELETE FROM Produto WHERE fornecedorID = @fornecedorID;";
+                SqlCommand cmdProdFornecedor = new SqlCommand(queryProdFornecedor, connection);
+                cmdProdFornecedor.Parameters.AddWithValue("@fornecedorID", infoID);
+
+                cmdProdFornecedor.ExecuteNonQuery();
+                FecharConexao();
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool SaveProductsFornecedor(int infoID, List<Produto> produtosDB)
+        {
+            if (AbrirConexao())
+            {
+                Produto[] produtosArray = produtosDB.ToArray();
+
+                foreach (Produto singleProduct in produtosArray)
+                {
+                    string queryProdutos = "INSERT INTO Produto (nome, preco, fornecedorID, quantidade, prateleira, validade) VALUES (@nome, @preco, @fornecedorID, @quantidade, @prateleira, @validade);";
+
+                    SqlCommand cmdProdutos = new SqlCommand(queryProdutos, connection);
+                    cmdProdutos.Parameters.AddWithValue("@nome", singleProduct.nome);
+                    cmdProdutos.Parameters.AddWithValue("@preco", singleProduct.preco);
+                    cmdProdutos.Parameters.AddWithValue("@quantidade", singleProduct.quantidade);
+                    cmdProdutos.Parameters.AddWithValue("@fornecedorID", infoID);
+                    cmdProdutos.Parameters.AddWithValue("@prateleira", singleProduct.prateleira);
+                    cmdProdutos.Parameters.AddWithValue("@validade", singleProduct.validade.Date);
+                    if (cmdProdutos.ExecuteNonQuery() == 0)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            return false;
+        }
+
         public bool ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, int infoID)
         {
             produtosSacola = new List<Produto>();

@@ -1,3 +1,13 @@
+DROP TABLE IF EXISTS Venda;
+DROP TABLE IF EXISTS Oferta;
+DROP TABLE IF EXISTS Sacola;
+DROP TABLE IF EXISTS Produto;
+DROP TABLE IF EXISTS Cliente;
+DROP TABLE IF EXISTS Carrinho;
+DROP TABLE IF EXISTS Gerente;
+DROP TABLE IF EXISTS Fornecedor;
+DROP TABLE IF EXISTS InfoBasica;
+
 CREATE TABLE InfoBasica
 (
 	infoID int IDENTITY(1, 1) PRIMARY KEY NOT NULL,
@@ -52,7 +62,7 @@ CREATE TABLE Sacola
 (
 	sacolaID int IDENTITY(1, 1) PRIMARY KEY NOT NULL,
 	carrinhoID int NOT NULL FOREIGN KEY REFERENCES dbo.Carrinho(carrinhoID),
-	productID int NOT NULL FOREIGN KEY REFERENCES dbo.Produto(productID),
+	productID int NOT NULL,
 	quantidade int NOT NULL,
 )
 

@@ -12,7 +12,6 @@ namespace CreateTablesDB
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
 
-
         [STAThread]
         static void Main()
         {
@@ -35,8 +34,8 @@ namespace CreateTablesDB
                 Console.Write("ERRO ao adicionar as tabelas...\n");
             }
 
-            Console.Write("\nPressione ENTER para sair...\n");
-            Console.ReadLine();
+            Console.Write("\nPressione ENTER para sair... ");
+            Console.Read();
         }
     }
 }

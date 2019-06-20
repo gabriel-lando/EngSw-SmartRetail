@@ -29,12 +29,20 @@ namespace SmartRetail
             PwdTextBox.SelectAll();
         }
 
+        private void PwdTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoginBtn_Click(this, new EventArgs());
+            }
+        }
+
         private void LimparBtn_Click(object sender, EventArgs e)
         {
-            //EmailTextBox.Text = "Email";
-            //PwdTextBox.Text = "Password";
-            EmailTextBox.Text = "admin@admin.com";
-            PwdTextBox.Text = "admin";
+            EmailTextBox.Text = "Email";
+            PwdTextBox.Text = "Password";
+            //EmailTextBox.Text = "admin@admin.com";
+            //PwdTextBox.Text = "admin";
             ErrorLoginTextBox.Visible = false;
         }
 
@@ -55,6 +63,11 @@ namespace SmartRetail
                 LimparBtn_Click(null, null);
                 TabCtrl.SelectedIndex = valida;
                 GerCtrlCad_ComboBox.SelectedIndex = 0;
+
+                if(valida == 1) //Carrega os produtos na tabela
+                {
+                    CarregaProdFornecedor();
+                }
             }
             else
             {
@@ -62,6 +75,28 @@ namespace SmartRetail
                 ErrorLoginTextBox.Visible = true;
                 ErrorLoginTextBox.Text = "Usuário ou senha incorretos!";
             }
+        }
+
+        private void CarregaProdFornecedor()
+        {
+            ClearTable();
+
+            SQLConnect sql = new SQLConnect();
+
+            if (sql.ReturnProductsFornecedor(out List<Produto> produtosDB, infoID))
+            {
+                Produto[] produtosArray = produtosDB.ToArray();
+
+                foreach (Produto produto in produtosArray)
+                {
+                    string[] tmpRow = new string[] {produto.nome, String.Format("{0:F2}", produto.preco), produto.quantidade.ToString(), produto.prateleira.ToString(), produto.validade.ToString("dd/MM/yyyy")};
+                    ForCtrlCad_ProdTable.Rows.Add(tmpRow);
+                }
+            }
+        }
+        private void ClearTable()
+        {
+            ForCtrlCad_ProdTable.Rows.Clear();
         }
 
         private void GerCtrlCad_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -204,6 +239,7 @@ namespace SmartRetail
                                 int qtdeGrid = int.Parse(Datarow.Cells[2].Value.ToString());
                                 int prateleiraGrid = int.Parse(Datarow.Cells[3].Value.ToString());
                                 DateTime validadeGrid = DateTime.Parse(Datarow.Cells[4].Value.ToString());
+
                                 list.Add(new Produto()
                                 {
                                     nome = nomeGrid,
@@ -305,7 +341,65 @@ namespace SmartRetail
         {
             //GerCtrlCad_ClearBtn_Click(null, null);
             //GerCtrlRem_ClearBtn_Click(null, null);
+            ClearTable();
             TabCtrl.SelectedIndex = 0;
+        }
+
+        private void ForCtrlCad_CancelBtn_Click(object sender, EventArgs e)
+        {
+            CarregaProdFornecedor();
+        }
+
+        private void ForCtrlCad_CadastrarBtn_Click(object sender, EventArgs e)
+        {
+            List<Produto> list = new List<Produto>();
+
+            foreach (DataGridViewRow Datarow in ForCtrlCad_ProdTable.Rows)
+            {
+                if (Datarow.Cells[0].Value != null && Datarow.Cells[1].Value != null && Datarow.Cells[2].Value != null && Datarow.Cells[3].Value != null && Datarow.Cells[4].Value != null)
+                {
+                    try
+                    {
+                        string nomeGrid = Datarow.Cells[0].Value.ToString();
+                        float precoGrid = float.Parse(Datarow.Cells[1].Value.ToString());
+                        int qtdeGrid = int.Parse(Datarow.Cells[2].Value.ToString());
+                        int prateleiraGrid = int.Parse(Datarow.Cells[3].Value.ToString());
+                        DateTime validadeGrid = DateTime.Parse(Datarow.Cells[4].Value.ToString());
+                        list.Add(new Produto()
+                        {
+                            nome = nomeGrid,
+                            preco = precoGrid,
+                            prateleira = prateleiraGrid,
+                            validade = validadeGrid,
+                            quantidade = qtdeGrid
+                        });
+                    }
+                    catch
+                    {
+                        ForCtrlCad_ErrorTextBox.Visible = true;
+                        ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+                        ForCtrlCad_ErrorTextBox.Text = "Verificar produtos!";
+                        return;
+                    }
+                }
+            }
+
+            SQLConnect sql = new SQLConnect();
+
+            if (sql.RemoveProductsFornecedor(infoID))
+            {
+                if (sql.SaveProductsFornecedor(infoID, list))
+                {
+                    ForCtrlCad_ErrorTextBox.Visible = true;
+                    ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Green;
+                    ForCtrlCad_ErrorTextBox.Text = "Dados inseridos com sucesso!";
+
+                    return;
+                }
+            }
+            ForCtrlCad_ErrorTextBox.Visible = true;
+            ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+            ForCtrlCad_ErrorTextBox.Text = "Erro ao atualizar produtos!";
         }
     }
 }

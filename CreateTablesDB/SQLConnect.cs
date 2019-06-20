@@ -17,7 +17,6 @@ namespace CreateTablesDB
         private string uid;
         private string password;
 
-        //Construtor
         public SQLConnect()
         {
             Inicializar();
@@ -70,12 +69,17 @@ namespace CreateTablesDB
             if (AbrirConexao())
             {
                 SqlCommand cmdTables = new SqlCommand(queryTables, connection);
-                if (cmdTables.ExecuteNonQuery() > 0)
+                try
                 {
+                    cmdTables.ExecuteNonQuery();
                     FecharConexao();
                     return true;
                 }
-                FecharConexao();
+                catch
+                {
+                    FecharConexao();
+                    return false;
+                }
             }
             return false;
         }
