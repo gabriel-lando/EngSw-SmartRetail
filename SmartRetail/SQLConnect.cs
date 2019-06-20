@@ -474,6 +474,51 @@ namespace SmartRetail
             return false;
         }
 
+        public bool LoadSomeProducts(out List<Produto> produtosDB, List<int> produtos)
+        {
+            produtosDB = new List<Produto>();
+            string queryProducts = "SELECT * FROM Produto WHERE productID = @productID;";
+            if (AbrirConexao())
+            {
+                foreach(int productID in produtos)
+                {
+                    SqlCommand cmdProducts = new SqlCommand(queryProducts, connection);
+                    cmdProducts.Parameters.AddWithValue("@productID", productID);
+                    SqlDataReader readerProducts = cmdProducts.ExecuteReader();
+
+                    if (readerProducts.Read())
+                    {
+                        string nome = readerProducts["nome"].ToString();
+                        float preco = float.Parse(readerProducts["preco"].ToString());
+                        int fornecedorID = int.Parse(readerProducts["fornecedorID"].ToString());
+                        int qtde = int.Parse(readerProducts["quantidade"].ToString());
+                        int prateleira = int.Parse(readerProducts["prateleira"].ToString());
+                        DateTime validade = DateTime.Parse(readerProducts["validade"].ToString()).Date;
+
+                        produtosDB.Add(new Produto()
+                        {
+                            productID = productID,
+                            nome = nome,
+                            fornecedorID = fornecedorID,
+                            preco = preco,
+                            validade = validade,
+                            prateleira = prateleira,
+                            quantidade = qtde
+                        });
+
+                        readerProducts.Close();
+                    }
+                }
+                FecharConexao();
+
+                if (produtosDB.Count() >= 0)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public bool LoadAllOffers(out List<Oferta> ofertasDB)
         {
             ofertasDB = new List<Oferta>();
@@ -537,6 +582,41 @@ namespace SmartRetail
                 FecharConexao();
 
                 return true;
+            }
+            return false;
+        }
+
+        public bool LoadSpecialOffers(out List<Oferta> ofertasDB)
+        {
+            ofertasDB = new List<Oferta>();
+            string queryOffers = "SELECT TOP 2 * FROM Oferta ORDER BY NEWID();";
+            if (AbrirConexao())
+            {
+                SqlCommand cmdOffers = new SqlCommand(queryOffers, connection);
+                SqlDataReader readerOffers = cmdOffers.ExecuteReader();
+
+                while (readerOffers.Read())
+                {
+                    int productID = int.Parse(readerOffers["productID"].ToString());
+                    string nome = readerOffers["nome"].ToString();
+                    float desconto = float.Parse(readerOffers["desconto"].ToString());
+                    DateTime duracao = DateTime.Parse(readerOffers["duracao"].ToString()).Date;
+
+                    ofertasDB.Add(new Oferta()
+                    {
+                        productID = productID,
+                        nome = nome,
+                        desconto = desconto,
+                        duracao = duracao
+                    });
+                }
+
+                FecharConexao();
+
+                if (ofertasDB.Count() >= 0)
+                {
+                    return true;
+                }
             }
             return false;
         }

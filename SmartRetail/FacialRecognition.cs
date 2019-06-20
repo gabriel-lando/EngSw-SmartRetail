@@ -10,7 +10,7 @@ namespace SmartRetail
     {
         protected bool validData;
 
-        string path, file;
+        protected string path, file;
         protected Image image;
         protected Thread getImageThread;
 

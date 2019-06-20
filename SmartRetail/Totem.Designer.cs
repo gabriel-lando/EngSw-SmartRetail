@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.TotemWelcomeTab = new System.Windows.Forms.TabPage();
             this.TotemLogoLabel = new System.Windows.Forms.Label();
@@ -44,25 +44,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ClienteLabelOfertas = new System.Windows.Forms.Label();
             this.ClienteOfertaPanel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ClienteOfertaPic1 = new System.Windows.Forms.PictureBox();
+            this.ClienteOfertaTextBox1 = new System.Windows.Forms.RichTextBox();
             this.ClienteOfertaPanel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ClienteOfertaPic2 = new System.Windows.Forms.PictureBox();
+            this.ClienteOfertaTextBox2 = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ClienteCarrinhoTotalValue = new System.Windows.Forms.Label();
             this.ClienteLabelCarrinho = new System.Windows.Forms.Label();
             this.ClienteCarrinhoTotalLabel = new System.Windows.Forms.Label();
             this.ClienteCarrinhoTable = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ClienteDetailsTextBox = new System.Windows.Forms.RichTextBox();
-            this.FacialRecPictureBox = new System.Windows.Forms.PictureBox();
             this.ClienteCarrinhoProdNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClienteCarrinhoProdPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClienteCarrinhoProdQtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClienteCarrinhoProdTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClienteOfertaTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.ClienteOfertaTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ClienteDetailsTextBox = new System.Windows.Forms.RichTextBox();
+            this.FacialRecPictureBox = new System.Windows.Forms.PictureBox();
             this.TabCtrl.SuspendLayout();
             this.TotemWelcomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CamLogoPictureBox)).BeginInit();
@@ -72,9 +68,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.ClienteOfertaPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic1)).BeginInit();
             this.ClienteOfertaPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteCarrinhoTable)).BeginInit();
             this.panel2.SuspendLayout();
@@ -132,7 +126,7 @@
             this.CamLogoPictureBox.InitialImage = null;
             this.CamLogoPictureBox.Location = new System.Drawing.Point(210, 100);
             this.CamLogoPictureBox.Name = "CamLogoPictureBox";
-            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 226);
+            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 222);
             this.CamLogoPictureBox.TabIndex = 1;
             this.CamLogoPictureBox.TabStop = false;
             // 
@@ -227,61 +221,49 @@
             // 
             this.ClienteOfertaPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ClienteOfertaPanel1.Controls.Add(this.ClienteOfertaTextBox1);
-            this.ClienteOfertaPanel1.Controls.Add(this.label1);
-            this.ClienteOfertaPanel1.Controls.Add(this.ClienteOfertaPic1);
             this.ClienteOfertaPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClienteOfertaPanel1.Location = new System.Drawing.Point(3, 33);
             this.ClienteOfertaPanel1.Name = "ClienteOfertaPanel1";
             this.ClienteOfertaPanel1.Size = new System.Drawing.Size(310, 189);
             this.ClienteOfertaPanel1.TabIndex = 1;
             // 
-            // label1
+            // ClienteOfertaTextBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Foto Oferta 1";
-            // 
-            // ClienteOfertaPic1
-            // 
-            this.ClienteOfertaPic1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ClienteOfertaPic1.Location = new System.Drawing.Point(14, 14);
-            this.ClienteOfertaPic1.Name = "ClienteOfertaPic1";
-            this.ClienteOfertaPic1.Size = new System.Drawing.Size(114, 156);
-            this.ClienteOfertaPic1.TabIndex = 0;
-            this.ClienteOfertaPic1.TabStop = false;
+            this.ClienteOfertaTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.ClienteOfertaTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ClienteOfertaTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClienteOfertaTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClienteOfertaTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.ClienteOfertaTextBox1.Name = "ClienteOfertaTextBox1";
+            this.ClienteOfertaTextBox1.ReadOnly = true;
+            this.ClienteOfertaTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ClienteOfertaTextBox1.Size = new System.Drawing.Size(308, 187);
+            this.ClienteOfertaTextBox1.TabIndex = 13;
+            this.ClienteOfertaTextBox1.Text = "";
             // 
             // ClienteOfertaPanel2
             // 
             this.ClienteOfertaPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ClienteOfertaPanel2.Controls.Add(this.ClienteOfertaTextBox2);
-            this.ClienteOfertaPanel2.Controls.Add(this.label2);
-            this.ClienteOfertaPanel2.Controls.Add(this.ClienteOfertaPic2);
             this.ClienteOfertaPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClienteOfertaPanel2.Location = new System.Drawing.Point(3, 228);
             this.ClienteOfertaPanel2.Name = "ClienteOfertaPanel2";
             this.ClienteOfertaPanel2.Size = new System.Drawing.Size(310, 190);
             this.ClienteOfertaPanel2.TabIndex = 2;
             // 
-            // label2
+            // ClienteOfertaTextBox2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Foto Oferta 2";
-            // 
-            // ClienteOfertaPic2
-            // 
-            this.ClienteOfertaPic2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ClienteOfertaPic2.Location = new System.Drawing.Point(14, 15);
-            this.ClienteOfertaPic2.Name = "ClienteOfertaPic2";
-            this.ClienteOfertaPic2.Size = new System.Drawing.Size(114, 156);
-            this.ClienteOfertaPic2.TabIndex = 1;
-            this.ClienteOfertaPic2.TabStop = false;
+            this.ClienteOfertaTextBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.ClienteOfertaTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ClienteOfertaTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClienteOfertaTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClienteOfertaTextBox2.Location = new System.Drawing.Point(0, 0);
+            this.ClienteOfertaTextBox2.Name = "ClienteOfertaTextBox2";
+            this.ClienteOfertaTextBox2.ReadOnly = true;
+            this.ClienteOfertaTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.ClienteOfertaTextBox2.Size = new System.Drawing.Size(308, 188);
+            this.ClienteOfertaTextBox2.TabIndex = 14;
+            this.ClienteOfertaTextBox2.Text = "";
             // 
             // panel3
             // 
@@ -348,6 +330,50 @@
             this.ClienteCarrinhoTable.Size = new System.Drawing.Size(311, 342);
             this.ClienteCarrinhoTable.TabIndex = 1;
             // 
+            // ClienteCarrinhoProdNome
+            // 
+            this.ClienteCarrinhoProdNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ClienteCarrinhoProdNome.FillWeight = 180F;
+            this.ClienteCarrinhoProdNome.HeaderText = "Produto";
+            this.ClienteCarrinhoProdNome.Name = "ClienteCarrinhoProdNome";
+            this.ClienteCarrinhoProdNome.ReadOnly = true;
+            this.ClienteCarrinhoProdNome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ClienteCarrinhoProdPreco
+            // 
+            this.ClienteCarrinhoProdPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ClienteCarrinhoProdPreco.FillWeight = 80F;
+            this.ClienteCarrinhoProdPreco.HeaderText = "Preço";
+            this.ClienteCarrinhoProdPreco.Name = "ClienteCarrinhoProdPreco";
+            this.ClienteCarrinhoProdPreco.ReadOnly = true;
+            this.ClienteCarrinhoProdPreco.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ClienteCarrinhoProdQtde
+            // 
+            this.ClienteCarrinhoProdQtde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ClienteCarrinhoProdQtde.FillWeight = 60F;
+            this.ClienteCarrinhoProdQtde.HeaderText = "Qtde";
+            this.ClienteCarrinhoProdQtde.Name = "ClienteCarrinhoProdQtde";
+            this.ClienteCarrinhoProdQtde.ReadOnly = true;
+            this.ClienteCarrinhoProdQtde.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ClienteCarrinhoProdTotal
+            // 
+            this.ClienteCarrinhoProdTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdTotal.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ClienteCarrinhoProdTotal.FillWeight = 80F;
+            this.ClienteCarrinhoProdTotal.HeaderText = "Total";
+            this.ClienteCarrinhoProdTotal.Name = "ClienteCarrinhoProdTotal";
+            this.ClienteCarrinhoProdTotal.ReadOnly = true;
+            this.ClienteCarrinhoProdTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.ClienteDetailsTextBox);
@@ -380,78 +406,6 @@
             this.FacialRecPictureBox.TabStop = false;
             this.FacialRecPictureBox.Click += new System.EventHandler(this.FacialRecPictureBox_Click);
             // 
-            // ClienteCarrinhoProdNome
-            // 
-            this.ClienteCarrinhoProdNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ClienteCarrinhoProdNome.FillWeight = 180F;
-            this.ClienteCarrinhoProdNome.HeaderText = "Produto";
-            this.ClienteCarrinhoProdNome.Name = "ClienteCarrinhoProdNome";
-            this.ClienteCarrinhoProdNome.ReadOnly = true;
-            this.ClienteCarrinhoProdNome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ClienteCarrinhoProdPreco
-            // 
-            this.ClienteCarrinhoProdPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ClienteCarrinhoProdPreco.FillWeight = 80F;
-            this.ClienteCarrinhoProdPreco.HeaderText = "Preço";
-            this.ClienteCarrinhoProdPreco.Name = "ClienteCarrinhoProdPreco";
-            this.ClienteCarrinhoProdPreco.ReadOnly = true;
-            this.ClienteCarrinhoProdPreco.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ClienteCarrinhoProdQtde
-            // 
-            this.ClienteCarrinhoProdQtde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ClienteCarrinhoProdQtde.FillWeight = 60F;
-            this.ClienteCarrinhoProdQtde.HeaderText = "Qtde";
-            this.ClienteCarrinhoProdQtde.Name = "ClienteCarrinhoProdQtde";
-            this.ClienteCarrinhoProdQtde.ReadOnly = true;
-            this.ClienteCarrinhoProdQtde.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ClienteCarrinhoProdTotal
-            // 
-            this.ClienteCarrinhoProdTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdTotal.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ClienteCarrinhoProdTotal.FillWeight = 80F;
-            this.ClienteCarrinhoProdTotal.HeaderText = "Total";
-            this.ClienteCarrinhoProdTotal.Name = "ClienteCarrinhoProdTotal";
-            this.ClienteCarrinhoProdTotal.ReadOnly = true;
-            this.ClienteCarrinhoProdTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ClienteOfertaTextBox1
-            // 
-            this.ClienteOfertaTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.ClienteOfertaTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ClienteOfertaTextBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ClienteOfertaTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteOfertaTextBox1.Location = new System.Drawing.Point(134, 0);
-            this.ClienteOfertaTextBox1.Name = "ClienteOfertaTextBox1";
-            this.ClienteOfertaTextBox1.ReadOnly = true;
-            this.ClienteOfertaTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.ClienteOfertaTextBox1.Size = new System.Drawing.Size(174, 187);
-            this.ClienteOfertaTextBox1.TabIndex = 13;
-            this.ClienteOfertaTextBox1.Text = "";
-            // 
-            // ClienteOfertaTextBox2
-            // 
-            this.ClienteOfertaTextBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.ClienteOfertaTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ClienteOfertaTextBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ClienteOfertaTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteOfertaTextBox2.Location = new System.Drawing.Point(134, 0);
-            this.ClienteOfertaTextBox2.Name = "ClienteOfertaTextBox2";
-            this.ClienteOfertaTextBox2.ReadOnly = true;
-            this.ClienteOfertaTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.ClienteOfertaTextBox2.Size = new System.Drawing.Size(174, 188);
-            this.ClienteOfertaTextBox2.TabIndex = 14;
-            this.ClienteOfertaTextBox2.Text = "";
-            // 
             // Totem
             // 
             this.AllowDrop = true;
@@ -476,11 +430,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ClienteOfertaPanel1.ResumeLayout(false);
-            this.ClienteOfertaPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic1)).EndInit();
             this.ClienteOfertaPanel2.ResumeLayout(false);
-            this.ClienteOfertaPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClienteOfertaPic2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteCarrinhoTable)).EndInit();
@@ -511,10 +461,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel ClienteOfertaPanel1;
         private System.Windows.Forms.Panel ClienteOfertaPanel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox ClienteOfertaPic1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox ClienteOfertaPic2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClienteCarrinhoProdNome;
