@@ -57,6 +57,11 @@
             this.GerCtrlCad_CadastrarBtn = new System.Windows.Forms.Button();
             this.GerCtrlCad_ClearBtn = new System.Windows.Forms.Button();
             this.GerCtrlCad_ProdTable = new System.Windows.Forms.DataGridView();
+            this.GerCadProd_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GerCadProd_Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GerCadProd_Qtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GerCadProd_Prateleira = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GerCadProd_Validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GerCtrlCad_Label8 = new System.Windows.Forms.Label();
             this.GerCtrlCad_SenhaRep = new System.Windows.Forms.TextBox();
             this.GerCtrlCad_Label7 = new System.Windows.Forms.Label();
@@ -83,11 +88,6 @@
             this.GerCtrlRem_Label1 = new System.Windows.Forms.Label();
             this.GerCtrlRem_ComboBox = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.GerCadProd_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GerCadProd_Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GerCadProd_Qtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GerCadProd_Prateleira = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GerCadProd_Validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabCtrl.SuspendLayout();
             this.LoginPageTab.SuspendLayout();
             this.FornecedorTab.SuspendLayout();
@@ -148,7 +148,7 @@
             this.ErrorLoginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ErrorLoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorLoginTextBox.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 368);
+            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 366);
             this.ErrorLoginTextBox.Name = "ErrorLoginTextBox";
             this.ErrorLoginTextBox.ReadOnly = true;
             this.ErrorLoginTextBox.Size = new System.Drawing.Size(260, 15);
@@ -183,7 +183,7 @@
             this.MessageLoginPage.DetectUrls = false;
             this.MessageLoginPage.Enabled = false;
             this.MessageLoginPage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MessageLoginPage.Location = new System.Drawing.Point(8, 110);
+            this.MessageLoginPage.Location = new System.Drawing.Point(8, 108);
             this.MessageLoginPage.Name = "MessageLoginPage";
             this.MessageLoginPage.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MessageLoginPage.Size = new System.Drawing.Size(260, 105);
@@ -195,7 +195,7 @@
             // 
             this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.Location = new System.Drawing.Point(185, 443);
+            this.LoginBtn.Location = new System.Drawing.Point(185, 439);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(83, 30);
             this.LoginBtn.TabIndex = 4;
@@ -207,7 +207,7 @@
             // 
             this.EmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTextBox.Location = new System.Drawing.Point(8, 268);
+            this.EmailTextBox.Location = new System.Drawing.Point(8, 266);
             this.EmailTextBox.MaxLength = 50;
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(260, 24);
@@ -220,7 +220,7 @@
             // 
             this.LimparBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LimparBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LimparBtn.Location = new System.Drawing.Point(8, 443);
+            this.LimparBtn.Location = new System.Drawing.Point(8, 439);
             this.LimparBtn.Name = "LimparBtn";
             this.LimparBtn.Size = new System.Drawing.Size(83, 30);
             this.LimparBtn.TabIndex = 3;
@@ -232,7 +232,7 @@
             // 
             this.PwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PwdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PwdTextBox.Location = new System.Drawing.Point(8, 311);
+            this.PwdTextBox.Location = new System.Drawing.Point(8, 309);
             this.PwdTextBox.MaxLength = 32;
             this.PwdTextBox.Name = "PwdTextBox";
             this.PwdTextBox.Size = new System.Drawing.Size(260, 24);
@@ -333,7 +333,7 @@
             this.GerenteCtrlHome.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlHome.Name = "GerenteCtrlHome";
             this.GerenteCtrlHome.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlHome.Size = new System.Drawing.Size(249, 490);
+            this.GerenteCtrlHome.Size = new System.Drawing.Size(249, 494);
             this.GerenteCtrlHome.TabIndex = 0;
             this.GerenteCtrlHome.Text = "Home";
             // 
@@ -480,9 +480,50 @@
             this.GerCadProd_Validade});
             this.GerCtrlCad_ProdTable.Location = new System.Drawing.Point(6, 306);
             this.GerCtrlCad_ProdTable.Name = "GerCtrlCad_ProdTable";
+            this.GerCtrlCad_ProdTable.RowHeadersVisible = false;
             this.GerCtrlCad_ProdTable.Size = new System.Drawing.Size(237, 122);
             this.GerCtrlCad_ProdTable.TabIndex = 15;
             this.GerCtrlCad_ProdTable.Visible = false;
+            // 
+            // GerCadProd_Nome
+            // 
+            this.GerCadProd_Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GerCadProd_Nome.HeaderText = "Nome";
+            this.GerCadProd_Nome.MaxInputLength = 50;
+            this.GerCadProd_Nome.Name = "GerCadProd_Nome";
+            this.GerCadProd_Nome.Width = 98;
+            // 
+            // GerCadProd_Preco
+            // 
+            this.GerCadProd_Preco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GerCadProd_Preco.HeaderText = "Preço";
+            this.GerCadProd_Preco.MaxInputLength = 10;
+            this.GerCadProd_Preco.Name = "GerCadProd_Preco";
+            this.GerCadProd_Preco.Width = 48;
+            // 
+            // GerCadProd_Qtd
+            // 
+            this.GerCadProd_Qtd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GerCadProd_Qtd.HeaderText = "Qtde";
+            this.GerCadProd_Qtd.MaxInputLength = 8;
+            this.GerCadProd_Qtd.Name = "GerCadProd_Qtd";
+            this.GerCadProd_Qtd.Width = 48;
+            // 
+            // GerCadProd_Prateleira
+            // 
+            this.GerCadProd_Prateleira.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GerCadProd_Prateleira.HeaderText = "Prateleira";
+            this.GerCadProd_Prateleira.MaxInputLength = 8;
+            this.GerCadProd_Prateleira.Name = "GerCadProd_Prateleira";
+            this.GerCadProd_Prateleira.Width = 60;
+            // 
+            // GerCadProd_Validade
+            // 
+            this.GerCadProd_Validade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GerCadProd_Validade.HeaderText = "Validade";
+            this.GerCadProd_Validade.MaxInputLength = 12;
+            this.GerCadProd_Validade.Name = "GerCadProd_Validade";
+            this.GerCadProd_Validade.Width = 80;
             // 
             // GerCtrlCad_Label8
             // 
@@ -735,46 +776,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // GerCadProd_Nome
-            // 
-            this.GerCadProd_Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GerCadProd_Nome.HeaderText = "Nome";
-            this.GerCadProd_Nome.MaxInputLength = 50;
-            this.GerCadProd_Nome.Name = "GerCadProd_Nome";
-            this.GerCadProd_Nome.Width = 98;
-            // 
-            // GerCadProd_Preco
-            // 
-            this.GerCadProd_Preco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GerCadProd_Preco.HeaderText = "Preço";
-            this.GerCadProd_Preco.MaxInputLength = 10;
-            this.GerCadProd_Preco.Name = "GerCadProd_Preco";
-            this.GerCadProd_Preco.Width = 48;
-            // 
-            // GerCadProd_Qtd
-            // 
-            this.GerCadProd_Qtd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GerCadProd_Qtd.HeaderText = "Qtde";
-            this.GerCadProd_Qtd.MaxInputLength = 8;
-            this.GerCadProd_Qtd.Name = "GerCadProd_Qtd";
-            this.GerCadProd_Qtd.Width = 48;
-            // 
-            // GerCadProd_Prateleira
-            // 
-            this.GerCadProd_Prateleira.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GerCadProd_Prateleira.HeaderText = "Prateleira";
-            this.GerCadProd_Prateleira.MaxInputLength = 8;
-            this.GerCadProd_Prateleira.Name = "GerCadProd_Prateleira";
-            this.GerCadProd_Prateleira.Width = 60;
-            // 
-            // GerCadProd_Validade
-            // 
-            this.GerCadProd_Validade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GerCadProd_Validade.HeaderText = "Validade";
-            this.GerCadProd_Validade.MaxInputLength = 12;
-            this.GerCadProd_Validade.Name = "GerCadProd_Validade";
-            this.GerCadProd_Validade.Width = 80;
             // 
             // App
             // 

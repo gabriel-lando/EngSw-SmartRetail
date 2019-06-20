@@ -197,19 +197,29 @@ namespace SmartRetail
                     {
                         if (Datarow.Cells[0].Value != null && Datarow.Cells[1].Value != null && Datarow.Cells[2].Value != null && Datarow.Cells[3].Value != null && Datarow.Cells[4].Value != null)
                         {
-                            string nomeGrid = Datarow.Cells[0].Value.ToString();
-                            float precoGrid = float.Parse(Datarow.Cells[1].Value.ToString());
-                            int qtdeGrid = int.Parse(Datarow.Cells[2].Value.ToString());
-                            int prateleiraGrid = int.Parse(Datarow.Cells[3].Value.ToString());
-                            DateTime validadeGrid = DateTime.Parse(Datarow.Cells[4].Value.ToString());
-                            list.Add(new Produto()
+                            try
                             {
-                                nome = nomeGrid,
-                                preco = precoGrid,
-                                prateleira = prateleiraGrid,
-                                validade = validadeGrid,
-                                quantidade = qtdeGrid
-                            });
+                                string nomeGrid = Datarow.Cells[0].Value.ToString();
+                                float precoGrid = float.Parse(Datarow.Cells[1].Value.ToString());
+                                int qtdeGrid = int.Parse(Datarow.Cells[2].Value.ToString());
+                                int prateleiraGrid = int.Parse(Datarow.Cells[3].Value.ToString());
+                                DateTime validadeGrid = DateTime.Parse(Datarow.Cells[4].Value.ToString());
+                                list.Add(new Produto()
+                                {
+                                    nome = nomeGrid,
+                                    preco = precoGrid,
+                                    prateleira = prateleiraGrid,
+                                    validade = validadeGrid,
+                                    quantidade = qtdeGrid
+                                });
+                            }
+                            catch
+                            {
+                                GerCtrlCad_ErrorTextBox.Visible = true;
+                                GerCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+                                GerCtrlCad_ErrorTextBox.Text = "Verificar produtos!";
+                                return;
+                            }
                         }
                     }
                     if (list != null)
