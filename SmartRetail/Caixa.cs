@@ -73,8 +73,8 @@ namespace SmartRetail
             TabCtrl.SelectedIndex = 2;
             FacialRecPictureBoxEntrada.Image = image;
 
-            Wait(3000); // Delay para leitura da tela antes de voltar pra Idle
-            IdleTab();
+            //Wait(3000); // Delay para leitura da tela antes de voltar pra Idle
+            //IdleTab();
 
         }
         private void SaidaTab(Image image)
@@ -88,6 +88,7 @@ namespace SmartRetail
             {
                 Produto[] produtosArray = produtosSacola.ToArray();
 
+                int index = 0;
                 foreach (Produto produto in produtosArray)
                 {
                     //ClienteCarrinhoTable
@@ -96,8 +97,8 @@ namespace SmartRetail
                 ClienteCarrinhoTotalValue.Text = String.Format("{0:F2}", preco_total);
             }
 
-            Wait(5000); // Delay para leitura da tela antes de voltar pra Idle
-            IdleTab();
+            //Wait(5000); // Delay para leitura da tela antes de voltar pra Idle
+            //IdleTab();
         }
 
         private void CadastroLimparBtn_Click(object sender, EventArgs e)
@@ -176,6 +177,13 @@ namespace SmartRetail
             IdleTab();
         }
 
-        
+        private void FacialRecPictureBoxSaida_Click(object sender, EventArgs e)
+        {
+            IdleTab();
+        }
+        private void FacialRecPictureBoxEntrada_Click(object sender, EventArgs e)
+        {
+            IdleTab();
+        }
     }
 }

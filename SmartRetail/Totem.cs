@@ -46,16 +46,16 @@ namespace SmartRetail
             }
         }
 
-        private void Wait(int time)
-        {
-            System.Threading.Thread thread = new System.Threading.Thread(delegate ()
-            {
-                System.Threading.Thread.Sleep(time);
-            });
-            thread.Start();
-            while (thread.IsAlive)
-                Application.DoEvents();
-        }
+        //private void Wait(int time)
+        //{
+        //    System.Threading.Thread thread = new System.Threading.Thread(delegate ()
+        //    {
+        //        System.Threading.Thread.Sleep(time);
+        //    });
+        //    thread.Start();
+        //    while (thread.IsAlive)
+        //        Application.DoEvents();
+        //}
 
         private void IdleTab()
         {
@@ -77,20 +77,23 @@ namespace SmartRetail
 
                 foreach (Produto produto in produtosArray)
                 {
-                    //ClienteCarrinhoTable
+                    string[] tmpRow = new string[]{produto.nome, String.Format("{0:F2}", produto.preco), produto.quantidade.ToString(), String.Format("{0:F2}", produto.preco * produto.quantidade)};
+                    ClienteCarrinhoTable.Rows.Add(tmpRow);
                 }
 
                 ClienteCarrinhoTotalValue.Text = String.Format("{0:F2}", preco_total);
             }
-
-            Wait(5000);
-            IdleTab();
         }
 
         private void ClearTable()
         {
             ClienteCarrinhoTable.Rows.Clear();
             ClienteCarrinhoTotalValue.Text = "0,00";
+        }
+
+        private void FacialRecPictureBox_Click(object sender, EventArgs e)
+        {
+            IdleTab();
         }
     }
 }

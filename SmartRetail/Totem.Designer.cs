@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.TotemWelcomeTab = new System.Windows.Forms.TabPage();
             this.TotemLogoLabel = new System.Windows.Forms.Label();
@@ -53,12 +54,13 @@
             this.ClienteLabelCarrinho = new System.Windows.Forms.Label();
             this.ClienteCarrinhoTotalLabel = new System.Windows.Forms.Label();
             this.ClienteCarrinhoTable = new System.Windows.Forms.DataGridView();
-            this.ClienteCarrinhoProdNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClienteCarrinhoProdPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClienteCarrinhoProdQtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.FacialRecPictureBox = new System.Windows.Forms.PictureBox();
+            this.ClienteCarrinhoProdNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClienteCarrinhoProdPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClienteCarrinhoProdQtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClienteCarrinhoProdTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabCtrl.SuspendLayout();
             this.TotemWelcomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CamLogoPictureBox)).BeginInit();
@@ -327,46 +329,20 @@
             // 
             // ClienteCarrinhoTable
             // 
+            this.ClienteCarrinhoTable.AllowUserToAddRows = false;
             this.ClienteCarrinhoTable.AllowUserToDeleteRows = false;
             this.ClienteCarrinhoTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClienteCarrinhoTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClienteCarrinhoProdNome,
             this.ClienteCarrinhoProdPreco,
-            this.ClienteCarrinhoProdQtde});
+            this.ClienteCarrinhoProdQtde,
+            this.ClienteCarrinhoProdTotal});
             this.ClienteCarrinhoTable.Location = new System.Drawing.Point(4, 27);
             this.ClienteCarrinhoTable.Name = "ClienteCarrinhoTable";
+            this.ClienteCarrinhoTable.ReadOnly = true;
+            this.ClienteCarrinhoTable.RowHeadersVisible = false;
             this.ClienteCarrinhoTable.Size = new System.Drawing.Size(311, 342);
             this.ClienteCarrinhoTable.TabIndex = 1;
-            // 
-            // ClienteCarrinhoProdNome
-            // 
-            this.ClienteCarrinhoProdNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ClienteCarrinhoProdNome.FillWeight = 180F;
-            this.ClienteCarrinhoProdNome.HeaderText = "Produto";
-            this.ClienteCarrinhoProdNome.Name = "ClienteCarrinhoProdNome";
-            this.ClienteCarrinhoProdNome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ClienteCarrinhoProdPreco
-            // 
-            this.ClienteCarrinhoProdPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ClienteCarrinhoProdPreco.FillWeight = 80F;
-            this.ClienteCarrinhoProdPreco.HeaderText = "Preço";
-            this.ClienteCarrinhoProdPreco.Name = "ClienteCarrinhoProdPreco";
-            this.ClienteCarrinhoProdPreco.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ClienteCarrinhoProdQtde
-            // 
-            this.ClienteCarrinhoProdQtde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ClienteCarrinhoProdQtde.FillWeight = 40F;
-            this.ClienteCarrinhoProdQtde.HeaderText = "Qtde";
-            this.ClienteCarrinhoProdQtde.Name = "ClienteCarrinhoProdQtde";
-            this.ClienteCarrinhoProdQtde.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // panel2
             // 
@@ -398,6 +374,51 @@
             this.FacialRecPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.FacialRecPictureBox.TabIndex = 0;
             this.FacialRecPictureBox.TabStop = false;
+            this.FacialRecPictureBox.Click += new System.EventHandler(this.FacialRecPictureBox_Click);
+            // 
+            // ClienteCarrinhoProdNome
+            // 
+            this.ClienteCarrinhoProdNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ClienteCarrinhoProdNome.FillWeight = 180F;
+            this.ClienteCarrinhoProdNome.HeaderText = "Produto";
+            this.ClienteCarrinhoProdNome.Name = "ClienteCarrinhoProdNome";
+            this.ClienteCarrinhoProdNome.ReadOnly = true;
+            this.ClienteCarrinhoProdNome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ClienteCarrinhoProdPreco
+            // 
+            this.ClienteCarrinhoProdPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ClienteCarrinhoProdPreco.FillWeight = 80F;
+            this.ClienteCarrinhoProdPreco.HeaderText = "Preço";
+            this.ClienteCarrinhoProdPreco.Name = "ClienteCarrinhoProdPreco";
+            this.ClienteCarrinhoProdPreco.ReadOnly = true;
+            this.ClienteCarrinhoProdPreco.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ClienteCarrinhoProdQtde
+            // 
+            this.ClienteCarrinhoProdQtde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ClienteCarrinhoProdQtde.FillWeight = 60F;
+            this.ClienteCarrinhoProdQtde.HeaderText = "Qtde";
+            this.ClienteCarrinhoProdQtde.Name = "ClienteCarrinhoProdQtde";
+            this.ClienteCarrinhoProdQtde.ReadOnly = true;
+            this.ClienteCarrinhoProdQtde.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ClienteCarrinhoProdTotal
+            // 
+            this.ClienteCarrinhoProdTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdTotal.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ClienteCarrinhoProdTotal.FillWeight = 80F;
+            this.ClienteCarrinhoProdTotal.HeaderText = "Total";
+            this.ClienteCarrinhoProdTotal.Name = "ClienteCarrinhoProdTotal";
+            this.ClienteCarrinhoProdTotal.ReadOnly = true;
+            this.ClienteCarrinhoProdTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Totem
             // 
@@ -462,10 +483,11 @@
         private System.Windows.Forms.PictureBox ClienteOfertaPic1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox ClienteOfertaPic2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClienteCarrinhoProdNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClienteCarrinhoProdPreco;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClienteCarrinhoProdQtde;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteCarrinhoProdTotal;
     }
 }

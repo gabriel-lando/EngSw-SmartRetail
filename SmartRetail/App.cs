@@ -40,8 +40,6 @@ namespace SmartRetail
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            HashAlgorithm sha = new SHA1CryptoServiceProvider();
-
             LoginData login = new LoginData
             {
                 email = EmailTextBox.Text,
@@ -204,11 +202,14 @@ namespace SmartRetail
                             int qtdeGrid = int.Parse(Datarow.Cells[2].Value.ToString());
                             int prateleiraGrid = int.Parse(Datarow.Cells[3].Value.ToString());
                             DateTime validadeGrid = DateTime.Parse(Datarow.Cells[4].Value.ToString());
-                            list.Add(new Produto() { nome = nomeGrid,
-                                                    preco = precoGrid,
-                                                    prateleira = prateleiraGrid,
-                                                    validade = validadeGrid,
-                                                    quantidade = qtdeGrid });
+                            list.Add(new Produto()
+                            {
+                                nome = nomeGrid,
+                                preco = precoGrid,
+                                prateleira = prateleiraGrid,
+                                validade = validadeGrid,
+                                quantidade = qtdeGrid
+                            });
                         }
                     }
                     if (list != null)
