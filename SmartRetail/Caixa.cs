@@ -82,23 +82,28 @@ namespace SmartRetail
             TabCtrl.SelectedIndex = 3;
             FacialRecPictureBoxSaida.Image = image;
 
+            ClearTable();
+
             SQLConnect sql = new SQLConnect();
 
             if (sql.ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, infoID))
             {
                 Produto[] produtosArray = produtosSacola.ToArray();
 
-                int index = 0;
                 foreach (Produto produto in produtosArray)
                 {
-                    //ClienteCarrinhoTable
+                    string[] tmpRow = new string[] { produto.nome, String.Format("{0:F2}", produto.preco), produto.quantidade.ToString(), String.Format("{0:F2}", produto.preco * produto.quantidade) };
+                    ClienteCarrinhoTable.Rows.Add(tmpRow);
                 }
 
                 ClienteCarrinhoTotalValue.Text = String.Format("{0:F2}", preco_total);
             }
+        }
 
-            //Wait(5000); // Delay para leitura da tela antes de voltar pra Idle
-            //IdleTab();
+        private void ClearTable()
+        {
+            ClienteCarrinhoTable.Rows.Clear();
+            ClienteCarrinhoTotalValue.Text = "0,00";
         }
 
         private void CadastroLimparBtn_Click(object sender, EventArgs e)
