@@ -40,8 +40,6 @@ namespace SmartRetail
                     infoID = valida;
                     SaidaTab(image);
                 }
-
-                //ClientInfoTextSaida.Text = facialRec.RetFilename();
             }
         }
 

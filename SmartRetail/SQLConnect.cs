@@ -449,7 +449,7 @@ namespace SmartRetail
                     int prateleira = int.Parse(readerProducts["prateleira"].ToString());
                     DateTime validade = DateTime.Parse(readerProducts["validade"].ToString()).Date;
 
-                    if (qtde > 0)
+                    if (qtde >= 0)
                     {
                         produtosDB.Add(new Produto()
                         {
@@ -463,13 +463,14 @@ namespace SmartRetail
                         });
                     }
                 }
+
+                FecharConexao();
+
                 if (produtosDB.Count() > 0)
                 {
                     return true;
                 }
-                FecharConexao();
             }
-
             return false;
         }
 
@@ -650,11 +651,14 @@ namespace SmartRetail
                             int productID = int.Parse(readerSacolas["productID"].ToString());
                             int qtde = int.Parse(readerSacolas["quantidade"].ToString());
 
-                            tmpSacola.Add(new Sacola()
+                            if(qtde > 0)
                             {
-                                productID = productID,
-                                quantidade = qtde
-                            });
+                                tmpSacola.Add(new Sacola()
+                                {
+                                    productID = productID,
+                                    quantidade = qtde
+                                });
+                            }
                         }
                         readerSacolas.Close();
 
@@ -694,11 +698,12 @@ namespace SmartRetail
                     }
                 }
 
-                if (produtosSacola.Count() > 0)
+                FecharConexao();
+
+                if (produtosSacola.Count() >= 0)
                 {
                     return true;
                 }
-                FecharConexao();
             }
             return false;
         }

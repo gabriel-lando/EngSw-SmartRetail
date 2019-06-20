@@ -43,6 +43,15 @@
             this.FornecedorCtrlHome = new System.Windows.Forms.TabPage();
             this.LogoffForBtn = new System.Windows.Forms.PictureBox();
             this.FornecedorCtrlCadastrar = new System.Windows.Forms.TabPage();
+            this.ForCtrlCad_ErrorTextBox = new System.Windows.Forms.TextBox();
+            this.ForCtrlCad_CadastrarBtn = new System.Windows.Forms.Button();
+            this.ForCtrlCad_CancelBtn = new System.Windows.Forms.Button();
+            this.ForCtrlCad_ProdTable = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GerenteTab = new System.Windows.Forms.TabPage();
             this.GerenteCtrl = new System.Windows.Forms.TabControl();
             this.GerenteCtrlHome = new System.Windows.Forms.TabPage();
@@ -88,15 +97,20 @@
             this.GerCtrlRem_Label1 = new System.Windows.Forms.Label();
             this.GerCtrlRem_ComboBox = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ForCtrlCad_ProdTable = new System.Windows.Forms.DataGridView();
-            this.ForCtrlCad_ErrorTextBox = new System.Windows.Forms.TextBox();
-            this.ForCtrlCad_CadastrarBtn = new System.Windows.Forms.Button();
-            this.ForCtrlCad_CancelBtn = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GerCtrlOfer_OferTable = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabCtrl.SuspendLayout();
             this.LoginPageTab.SuspendLayout();
             this.FornecedorTab.SuspendLayout();
@@ -104,15 +118,19 @@
             this.FornecedorCtrlHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).BeginInit();
             this.FornecedorCtrlCadastrar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ForCtrlCad_ProdTable)).BeginInit();
             this.GerenteTab.SuspendLayout();
             this.GerenteCtrl.SuspendLayout();
             this.GerenteCtrlHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).BeginInit();
+            this.GerenteCtrlGerProd.SuspendLayout();
             this.GerenteCtrlConsDados.SuspendLayout();
+            this.GerenteCtrlGerOfertas.SuspendLayout();
             this.GerenteCtrlCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).BeginInit();
             this.GerenteCtrlRemover.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ForCtrlCad_ProdTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlOfer_OferTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // TabCtrl
@@ -123,7 +141,7 @@
             this.TabCtrl.Controls.Add(this.GerenteTab);
             this.TabCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabCtrl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.TabCtrl.ItemSize = new System.Drawing.Size(0, 1);
+            this.TabCtrl.ItemSize = new System.Drawing.Size(5, 5);
             this.TabCtrl.Location = new System.Drawing.Point(0, 0);
             this.TabCtrl.Margin = new System.Windows.Forms.Padding(0);
             this.TabCtrl.Name = "TabCtrl";
@@ -159,7 +177,7 @@
             this.ErrorLoginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ErrorLoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorLoginTextBox.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 366);
+            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 364);
             this.ErrorLoginTextBox.Name = "ErrorLoginTextBox";
             this.ErrorLoginTextBox.ReadOnly = true;
             this.ErrorLoginTextBox.Size = new System.Drawing.Size(260, 15);
@@ -194,7 +212,7 @@
             this.MessageLoginPage.DetectUrls = false;
             this.MessageLoginPage.Enabled = false;
             this.MessageLoginPage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MessageLoginPage.Location = new System.Drawing.Point(8, 108);
+            this.MessageLoginPage.Location = new System.Drawing.Point(8, 106);
             this.MessageLoginPage.Name = "MessageLoginPage";
             this.MessageLoginPage.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MessageLoginPage.Size = new System.Drawing.Size(260, 105);
@@ -206,7 +224,7 @@
             // 
             this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.Location = new System.Drawing.Point(185, 439);
+            this.LoginBtn.Location = new System.Drawing.Point(185, 435);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(83, 30);
             this.LoginBtn.TabIndex = 4;
@@ -218,7 +236,7 @@
             // 
             this.EmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTextBox.Location = new System.Drawing.Point(8, 266);
+            this.EmailTextBox.Location = new System.Drawing.Point(8, 264);
             this.EmailTextBox.MaxLength = 50;
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(260, 24);
@@ -231,7 +249,7 @@
             // 
             this.LimparBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LimparBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LimparBtn.Location = new System.Drawing.Point(8, 439);
+            this.LimparBtn.Location = new System.Drawing.Point(8, 435);
             this.LimparBtn.Name = "LimparBtn";
             this.LimparBtn.Size = new System.Drawing.Size(83, 30);
             this.LimparBtn.TabIndex = 3;
@@ -243,7 +261,7 @@
             // 
             this.PwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PwdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PwdTextBox.Location = new System.Drawing.Point(8, 309);
+            this.PwdTextBox.Location = new System.Drawing.Point(8, 307);
             this.PwdTextBox.MaxLength = 32;
             this.PwdTextBox.Name = "PwdTextBox";
             this.PwdTextBox.Size = new System.Drawing.Size(260, 24);
@@ -257,10 +275,10 @@
             // FornecedorTab
             // 
             this.FornecedorTab.Controls.Add(this.FornecedorCtrl);
-            this.FornecedorTab.Location = new System.Drawing.Point(4, 5);
+            this.FornecedorTab.Location = new System.Drawing.Point(4, 9);
             this.FornecedorTab.Margin = new System.Windows.Forms.Padding(0);
             this.FornecedorTab.Name = "FornecedorTab";
-            this.FornecedorTab.Size = new System.Drawing.Size(276, 502);
+            this.FornecedorTab.Size = new System.Drawing.Size(276, 498);
             this.FornecedorTab.TabIndex = 0;
             this.FornecedorTab.Text = "FornecedorTab";
             this.FornecedorTab.UseVisualStyleBackColor = true;
@@ -275,7 +293,7 @@
             this.FornecedorCtrl.Multiline = true;
             this.FornecedorCtrl.Name = "FornecedorCtrl";
             this.FornecedorCtrl.SelectedIndex = 0;
-            this.FornecedorCtrl.Size = new System.Drawing.Size(276, 502);
+            this.FornecedorCtrl.Size = new System.Drawing.Size(276, 498);
             this.FornecedorCtrl.TabIndex = 0;
             // 
             // FornecedorCtrlHome
@@ -309,10 +327,104 @@
             this.FornecedorCtrlCadastrar.Controls.Add(this.ForCtrlCad_ProdTable);
             this.FornecedorCtrlCadastrar.Location = new System.Drawing.Point(23, 4);
             this.FornecedorCtrlCadastrar.Name = "FornecedorCtrlCadastrar";
-            this.FornecedorCtrlCadastrar.Padding = new System.Windows.Forms.Padding(3);
-            this.FornecedorCtrlCadastrar.Size = new System.Drawing.Size(249, 494);
+            this.FornecedorCtrlCadastrar.Size = new System.Drawing.Size(249, 490);
             this.FornecedorCtrlCadastrar.TabIndex = 1;
             this.FornecedorCtrlCadastrar.Text = "Cadastrar";
+            // 
+            // ForCtrlCad_ErrorTextBox
+            // 
+            this.ForCtrlCad_ErrorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ForCtrlCad_ErrorTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ForCtrlCad_ErrorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ForCtrlCad_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ForCtrlCad_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+            this.ForCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(3, 445);
+            this.ForCtrlCad_ErrorTextBox.Name = "ForCtrlCad_ErrorTextBox";
+            this.ForCtrlCad_ErrorTextBox.ReadOnly = true;
+            this.ForCtrlCad_ErrorTextBox.Size = new System.Drawing.Size(243, 13);
+            this.ForCtrlCad_ErrorTextBox.TabIndex = 21;
+            this.ForCtrlCad_ErrorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ForCtrlCad_ErrorTextBox.Visible = false;
+            // 
+            // ForCtrlCad_CadastrarBtn
+            // 
+            this.ForCtrlCad_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ForCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(171, 463);
+            this.ForCtrlCad_CadastrarBtn.Name = "ForCtrlCad_CadastrarBtn";
+            this.ForCtrlCad_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
+            this.ForCtrlCad_CadastrarBtn.TabIndex = 20;
+            this.ForCtrlCad_CadastrarBtn.Text = "Cadastrar";
+            this.ForCtrlCad_CadastrarBtn.UseVisualStyleBackColor = true;
+            this.ForCtrlCad_CadastrarBtn.Click += new System.EventHandler(this.ForCtrlCad_CadastrarBtn_Click);
+            // 
+            // ForCtrlCad_CancelBtn
+            // 
+            this.ForCtrlCad_CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ForCtrlCad_CancelBtn.Location = new System.Drawing.Point(3, 463);
+            this.ForCtrlCad_CancelBtn.Name = "ForCtrlCad_CancelBtn";
+            this.ForCtrlCad_CancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.ForCtrlCad_CancelBtn.TabIndex = 19;
+            this.ForCtrlCad_CancelBtn.Text = "Cancelar";
+            this.ForCtrlCad_CancelBtn.UseVisualStyleBackColor = true;
+            this.ForCtrlCad_CancelBtn.Click += new System.EventHandler(this.ForCtrlCad_CancelBtn_Click);
+            // 
+            // ForCtrlCad_ProdTable
+            // 
+            this.ForCtrlCad_ProdTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ForCtrlCad_ProdTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.ForCtrlCad_ProdTable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ForCtrlCad_ProdTable.Location = new System.Drawing.Point(0, 0);
+            this.ForCtrlCad_ProdTable.Name = "ForCtrlCad_ProdTable";
+            this.ForCtrlCad_ProdTable.RowHeadersVisible = false;
+            this.ForCtrlCad_ProdTable.Size = new System.Drawing.Size(249, 439);
+            this.ForCtrlCad_ProdTable.TabIndex = 16;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn1.MaxInputLength = 50;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 98;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
+            this.dataGridViewTextBoxColumn2.MaxInputLength = 10;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Qtde";
+            this.dataGridViewTextBoxColumn3.MaxInputLength = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Prateleira";
+            this.dataGridViewTextBoxColumn4.MaxInputLength = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Validade";
+            this.dataGridViewTextBoxColumn5.MaxInputLength = 12;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 80;
             // 
             // GerenteTab
             // 
@@ -341,6 +453,7 @@
             this.GerenteCtrl.SelectedIndex = 0;
             this.GerenteCtrl.Size = new System.Drawing.Size(276, 498);
             this.GerenteCtrl.TabIndex = 0;
+            this.GerenteCtrl.SelectedIndexChanged += new System.EventHandler(this.GerenteCtrl_SelectedIndexChanged);
             // 
             // GerenteCtrlHome
             // 
@@ -367,9 +480,10 @@
             // GerenteCtrlGerProd
             // 
             this.GerenteCtrlGerProd.BackColor = System.Drawing.SystemColors.Control;
+            this.GerenteCtrlGerProd.Controls.Add(this.dataGridView1);
             this.GerenteCtrlGerProd.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlGerProd.Name = "GerenteCtrlGerProd";
-            this.GerenteCtrlGerProd.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlGerProd.Size = new System.Drawing.Size(249, 490);
             this.GerenteCtrlGerProd.TabIndex = 3;
             this.GerenteCtrlGerProd.Text = "Produtos";
             // 
@@ -381,7 +495,7 @@
             this.GerenteCtrlConsDados.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlConsDados.Name = "GerenteCtrlConsDados";
             this.GerenteCtrlConsDados.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlConsDados.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlConsDados.Size = new System.Drawing.Size(249, 490);
             this.GerenteCtrlConsDados.TabIndex = 4;
             this.GerenteCtrlConsDados.Text = "Consultar";
             // 
@@ -411,9 +525,13 @@
             // GerenteCtrlGerOfertas
             // 
             this.GerenteCtrlGerOfertas.BackColor = System.Drawing.SystemColors.Control;
+            this.GerenteCtrlGerOfertas.Controls.Add(this.textBox1);
+            this.GerenteCtrlGerOfertas.Controls.Add(this.button1);
+            this.GerenteCtrlGerOfertas.Controls.Add(this.button2);
+            this.GerenteCtrlGerOfertas.Controls.Add(this.GerCtrlOfer_OferTable);
             this.GerenteCtrlGerOfertas.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlGerOfertas.Name = "GerenteCtrlGerOfertas";
-            this.GerenteCtrlGerOfertas.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlGerOfertas.Size = new System.Drawing.Size(249, 490);
             this.GerenteCtrlGerOfertas.TabIndex = 5;
             this.GerenteCtrlGerOfertas.Text = "Ofertas";
             // 
@@ -691,7 +809,7 @@
             this.GerenteCtrlRemover.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlRemover.Name = "GerenteCtrlRemover";
             this.GerenteCtrlRemover.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlRemover.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlRemover.Size = new System.Drawing.Size(249, 490);
             this.GerenteCtrlRemover.TabIndex = 2;
             this.GerenteCtrlRemover.Text = "Remover";
             // 
@@ -704,7 +822,7 @@
             this.GerCtrlRem_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.GerCtrlRem_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GerCtrlRem_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.GerCtrlRem_ErrorTextBox.Location = new System.Drawing.Point(9, 431);
+            this.GerCtrlRem_ErrorTextBox.Location = new System.Drawing.Point(9, 427);
             this.GerCtrlRem_ErrorTextBox.Name = "GerCtrlRem_ErrorTextBox";
             this.GerCtrlRem_ErrorTextBox.ReadOnly = true;
             this.GerCtrlRem_ErrorTextBox.Size = new System.Drawing.Size(231, 15);
@@ -715,7 +833,7 @@
             // GerCtrlRem_RemoverBtn
             // 
             this.GerCtrlRem_RemoverBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GerCtrlRem_RemoverBtn.Location = new System.Drawing.Point(168, 465);
+            this.GerCtrlRem_RemoverBtn.Location = new System.Drawing.Point(168, 461);
             this.GerCtrlRem_RemoverBtn.Name = "GerCtrlRem_RemoverBtn";
             this.GerCtrlRem_RemoverBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlRem_RemoverBtn.TabIndex = 20;
@@ -726,7 +844,7 @@
             // GerCtrlRem_ClearBtn
             // 
             this.GerCtrlRem_ClearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GerCtrlRem_ClearBtn.Location = new System.Drawing.Point(6, 465);
+            this.GerCtrlRem_ClearBtn.Location = new System.Drawing.Point(6, 461);
             this.GerCtrlRem_ClearBtn.Name = "GerCtrlRem_ClearBtn";
             this.GerCtrlRem_ClearBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlRem_ClearBtn.TabIndex = 19;
@@ -794,100 +912,151 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // ForCtrlCad_ProdTable
+            // GerCtrlOfer_OferTable
             // 
-            this.ForCtrlCad_ProdTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ForCtrlCad_ProdTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.ForCtrlCad_ProdTable.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ForCtrlCad_ProdTable.Location = new System.Drawing.Point(3, 3);
-            this.ForCtrlCad_ProdTable.Name = "ForCtrlCad_ProdTable";
-            this.ForCtrlCad_ProdTable.RowHeadersVisible = false;
-            this.ForCtrlCad_ProdTable.Size = new System.Drawing.Size(243, 433);
-            this.ForCtrlCad_ProdTable.TabIndex = 16;
+            this.GerCtrlOfer_OferTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GerCtrlOfer_OferTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn10});
+            this.GerCtrlOfer_OferTable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GerCtrlOfer_OferTable.Location = new System.Drawing.Point(0, 0);
+            this.GerCtrlOfer_OferTable.Name = "GerCtrlOfer_OferTable";
+            this.GerCtrlOfer_OferTable.RowHeadersVisible = false;
+            this.GerCtrlOfer_OferTable.Size = new System.Drawing.Size(249, 438);
+            this.GerCtrlOfer_OferTable.TabIndex = 17;
             // 
-            // ForCtrlCad_ErrorTextBox
+            // textBox1
             // 
-            this.ForCtrlCad_ErrorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ForCtrlCad_ErrorTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ForCtrlCad_ErrorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ForCtrlCad_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ForCtrlCad_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.ForCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(6, 446);
-            this.ForCtrlCad_ErrorTextBox.Name = "ForCtrlCad_ErrorTextBox";
-            this.ForCtrlCad_ErrorTextBox.ReadOnly = true;
-            this.ForCtrlCad_ErrorTextBox.Size = new System.Drawing.Size(237, 13);
-            this.ForCtrlCad_ErrorTextBox.TabIndex = 21;
-            this.ForCtrlCad_ErrorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ForCtrlCad_ErrorTextBox.Visible = false;
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Red;
+            this.textBox1.Location = new System.Drawing.Point(4, 444);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(241, 13);
+            this.textBox1.TabIndex = 24;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.Visible = false;
             // 
-            // ForCtrlCad_CadastrarBtn
+            // button1
             // 
-            this.ForCtrlCad_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ForCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(168, 464);
-            this.ForCtrlCad_CadastrarBtn.Name = "ForCtrlCad_CadastrarBtn";
-            this.ForCtrlCad_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
-            this.ForCtrlCad_CadastrarBtn.TabIndex = 20;
-            this.ForCtrlCad_CadastrarBtn.Text = "Cadastrar";
-            this.ForCtrlCad_CadastrarBtn.UseVisualStyleBackColor = true;
-            this.ForCtrlCad_CadastrarBtn.Click += new System.EventHandler(this.ForCtrlCad_CadastrarBtn_Click);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(171, 463);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Cadastrar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // ForCtrlCad_CancelBtn
+            // button2
             // 
-            this.ForCtrlCad_CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ForCtrlCad_CancelBtn.Location = new System.Drawing.Point(6, 464);
-            this.ForCtrlCad_CancelBtn.Name = "ForCtrlCad_CancelBtn";
-            this.ForCtrlCad_CancelBtn.Size = new System.Drawing.Size(75, 23);
-            this.ForCtrlCad_CancelBtn.TabIndex = 19;
-            this.ForCtrlCad_CancelBtn.Text = "Cancelar";
-            this.ForCtrlCad_CancelBtn.UseVisualStyleBackColor = true;
-            this.ForCtrlCad_CancelBtn.Click += new System.EventHandler(this.ForCtrlCad_CancelBtn_Click);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.Location = new System.Drawing.Point(3, 463);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn1.MaxInputLength = 50;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 98;
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Produto";
+            this.dataGridViewTextBoxColumn6.MaxInputLength = 50;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
-            this.dataGridViewTextBoxColumn2.MaxInputLength = 10;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 48;
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.FillWeight = 80F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Desconto";
+            this.dataGridViewTextBoxColumn7.MaxInputLength = 10;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // dataGridViewTextBoxColumn3
+            // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Qtde";
-            this.dataGridViewTextBoxColumn3.MaxInputLength = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 48;
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.FillWeight = 80F;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Duração";
+            this.dataGridViewTextBoxColumn10.MaxInputLength = 12;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
-            // dataGridViewTextBoxColumn4
+            // dataGridView1
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Prateleira";
-            this.dataGridViewTextBoxColumn4.MaxInputLength = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 60;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.Column1,
+            this.dataGridViewTextBoxColumn13});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(249, 490);
+            this.dataGridView1.TabIndex = 17;
             // 
-            // dataGridViewTextBoxColumn5
+            // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Validade";
-            this.dataGridViewTextBoxColumn5.MaxInputLength = 12;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 80;
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn8.MaxInputLength = 50;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 98;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Preço";
+            this.dataGridViewTextBoxColumn9.MaxInputLength = 10;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn11.HeaderText = "Qtde";
+            this.dataGridViewTextBoxColumn11.MaxInputLength = 8;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn12.HeaderText = "Prateleira";
+            this.dataGridViewTextBoxColumn12.MaxInputLength = 8;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 60;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.HeaderText = "Fornecedor";
+            this.Column1.MaxInputLength = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn13.HeaderText = "Validade";
+            this.dataGridViewTextBoxColumn13.MaxInputLength = 10;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 80;
             // 
             // App
             // 
@@ -910,18 +1079,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).EndInit();
             this.FornecedorCtrlCadastrar.ResumeLayout(false);
             this.FornecedorCtrlCadastrar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ForCtrlCad_ProdTable)).EndInit();
             this.GerenteTab.ResumeLayout(false);
             this.GerenteCtrl.ResumeLayout(false);
             this.GerenteCtrlHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).EndInit();
+            this.GerenteCtrlGerProd.ResumeLayout(false);
             this.GerenteCtrlConsDados.ResumeLayout(false);
             this.GerenteCtrlConsDados.PerformLayout();
+            this.GerenteCtrlGerOfertas.ResumeLayout(false);
+            this.GerenteCtrlGerOfertas.PerformLayout();
             this.GerenteCtrlCadastrar.ResumeLayout(false);
             this.GerenteCtrlCadastrar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).EndInit();
             this.GerenteCtrlRemover.ResumeLayout(false);
             this.GerenteCtrlRemover.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ForCtrlCad_ProdTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlOfer_OferTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -996,6 +1170,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView GerCtrlOfer_OferTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }
 

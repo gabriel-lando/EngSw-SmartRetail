@@ -401,5 +401,27 @@ namespace SmartRetail
             ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
             ForCtrlCad_ErrorTextBox.Text = "Erro ao atualizar produtos!";
         }
+
+        private void CarregaProdutos()
+        {
+
+        }
+
+        private void CarregaOfertas()
+        {
+
+        }
+
+        private void GerenteCtrl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (GerenteCtrl.SelectedTab.Text == "Produtos")
+            {
+                CarregaProdutos();
+            }
+            else if (GerenteCtrl.SelectedTab.Text == "Ofertas")
+            {
+                CarregaOfertas();
+            }
+        }
     }
 }

@@ -33,6 +33,7 @@
             this.CamLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.TotemWelcomeLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.DetailsTextBox = new System.Windows.Forms.RichTextBox();
             this.AddBtn = new System.Windows.Forms.Button();
             this.CancelarBtn = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.PrateleiraComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FacialRecPictureBoxPrateleira = new System.Windows.Forms.PictureBox();
-            this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.TabCtrl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CamLogoPictureBox)).BeginInit();
@@ -125,6 +125,22 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
+            // ResultTextBox
+            // 
+            this.ResultTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ResultTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultTextBox.ForeColor = System.Drawing.Color.Red;
+            this.ResultTextBox.Location = new System.Drawing.Point(165, 158);
+            this.ResultTextBox.MaxLength = 50;
+            this.ResultTextBox.Name = "ResultTextBox";
+            this.ResultTextBox.ReadOnly = true;
+            this.ResultTextBox.Size = new System.Drawing.Size(179, 17);
+            this.ResultTextBox.TabIndex = 13;
+            this.ResultTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ResultTextBox.Visible = false;
+            this.ResultTextBox.WordWrap = false;
+            // 
             // DetailsTextBox
             // 
             this.DetailsTextBox.BackColor = System.Drawing.SystemColors.Control;
@@ -145,7 +161,7 @@
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(75, 23);
             this.AddBtn.TabIndex = 10;
-            this.AddBtn.Text = "Adicionar";
+            this.AddBtn.Text = "Atualizar";
             this.AddBtn.UseVisualStyleBackColor = true;
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
@@ -227,22 +243,6 @@
             this.FacialRecPictureBoxPrateleira.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.FacialRecPictureBoxPrateleira.TabIndex = 2;
             this.FacialRecPictureBoxPrateleira.TabStop = false;
-            // 
-            // ResultTextBox
-            // 
-            this.ResultTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ResultTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResultTextBox.ForeColor = System.Drawing.Color.Red;
-            this.ResultTextBox.Location = new System.Drawing.Point(165, 158);
-            this.ResultTextBox.MaxLength = 50;
-            this.ResultTextBox.Name = "ResultTextBox";
-            this.ResultTextBox.ReadOnly = true;
-            this.ResultTextBox.Size = new System.Drawing.Size(179, 17);
-            this.ResultTextBox.TabIndex = 13;
-            this.ResultTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ResultTextBox.Visible = false;
-            this.ResultTextBox.WordWrap = false;
             // 
             // Prateleira
             // 

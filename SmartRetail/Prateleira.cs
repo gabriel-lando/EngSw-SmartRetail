@@ -13,7 +13,7 @@ namespace SmartRetail
 {
     public partial class Prateleira : Form
     {
-        private List<Produto> produtos;
+        private List<Produto> produtos, sacola;
         private int infoID = 0;
 
         private FacialRecognition facialRec = new FacialRecognition();
@@ -80,9 +80,6 @@ namespace SmartRetail
             PrateleiraComboBox.SelectedIndex = 0;
             ProdutoComboBox.SelectedIndex = 0;
             QtdeComboBox.SelectedIndex = 0;
-
-            DetailsTextBox.Text = "";
-            ResultTextBox.Visible = false;
         }
 
         private void ClearDetailsTextBox()
@@ -98,7 +95,12 @@ namespace SmartRetail
             if (sql.LoadAllProducts(out List<Produto> produtosDB))
             {
                 PrateleiraComboBox.Items.Clear();
-                
+
+                if(sql.ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, infoID))
+                {
+                    sacola = produtosSacola;
+                }
+
                 List<Produto> produtoSort = produtosDB.OrderBy(o => o.prateleira).ToList();
                 produtos = produtoSort;
 
@@ -143,11 +145,12 @@ namespace SmartRetail
                 if (prateleira == produto.prateleira)
                 {
                     ProdutoComboBox.Items.Add(produto.nome);
+                    ProdutoComboBox.Enabled = true;
+                    QtdeComboBox.Enabled = false;
+                    ProdutoComboBox.SelectedIndex = 0;
+                    return;
                 }
             }
-            ProdutoComboBox.Enabled = true;
-            QtdeComboBox.Enabled = false;
-            ProdutoComboBox.SelectedIndex = 0;
         }
 
         private void CarregaQtde(string productName)
@@ -155,16 +158,31 @@ namespace SmartRetail
             QtdeComboBox.Items.Clear();
             Produto[] produtosArray = produtos.ToArray();
 
+            Produto[] sacolaArray = sacola.ToArray();
+
             foreach (Produto produto in produtosArray)
             {
                 if (productName == produto.nome)
                 {
-                    for (int i = 1; i <= produto.quantidade; i++)
+                    int qtde = produto.quantidade;
+                    int index = 0;
+
+                    foreach (Produto sacola in sacolaArray)
+                    {
+                        if (sacola.productID == produto.productID)
+                        {
+                            qtde += sacola.quantidade;
+                            index = sacola.quantidade;
+                            break;
+                        }
+                    }
+                    for (int i = 0; i <= qtde; i++)
                     {
                         QtdeComboBox.Items.Add(i.ToString());
                     }
                     QtdeComboBox.Enabled = true;
-                    QtdeComboBox.SelectedIndex = 0;
+                    QtdeComboBox.SelectedIndex = index;
+                    return;
                 }
             }
         }
@@ -207,8 +225,10 @@ namespace SmartRetail
             ClearDetailsTextBox();
             IdleTab();
         }
-        private void AddBtn_Click(object sender, EventArgs e) // TODO: Adicionar itens no carrinho da pessoa
+        private void AddBtn_Click(object sender, EventArgs e)
         {
+            ClearDetailsTextBox();
+
             if (PrateleiraComboBox.Enabled && ProdutoComboBox.Enabled && QtdeComboBox.Enabled) // Enviar infoID do cliente, productID e quantidade
             {
                 Produto[] produtosArray = produtos.ToArray();
@@ -217,9 +237,21 @@ namespace SmartRetail
                 {
                     if (ProdutoComboBox.SelectedItem.ToString() == produto.nome)
                     {
-                        SQLConnect sql = new SQLConnect();
                         int qtde = int.Parse(QtdeComboBox.SelectedItem.ToString());
 
+                        Produto[] sacolaArray = sacola.ToArray();
+
+                        foreach (Produto sacola in sacolaArray)
+                        {
+                            if (sacola.productID == produto.productID)
+                            {
+                                qtde -= sacola.quantidade;
+                                break;
+                            }
+                        }
+
+                        SQLConnect sql = new SQLConnect();
+                        
                         if (sql.AddProdutoCarrinho(infoID, produto, qtde))
                         {
                             ResultTextBox.Visible = true;
@@ -234,6 +266,8 @@ namespace SmartRetail
                             ResultTextBox.ForeColor = System.Drawing.Color.Red;
                             ResultTextBox.Text = "Erro ao adicionar!";
                         }
+
+                        return;
                     }
                 }
             }
