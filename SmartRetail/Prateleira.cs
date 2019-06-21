@@ -39,8 +39,6 @@ namespace SmartRetail
                 {
                     IdleTab();
                 }
-
-                //ClientInfoTextSaida.Text = facialRec.RetFilename();
             }
         }
 
@@ -175,6 +173,7 @@ namespace SmartRetail
         {
             if (PrateleiraComboBox.Enabled)
             {
+                ResultTextBox.Visible = false;
                 int prateleira;
 
                 try
@@ -196,6 +195,7 @@ namespace SmartRetail
         {
             if (ProdutoComboBox.Enabled)
             {
+                ResultTextBox.Visible = false;
                 string produto;
                 try
                 {
@@ -215,6 +215,7 @@ namespace SmartRetail
         {
             if (QtdeComboBox.Enabled)
             {
+                ResultTextBox.Visible = false;
                 Produto[] produtosArray = produtos.ToArray();
 
                 foreach (Produto produto in produtosArray)
