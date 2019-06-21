@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.CaixaWelcomeTab = new System.Windows.Forms.TabPage();
             this.CaixaLogoLabel = new System.Windows.Forms.Label();
@@ -63,8 +63,6 @@
             this.FacialRecPictureBoxEntrada = new System.Windows.Forms.PictureBox();
             this.CaixaClienteSaida = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.FacialRecPictureBoxSaida = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.ClienteCarrinhoTable = new System.Windows.Forms.DataGridView();
@@ -78,6 +76,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.FacialRecPictureBoxSaida = new System.Windows.Forms.PictureBox();
             this.TabCtrl.SuspendLayout();
             this.CaixaWelcomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CamLogoPictureBox)).BeginInit();
@@ -87,12 +87,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxEntrada)).BeginInit();
             this.CaixaClienteSaida.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxSaida)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteCarrinhoTable)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxSaida)).BeginInit();
             this.SuspendLayout();
             // 
             // TabCtrl
@@ -119,10 +119,10 @@
             this.CaixaWelcomeTab.Controls.Add(this.CaixaLogoLabel);
             this.CaixaWelcomeTab.Controls.Add(this.CamLogoPictureBox);
             this.CaixaWelcomeTab.Controls.Add(this.CaixaWelcomeLabel);
-            this.CaixaWelcomeTab.Location = new System.Drawing.Point(4, 9);
+            this.CaixaWelcomeTab.Location = new System.Drawing.Point(4, 5);
             this.CaixaWelcomeTab.Name = "CaixaWelcomeTab";
             this.CaixaWelcomeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CaixaWelcomeTab.Size = new System.Drawing.Size(792, 417);
+            this.CaixaWelcomeTab.Size = new System.Drawing.Size(792, 421);
             this.CaixaWelcomeTab.TabIndex = 1;
             this.CaixaWelcomeTab.UseVisualStyleBackColor = true;
             // 
@@ -130,7 +130,7 @@
             // 
             this.CaixaLogoLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CaixaLogoLabel.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CaixaLogoLabel.Location = new System.Drawing.Point(3, 340);
+            this.CaixaLogoLabel.Location = new System.Drawing.Point(3, 344);
             this.CaixaLogoLabel.Name = "CaixaLogoLabel";
             this.CaixaLogoLabel.Size = new System.Drawing.Size(786, 74);
             this.CaixaLogoLabel.TabIndex = 3;
@@ -148,7 +148,7 @@
             this.CamLogoPictureBox.InitialImage = null;
             this.CamLogoPictureBox.Location = new System.Drawing.Point(210, 100);
             this.CamLogoPictureBox.Name = "CamLogoPictureBox";
-            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 222);
+            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 230);
             this.CamLogoPictureBox.TabIndex = 2;
             this.CamLogoPictureBox.TabStop = false;
             // 
@@ -185,9 +185,9 @@
             this.CaixaClienteEntrada.Controls.Add(this.label3);
             this.CaixaClienteEntrada.Controls.Add(this.richTextBox3);
             this.CaixaClienteEntrada.Controls.Add(this.FacialRecPictureBoxCadastro);
-            this.CaixaClienteEntrada.Location = new System.Drawing.Point(4, 5);
+            this.CaixaClienteEntrada.Location = new System.Drawing.Point(4, 9);
             this.CaixaClienteEntrada.Name = "CaixaClienteEntrada";
-            this.CaixaClienteEntrada.Size = new System.Drawing.Size(792, 421);
+            this.CaixaClienteEntrada.Size = new System.Drawing.Size(792, 417);
             this.CaixaClienteEntrada.TabIndex = 2;
             this.CaixaClienteEntrada.Text = "tabPage1";
             this.CaixaClienteEntrada.UseVisualStyleBackColor = true;
@@ -358,7 +358,7 @@
             this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox3.Enabled = false;
             this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox3.Location = new System.Drawing.Point(3, 213);
+            this.richTextBox3.Location = new System.Drawing.Point(3, 209);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(150, 200);
             this.richTextBox3.TabIndex = 1;
@@ -451,29 +451,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(792, 417);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.FacialRecPictureBoxSaida);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(156, 417);
-            this.panel1.TabIndex = 0;
-            // 
-            // FacialRecPictureBoxSaida
-            // 
-            this.FacialRecPictureBoxSaida.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.FacialRecPictureBoxSaida.BackColor = System.Drawing.Color.PaleGreen;
-            this.FacialRecPictureBoxSaida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FacialRecPictureBoxSaida.Location = new System.Drawing.Point(3, 3);
-            this.FacialRecPictureBoxSaida.Name = "FacialRecPictureBoxSaida";
-            this.FacialRecPictureBoxSaida.Size = new System.Drawing.Size(150, 200);
-            this.FacialRecPictureBoxSaida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.FacialRecPictureBoxSaida.TabIndex = 0;
-            this.FacialRecPictureBoxSaida.TabStop = false;
-            this.FacialRecPictureBoxSaida.Click += new System.EventHandler(this.FacialRecPictureBoxSaida_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel4);
@@ -517,8 +494,8 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridViewTextBoxColumn1.FillWeight = 180F;
             this.dataGridViewTextBoxColumn1.HeaderText = "Produto";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -528,8 +505,8 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewTextBoxColumn2.FillWeight = 80F;
             this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -539,8 +516,8 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridViewTextBoxColumn3.FillWeight = 60F;
             this.dataGridViewTextBoxColumn3.HeaderText = "Qtde";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -550,8 +527,8 @@
             // ClienteCarrinhoProdTotal
             // 
             this.ClienteCarrinhoProdTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdTotal.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdTotal.DefaultCellStyle = dataGridViewCellStyle20;
             this.ClienteCarrinhoProdTotal.FillWeight = 80F;
             this.ClienteCarrinhoProdTotal.HeaderText = "Total";
             this.ClienteCarrinhoProdTotal.Name = "ClienteCarrinhoProdTotal";
@@ -627,6 +604,29 @@
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "Obrigado pela\n  preferência\n \nVolte Sempre";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.FacialRecPictureBoxSaida);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(156, 417);
+            this.panel1.TabIndex = 0;
+            // 
+            // FacialRecPictureBoxSaida
+            // 
+            this.FacialRecPictureBoxSaida.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.FacialRecPictureBoxSaida.BackColor = System.Drawing.Color.PaleGreen;
+            this.FacialRecPictureBoxSaida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FacialRecPictureBoxSaida.Location = new System.Drawing.Point(3, 3);
+            this.FacialRecPictureBoxSaida.Name = "FacialRecPictureBoxSaida";
+            this.FacialRecPictureBoxSaida.Size = new System.Drawing.Size(150, 200);
+            this.FacialRecPictureBoxSaida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FacialRecPictureBoxSaida.TabIndex = 0;
+            this.FacialRecPictureBoxSaida.TabStop = false;
+            this.FacialRecPictureBoxSaida.Click += new System.EventHandler(this.FacialRecPictureBoxSaida_Click);
+            // 
             // Caixa
             // 
             this.AllowDrop = true;
@@ -652,13 +652,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxEntrada)).EndInit();
             this.CaixaClienteSaida.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxSaida)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteCarrinhoTable)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxSaida)).EndInit();
             this.ResumeLayout(false);
 
         }
