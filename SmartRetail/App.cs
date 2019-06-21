@@ -77,7 +77,7 @@ namespace SmartRetail
 
         private void CarregaProdFornecedor()
         {
-            ClearTable();
+            ClearTable_Fornecedor();
 
             SQLConnect sql = new SQLConnect();
 
@@ -85,16 +85,47 @@ namespace SmartRetail
             {
                 Produto[] produtosArray = produtosDB.ToArray();
 
+                VerificaSemEstoque(produtosArray);
+
                 foreach (Produto produto in produtosArray)
                 {
-                    string[] tmpRow = new string[] { produto.productID.ToString(), produto.nome, String.Format("{0:F2}", produto.preco), produto.quantidade.ToString(), produto.prateleira.ToString(), produto.validade.ToString("dd/MM/yyyy")};
+                    string[] tmpRow = new string[] { produto.productID.ToString(), produto.nome, string.Format("{0:F2}", produto.preco), produto.quantidade.ToString(), produto.prateleira.ToString(), produto.validade.ToString("dd/MM/yyyy")};
                     ForCtrlCad_ProdTable.Rows.Add(tmpRow);
                 }
             }
         }
-        private void ClearTable()
+        private void ClearTable_Fornecedor()
         {
             ForCtrlCad_ProdTable.Rows.Clear();
+            ForCtrlHome_TextBox.Visible = false;
+            ForCtrlCad_ErrorTextBox.Visible = false;
+        }
+
+        private void FornecedorCtrl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (FornecedorCtrl.SelectedTab.Text == "Home")
+            {
+                CarregaProdFornecedor();
+            }
+        }
+
+        private void VerificaSemEstoque(Produto[] produtos)
+        {
+            List<string> sem_estoque = new List<string>();
+
+            foreach (Produto produto in produtos)
+            {
+                if(produto.quantidade <= 0)
+                {
+                    sem_estoque.Add(produto.nome);
+                }
+            }
+
+            if (sem_estoque.Count > 0)
+            {
+                ForCtrlHome_TextBox.Text = string.Format("Fora de estoque:\n\n") + string.Join("\n", sem_estoque);
+                ForCtrlHome_TextBox.Visible = true;
+            }
         }
 
         private void GerCtrlCad_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -337,7 +368,7 @@ namespace SmartRetail
 
         private void LogoffForBtn_Click(object sender, EventArgs e)
         {
-            ClearTable();
+            ClearTable_Fornecedor();
             TabCtrl.SelectedIndex = 0;
         }
 
@@ -477,7 +508,7 @@ namespace SmartRetail
 
         private void CarregaProdutos()
         {
-            ClearTables();
+            ClearTables_Gerente();
 
             SQLConnect sql = new SQLConnect();
             if (sql.LoadAllProducts(out List<Produto> produtosDB))
@@ -494,7 +525,7 @@ namespace SmartRetail
 
         private void CarregaOfertas()
         {
-            ClearTables();
+            ClearTables_Gerente();
 
             SQLConnect sql = new SQLConnect();
             if (sql.LoadAllProducts(out List<Produto> produtosDB))
@@ -587,12 +618,12 @@ namespace SmartRetail
 
         private void CarregaConsulta()
         {
-            ClearTables();
+            ClearTables_Gerente();
             GerCtrlCons_ComboBox.SelectedIndex = 0;
             GerCtrlCons_ConsTable.Visible = false;
         }
 
-        private void ClearTables()
+        private void ClearTables_Gerente()
         {
             GerCtrlCons_ConsTable.Rows.Clear();
             GerCtrlCons_ConsTable.Columns.Clear();
@@ -631,7 +662,7 @@ namespace SmartRetail
         private void GerCtrlCons_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SQLConnect sql = new SQLConnect();
-            ClearTables();
+            ClearTables_Gerente();
 
             switch (GerCtrlCons_ComboBox.SelectedItem.ToString())
             {
@@ -712,7 +743,7 @@ namespace SmartRetail
                     }
                     break;
                 default:
-                    ClearTables();
+                    ClearTables_Gerente();
                     GerCtrlCons_ConsTable.Visible = false;
                     break;
 
