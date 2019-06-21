@@ -635,7 +635,7 @@ namespace SmartRetail
             return false;
         }
 
-        public bool AddProdutoCarrinho(int infoID, Produto produto, int qtde) // Buscar carrinhoID, criar Sacola com carrinhoID, productID e quantidade, subtrair quantidade do productID 
+        public bool ChangeProdutoCarrinho(int infoID, Produto produto, int qtde) // Buscar carrinhoID, criar Sacola com carrinhoID, productID e quantidade, subtrair quantidade do productID 
         {
             string queryCarrinhoID = "SELECT * FROM Cliente WHERE infoID = @infoID;";
 

@@ -267,7 +267,7 @@ namespace SmartRetail
             IdleTab();
         }
 
-        private void AddBtn_Click(object sender, EventArgs e)
+        private void UpdateBtn_Click(object sender, EventArgs e)
         {
             ClearDetailsTextBox();
 
@@ -318,7 +318,7 @@ namespace SmartRetail
 
                         SQLConnect sql = new SQLConnect();
                         
-                        if (sql.AddProdutoCarrinho(infoID, produto, qtde))
+                        if (sql.ChangeProdutoCarrinho(infoID, produto, qtde))
                         {
                             ResultTextBox.Visible = true;
                             ResultTextBox.ForeColor = System.Drawing.Color.Green;

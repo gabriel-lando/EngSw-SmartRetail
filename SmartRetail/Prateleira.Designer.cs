@@ -36,7 +36,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.DetailsTextBox = new System.Windows.Forms.RichTextBox();
-            this.AddBtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
             this.CancelarBtn = new System.Windows.Forms.Button();
             this.QtdeComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             this.TabCtrl.Controls.Add(this.tabPage2);
             this.TabCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabCtrl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.TabCtrl.ItemSize = new System.Drawing.Size(0, 1);
+            this.TabCtrl.ItemSize = new System.Drawing.Size(5, 5);
             this.TabCtrl.Location = new System.Drawing.Point(0, 0);
             this.TabCtrl.Name = "TabCtrl";
             this.TabCtrl.Padding = new System.Drawing.Point(0, 0);
@@ -73,10 +73,10 @@
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.CamLogoPictureBox);
             this.tabPage1.Controls.Add(this.TotemWelcomeLabel);
-            this.tabPage1.Location = new System.Drawing.Point(4, 5);
+            this.tabPage1.Location = new System.Drawing.Point(4, 9);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(588, 215);
+            this.tabPage1.Size = new System.Drawing.Size(588, 211);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -87,7 +87,7 @@
             this.CamLogoPictureBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CamLogoPictureBox.ErrorImage = null;
             this.CamLogoPictureBox.InitialImage = null;
-            this.CamLogoPictureBox.Location = new System.Drawing.Point(3, 76);
+            this.CamLogoPictureBox.Location = new System.Drawing.Point(3, 72);
             this.CamLogoPictureBox.Name = "CamLogoPictureBox";
             this.CamLogoPictureBox.Size = new System.Drawing.Size(582, 136);
             this.CamLogoPictureBox.TabIndex = 2;
@@ -110,7 +110,7 @@
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage2.Controls.Add(this.ResultTextBox);
             this.tabPage2.Controls.Add(this.DetailsTextBox);
-            this.tabPage2.Controls.Add(this.AddBtn);
+            this.tabPage2.Controls.Add(this.UpdateBtn);
             this.tabPage2.Controls.Add(this.CancelarBtn);
             this.tabPage2.Controls.Add(this.QtdeComboBox);
             this.tabPage2.Controls.Add(this.label3);
@@ -119,10 +119,10 @@
             this.tabPage2.Controls.Add(this.PrateleiraComboBox);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.FacialRecPictureBoxPrateleira);
-            this.tabPage2.Location = new System.Drawing.Point(4, 5);
+            this.tabPage2.Location = new System.Drawing.Point(4, 9);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(588, 215);
+            this.tabPage2.Size = new System.Drawing.Size(588, 211);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
@@ -152,19 +152,19 @@
             this.DetailsTextBox.Name = "DetailsTextBox";
             this.DetailsTextBox.ReadOnly = true;
             this.DetailsTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.DetailsTextBox.Size = new System.Drawing.Size(219, 209);
+            this.DetailsTextBox.Size = new System.Drawing.Size(219, 205);
             this.DetailsTextBox.TabIndex = 12;
             this.DetailsTextBox.Text = "";
             // 
-            // AddBtn
+            // UpdateBtn
             // 
-            this.AddBtn.Location = new System.Drawing.Point(269, 184);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(75, 23);
-            this.AddBtn.TabIndex = 10;
-            this.AddBtn.Text = "Atualizar";
-            this.AddBtn.UseVisualStyleBackColor = true;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            this.UpdateBtn.Location = new System.Drawing.Point(269, 184);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(75, 23);
+            this.UpdateBtn.TabIndex = 10;
+            this.UpdateBtn.Text = "Atualizar";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // CancelarBtn
             // 
@@ -280,7 +280,7 @@
         private System.Windows.Forms.Label TotemWelcomeLabel;
         private System.Windows.Forms.PictureBox CamLogoPictureBox;
         private System.Windows.Forms.PictureBox FacialRecPictureBoxPrateleira;
-        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Button CancelarBtn;
         private System.Windows.Forms.ComboBox QtdeComboBox;
         private System.Windows.Forms.Label label3;
