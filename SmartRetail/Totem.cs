@@ -119,13 +119,13 @@ namespace SmartRetail
                     switch (ofertasDB.Count())
                     {
                         case 1:
-                            string oferta = String.Format("Produto:\t{0} \n\nValidade:\t{1:dd/MM/yyyy} \n\nSem desconto :\tR$ {2:F2} \n\nCom desconto :\tR$ {3:F2} \n\nDesconto :\t{4:F1} %", produto[0].nome, produto[0].validade, produto[0].preco, produto[0].preco * (1 - (ofertas[0].desconto)/100), ofertas[0].desconto);
+                            string oferta = String.Format("Produto:\t\t{0} \n\nValidade:\t\t{1:dd/MM/yyyy} \n\nSem desconto :\tR$ {2:F2} \n\nCom desconto :\tR$ {3:F2} \n\nDesconto :\t\t{4:F1} %", produto[0].nome, produto[0].validade, produto[0].preco, produto[0].preco * (1 - (ofertas[0].desconto)/100), ofertas[0].desconto);
                             ClienteOfertaTextBox1.Text = oferta;
                             ClienteOfertaTextBox2.Text = "";
                             break;
                         case 2:
-                            string oferta1 = String.Format("Produto:\t{0} \n\nValidade:\t{1:dd/MM/yyyy} \n\nSem desconto :\tR$ {2:F2} \n\nCom desconto :\tR$ {3:F2} \n\nDesconto :\t{4:F1} %", produto[0].nome, produto[0].validade, produto[0].preco, produto[0].preco * (1 - (ofertas[0].desconto) / 100), ofertas[0].desconto);
-                            string oferta2 = String.Format("Produto:\t{0} \n\nValidade:\t{1:dd/MM/yyyy} \n\nSem desconto :\tR$ {2:F2} \n\nCom desconto :\tR$ {3:F2} \n\nDesconto :\t{4:F1} %", produto[1].nome, produto[1].validade, produto[1].preco, produto[1].preco * (1 - (ofertas[1].desconto) / 100), ofertas[1].desconto);
+                            string oferta1 = String.Format("Produto:\t\t{0} \n\nValidade:\t\t{1:dd/MM/yyyy} \n\nSem desconto :\tR$ {2:F2} \n\nCom desconto :\tR$ {3:F2} \n\nDesconto :\t\t{4:F1} %", produto[0].nome, produto[0].validade, produto[0].preco, produto[0].preco * (1 - (ofertas[0].desconto) / 100), ofertas[0].desconto);
+                            string oferta2 = String.Format("Produto:\t\t{0} \n\nValidade:\t\t{1:dd/MM/yyyy} \n\nSem desconto :\tR$ {2:F2} \n\nCom desconto :\tR$ {3:F2} \n\nDesconto :\t\t{4:F1} %", produto[1].nome, produto[1].validade, produto[1].preco, produto[1].preco * (1 - (ofertas[1].desconto) / 100), ofertas[1].desconto);
                             ClienteOfertaTextBox1.Text = oferta1;
                             ClienteOfertaTextBox2.Text = oferta2;
                             break;
