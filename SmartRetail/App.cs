@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartRetail
@@ -513,12 +508,23 @@ namespace SmartRetail
             SQLConnect sql = new SQLConnect();
             if (sql.LoadAllProducts(out List<Produto> produtosDB))
             {
-                Produto[] produtosArray = produtosDB.ToArray();
-
-                foreach (Produto produto in produtosArray)
+                if (sql.ReturnAllFornGer(out List<InfoBasica> infoBasicasDB, 1))
                 {
-                    string[] tmpRow = new string[] { produto.nome, String.Format("{0:F2}", produto.preco), produto.quantidade.ToString(), produto.prateleira.ToString(), produto.fornecedorID.ToString(), produto.validade.ToString("dd/MM/yyyy") };
-                    GerCtrlProd_ProdTable.Rows.Add(tmpRow);
+                    Produto[] produtosArray = produtosDB.ToArray();
+                    InfoBasica[] infoArray = infoBasicasDB.ToArray();
+
+                    foreach (Produto produto in produtosArray)
+                    {
+                        foreach(InfoBasica info in infoArray)
+                        {
+                            if(produto.fornecedorID == info.infoID)
+                            {
+                                string[] tmpRow = new string[] { produto.nome, String.Format("{0:F2}", produto.preco), produto.quantidade.ToString(), produto.prateleira.ToString(), info.nome, produto.validade.ToString("dd/MM/yyyy") };
+                                GerCtrlProd_ProdTable.Rows.Add(tmpRow);
+                                break;
+                            }
+                        }
+                    }
                 }
             }
         }

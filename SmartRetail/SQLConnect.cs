@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartRetail
@@ -897,6 +894,7 @@ namespace SmartRetail
 
                     infoBasicasDB.Add(new InfoBasica()
                     {
+                        infoID = infoID,
                         nome = nome,
                         email = email,
                         cadastro = cadastro,

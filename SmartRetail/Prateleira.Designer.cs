@@ -59,7 +59,7 @@
             this.TabCtrl.Controls.Add(this.tabPage2);
             this.TabCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabCtrl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.TabCtrl.ItemSize = new System.Drawing.Size(5, 5);
+            this.TabCtrl.ItemSize = new System.Drawing.Size(0, 1);
             this.TabCtrl.Location = new System.Drawing.Point(0, 0);
             this.TabCtrl.Name = "TabCtrl";
             this.TabCtrl.Padding = new System.Drawing.Point(0, 0);
@@ -73,10 +73,10 @@
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.CamLogoPictureBox);
             this.tabPage1.Controls.Add(this.TotemWelcomeLabel);
-            this.tabPage1.Location = new System.Drawing.Point(4, 9);
+            this.tabPage1.Location = new System.Drawing.Point(4, 5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(588, 211);
+            this.tabPage1.Size = new System.Drawing.Size(588, 215);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -87,7 +87,7 @@
             this.CamLogoPictureBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CamLogoPictureBox.ErrorImage = null;
             this.CamLogoPictureBox.InitialImage = null;
-            this.CamLogoPictureBox.Location = new System.Drawing.Point(3, 72);
+            this.CamLogoPictureBox.Location = new System.Drawing.Point(3, 76);
             this.CamLogoPictureBox.Name = "CamLogoPictureBox";
             this.CamLogoPictureBox.Size = new System.Drawing.Size(582, 136);
             this.CamLogoPictureBox.TabIndex = 2;
