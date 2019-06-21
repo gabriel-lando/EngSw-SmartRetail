@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Favicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
@@ -42,6 +45,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Favicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
