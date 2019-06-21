@@ -243,6 +243,7 @@
             this.FacialRecPictureBoxPrateleira.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.FacialRecPictureBoxPrateleira.TabIndex = 2;
             this.FacialRecPictureBoxPrateleira.TabStop = false;
+            this.FacialRecPictureBoxPrateleira.Click += new System.EventHandler(this.FacialRecPictureBoxPrateleira_Click);
             // 
             // Prateleira
             // 

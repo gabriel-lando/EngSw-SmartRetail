@@ -213,6 +213,14 @@ namespace SmartRetail
             ClearDetailsTextBox();
             IdleTab();
         }
+
+        private void FacialRecPictureBoxPrateleira_Click(object sender, EventArgs e)
+        {
+            ClearComboBox();
+            ClearDetailsTextBox();
+            IdleTab();
+        }
+
         private void AddBtn_Click(object sender, EventArgs e)
         {
             ClearDetailsTextBox();
