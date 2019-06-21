@@ -200,7 +200,16 @@ namespace SmartRetail
                 {
                     if (ProdutoComboBox.SelectedItem.ToString() == produto.nome)
                     {
-                        int qtde = int.Parse(QtdeComboBox.SelectedItem.ToString());
+                        int qtde;
+
+                        try
+                        {
+                            qtde = int.Parse(QtdeComboBox.SelectedItem.ToString());
+                        }
+                        catch
+                        {
+                            return;
+                        }
                         DetailsTextBox.Text = String.Format("Produto:\t{0} \n\nValidade:\t{1:dd/MM/yyyy} \n\nValor un:\tR$ {2:F2} \n\nTotal:\t\tR$ {3:F2}", produto.nome, produto.validade, produto.preco, produto.preco * qtde);
                     }
                 }
@@ -233,7 +242,19 @@ namespace SmartRetail
                 {
                     if (ProdutoComboBox.SelectedItem.ToString() == produto.nome)
                     {
-                        int qtde = int.Parse(QtdeComboBox.SelectedItem.ToString());
+                        int qtde;
+
+                        try
+                        {
+                            qtde = int.Parse(QtdeComboBox.SelectedItem.ToString());
+                        }
+                        catch
+                        {
+                            ResultTextBox.Visible = true;
+                            ResultTextBox.ForeColor = System.Drawing.Color.Red;
+                            ResultTextBox.Text = "Quantidade inválida!";
+                            return;
+                        }
 
                         Produto[] sacolaArray = sacola.ToArray();
 
