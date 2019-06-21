@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CreateTablesDB
 {
@@ -34,8 +30,10 @@ namespace CreateTablesDB
                 Console.Write("ERRO ao adicionar as tabelas...\n");
             }
 
-            Console.Write("\nPressione ENTER para sair... ");
-            Console.Read();
+            Console.Write("\nPressione uma tecla para sair... ");
+            Console.ReadKey();
+
+            Environment.Exit(1);
         }
     }
 }
