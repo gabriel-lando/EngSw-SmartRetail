@@ -826,109 +826,109 @@ namespace SmartRetail
 
             string queryCarrinhoID = "SELECT * FROM Cliente WHERE infoID = @infoID;";
 
-            if (AbrirConexao())
+            if (LoadAllOffers(out List<Oferta> ofertasDB))
             {
-                SqlCommand cmdCarrinhoID = new SqlCommand(queryCarrinhoID, connection);
-                cmdCarrinhoID.Parameters.AddWithValue("@infoID", infoID);
-                SqlDataReader readerCarrinhoID = cmdCarrinhoID.ExecuteReader();
-
-                if (readerCarrinhoID.Read())
+                if (AbrirConexao())
                 {
-                    int carrinhoID = int.Parse(readerCarrinhoID["carrinhoID"].ToString());
-                    readerCarrinhoID.Close();
+                    SqlCommand cmdCarrinhoID = new SqlCommand(queryCarrinhoID, connection);
+                    cmdCarrinhoID.Parameters.AddWithValue("@infoID", infoID);
+                    SqlDataReader readerCarrinhoID = cmdCarrinhoID.ExecuteReader();
 
-                    if (carrinhoID > 0) // Se existir carrinho, retorna os produtos e qtdes da sacola
+                    if (readerCarrinhoID.Read())
                     {
-                        string queryTotal = "SELECT * FROM Carrinho WHERE carrinhoID = @carrinhoID;";
-                        SqlCommand cmdTotal = new SqlCommand(queryTotal, connection);
-                        cmdTotal.Parameters.AddWithValue("@carrinhoID", carrinhoID);
-                        SqlDataReader readerTotal = cmdTotal.ExecuteReader();
+                        int carrinhoID = int.Parse(readerCarrinhoID["carrinhoID"].ToString());
+                        readerCarrinhoID.Close();
 
-                        if (readerTotal.Read())
+                        if (carrinhoID > 0) // Se existir carrinho, retorna os produtos e qtdes da sacola
                         {
-                            preco_total = float.Parse(readerTotal["preco_total"].ToString());
-                        }
-                        readerTotal.Close();
+                            string queryTotal = "SELECT * FROM Carrinho WHERE carrinhoID = @carrinhoID;";
+                            SqlCommand cmdTotal = new SqlCommand(queryTotal, connection);
+                            cmdTotal.Parameters.AddWithValue("@carrinhoID", carrinhoID);
+                            SqlDataReader readerTotal = cmdTotal.ExecuteReader();
 
-                        string querySacolas = "SELECT * FROM Sacola WHERE carrinhoID = @carrinhoID;";
-                        SqlCommand cmdSacolas = new SqlCommand(querySacolas, connection);
-                        cmdSacolas.Parameters.AddWithValue("@carrinhoID", carrinhoID);
-                        SqlDataReader readerSacolas = cmdSacolas.ExecuteReader();
-
-                        List<Sacola> tmpSacola = new List<Sacola>();
-
-                        while (readerSacolas.Read())
-                        {
-                            int productID = int.Parse(readerSacolas["productID"].ToString());
-                            int qtde = int.Parse(readerSacolas["quantidade"].ToString());
-
-                            if(qtde > 0)
+                            if (readerTotal.Read())
                             {
-                                tmpSacola.Add(new Sacola()
-                                {
-                                    productID = productID,
-                                    quantidade = qtde
-                                });
+                                preco_total = float.Parse(readerTotal["preco_total"].ToString());
                             }
-                        }
-                        readerSacolas.Close();
+                            readerTotal.Close();
 
-                        if(tmpSacola.Count() > 0)
-                        {
-                            if (!LoadAllOffers(out List<Oferta> ofertasDB))
+                            string querySacolas = "SELECT * FROM Sacola WHERE carrinhoID = @carrinhoID;";
+                            SqlCommand cmdSacolas = new SqlCommand(querySacolas, connection);
+                            cmdSacolas.Parameters.AddWithValue("@carrinhoID", carrinhoID);
+                            SqlDataReader readerSacolas = cmdSacolas.ExecuteReader();
+
+                            List<Sacola> tmpSacola = new List<Sacola>();
+
+                            while (readerSacolas.Read())
                             {
-                                return false;
-                            }
+                                int productID = int.Parse(readerSacolas["productID"].ToString());
+                                int qtde = int.Parse(readerSacolas["quantidade"].ToString());
 
-                            Oferta[] ofertas = ofertasDB.ToArray();
-                            Sacola[] sacolaArray = tmpSacola.ToArray();
-
-                            foreach (Sacola sacola in sacolaArray)
-                            {
-                                string queryProducts = "SELECT * FROM Produto WHERE productID = @productID;";
-                                SqlCommand cmdProducts = new SqlCommand(queryProducts, connection);
-                                cmdProducts.Parameters.AddWithValue("@productID", sacola.productID);
-                                SqlDataReader readerProducts = cmdProducts.ExecuteReader();
-
-                                if (readerProducts.Read())
+                                if (qtde > 0)
                                 {
-                                    string nome = readerProducts["nome"].ToString();
-                                    float preco = float.Parse(readerProducts["preco"].ToString());
-                                    int fornecedorID = int.Parse(readerProducts["fornecedorID"].ToString());
-                                    int prateleira = int.Parse(readerProducts["prateleira"].ToString());
-                                    DateTime validade = DateTime.Parse(readerProducts["validade"].ToString()).Date;
-
-                                    foreach (Oferta oferta in ofertas)
+                                    tmpSacola.Add(new Sacola()
                                     {
-                                        if (oferta.productID == sacola.productID)
-                                        {
-                                            preco *= (1 - (oferta.desconto) / 100);
-                                            break;
-                                        }
-                                    }
-
-                                    produtosSacola.Add(new Produto()
-                                    {
-                                        productID = sacola.productID,
-                                        nome = nome,
-                                        fornecedorID = fornecedorID,
-                                        preco = preco,
-                                        validade = validade,
-                                        prateleira = prateleira,
-                                        quantidade = sacola.quantidade
+                                        productID = productID,
+                                        quantidade = qtde
                                     });
                                 }
-                                readerProducts.Close();
+                            }
+                            readerSacolas.Close();
+
+                            if (tmpSacola.Count() > 0)
+                            {
+
+                                Oferta[] ofertas = ofertasDB.ToArray();
+                                Sacola[] sacolaArray = tmpSacola.ToArray();
+
+                                foreach (Sacola sacola in sacolaArray)
+                                {
+                                    string queryProducts = "SELECT * FROM Produto WHERE productID = @productID;";
+                                    SqlCommand cmdProducts = new SqlCommand(queryProducts, connection);
+                                    cmdProducts.Parameters.AddWithValue("@productID", sacola.productID);
+                                    SqlDataReader readerProducts = cmdProducts.ExecuteReader();
+
+                                    if (readerProducts.Read())
+                                    {
+                                        string nome = readerProducts["nome"].ToString();
+                                        float preco = float.Parse(readerProducts["preco"].ToString());
+                                        int fornecedorID = int.Parse(readerProducts["fornecedorID"].ToString());
+                                        int prateleira = int.Parse(readerProducts["prateleira"].ToString());
+                                        DateTime validade = DateTime.Parse(readerProducts["validade"].ToString()).Date;
+
+                                        foreach (Oferta oferta in ofertas)
+                                        {
+                                            if (oferta.productID == sacola.productID)
+                                            {
+                                                preco *= (1 - (oferta.desconto) / 100);
+                                                break;
+                                            }
+                                        }
+
+                                        produtosSacola.Add(new Produto()
+                                        {
+                                            productID = sacola.productID,
+                                            nome = nome,
+                                            fornecedorID = fornecedorID,
+                                            preco = preco,
+                                            validade = validade,
+                                            prateleira = prateleira,
+                                            quantidade = sacola.quantidade
+                                        });
+                                    }
+                                    readerProducts.Close();
+                                }
+
                             }
                         }
                     }
-                }
 
-                FecharConexao();
+                    FecharConexao();
 
-                if (produtosSacola.Count() >= 0)
-                {
-                    return true;
+                    if (produtosSacola.Count() >= 0)
+                    {
+                        return true;
+                    }
                 }
             }
             return false;

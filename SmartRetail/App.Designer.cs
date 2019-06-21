@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.LoginPageTab = new System.Windows.Forms.TabPage();
             this.ErrorLoginTextBox = new System.Windows.Forms.TextBox();
@@ -293,10 +293,10 @@
             // FornecedorTab
             // 
             this.FornecedorTab.Controls.Add(this.FornecedorCtrl);
-            this.FornecedorTab.Location = new System.Drawing.Point(4, 5);
+            this.FornecedorTab.Location = new System.Drawing.Point(4, 9);
             this.FornecedorTab.Margin = new System.Windows.Forms.Padding(0);
             this.FornecedorTab.Name = "FornecedorTab";
-            this.FornecedorTab.Size = new System.Drawing.Size(276, 502);
+            this.FornecedorTab.Size = new System.Drawing.Size(276, 498);
             this.FornecedorTab.TabIndex = 0;
             this.FornecedorTab.Text = "FornecedorTab";
             this.FornecedorTab.UseVisualStyleBackColor = true;
@@ -311,7 +311,7 @@
             this.FornecedorCtrl.Multiline = true;
             this.FornecedorCtrl.Name = "FornecedorCtrl";
             this.FornecedorCtrl.SelectedIndex = 0;
-            this.FornecedorCtrl.Size = new System.Drawing.Size(276, 502);
+            this.FornecedorCtrl.Size = new System.Drawing.Size(276, 498);
             this.FornecedorCtrl.TabIndex = 0;
             // 
             // FornecedorCtrlHome
@@ -345,7 +345,7 @@
             this.FornecedorCtrlCadastrar.Controls.Add(this.ForCtrlCad_ProdTable);
             this.FornecedorCtrlCadastrar.Location = new System.Drawing.Point(23, 4);
             this.FornecedorCtrlCadastrar.Name = "FornecedorCtrlCadastrar";
-            this.FornecedorCtrlCadastrar.Size = new System.Drawing.Size(249, 494);
+            this.FornecedorCtrlCadastrar.Size = new System.Drawing.Size(249, 490);
             this.FornecedorCtrlCadastrar.TabIndex = 1;
             this.FornecedorCtrlCadastrar.Text = "Cadastrar";
             // 
@@ -358,7 +358,7 @@
             this.ForCtrlCad_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ForCtrlCad_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.ForCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(3, 449);
+            this.ForCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(3, 445);
             this.ForCtrlCad_ErrorTextBox.Name = "ForCtrlCad_ErrorTextBox";
             this.ForCtrlCad_ErrorTextBox.ReadOnly = true;
             this.ForCtrlCad_ErrorTextBox.Size = new System.Drawing.Size(243, 13);
@@ -369,7 +369,7 @@
             // ForCtrlCad_CadastrarBtn
             // 
             this.ForCtrlCad_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ForCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(171, 467);
+            this.ForCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(171, 463);
             this.ForCtrlCad_CadastrarBtn.Name = "ForCtrlCad_CadastrarBtn";
             this.ForCtrlCad_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
             this.ForCtrlCad_CadastrarBtn.TabIndex = 20;
@@ -380,7 +380,7 @@
             // ForCtrlCad_CancelBtn
             // 
             this.ForCtrlCad_CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ForCtrlCad_CancelBtn.Location = new System.Drawing.Point(3, 467);
+            this.ForCtrlCad_CancelBtn.Location = new System.Drawing.Point(3, 463);
             this.ForCtrlCad_CancelBtn.Name = "ForCtrlCad_CancelBtn";
             this.ForCtrlCad_CancelBtn.Size = new System.Drawing.Size(75, 23);
             this.ForCtrlCad_CancelBtn.TabIndex = 19;
@@ -409,10 +409,10 @@
             // GerenteTab
             // 
             this.GerenteTab.Controls.Add(this.GerenteCtrl);
-            this.GerenteTab.Location = new System.Drawing.Point(4, 9);
+            this.GerenteTab.Location = new System.Drawing.Point(4, 5);
             this.GerenteTab.Margin = new System.Windows.Forms.Padding(0);
             this.GerenteTab.Name = "GerenteTab";
-            this.GerenteTab.Size = new System.Drawing.Size(276, 498);
+            this.GerenteTab.Size = new System.Drawing.Size(276, 502);
             this.GerenteTab.TabIndex = 1;
             this.GerenteTab.Text = "GerenteTab";
             this.GerenteTab.UseVisualStyleBackColor = true;
@@ -422,8 +422,8 @@
             this.GerenteCtrl.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.GerenteCtrl.Controls.Add(this.GerenteCtrlHome);
             this.GerenteCtrl.Controls.Add(this.GerenteCtrlGerProd);
-            this.GerenteCtrl.Controls.Add(this.GerenteCtrlConsDados);
             this.GerenteCtrl.Controls.Add(this.GerenteCtrlGerOfertas);
+            this.GerenteCtrl.Controls.Add(this.GerenteCtrlConsDados);
             this.GerenteCtrl.Controls.Add(this.GerenteCtrlCadastrar);
             this.GerenteCtrl.Controls.Add(this.GerenteCtrlRemover);
             this.GerenteCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -431,7 +431,7 @@
             this.GerenteCtrl.Multiline = true;
             this.GerenteCtrl.Name = "GerenteCtrl";
             this.GerenteCtrl.SelectedIndex = 0;
-            this.GerenteCtrl.Size = new System.Drawing.Size(276, 498);
+            this.GerenteCtrl.Size = new System.Drawing.Size(276, 502);
             this.GerenteCtrl.TabIndex = 0;
             this.GerenteCtrl.SelectedIndexChanged += new System.EventHandler(this.GerenteCtrl_SelectedIndexChanged);
             // 
@@ -442,7 +442,7 @@
             this.GerenteCtrlHome.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlHome.Name = "GerenteCtrlHome";
             this.GerenteCtrlHome.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlHome.Size = new System.Drawing.Size(249, 490);
+            this.GerenteCtrlHome.Size = new System.Drawing.Size(249, 494);
             this.GerenteCtrlHome.TabIndex = 0;
             this.GerenteCtrlHome.Text = "Home";
             // 
@@ -463,7 +463,7 @@
             this.GerenteCtrlGerProd.Controls.Add(this.GerCtrlProd_ProdTable);
             this.GerenteCtrlGerProd.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlGerProd.Name = "GerenteCtrlGerProd";
-            this.GerenteCtrlGerProd.Size = new System.Drawing.Size(249, 490);
+            this.GerenteCtrlGerProd.Size = new System.Drawing.Size(249, 494);
             this.GerenteCtrlGerProd.TabIndex = 3;
             this.GerenteCtrlGerProd.Text = "Produtos";
             // 
@@ -511,7 +511,7 @@
             this.GerenteCtrlGerOfertas.Controls.Add(this.GerCtrlOfer_OferTable);
             this.GerenteCtrlGerOfertas.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlGerOfertas.Name = "GerenteCtrlGerOfertas";
-            this.GerenteCtrlGerOfertas.Size = new System.Drawing.Size(249, 490);
+            this.GerenteCtrlGerOfertas.Size = new System.Drawing.Size(249, 494);
             this.GerenteCtrlGerOfertas.TabIndex = 5;
             this.GerenteCtrlGerOfertas.Text = "Ofertas";
             // 
@@ -918,7 +918,7 @@
             this.GerCtrlOfer_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.GerCtrlOfer_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GerCtrlOfer_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.GerCtrlOfer_ErrorTextBox.Location = new System.Drawing.Point(4, 444);
+            this.GerCtrlOfer_ErrorTextBox.Location = new System.Drawing.Point(4, 448);
             this.GerCtrlOfer_ErrorTextBox.Name = "GerCtrlOfer_ErrorTextBox";
             this.GerCtrlOfer_ErrorTextBox.ReadOnly = true;
             this.GerCtrlOfer_ErrorTextBox.Size = new System.Drawing.Size(241, 13);
@@ -929,7 +929,7 @@
             // GerCtrlOfer_CadastrarBtn
             // 
             this.GerCtrlOfer_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GerCtrlOfer_CadastrarBtn.Location = new System.Drawing.Point(171, 463);
+            this.GerCtrlOfer_CadastrarBtn.Location = new System.Drawing.Point(171, 467);
             this.GerCtrlOfer_CadastrarBtn.Name = "GerCtrlOfer_CadastrarBtn";
             this.GerCtrlOfer_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlOfer_CadastrarBtn.TabIndex = 23;
@@ -940,7 +940,7 @@
             // GerCtrlOfer_CancelBtn
             // 
             this.GerCtrlOfer_CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GerCtrlOfer_CancelBtn.Location = new System.Drawing.Point(3, 463);
+            this.GerCtrlOfer_CancelBtn.Location = new System.Drawing.Point(3, 467);
             this.GerCtrlOfer_CancelBtn.Name = "GerCtrlOfer_CancelBtn";
             this.GerCtrlOfer_CancelBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlOfer_CancelBtn.TabIndex = 22;
@@ -965,14 +965,14 @@
             this.GerCtrlProd_ProdTable.Name = "GerCtrlProd_ProdTable";
             this.GerCtrlProd_ProdTable.ReadOnly = true;
             this.GerCtrlProd_ProdTable.RowHeadersVisible = false;
-            this.GerCtrlProd_ProdTable.Size = new System.Drawing.Size(249, 490);
+            this.GerCtrlProd_ProdTable.Size = new System.Drawing.Size(249, 494);
             this.GerCtrlProd_ProdTable.TabIndex = 17;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle33;
             this.dataGridViewTextBoxColumn8.HeaderText = "Nome";
             this.dataGridViewTextBoxColumn8.MaxInputLength = 50;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
@@ -982,8 +982,8 @@
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle34;
             this.dataGridViewTextBoxColumn9.HeaderText = "Preço";
             this.dataGridViewTextBoxColumn9.MaxInputLength = 10;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
@@ -993,8 +993,8 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle35;
             this.dataGridViewTextBoxColumn11.HeaderText = "Qtde";
             this.dataGridViewTextBoxColumn11.MaxInputLength = 8;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
@@ -1004,8 +1004,8 @@
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle36;
             this.dataGridViewTextBoxColumn12.HeaderText = "Prateleira";
             this.dataGridViewTextBoxColumn12.MaxInputLength = 8;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
@@ -1015,8 +1015,8 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle37;
             this.Column1.HeaderText = "Fornecedor";
             this.Column1.MaxInputLength = 8;
             this.Column1.Name = "Column1";
@@ -1026,8 +1026,8 @@
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle38;
             this.dataGridViewTextBoxColumn13.HeaderText = "Validade";
             this.dataGridViewTextBoxColumn13.MaxInputLength = 10;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
@@ -1036,8 +1036,8 @@
             // 
             // Column2
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle39;
             this.Column2.HeaderText = "prodID";
             this.Column2.MaxInputLength = 8;
             this.Column2.Name = "Column2";
@@ -1047,8 +1047,8 @@
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle40;
             this.dataGridViewTextBoxColumn6.HeaderText = "Produto";
             this.dataGridViewTextBoxColumn6.MaxInputLength = 50;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
@@ -1057,8 +1057,8 @@
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle41;
             this.dataGridViewTextBoxColumn7.FillWeight = 80F;
             this.dataGridViewTextBoxColumn7.HeaderText = "Desconto";
             this.dataGridViewTextBoxColumn7.MaxInputLength = 10;
@@ -1067,8 +1067,8 @@
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle42;
             this.dataGridViewTextBoxColumn10.FillWeight = 80F;
             this.dataGridViewTextBoxColumn10.HeaderText = "Duração";
             this.dataGridViewTextBoxColumn10.MaxInputLength = 12;
@@ -1076,8 +1076,8 @@
             // 
             // Column3
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle43;
             this.Column3.HeaderText = "ProdID";
             this.Column3.MaxInputLength = 8;
             this.Column3.Name = "Column3";
@@ -1087,8 +1087,8 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle44;
             this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
             this.dataGridViewTextBoxColumn1.MaxInputLength = 50;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -1097,8 +1097,8 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle45;
             this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
             this.dataGridViewTextBoxColumn2.MaxInputLength = 10;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -1107,8 +1107,8 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle46;
             this.dataGridViewTextBoxColumn3.HeaderText = "Qtde";
             this.dataGridViewTextBoxColumn3.MaxInputLength = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -1117,8 +1117,8 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle47;
             this.dataGridViewTextBoxColumn4.HeaderText = "Prateleira";
             this.dataGridViewTextBoxColumn4.MaxInputLength = 8;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
@@ -1127,8 +1127,8 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle48;
             this.dataGridViewTextBoxColumn5.HeaderText = "Validade";
             this.dataGridViewTextBoxColumn5.MaxInputLength = 12;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
