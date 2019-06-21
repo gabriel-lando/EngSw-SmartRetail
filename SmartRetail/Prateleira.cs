@@ -179,7 +179,20 @@ namespace SmartRetail
         {
             if (PrateleiraComboBox.Enabled)
             {
-                CarregaProdutos(int.Parse(PrateleiraComboBox.SelectedItem.ToString()));
+                int prateleira;
+
+                try
+                {
+                    prateleira = int.Parse(PrateleiraComboBox.SelectedItem.ToString());
+                }
+                catch
+                {
+                    ResultTextBox.Visible = true;
+                    ResultTextBox.ForeColor = System.Drawing.Color.Red;
+                    ResultTextBox.Text = "Prateleira inválida!";
+                    return;
+                }
+                CarregaProdutos(prateleira);
             }
         }
 
@@ -187,7 +200,19 @@ namespace SmartRetail
         {
             if (ProdutoComboBox.Enabled)
             {
-                CarregaQtde(ProdutoComboBox.SelectedItem.ToString());
+                string produto;
+                try
+                {
+                    produto = ProdutoComboBox.SelectedItem.ToString();
+                }
+                catch
+                {
+                    ResultTextBox.Visible = true;
+                    ResultTextBox.ForeColor = System.Drawing.Color.Red;
+                    ResultTextBox.Text = "Produto inválido!";
+                    return;
+                }
+                CarregaQtde(produto);
             }
         }
         private void QtdeComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -198,7 +223,19 @@ namespace SmartRetail
 
                 foreach (Produto produto in produtosArray)
                 {
-                    if (ProdutoComboBox.SelectedItem.ToString() == produto.nome)
+                    string produtoStr;
+                    try
+                    {
+                        produtoStr = ProdutoComboBox.SelectedItem.ToString();
+                    }
+                    catch
+                    {
+                        ResultTextBox.Visible = true;
+                        ResultTextBox.ForeColor = System.Drawing.Color.Red;
+                        ResultTextBox.Text = "Produto inválido!";
+                        return;
+                    }
+                    if (produtoStr == produto.nome)
                     {
                         int qtde;
 
@@ -210,7 +247,7 @@ namespace SmartRetail
                         {
                             return;
                         }
-                        DetailsTextBox.Text = String.Format("Produto:\t{0} \n\nValidade:\t{1:dd/MM/yyyy} \n\nValor un:\tR$ {2:F2} \n\nTotal:\t\tR$ {3:F2}", produto.nome, produto.validade, produto.preco, produto.preco * qtde);
+                        DetailsTextBox.Text = string.Format("Produto:\t{0} \n\nValidade:\t{1:dd/MM/yyyy} \n\nValor un:\tR$ {2:F2} \n\nTotal:\t\tR$ {3:F2}", produto.nome, produto.validade, produto.preco, produto.preco * qtde);
                     }
                 }
             }
@@ -240,7 +277,19 @@ namespace SmartRetail
 
                 foreach (Produto produto in produtosArray)
                 {
-                    if (ProdutoComboBox.SelectedItem.ToString() == produto.nome)
+                    string produtoStr;
+                    try
+                    {
+                        produtoStr = ProdutoComboBox.SelectedItem.ToString();
+                    }
+                    catch
+                    {
+                        ResultTextBox.Visible = true;
+                        ResultTextBox.ForeColor = System.Drawing.Color.Red;
+                        ResultTextBox.Text = "Produto inválido!";
+                        return;
+                    }
+                    if (produtoStr == produto.nome)
                     {
                         int qtde;
 
