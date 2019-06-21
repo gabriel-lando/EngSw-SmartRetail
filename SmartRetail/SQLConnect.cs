@@ -343,9 +343,6 @@ namespace SmartRetail
                                 SELECT @nome, @cadastro, @email, @telefone, @funcao
                                 WHERE NOT EXISTS (SELECT * from Cliente WHERE facial_data = @facial); SELECT SCOPE_IDENTITY();";
 
-            //string queryCliente = @"INSERT INTO Cliente (infoID, facial_data, endereco_cobranca, nro_cartao_de_credito, onStore)
-            //                        SELECT @infoID, @facial, @endereco, @cartao, @onStore"; //Sem Carrinho
-
             string queryCliente = @"INSERT INTO Cliente (infoID, facial_data, endereco_cobranca, nro_cartao_de_credito, carrinhoID, onStore)
                                     SELECT @infoID, @facial, @endereco, @cartao, @carrinhoID, @onStore";
 

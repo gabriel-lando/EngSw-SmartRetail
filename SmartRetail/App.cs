@@ -39,10 +39,8 @@ namespace SmartRetail
 
         private void LimparBtn_Click(object sender, EventArgs e)
         {
-            //EmailTextBox.Text = "Email";
-            //PwdTextBox.Text = "Password";
-            EmailTextBox.Text = "admin@admin.com";
-            PwdTextBox.Text = "admin";
+            EmailTextBox.Text = "Email";
+            PwdTextBox.Text = "Password";
             ErrorLoginTextBox.Visible = false;
         }
 
@@ -339,8 +337,6 @@ namespace SmartRetail
 
         private void LogoffForBtn_Click(object sender, EventArgs e)
         {
-            //GerCtrlCad_ClearBtn_Click(null, null);
-            //GerCtrlRem_ClearBtn_Click(null, null);
             ClearTable();
             TabCtrl.SelectedIndex = 0;
         }
