@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.CaixaWelcomeTab = new System.Windows.Forms.TabPage();
             this.CaixaLogoLabel = new System.Windows.Forms.Label();
@@ -60,26 +60,24 @@
             this.CaixaCadastroCliente = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.ClientInfoTextEntrada = new System.Windows.Forms.RichTextBox();
             this.FacialRecPictureBoxEntrada = new System.Windows.Forms.PictureBox();
             this.CaixaClienteSaida = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ClientInfoTextSaida = new System.Windows.Forms.RichTextBox();
             this.FacialRecPictureBoxSaida = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.ClienteCarrinhoTable = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClienteCarrinhoProdTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClienteCarrinhoTotalValue = new System.Windows.Forms.Label();
             this.ClienteLabelCarrinho = new System.Windows.Forms.Label();
             this.ClienteCarrinhoTotalLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.ClienteCarrinhoTable = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClienteCarrinhoProdTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabCtrl.SuspendLayout();
             this.CaixaWelcomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CamLogoPictureBox)).BeginInit();
@@ -93,8 +91,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.FacialRecPictureBoxSaida)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteCarrinhoTable)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabCtrl
@@ -150,7 +148,7 @@
             this.CamLogoPictureBox.InitialImage = null;
             this.CamLogoPictureBox.Location = new System.Drawing.Point(210, 100);
             this.CamLogoPictureBox.Name = "CamLogoPictureBox";
-            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 226);
+            this.CamLogoPictureBox.Size = new System.Drawing.Size(353, 222);
             this.CamLogoPictureBox.TabIndex = 2;
             this.CamLogoPictureBox.TabStop = false;
             // 
@@ -187,9 +185,9 @@
             this.CaixaClienteEntrada.Controls.Add(this.label3);
             this.CaixaClienteEntrada.Controls.Add(this.richTextBox3);
             this.CaixaClienteEntrada.Controls.Add(this.FacialRecPictureBoxCadastro);
-            this.CaixaClienteEntrada.Location = new System.Drawing.Point(4, 9);
+            this.CaixaClienteEntrada.Location = new System.Drawing.Point(4, 5);
             this.CaixaClienteEntrada.Name = "CaixaClienteEntrada";
-            this.CaixaClienteEntrada.Size = new System.Drawing.Size(792, 417);
+            this.CaixaClienteEntrada.Size = new System.Drawing.Size(792, 421);
             this.CaixaClienteEntrada.TabIndex = 2;
             this.CaixaClienteEntrada.Text = "tabPage1";
             this.CaixaClienteEntrada.UseVisualStyleBackColor = true;
@@ -357,9 +355,10 @@
             // 
             this.richTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox3.Enabled = false;
             this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox3.Location = new System.Drawing.Point(3, 204);
+            this.richTextBox3.Location = new System.Drawing.Point(3, 213);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(150, 200);
             this.richTextBox3.TabIndex = 1;
@@ -380,7 +379,6 @@
             // 
             this.CaixaCadastroCliente.Controls.Add(this.richTextBox1);
             this.CaixaCadastroCliente.Controls.Add(this.label2);
-            this.CaixaCadastroCliente.Controls.Add(this.ClientInfoTextEntrada);
             this.CaixaCadastroCliente.Controls.Add(this.FacialRecPictureBoxEntrada);
             this.CaixaCadastroCliente.Location = new System.Drawing.Point(4, 9);
             this.CaixaCadastroCliente.Name = "CaixaCadastroCliente";
@@ -395,32 +393,23 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.richTextBox1.Enabled = false;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(185, 302);
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(8, 298);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(581, 90);
+            this.richTextBox1.Size = new System.Drawing.Size(776, 111);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "Dica: use os Totens para verificar\n as ofertas exclusivas para você!";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 44F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label2.Location = new System.Drawing.Point(174, 85);
+            this.label2.Location = new System.Drawing.Point(159, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(592, 64);
+            this.label2.Size = new System.Drawing.Size(622, 67);
             this.label2.TabIndex = 3;
             this.label2.Text = "Bem Vindo de Volta :)";
-            // 
-            // ClientInfoTextEntrada
-            // 
-            this.ClientInfoTextEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ClientInfoTextEntrada.Location = new System.Drawing.Point(3, 195);
-            this.ClientInfoTextEntrada.Name = "ClientInfoTextEntrada";
-            this.ClientInfoTextEntrada.Size = new System.Drawing.Size(150, 200);
-            this.ClientInfoTextEntrada.TabIndex = 2;
-            this.ClientInfoTextEntrada.Text = "";
             // 
             // FacialRecPictureBoxEntrada
             // 
@@ -437,57 +426,47 @@
             // CaixaClienteSaida
             // 
             this.CaixaClienteSaida.Controls.Add(this.tableLayoutPanel1);
-            this.CaixaClienteSaida.Location = new System.Drawing.Point(4, 5);
+            this.CaixaClienteSaida.Location = new System.Drawing.Point(4, 9);
             this.CaixaClienteSaida.Margin = new System.Windows.Forms.Padding(0);
             this.CaixaClienteSaida.Name = "CaixaClienteSaida";
-            this.CaixaClienteSaida.Size = new System.Drawing.Size(792, 421);
+            this.CaixaClienteSaida.Size = new System.Drawing.Size(792, 417);
             this.CaixaClienteSaida.TabIndex = 0;
             this.CaixaClienteSaida.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(792, 421);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(792, 417);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.ClientInfoTextSaida);
             this.panel1.Controls.Add(this.FacialRecPictureBoxSaida);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 421);
+            this.panel1.Size = new System.Drawing.Size(156, 417);
             this.panel1.TabIndex = 0;
-            // 
-            // ClientInfoTextSaida
-            // 
-            this.ClientInfoTextSaida.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ClientInfoTextSaida.Location = new System.Drawing.Point(0, 213);
-            this.ClientInfoTextSaida.Name = "ClientInfoTextSaida";
-            this.ClientInfoTextSaida.Size = new System.Drawing.Size(150, 200);
-            this.ClientInfoTextSaida.TabIndex = 4;
-            this.ClientInfoTextSaida.Text = "";
             // 
             // FacialRecPictureBoxSaida
             // 
             this.FacialRecPictureBoxSaida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.FacialRecPictureBoxSaida.BackColor = System.Drawing.Color.PaleGreen;
             this.FacialRecPictureBoxSaida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FacialRecPictureBoxSaida.Location = new System.Drawing.Point(0, 3);
+            this.FacialRecPictureBoxSaida.Location = new System.Drawing.Point(3, 3);
             this.FacialRecPictureBoxSaida.Name = "FacialRecPictureBoxSaida";
             this.FacialRecPictureBoxSaida.Size = new System.Drawing.Size(150, 200);
             this.FacialRecPictureBoxSaida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -499,10 +478,10 @@
             // 
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(150, 0);
+            this.panel2.Location = new System.Drawing.Point(156, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 421);
+            this.panel2.Size = new System.Drawing.Size(318, 417);
             this.panel2.TabIndex = 1;
             // 
             // panel4
@@ -515,14 +494,75 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(321, 421);
+            this.panel4.Size = new System.Drawing.Size(318, 417);
             this.panel4.TabIndex = 5;
+            // 
+            // ClienteCarrinhoTable
+            // 
+            this.ClienteCarrinhoTable.AllowUserToAddRows = false;
+            this.ClienteCarrinhoTable.AllowUserToDeleteRows = false;
+            this.ClienteCarrinhoTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClienteCarrinhoTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.ClienteCarrinhoProdTotal});
+            this.ClienteCarrinhoTable.Location = new System.Drawing.Point(4, 27);
+            this.ClienteCarrinhoTable.Name = "ClienteCarrinhoTable";
+            this.ClienteCarrinhoTable.ReadOnly = true;
+            this.ClienteCarrinhoTable.RowHeadersVisible = false;
+            this.ClienteCarrinhoTable.Size = new System.Drawing.Size(311, 342);
+            this.ClienteCarrinhoTable.TabIndex = 4;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewTextBoxColumn1.FillWeight = 180F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Produto";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewTextBoxColumn2.FillWeight = 80F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewTextBoxColumn3.FillWeight = 60F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Qtde";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ClienteCarrinhoProdTotal
+            // 
+            this.ClienteCarrinhoProdTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdTotal.DefaultCellStyle = dataGridViewCellStyle12;
+            this.ClienteCarrinhoProdTotal.FillWeight = 80F;
+            this.ClienteCarrinhoProdTotal.HeaderText = "Total";
+            this.ClienteCarrinhoProdTotal.Name = "ClienteCarrinhoProdTotal";
+            this.ClienteCarrinhoProdTotal.ReadOnly = true;
+            this.ClienteCarrinhoProdTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ClienteCarrinhoTotalValue
             // 
             this.ClienteCarrinhoTotalValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ClienteCarrinhoTotalValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteCarrinhoTotalValue.Location = new System.Drawing.Point(194, 387);
+            this.ClienteCarrinhoTotalValue.Location = new System.Drawing.Point(191, 383);
             this.ClienteCarrinhoTotalValue.Name = "ClienteCarrinhoTotalValue";
             this.ClienteCarrinhoTotalValue.Size = new System.Drawing.Size(124, 31);
             this.ClienteCarrinhoTotalValue.TabIndex = 3;
@@ -536,7 +576,7 @@
             this.ClienteLabelCarrinho.Location = new System.Drawing.Point(0, 0);
             this.ClienteLabelCarrinho.Name = "ClienteLabelCarrinho";
             this.ClienteLabelCarrinho.Padding = new System.Windows.Forms.Padding(3);
-            this.ClienteLabelCarrinho.Size = new System.Drawing.Size(321, 24);
+            this.ClienteLabelCarrinho.Size = new System.Drawing.Size(318, 24);
             this.ClienteLabelCarrinho.TabIndex = 0;
             this.ClienteLabelCarrinho.Text = "Carrinho:";
             this.ClienteLabelCarrinho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -546,7 +586,7 @@
             this.ClienteCarrinhoTotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ClienteCarrinhoTotalLabel.AutoSize = true;
             this.ClienteCarrinhoTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteCarrinhoTotalLabel.Location = new System.Drawing.Point(3, 387);
+            this.ClienteCarrinhoTotalLabel.Location = new System.Drawing.Point(3, 383);
             this.ClienteCarrinhoTotalLabel.Name = "ClienteCarrinhoTotalLabel";
             this.ClienteCarrinhoTotalLabel.Size = new System.Drawing.Size(110, 31);
             this.ClienteCarrinhoTotalLabel.TabIndex = 2;
@@ -558,10 +598,10 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.richTextBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(471, 0);
+            this.panel3.Location = new System.Drawing.Point(474, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(321, 421);
+            this.panel3.Size = new System.Drawing.Size(318, 417);
             this.panel3.TabIndex = 2;
             // 
             // label1
@@ -586,67 +626,6 @@
             this.richTextBox2.Size = new System.Drawing.Size(253, 195);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "Obrigado pela\n  preferência\n \nVolte Sempre";
-            // 
-            // ClienteCarrinhoTable
-            // 
-            this.ClienteCarrinhoTable.AllowUserToAddRows = false;
-            this.ClienteCarrinhoTable.AllowUserToDeleteRows = false;
-            this.ClienteCarrinhoTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ClienteCarrinhoTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.ClienteCarrinhoProdTotal});
-            this.ClienteCarrinhoTable.Location = new System.Drawing.Point(4, 27);
-            this.ClienteCarrinhoTable.Name = "ClienteCarrinhoTable";
-            this.ClienteCarrinhoTable.ReadOnly = true;
-            this.ClienteCarrinhoTable.RowHeadersVisible = false;
-            this.ClienteCarrinhoTable.Size = new System.Drawing.Size(311, 342);
-            this.ClienteCarrinhoTable.TabIndex = 4;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewTextBoxColumn1.FillWeight = 180F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Produto";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewTextBoxColumn2.FillWeight = 80F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridViewTextBoxColumn3.FillWeight = 60F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Qtde";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ClienteCarrinhoProdTotal
-            // 
-            this.ClienteCarrinhoProdTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdTotal.DefaultCellStyle = dataGridViewCellStyle8;
-            this.ClienteCarrinhoProdTotal.FillWeight = 80F;
-            this.ClienteCarrinhoProdTotal.HeaderText = "Total";
-            this.ClienteCarrinhoProdTotal.Name = "ClienteCarrinhoProdTotal";
-            this.ClienteCarrinhoProdTotal.ReadOnly = true;
-            this.ClienteCarrinhoProdTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Caixa
             // 
@@ -678,8 +657,8 @@
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ClienteCarrinhoTable)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -695,7 +674,6 @@
         private System.Windows.Forms.Label CaixaLogoLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RichTextBox ClientInfoTextSaida;
         private System.Windows.Forms.PictureBox FacialRecPictureBoxSaida;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
@@ -708,7 +686,6 @@
         private System.Windows.Forms.PictureBox FacialRecPictureBoxCadastro;
         private System.Windows.Forms.PictureBox FacialRecPictureBoxEntrada;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox ClientInfoTextEntrada;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox CadastroCartaoText;
         private System.Windows.Forms.Label label8;

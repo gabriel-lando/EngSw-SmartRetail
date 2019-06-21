@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.TotemWelcomeTab = new System.Windows.Forms.TabPage();
             this.TotemLogoLabel = new System.Windows.Forms.Label();
@@ -57,7 +57,6 @@
             this.ClienteCarrinhoProdQtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClienteCarrinhoProdTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ClienteDetailsTextBox = new System.Windows.Forms.RichTextBox();
             this.FacialRecPictureBox = new System.Windows.Forms.PictureBox();
             this.TabCtrl.SuspendLayout();
             this.TotemWelcomeTab.SuspendLayout();
@@ -97,10 +96,10 @@
             this.TotemWelcomeTab.Controls.Add(this.TotemLogoLabel);
             this.TotemWelcomeTab.Controls.Add(this.CamLogoPictureBox);
             this.TotemWelcomeTab.Controls.Add(this.TotemWelcomeLabel);
-            this.TotemWelcomeTab.Location = new System.Drawing.Point(4, 9);
+            this.TotemWelcomeTab.Location = new System.Drawing.Point(4, 5);
             this.TotemWelcomeTab.Name = "TotemWelcomeTab";
             this.TotemWelcomeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.TotemWelcomeTab.Size = new System.Drawing.Size(792, 417);
+            this.TotemWelcomeTab.Size = new System.Drawing.Size(792, 421);
             this.TotemWelcomeTab.TabIndex = 1;
             this.TotemWelcomeTab.UseVisualStyleBackColor = true;
             // 
@@ -108,7 +107,7 @@
             // 
             this.TotemLogoLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TotemLogoLabel.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotemLogoLabel.Location = new System.Drawing.Point(3, 340);
+            this.TotemLogoLabel.Location = new System.Drawing.Point(3, 344);
             this.TotemLogoLabel.Name = "TotemLogoLabel";
             this.TotemLogoLabel.Size = new System.Drawing.Size(786, 74);
             this.TotemLogoLabel.TabIndex = 2;
@@ -145,10 +144,10 @@
             // TotemCliente
             // 
             this.TotemCliente.Controls.Add(this.ClienteTableLayout);
-            this.TotemCliente.Location = new System.Drawing.Point(4, 5);
+            this.TotemCliente.Location = new System.Drawing.Point(4, 9);
             this.TotemCliente.Margin = new System.Windows.Forms.Padding(0);
             this.TotemCliente.Name = "TotemCliente";
-            this.TotemCliente.Size = new System.Drawing.Size(792, 421);
+            this.TotemCliente.Size = new System.Drawing.Size(792, 417);
             this.TotemCliente.TabIndex = 0;
             this.TotemCliente.UseVisualStyleBackColor = true;
             // 
@@ -167,7 +166,7 @@
             this.ClienteTableLayout.Name = "ClienteTableLayout";
             this.ClienteTableLayout.RowCount = 1;
             this.ClienteTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ClienteTableLayout.Size = new System.Drawing.Size(792, 421);
+            this.ClienteTableLayout.Size = new System.Drawing.Size(792, 417);
             this.ClienteTableLayout.TabIndex = 5;
             // 
             // ClienteCarrinhoPanel
@@ -177,7 +176,7 @@
             this.ClienteCarrinhoPanel.Location = new System.Drawing.Point(160, 0);
             this.ClienteCarrinhoPanel.Margin = new System.Windows.Forms.Padding(0);
             this.ClienteCarrinhoPanel.Name = "ClienteCarrinhoPanel";
-            this.ClienteCarrinhoPanel.Size = new System.Drawing.Size(316, 421);
+            this.ClienteCarrinhoPanel.Size = new System.Drawing.Size(316, 417);
             this.ClienteCarrinhoPanel.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -194,7 +193,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(316, 421);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(316, 417);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // panel1
@@ -224,7 +223,7 @@
             this.ClienteOfertaPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClienteOfertaPanel1.Location = new System.Drawing.Point(3, 33);
             this.ClienteOfertaPanel1.Name = "ClienteOfertaPanel1";
-            this.ClienteOfertaPanel1.Size = new System.Drawing.Size(310, 189);
+            this.ClienteOfertaPanel1.Size = new System.Drawing.Size(310, 187);
             this.ClienteOfertaPanel1.TabIndex = 1;
             // 
             // ClienteOfertaTextBox1
@@ -237,7 +236,7 @@
             this.ClienteOfertaTextBox1.Name = "ClienteOfertaTextBox1";
             this.ClienteOfertaTextBox1.ReadOnly = true;
             this.ClienteOfertaTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.ClienteOfertaTextBox1.Size = new System.Drawing.Size(308, 187);
+            this.ClienteOfertaTextBox1.Size = new System.Drawing.Size(308, 185);
             this.ClienteOfertaTextBox1.TabIndex = 13;
             this.ClienteOfertaTextBox1.Text = "";
             // 
@@ -246,9 +245,9 @@
             this.ClienteOfertaPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ClienteOfertaPanel2.Controls.Add(this.ClienteOfertaTextBox2);
             this.ClienteOfertaPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ClienteOfertaPanel2.Location = new System.Drawing.Point(3, 228);
+            this.ClienteOfertaPanel2.Location = new System.Drawing.Point(3, 226);
             this.ClienteOfertaPanel2.Name = "ClienteOfertaPanel2";
-            this.ClienteOfertaPanel2.Size = new System.Drawing.Size(310, 190);
+            this.ClienteOfertaPanel2.Size = new System.Drawing.Size(310, 188);
             this.ClienteOfertaPanel2.TabIndex = 2;
             // 
             // ClienteOfertaTextBox2
@@ -261,7 +260,7 @@
             this.ClienteOfertaTextBox2.Name = "ClienteOfertaTextBox2";
             this.ClienteOfertaTextBox2.ReadOnly = true;
             this.ClienteOfertaTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.ClienteOfertaTextBox2.Size = new System.Drawing.Size(308, 188);
+            this.ClienteOfertaTextBox2.Size = new System.Drawing.Size(308, 186);
             this.ClienteOfertaTextBox2.TabIndex = 14;
             this.ClienteOfertaTextBox2.Text = "";
             // 
@@ -275,14 +274,14 @@
             this.panel3.Location = new System.Drawing.Point(476, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(316, 421);
+            this.panel3.Size = new System.Drawing.Size(316, 417);
             this.panel3.TabIndex = 4;
             // 
             // ClienteCarrinhoTotalValue
             // 
             this.ClienteCarrinhoTotalValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ClienteCarrinhoTotalValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteCarrinhoTotalValue.Location = new System.Drawing.Point(189, 387);
+            this.ClienteCarrinhoTotalValue.Location = new System.Drawing.Point(189, 383);
             this.ClienteCarrinhoTotalValue.Name = "ClienteCarrinhoTotalValue";
             this.ClienteCarrinhoTotalValue.Size = new System.Drawing.Size(124, 31);
             this.ClienteCarrinhoTotalValue.TabIndex = 3;
@@ -306,7 +305,7 @@
             this.ClienteCarrinhoTotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ClienteCarrinhoTotalLabel.AutoSize = true;
             this.ClienteCarrinhoTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteCarrinhoTotalLabel.Location = new System.Drawing.Point(3, 387);
+            this.ClienteCarrinhoTotalLabel.Location = new System.Drawing.Point(3, 383);
             this.ClienteCarrinhoTotalLabel.Name = "ClienteCarrinhoTotalLabel";
             this.ClienteCarrinhoTotalLabel.Size = new System.Drawing.Size(110, 31);
             this.ClienteCarrinhoTotalLabel.TabIndex = 2;
@@ -333,8 +332,8 @@
             // ClienteCarrinhoProdNome
             // 
             this.ClienteCarrinhoProdNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ClienteCarrinhoProdNome.DefaultCellStyle = dataGridViewCellStyle5;
             this.ClienteCarrinhoProdNome.FillWeight = 180F;
             this.ClienteCarrinhoProdNome.HeaderText = "Produto";
             this.ClienteCarrinhoProdNome.Name = "ClienteCarrinhoProdNome";
@@ -344,8 +343,8 @@
             // ClienteCarrinhoProdPreco
             // 
             this.ClienteCarrinhoProdPreco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdPreco.DefaultCellStyle = dataGridViewCellStyle6;
             this.ClienteCarrinhoProdPreco.FillWeight = 80F;
             this.ClienteCarrinhoProdPreco.HeaderText = "Preço";
             this.ClienteCarrinhoProdPreco.Name = "ClienteCarrinhoProdPreco";
@@ -355,8 +354,8 @@
             // ClienteCarrinhoProdQtde
             // 
             this.ClienteCarrinhoProdQtde.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdQtde.DefaultCellStyle = dataGridViewCellStyle7;
             this.ClienteCarrinhoProdQtde.FillWeight = 60F;
             this.ClienteCarrinhoProdQtde.HeaderText = "Qtde";
             this.ClienteCarrinhoProdQtde.Name = "ClienteCarrinhoProdQtde";
@@ -366,8 +365,8 @@
             // ClienteCarrinhoProdTotal
             // 
             this.ClienteCarrinhoProdTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ClienteCarrinhoProdTotal.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ClienteCarrinhoProdTotal.DefaultCellStyle = dataGridViewCellStyle8;
             this.ClienteCarrinhoProdTotal.FillWeight = 80F;
             this.ClienteCarrinhoProdTotal.HeaderText = "Total";
             this.ClienteCarrinhoProdTotal.Name = "ClienteCarrinhoProdTotal";
@@ -376,30 +375,19 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.ClienteDetailsTextBox);
             this.panel2.Controls.Add(this.FacialRecPictureBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(160, 421);
+            this.panel2.Size = new System.Drawing.Size(160, 417);
             this.panel2.TabIndex = 3;
-            // 
-            // ClienteDetailsTextBox
-            // 
-            this.ClienteDetailsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ClienteDetailsTextBox.Location = new System.Drawing.Point(3, 213);
-            this.ClienteDetailsTextBox.Name = "ClienteDetailsTextBox";
-            this.ClienteDetailsTextBox.ReadOnly = true;
-            this.ClienteDetailsTextBox.Size = new System.Drawing.Size(150, 200);
-            this.ClienteDetailsTextBox.TabIndex = 4;
-            this.ClienteDetailsTextBox.Text = "";
             // 
             // FacialRecPictureBox
             // 
             this.FacialRecPictureBox.BackColor = System.Drawing.Color.PaleGreen;
             this.FacialRecPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FacialRecPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.FacialRecPictureBox.Location = new System.Drawing.Point(7, 27);
             this.FacialRecPictureBox.Name = "FacialRecPictureBox";
             this.FacialRecPictureBox.Size = new System.Drawing.Size(150, 200);
             this.FacialRecPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -446,7 +434,6 @@
         private System.Windows.Forms.TabControl TabCtrl;
         private System.Windows.Forms.TabPage TotemWelcomeTab;
         private System.Windows.Forms.PictureBox FacialRecPictureBox;
-        private System.Windows.Forms.RichTextBox ClienteDetailsTextBox;
         private System.Windows.Forms.TabPage TotemCliente;
         private System.Windows.Forms.Label TotemWelcomeLabel;
         private System.Windows.Forms.Label TotemLogoLabel;
