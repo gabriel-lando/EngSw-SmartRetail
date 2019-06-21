@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Totem));
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.TotemWelcomeTab = new System.Windows.Forms.TabPage();
             this.TotemLogoLabel = new System.Windows.Forms.Label();
@@ -403,6 +404,7 @@
             this.ClientSize = new System.Drawing.Size(800, 430);
             this.Controls.Add(this.TabCtrl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 469);
             this.MaximizeBox = false;
             this.Name = "Totem";

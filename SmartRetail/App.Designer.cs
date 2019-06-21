@@ -45,6 +45,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(App));
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.LoginPageTab = new System.Windows.Forms.TabPage();
             this.ErrorLoginTextBox = new System.Windows.Forms.TextBox();
@@ -1177,6 +1178,7 @@
             this.ClientSize = new System.Drawing.Size(284, 511);
             this.Controls.Add(this.TabCtrl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(816, 263);
             this.MaximizeBox = false;
             this.Name = "App";
