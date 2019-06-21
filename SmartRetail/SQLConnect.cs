@@ -434,6 +434,14 @@ namespace SmartRetail
         {
             produtosDB = new List<Produto>();
             string queryProducts = "SELECT * FROM Produto;";
+
+            if(!LoadAllOffers(out List<Oferta> ofertasDB))
+            {
+                return false;
+            }
+
+            Oferta[] ofertas = ofertasDB.ToArray();
+
             if (AbrirConexao())
             {
                 SqlCommand cmdProducts = new SqlCommand(queryProducts, connection);
@@ -451,6 +459,15 @@ namespace SmartRetail
 
                     if (qtde >= 0)
                     {
+                        foreach (Oferta oferta in ofertas)
+                        {
+                            if (oferta.productID == productID)
+                            {
+                                preco *= (1 - (oferta.desconto) / 100);
+                                break;
+                            }
+                        }
+
                         produtosDB.Add(new Produto()
                         {
                             productID = productID,
@@ -858,6 +875,12 @@ namespace SmartRetail
 
                         if(tmpSacola.Count() > 0)
                         {
+                            if (!LoadAllOffers(out List<Oferta> ofertasDB))
+                            {
+                                return false;
+                            }
+
+                            Oferta[] ofertas = ofertasDB.ToArray();
                             Sacola[] sacolaArray = tmpSacola.ToArray();
 
                             foreach (Sacola sacola in sacolaArray)
@@ -874,6 +897,15 @@ namespace SmartRetail
                                     int fornecedorID = int.Parse(readerProducts["fornecedorID"].ToString());
                                     int prateleira = int.Parse(readerProducts["prateleira"].ToString());
                                     DateTime validade = DateTime.Parse(readerProducts["validade"].ToString()).Date;
+
+                                    foreach (Oferta oferta in ofertas)
+                                    {
+                                        if (oferta.productID == sacola.productID)
+                                        {
+                                            preco *= (1 - (oferta.desconto) / 100);
+                                            break;
+                                        }
+                                    }
 
                                     produtosSacola.Add(new Produto()
                                     {
