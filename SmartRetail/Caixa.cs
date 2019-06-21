@@ -84,7 +84,7 @@ namespace SmartRetail
 
             SQLConnect sql = new SQLConnect();
 
-            if (sql.ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, infoID))
+            if (sql.ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, out int carrinhoID, infoID))
             {
                 Produto[] produtosArray = produtosSacola.ToArray();
 
@@ -95,6 +95,8 @@ namespace SmartRetail
                 }
 
                 ClienteCarrinhoTotalValue.Text = String.Format("{0:F2}", preco_total);
+
+                sql.GenerateNF(infoID, carrinhoID);
             }
         }
 

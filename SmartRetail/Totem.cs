@@ -78,7 +78,7 @@ namespace SmartRetail
         {
             SQLConnect sql = new SQLConnect();
 
-            if (sql.ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, infoID))
+            if (sql.ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, out int carrinhoID, infoID))
             {
                 Produto[] produtosArray = produtosSacola.ToArray();
 

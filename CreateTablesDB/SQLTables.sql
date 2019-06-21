@@ -63,19 +63,20 @@ CREATE TABLE Sacola
 	sacolaID int IDENTITY(1, 1) PRIMARY KEY NOT NULL,
 	carrinhoID int NOT NULL FOREIGN KEY REFERENCES dbo.Carrinho(carrinhoID),
 	productID int NOT NULL,
-	quantidade int NOT NULL,
+	quantidade int NOT NULL
 )
 
 CREATE TABLE Oferta
 (
 	productID int PRIMARY KEY FOREIGN KEY REFERENCES dbo.Produto(productID),
 	nome varchar(50) NOT NULL ,
-	desconto float NOT NULL,,
-	duracao date NOT NULL,
+	desconto float NOT NULL,
+	duracao date NOT NULL
 )
 
 CREATE TABLE Venda
 (
-	nota_fiscal bigint IDENTITY(1, 1) PRIMARY KEY NOT NULL,
+	nota_fiscal bigint IDENTITY(1, 1) PRIMARY KEY,
 	carrinhoID int FOREIGN KEY REFERENCES dbo.Carrinho(carrinhoID),
+	infoID int FOREIGN KEY REFERENCES dbo.InfoBasica(infoID)
 )

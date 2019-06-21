@@ -96,7 +96,7 @@ namespace SmartRetail
             {
                 PrateleiraComboBox.Items.Clear();
 
-                if(sql.ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, infoID))
+                if(sql.ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, out int carrinhoID, infoID))
                 {
                     sacola = produtosSacola;
                 }
@@ -124,17 +124,6 @@ namespace SmartRetail
             return false;
         }
 
-        //private void AtualizarProdutos()
-        //{
-        //    SQLConnect sql = new SQLConnect();
-
-        //    if (sql.LoadAllProducts(out List<Produto> produtosDB))
-        //    {
-        //        List<Produto> produtoSort = produtosDB.OrderBy(o => o.prateleira).ToList();
-        //        produtos = produtoSort;
-        //    }
-        //}
-
         private void CarregaProdutos(int prateleira)
         {
             ProdutoComboBox.Items.Clear();
@@ -146,9 +135,8 @@ namespace SmartRetail
                 {
                     ProdutoComboBox.Items.Add(produto.nome);
                     ProdutoComboBox.Enabled = true;
-                    QtdeComboBox.Enabled = false;
+                    QtdeComboBox.Enabled = true;
                     ProdutoComboBox.SelectedIndex = 0;
-                    return;
                 }
             }
         }

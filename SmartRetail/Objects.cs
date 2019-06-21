@@ -50,11 +50,17 @@ namespace SmartRetail
         public float desconto;
         public DateTime duracao;
     }
+    class Venda
+    {
+        public int nota_fiscal, carrinhoID, infoID;
+        public string nome;
+        public float preco_total;
+    }
 
     class InfoBasica {
         public string nome, email;
         public long cadastro, telefone;
-        public int funcao;
+        public int funcao, infoID;
 
         public bool ValidaEmail()
         {

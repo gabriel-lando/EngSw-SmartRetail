@@ -589,8 +589,18 @@ namespace SmartRetail
             GerCtrlOfer_ErrorTextBox.Text = "Erro ao atualizar ofertas!";
         }
 
+        private void CarregaConsulta()
+        {
+            ClearTables();
+            GerCtrlCons_ComboBox.SelectedIndex = 0;
+            GerCtrlCons_ConsTable.Visible = false;
+        }
+
         private void ClearTables()
         {
+            GerCtrlCons_ConsTable.Rows.Clear();
+            GerCtrlCons_ConsTable.Columns.Clear();
+
             GerCtrlProd_ProdTable.Rows.Clear();
             GerCtrlOfer_OferTable.Rows.Clear();
             GerCtrlOfer_ErrorTextBox.Visible = false;
@@ -606,6 +616,10 @@ namespace SmartRetail
             {
                 CarregaOfertas();
             }
+            else if (GerenteCtrl.SelectedTab.Text == "Consultar")
+            {
+                CarregaConsulta();
+            }
         }
 
         private void GerCtrlOfer_CancelBtn_Click(object sender, EventArgs e)
@@ -616,6 +630,97 @@ namespace SmartRetail
         private void GerCtrlOfer_CadastrarBtn_Click(object sender, EventArgs e)
         {
             CadastraOfertas();
+        }
+
+        private void GerCtrlCons_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SQLConnect sql = new SQLConnect();
+            ClearTables();
+
+            switch (GerCtrlCons_ComboBox.SelectedItem.ToString())
+            {
+                case "Clientes":
+                    if (sql.ReturnAllClients(out List<Cliente> clientesDB, out List<InfoBasica> infoBasicasDB))
+                    {
+                        Cliente[] clientesSort = clientesDB.OrderBy(o => o.infoID).ToArray();
+                        InfoBasica[] infoSort = infoBasicasDB.OrderBy(o => o.infoID).ToArray();
+                        GerCtrlCons_ConsTable.Columns.Add("Column1", "Nome");
+                        GerCtrlCons_ConsTable.Columns.Add("Column2", "CPF");
+                        GerCtrlCons_ConsTable.Columns.Add("Column3", "Email");
+                        GerCtrlCons_ConsTable.Columns.Add("Column4", "Telefone");
+                        GerCtrlCons_ConsTable.Columns.Add("Column5", "Endereço");
+                        GerCtrlCons_ConsTable.Visible = true;
+
+                        foreach (InfoBasica info in infoSort)
+                        {
+                            foreach (Cliente cliente in clientesSort)
+                            {
+                                if(info.infoID == cliente.infoID)
+                                {
+                                    string[] tmpRow = new string[] { info.nome, info.cadastro.ToString(), info.email, info.telefone.ToString(), cliente.endereco_cobranca };
+                                    GerCtrlCons_ConsTable.Rows.Add(tmpRow);
+                                    break;
+                                }
+                            } 
+                        }
+                    }
+                    break;
+                case "Fornecedores":
+                    if (sql.ReturnAllFornGer(out List<InfoBasica> infoForsDB, 1))
+                    {
+                        InfoBasica[] infoSort = infoForsDB.OrderBy(o => o.infoID).ToArray();
+                        GerCtrlCons_ConsTable.Columns.Add("Column1", "Nome");
+                        GerCtrlCons_ConsTable.Columns.Add("Column2", "CNPJ");
+                        GerCtrlCons_ConsTable.Columns.Add("Column3", "Email");
+                        GerCtrlCons_ConsTable.Columns.Add("Column4", "Telefone");
+                        GerCtrlCons_ConsTable.Visible = true;
+
+                        foreach (InfoBasica info in infoSort)
+                        {
+                            string[] tmpRow = new string[] { info.nome, info.cadastro.ToString(), info.email, info.telefone.ToString() };
+                            GerCtrlCons_ConsTable.Rows.Add(tmpRow);
+                        }
+                    }
+                    break;
+                case "Gerentes":
+                    if (sql.ReturnAllFornGer(out List<InfoBasica> infoGerDB, 2))
+                    {
+                        InfoBasica[] infoSort = infoGerDB.OrderBy(o => o.infoID).ToArray();
+                        GerCtrlCons_ConsTable.Columns.Add("Column1", "Nome");
+                        GerCtrlCons_ConsTable.Columns.Add("Column2", "CPF");
+                        GerCtrlCons_ConsTable.Columns.Add("Column3", "Email");
+                        GerCtrlCons_ConsTable.Columns.Add("Column4", "Telefone");
+                        GerCtrlCons_ConsTable.Visible = true;
+
+                        foreach (InfoBasica info in infoSort)
+                        {
+                            string[] tmpRow = new string[] { info.nome, info.cadastro.ToString(), info.email, info.telefone.ToString() };
+                            GerCtrlCons_ConsTable.Rows.Add(tmpRow);
+                        }
+                    }
+                    break;
+                case "Vendas":
+                    if (sql.ReturnAllSells(out List<Venda> vendasDB))
+                    {
+                        Venda[] vendasSort = vendasDB.OrderBy(o => o.nota_fiscal).ToArray();
+                        GerCtrlCons_ConsTable.Columns.Add("Column1", "Cliente");
+                        GerCtrlCons_ConsTable.Columns.Add("Column2", "Valor");
+                        GerCtrlCons_ConsTable.Columns.Add("Column3", "Nota Fiscal");
+                        GerCtrlCons_ConsTable.Visible = true;
+
+                        foreach (Venda venda in vendasSort)
+                        {
+                            string[] tmpRow = new string[] { venda.nome, string.Format("{0:F2}", venda.preco_total), venda.nota_fiscal.ToString() };
+                            GerCtrlCons_ConsTable.Rows.Add(tmpRow);
+                        }
+                    }
+                    break;
+                default:
+                    ClearTables();
+                    GerCtrlCons_ConsTable.Visible = false;
+                    break;
+
+            }
         }
     }
 }

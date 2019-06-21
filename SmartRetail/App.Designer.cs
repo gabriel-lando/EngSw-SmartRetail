@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabCtrl = new System.Windows.Forms.TabControl();
             this.LoginPageTab = new System.Windows.Forms.TabPage();
             this.ErrorLoginTextBox = new System.Windows.Forms.TextBox();
@@ -63,15 +63,37 @@
             this.ForCtrlCad_CadastrarBtn = new System.Windows.Forms.Button();
             this.ForCtrlCad_CancelBtn = new System.Windows.Forms.Button();
             this.ForCtrlCad_ProdTable = new System.Windows.Forms.DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GerenteTab = new System.Windows.Forms.TabPage();
             this.GerenteCtrl = new System.Windows.Forms.TabControl();
             this.GerenteCtrlHome = new System.Windows.Forms.TabPage();
             this.LogoffGerBtn = new System.Windows.Forms.PictureBox();
             this.GerenteCtrlGerProd = new System.Windows.Forms.TabPage();
+            this.GerCtrlProd_ProdTable = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GerenteCtrlGerOfertas = new System.Windows.Forms.TabPage();
+            this.GerCtrlOfer_ErrorTextBox = new System.Windows.Forms.TextBox();
+            this.GerCtrlOfer_CadastrarBtn = new System.Windows.Forms.Button();
+            this.GerCtrlOfer_CancelBtn = new System.Windows.Forms.Button();
+            this.GerCtrlOfer_OferTable = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GerenteCtrlConsDados = new System.Windows.Forms.TabPage();
+            this.GerCtrlCons_ConsTable = new System.Windows.Forms.DataGridView();
             this.GerCtrlCons_Label1 = new System.Windows.Forms.Label();
             this.GerCtrlCons_ComboBox = new System.Windows.Forms.ComboBox();
-            this.GerenteCtrlGerOfertas = new System.Windows.Forms.TabPage();
             this.GerenteCtrlCadastrar = new System.Windows.Forms.TabPage();
             this.GerCtrlCad_ErrorTextBox = new System.Windows.Forms.TextBox();
             this.GerCtrlCad_CadastrarBtn = new System.Windows.Forms.Button();
@@ -108,27 +130,6 @@
             this.GerCtrlRem_Label1 = new System.Windows.Forms.Label();
             this.GerCtrlRem_ComboBox = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.GerCtrlOfer_OferTable = new System.Windows.Forms.DataGridView();
-            this.GerCtrlOfer_ErrorTextBox = new System.Windows.Forms.TextBox();
-            this.GerCtrlOfer_CadastrarBtn = new System.Windows.Forms.Button();
-            this.GerCtrlOfer_CancelBtn = new System.Windows.Forms.Button();
-            this.GerCtrlProd_ProdTable = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabCtrl.SuspendLayout();
             this.LoginPageTab.SuspendLayout();
             this.FornecedorTab.SuspendLayout();
@@ -142,13 +143,14 @@
             this.GerenteCtrlHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).BeginInit();
             this.GerenteCtrlGerProd.SuspendLayout();
-            this.GerenteCtrlConsDados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlProd_ProdTable)).BeginInit();
             this.GerenteCtrlGerOfertas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlOfer_OferTable)).BeginInit();
+            this.GerenteCtrlConsDados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCons_ConsTable)).BeginInit();
             this.GerenteCtrlCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).BeginInit();
             this.GerenteCtrlRemover.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlOfer_OferTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlProd_ProdTable)).BeginInit();
             this.SuspendLayout();
             // 
             // TabCtrl
@@ -195,7 +197,7 @@
             this.ErrorLoginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ErrorLoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorLoginTextBox.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 364);
+            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 362);
             this.ErrorLoginTextBox.Name = "ErrorLoginTextBox";
             this.ErrorLoginTextBox.ReadOnly = true;
             this.ErrorLoginTextBox.Size = new System.Drawing.Size(260, 15);
@@ -230,7 +232,7 @@
             this.MessageLoginPage.DetectUrls = false;
             this.MessageLoginPage.Enabled = false;
             this.MessageLoginPage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MessageLoginPage.Location = new System.Drawing.Point(8, 106);
+            this.MessageLoginPage.Location = new System.Drawing.Point(8, 104);
             this.MessageLoginPage.Name = "MessageLoginPage";
             this.MessageLoginPage.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MessageLoginPage.Size = new System.Drawing.Size(260, 105);
@@ -242,7 +244,7 @@
             // 
             this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.Location = new System.Drawing.Point(185, 435);
+            this.LoginBtn.Location = new System.Drawing.Point(185, 431);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(83, 30);
             this.LoginBtn.TabIndex = 4;
@@ -254,7 +256,7 @@
             // 
             this.EmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTextBox.Location = new System.Drawing.Point(8, 264);
+            this.EmailTextBox.Location = new System.Drawing.Point(8, 262);
             this.EmailTextBox.MaxLength = 50;
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(260, 24);
@@ -267,7 +269,7 @@
             // 
             this.LimparBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LimparBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LimparBtn.Location = new System.Drawing.Point(8, 435);
+            this.LimparBtn.Location = new System.Drawing.Point(8, 431);
             this.LimparBtn.Name = "LimparBtn";
             this.LimparBtn.Size = new System.Drawing.Size(83, 30);
             this.LimparBtn.TabIndex = 3;
@@ -279,7 +281,7 @@
             // 
             this.PwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PwdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PwdTextBox.Location = new System.Drawing.Point(8, 307);
+            this.PwdTextBox.Location = new System.Drawing.Point(8, 305);
             this.PwdTextBox.MaxLength = 32;
             this.PwdTextBox.Name = "PwdTextBox";
             this.PwdTextBox.Size = new System.Drawing.Size(260, 24);
@@ -293,10 +295,10 @@
             // FornecedorTab
             // 
             this.FornecedorTab.Controls.Add(this.FornecedorCtrl);
-            this.FornecedorTab.Location = new System.Drawing.Point(4, 9);
+            this.FornecedorTab.Location = new System.Drawing.Point(4, 5);
             this.FornecedorTab.Margin = new System.Windows.Forms.Padding(0);
             this.FornecedorTab.Name = "FornecedorTab";
-            this.FornecedorTab.Size = new System.Drawing.Size(276, 498);
+            this.FornecedorTab.Size = new System.Drawing.Size(276, 502);
             this.FornecedorTab.TabIndex = 0;
             this.FornecedorTab.Text = "FornecedorTab";
             this.FornecedorTab.UseVisualStyleBackColor = true;
@@ -311,7 +313,7 @@
             this.FornecedorCtrl.Multiline = true;
             this.FornecedorCtrl.Name = "FornecedorCtrl";
             this.FornecedorCtrl.SelectedIndex = 0;
-            this.FornecedorCtrl.Size = new System.Drawing.Size(276, 498);
+            this.FornecedorCtrl.Size = new System.Drawing.Size(276, 502);
             this.FornecedorCtrl.TabIndex = 0;
             // 
             // FornecedorCtrlHome
@@ -321,7 +323,7 @@
             this.FornecedorCtrlHome.Location = new System.Drawing.Point(23, 4);
             this.FornecedorCtrlHome.Name = "FornecedorCtrlHome";
             this.FornecedorCtrlHome.Padding = new System.Windows.Forms.Padding(3);
-            this.FornecedorCtrlHome.Size = new System.Drawing.Size(249, 490);
+            this.FornecedorCtrlHome.Size = new System.Drawing.Size(249, 494);
             this.FornecedorCtrlHome.TabIndex = 0;
             this.FornecedorCtrlHome.Text = "Home";
             // 
@@ -406,6 +408,66 @@
             this.ForCtrlCad_ProdTable.Size = new System.Drawing.Size(249, 439);
             this.ForCtrlCad_ProdTable.TabIndex = 16;
             // 
+            // Column3
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column3.HeaderText = "ProdID";
+            this.Column3.MaxInputLength = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn1.MaxInputLength = 50;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 98;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
+            this.dataGridViewTextBoxColumn2.MaxInputLength = 10;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Qtde";
+            this.dataGridViewTextBoxColumn3.MaxInputLength = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Prateleira";
+            this.dataGridViewTextBoxColumn4.MaxInputLength = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Validade";
+            this.dataGridViewTextBoxColumn5.MaxInputLength = 12;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 80;
+            // 
             // GerenteTab
             // 
             this.GerenteTab.Controls.Add(this.GerenteCtrl);
@@ -442,7 +504,7 @@
             this.GerenteCtrlHome.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlHome.Name = "GerenteCtrlHome";
             this.GerenteCtrlHome.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlHome.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlHome.Size = new System.Drawing.Size(249, 490);
             this.GerenteCtrlHome.TabIndex = 0;
             this.GerenteCtrlHome.Text = "Home";
             // 
@@ -467,40 +529,91 @@
             this.GerenteCtrlGerProd.TabIndex = 3;
             this.GerenteCtrlGerProd.Text = "Produtos";
             // 
-            // GerenteCtrlConsDados
+            // GerCtrlProd_ProdTable
             // 
-            this.GerenteCtrlConsDados.BackColor = System.Drawing.SystemColors.Control;
-            this.GerenteCtrlConsDados.Controls.Add(this.GerCtrlCons_Label1);
-            this.GerenteCtrlConsDados.Controls.Add(this.GerCtrlCons_ComboBox);
-            this.GerenteCtrlConsDados.Location = new System.Drawing.Point(23, 4);
-            this.GerenteCtrlConsDados.Name = "GerenteCtrlConsDados";
-            this.GerenteCtrlConsDados.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlConsDados.Size = new System.Drawing.Size(249, 490);
-            this.GerenteCtrlConsDados.TabIndex = 4;
-            this.GerenteCtrlConsDados.Text = "Consultar";
+            this.GerCtrlProd_ProdTable.AllowUserToAddRows = false;
+            this.GerCtrlProd_ProdTable.AllowUserToDeleteRows = false;
+            this.GerCtrlProd_ProdTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GerCtrlProd_ProdTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.Column1,
+            this.dataGridViewTextBoxColumn13});
+            this.GerCtrlProd_ProdTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GerCtrlProd_ProdTable.Location = new System.Drawing.Point(0, 0);
+            this.GerCtrlProd_ProdTable.Name = "GerCtrlProd_ProdTable";
+            this.GerCtrlProd_ProdTable.ReadOnly = true;
+            this.GerCtrlProd_ProdTable.RowHeadersVisible = false;
+            this.GerCtrlProd_ProdTable.Size = new System.Drawing.Size(249, 494);
+            this.GerCtrlProd_ProdTable.TabIndex = 17;
             // 
-            // GerCtrlCons_Label1
+            // dataGridViewTextBoxColumn8
             // 
-            this.GerCtrlCons_Label1.AutoSize = true;
-            this.GerCtrlCons_Label1.Location = new System.Drawing.Point(6, 15);
-            this.GerCtrlCons_Label1.Name = "GerCtrlCons_Label1";
-            this.GerCtrlCons_Label1.Size = new System.Drawing.Size(57, 13);
-            this.GerCtrlCons_Label1.TabIndex = 1;
-            this.GerCtrlCons_Label1.Text = "Selecione:";
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn8.MaxInputLength = 50;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 98;
             // 
-            // GerCtrlCons_ComboBox
+            // dataGridViewTextBoxColumn9
             // 
-            this.GerCtrlCons_ComboBox.FormattingEnabled = true;
-            this.GerCtrlCons_ComboBox.Items.AddRange(new object[] {
-            "Vendas",
-            "Estoque",
-            "Fornecimento",
-            "Clientes",
-            "Gastos"});
-            this.GerCtrlCons_ComboBox.Location = new System.Drawing.Point(6, 31);
-            this.GerCtrlCons_ComboBox.Name = "GerCtrlCons_ComboBox";
-            this.GerCtrlCons_ComboBox.Size = new System.Drawing.Size(237, 21);
-            this.GerCtrlCons_ComboBox.TabIndex = 0;
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Preço";
+            this.dataGridViewTextBoxColumn9.MaxInputLength = 10;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewTextBoxColumn11.HeaderText = "Qtde";
+            this.dataGridViewTextBoxColumn11.MaxInputLength = 8;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewTextBoxColumn12.HeaderText = "Prateleira";
+            this.dataGridViewTextBoxColumn12.MaxInputLength = 8;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 60;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Column1.HeaderText = "Fornecedor";
+            this.Column1.MaxInputLength = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewTextBoxColumn13.HeaderText = "Validade";
+            this.dataGridViewTextBoxColumn13.MaxInputLength = 10;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 80;
             // 
             // GerenteCtrlGerOfertas
             // 
@@ -514,6 +627,153 @@
             this.GerenteCtrlGerOfertas.Size = new System.Drawing.Size(249, 494);
             this.GerenteCtrlGerOfertas.TabIndex = 5;
             this.GerenteCtrlGerOfertas.Text = "Ofertas";
+            // 
+            // GerCtrlOfer_ErrorTextBox
+            // 
+            this.GerCtrlOfer_ErrorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GerCtrlOfer_ErrorTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.GerCtrlOfer_ErrorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GerCtrlOfer_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GerCtrlOfer_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GerCtrlOfer_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
+            this.GerCtrlOfer_ErrorTextBox.Location = new System.Drawing.Point(4, 448);
+            this.GerCtrlOfer_ErrorTextBox.Name = "GerCtrlOfer_ErrorTextBox";
+            this.GerCtrlOfer_ErrorTextBox.ReadOnly = true;
+            this.GerCtrlOfer_ErrorTextBox.Size = new System.Drawing.Size(241, 13);
+            this.GerCtrlOfer_ErrorTextBox.TabIndex = 24;
+            this.GerCtrlOfer_ErrorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.GerCtrlOfer_ErrorTextBox.Visible = false;
+            // 
+            // GerCtrlOfer_CadastrarBtn
+            // 
+            this.GerCtrlOfer_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.GerCtrlOfer_CadastrarBtn.Location = new System.Drawing.Point(171, 467);
+            this.GerCtrlOfer_CadastrarBtn.Name = "GerCtrlOfer_CadastrarBtn";
+            this.GerCtrlOfer_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
+            this.GerCtrlOfer_CadastrarBtn.TabIndex = 23;
+            this.GerCtrlOfer_CadastrarBtn.Text = "Atualizar";
+            this.GerCtrlOfer_CadastrarBtn.UseVisualStyleBackColor = true;
+            this.GerCtrlOfer_CadastrarBtn.Click += new System.EventHandler(this.GerCtrlOfer_CadastrarBtn_Click);
+            // 
+            // GerCtrlOfer_CancelBtn
+            // 
+            this.GerCtrlOfer_CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GerCtrlOfer_CancelBtn.Location = new System.Drawing.Point(3, 467);
+            this.GerCtrlOfer_CancelBtn.Name = "GerCtrlOfer_CancelBtn";
+            this.GerCtrlOfer_CancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.GerCtrlOfer_CancelBtn.TabIndex = 22;
+            this.GerCtrlOfer_CancelBtn.Text = "Cancelar";
+            this.GerCtrlOfer_CancelBtn.UseVisualStyleBackColor = true;
+            this.GerCtrlOfer_CancelBtn.Click += new System.EventHandler(this.GerCtrlOfer_CancelBtn_Click);
+            // 
+            // GerCtrlOfer_OferTable
+            // 
+            this.GerCtrlOfer_OferTable.AllowUserToAddRows = false;
+            this.GerCtrlOfer_OferTable.AllowUserToDeleteRows = false;
+            this.GerCtrlOfer_OferTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GerCtrlOfer_OferTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn10});
+            this.GerCtrlOfer_OferTable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GerCtrlOfer_OferTable.Location = new System.Drawing.Point(0, 0);
+            this.GerCtrlOfer_OferTable.Name = "GerCtrlOfer_OferTable";
+            this.GerCtrlOfer_OferTable.RowHeadersVisible = false;
+            this.GerCtrlOfer_OferTable.Size = new System.Drawing.Size(249, 438);
+            this.GerCtrlOfer_OferTable.TabIndex = 17;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Column2.HeaderText = "prodID";
+            this.Column2.MaxInputLength = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Produto";
+            this.dataGridViewTextBoxColumn6.MaxInputLength = 50;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridViewTextBoxColumn7.FillWeight = 80F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Desconto";
+            this.dataGridViewTextBoxColumn7.MaxInputLength = 10;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridViewTextBoxColumn10.FillWeight = 80F;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Duração";
+            this.dataGridViewTextBoxColumn10.MaxInputLength = 12;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // GerenteCtrlConsDados
+            // 
+            this.GerenteCtrlConsDados.BackColor = System.Drawing.SystemColors.Control;
+            this.GerenteCtrlConsDados.Controls.Add(this.GerCtrlCons_ConsTable);
+            this.GerenteCtrlConsDados.Controls.Add(this.GerCtrlCons_Label1);
+            this.GerenteCtrlConsDados.Controls.Add(this.GerCtrlCons_ComboBox);
+            this.GerenteCtrlConsDados.Location = new System.Drawing.Point(23, 4);
+            this.GerenteCtrlConsDados.Name = "GerenteCtrlConsDados";
+            this.GerenteCtrlConsDados.Padding = new System.Windows.Forms.Padding(3);
+            this.GerenteCtrlConsDados.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlConsDados.TabIndex = 4;
+            this.GerenteCtrlConsDados.Text = "Consultar";
+            // 
+            // GerCtrlCons_ConsTable
+            // 
+            this.GerCtrlCons_ConsTable.AllowUserToAddRows = false;
+            this.GerCtrlCons_ConsTable.AllowUserToDeleteRows = false;
+            this.GerCtrlCons_ConsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GerCtrlCons_ConsTable.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.GerCtrlCons_ConsTable.Location = new System.Drawing.Point(3, 46);
+            this.GerCtrlCons_ConsTable.Name = "GerCtrlCons_ConsTable";
+            this.GerCtrlCons_ConsTable.ReadOnly = true;
+            this.GerCtrlCons_ConsTable.RowHeadersVisible = false;
+            this.GerCtrlCons_ConsTable.Size = new System.Drawing.Size(243, 445);
+            this.GerCtrlCons_ConsTable.TabIndex = 2;
+            this.GerCtrlCons_ConsTable.Visible = false;
+            // 
+            // GerCtrlCons_Label1
+            // 
+            this.GerCtrlCons_Label1.AutoSize = true;
+            this.GerCtrlCons_Label1.Location = new System.Drawing.Point(3, 3);
+            this.GerCtrlCons_Label1.Name = "GerCtrlCons_Label1";
+            this.GerCtrlCons_Label1.Size = new System.Drawing.Size(57, 13);
+            this.GerCtrlCons_Label1.TabIndex = 1;
+            this.GerCtrlCons_Label1.Text = "Selecione:";
+            // 
+            // GerCtrlCons_ComboBox
+            // 
+            this.GerCtrlCons_ComboBox.FormattingEnabled = true;
+            this.GerCtrlCons_ComboBox.Items.AddRange(new object[] {
+            "(Selecionar)",
+            "Clientes",
+            "Fornecedores",
+            "Gerentes",
+            "Vendas"});
+            this.GerCtrlCons_ComboBox.Location = new System.Drawing.Point(6, 19);
+            this.GerCtrlCons_ComboBox.Name = "GerCtrlCons_ComboBox";
+            this.GerCtrlCons_ComboBox.Size = new System.Drawing.Size(237, 21);
+            this.GerCtrlCons_ComboBox.TabIndex = 0;
+            this.GerCtrlCons_ComboBox.SelectedIndexChanged += new System.EventHandler(this.GerCtrlCons_ComboBox_SelectedIndexChanged);
             // 
             // GerenteCtrlCadastrar
             // 
@@ -540,7 +800,7 @@
             this.GerenteCtrlCadastrar.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlCadastrar.Name = "GerenteCtrlCadastrar";
             this.GerenteCtrlCadastrar.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlCadastrar.Size = new System.Drawing.Size(249, 490);
+            this.GerenteCtrlCadastrar.Size = new System.Drawing.Size(249, 494);
             this.GerenteCtrlCadastrar.TabIndex = 1;
             this.GerenteCtrlCadastrar.Text = "Cadastrar";
             // 
@@ -553,7 +813,7 @@
             this.GerCtrlCad_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.GerCtrlCad_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GerCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.GerCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(6, 440);
+            this.GerCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(6, 444);
             this.GerCtrlCad_ErrorTextBox.Name = "GerCtrlCad_ErrorTextBox";
             this.GerCtrlCad_ErrorTextBox.ReadOnly = true;
             this.GerCtrlCad_ErrorTextBox.Size = new System.Drawing.Size(237, 13);
@@ -564,7 +824,7 @@
             // GerCtrlCad_CadastrarBtn
             // 
             this.GerCtrlCad_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GerCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(168, 461);
+            this.GerCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(168, 465);
             this.GerCtrlCad_CadastrarBtn.Name = "GerCtrlCad_CadastrarBtn";
             this.GerCtrlCad_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlCad_CadastrarBtn.TabIndex = 17;
@@ -575,7 +835,7 @@
             // GerCtrlCad_ClearBtn
             // 
             this.GerCtrlCad_ClearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GerCtrlCad_ClearBtn.Location = new System.Drawing.Point(6, 461);
+            this.GerCtrlCad_ClearBtn.Location = new System.Drawing.Point(6, 465);
             this.GerCtrlCad_ClearBtn.Name = "GerCtrlCad_ClearBtn";
             this.GerCtrlCad_ClearBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlCad_ClearBtn.TabIndex = 16;
@@ -789,7 +1049,7 @@
             this.GerenteCtrlRemover.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlRemover.Name = "GerenteCtrlRemover";
             this.GerenteCtrlRemover.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlRemover.Size = new System.Drawing.Size(249, 490);
+            this.GerenteCtrlRemover.Size = new System.Drawing.Size(249, 494);
             this.GerenteCtrlRemover.TabIndex = 2;
             this.GerenteCtrlRemover.Text = "Remover";
             // 
@@ -802,7 +1062,7 @@
             this.GerCtrlRem_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.GerCtrlRem_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GerCtrlRem_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.GerCtrlRem_ErrorTextBox.Location = new System.Drawing.Point(9, 427);
+            this.GerCtrlRem_ErrorTextBox.Location = new System.Drawing.Point(9, 431);
             this.GerCtrlRem_ErrorTextBox.Name = "GerCtrlRem_ErrorTextBox";
             this.GerCtrlRem_ErrorTextBox.ReadOnly = true;
             this.GerCtrlRem_ErrorTextBox.Size = new System.Drawing.Size(231, 15);
@@ -813,7 +1073,7 @@
             // GerCtrlRem_RemoverBtn
             // 
             this.GerCtrlRem_RemoverBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GerCtrlRem_RemoverBtn.Location = new System.Drawing.Point(168, 461);
+            this.GerCtrlRem_RemoverBtn.Location = new System.Drawing.Point(168, 465);
             this.GerCtrlRem_RemoverBtn.Name = "GerCtrlRem_RemoverBtn";
             this.GerCtrlRem_RemoverBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlRem_RemoverBtn.TabIndex = 20;
@@ -824,7 +1084,7 @@
             // GerCtrlRem_ClearBtn
             // 
             this.GerCtrlRem_ClearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GerCtrlRem_ClearBtn.Location = new System.Drawing.Point(6, 461);
+            this.GerCtrlRem_ClearBtn.Location = new System.Drawing.Point(6, 465);
             this.GerCtrlRem_ClearBtn.Name = "GerCtrlRem_ClearBtn";
             this.GerCtrlRem_ClearBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlRem_ClearBtn.TabIndex = 19;
@@ -892,248 +1152,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // GerCtrlOfer_OferTable
-            // 
-            this.GerCtrlOfer_OferTable.AllowUserToAddRows = false;
-            this.GerCtrlOfer_OferTable.AllowUserToDeleteRows = false;
-            this.GerCtrlOfer_OferTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GerCtrlOfer_OferTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn10});
-            this.GerCtrlOfer_OferTable.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GerCtrlOfer_OferTable.Location = new System.Drawing.Point(0, 0);
-            this.GerCtrlOfer_OferTable.Name = "GerCtrlOfer_OferTable";
-            this.GerCtrlOfer_OferTable.RowHeadersVisible = false;
-            this.GerCtrlOfer_OferTable.Size = new System.Drawing.Size(249, 438);
-            this.GerCtrlOfer_OferTable.TabIndex = 17;
-            // 
-            // GerCtrlOfer_ErrorTextBox
-            // 
-            this.GerCtrlOfer_ErrorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GerCtrlOfer_ErrorTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.GerCtrlOfer_ErrorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GerCtrlOfer_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GerCtrlOfer_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GerCtrlOfer_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.GerCtrlOfer_ErrorTextBox.Location = new System.Drawing.Point(4, 448);
-            this.GerCtrlOfer_ErrorTextBox.Name = "GerCtrlOfer_ErrorTextBox";
-            this.GerCtrlOfer_ErrorTextBox.ReadOnly = true;
-            this.GerCtrlOfer_ErrorTextBox.Size = new System.Drawing.Size(241, 13);
-            this.GerCtrlOfer_ErrorTextBox.TabIndex = 24;
-            this.GerCtrlOfer_ErrorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.GerCtrlOfer_ErrorTextBox.Visible = false;
-            // 
-            // GerCtrlOfer_CadastrarBtn
-            // 
-            this.GerCtrlOfer_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GerCtrlOfer_CadastrarBtn.Location = new System.Drawing.Point(171, 467);
-            this.GerCtrlOfer_CadastrarBtn.Name = "GerCtrlOfer_CadastrarBtn";
-            this.GerCtrlOfer_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
-            this.GerCtrlOfer_CadastrarBtn.TabIndex = 23;
-            this.GerCtrlOfer_CadastrarBtn.Text = "Atualizar";
-            this.GerCtrlOfer_CadastrarBtn.UseVisualStyleBackColor = true;
-            this.GerCtrlOfer_CadastrarBtn.Click += new System.EventHandler(this.GerCtrlOfer_CadastrarBtn_Click);
-            // 
-            // GerCtrlOfer_CancelBtn
-            // 
-            this.GerCtrlOfer_CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GerCtrlOfer_CancelBtn.Location = new System.Drawing.Point(3, 467);
-            this.GerCtrlOfer_CancelBtn.Name = "GerCtrlOfer_CancelBtn";
-            this.GerCtrlOfer_CancelBtn.Size = new System.Drawing.Size(75, 23);
-            this.GerCtrlOfer_CancelBtn.TabIndex = 22;
-            this.GerCtrlOfer_CancelBtn.Text = "Cancelar";
-            this.GerCtrlOfer_CancelBtn.UseVisualStyleBackColor = true;
-            this.GerCtrlOfer_CancelBtn.Click += new System.EventHandler(this.GerCtrlOfer_CancelBtn_Click);
-            // 
-            // GerCtrlProd_ProdTable
-            // 
-            this.GerCtrlProd_ProdTable.AllowUserToAddRows = false;
-            this.GerCtrlProd_ProdTable.AllowUserToDeleteRows = false;
-            this.GerCtrlProd_ProdTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GerCtrlProd_ProdTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.Column1,
-            this.dataGridViewTextBoxColumn13});
-            this.GerCtrlProd_ProdTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GerCtrlProd_ProdTable.Location = new System.Drawing.Point(0, 0);
-            this.GerCtrlProd_ProdTable.Name = "GerCtrlProd_ProdTable";
-            this.GerCtrlProd_ProdTable.ReadOnly = true;
-            this.GerCtrlProd_ProdTable.RowHeadersVisible = false;
-            this.GerCtrlProd_ProdTable.Size = new System.Drawing.Size(249, 494);
-            this.GerCtrlProd_ProdTable.TabIndex = 17;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle33;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn8.MaxInputLength = 50;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 98;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle34;
-            this.dataGridViewTextBoxColumn9.HeaderText = "Preço";
-            this.dataGridViewTextBoxColumn9.MaxInputLength = 10;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 48;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle35;
-            this.dataGridViewTextBoxColumn11.HeaderText = "Qtde";
-            this.dataGridViewTextBoxColumn11.MaxInputLength = 8;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 48;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle36;
-            this.dataGridViewTextBoxColumn12.HeaderText = "Prateleira";
-            this.dataGridViewTextBoxColumn12.MaxInputLength = 8;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle37;
-            this.Column1.HeaderText = "Fornecedor";
-            this.Column1.MaxInputLength = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle38;
-            this.dataGridViewTextBoxColumn13.HeaderText = "Validade";
-            this.dataGridViewTextBoxColumn13.MaxInputLength = 10;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 80;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle39;
-            this.Column2.HeaderText = "prodID";
-            this.Column2.MaxInputLength = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle40;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Produto";
-            this.dataGridViewTextBoxColumn6.MaxInputLength = 50;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle41;
-            this.dataGridViewTextBoxColumn7.FillWeight = 80F;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Desconto";
-            this.dataGridViewTextBoxColumn7.MaxInputLength = 10;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle42;
-            this.dataGridViewTextBoxColumn10.FillWeight = 80F;
-            this.dataGridViewTextBoxColumn10.HeaderText = "Duração";
-            this.dataGridViewTextBoxColumn10.MaxInputLength = 12;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle43;
-            this.Column3.HeaderText = "ProdID";
-            this.Column3.MaxInputLength = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle44;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn1.MaxInputLength = 50;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 98;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle45;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Preço";
-            this.dataGridViewTextBoxColumn2.MaxInputLength = 10;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 48;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle46;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Qtde";
-            this.dataGridViewTextBoxColumn3.MaxInputLength = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 48;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle47;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Prateleira";
-            this.dataGridViewTextBoxColumn4.MaxInputLength = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle48;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Validade";
-            this.dataGridViewTextBoxColumn5.MaxInputLength = 12;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 80;
-            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1161,17 +1179,18 @@
             this.GerenteCtrlHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).EndInit();
             this.GerenteCtrlGerProd.ResumeLayout(false);
-            this.GerenteCtrlConsDados.ResumeLayout(false);
-            this.GerenteCtrlConsDados.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlProd_ProdTable)).EndInit();
             this.GerenteCtrlGerOfertas.ResumeLayout(false);
             this.GerenteCtrlGerOfertas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlOfer_OferTable)).EndInit();
+            this.GerenteCtrlConsDados.ResumeLayout(false);
+            this.GerenteCtrlConsDados.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCons_ConsTable)).EndInit();
             this.GerenteCtrlCadastrar.ResumeLayout(false);
             this.GerenteCtrlCadastrar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).EndInit();
             this.GerenteCtrlRemover.ResumeLayout(false);
             this.GerenteCtrlRemover.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlOfer_OferTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GerCtrlProd_ProdTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1262,6 +1281,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridView GerCtrlCons_ConsTable;
     }
 }
 

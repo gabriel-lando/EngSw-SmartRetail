@@ -775,22 +775,6 @@ namespace SmartRetail
             return false;
         }
 
-        //public bool RemoveProductsFornecedor(int infoID)
-        //{
-        //    if (AbrirConexao())
-        //    {
-        //        string queryProdFornecedor = "DELETE FROM Produto WHERE fornecedorID = @fornecedorID;";
-        //        SqlCommand cmdProdFornecedor = new SqlCommand(queryProdFornecedor, connection);
-        //        cmdProdFornecedor.Parameters.AddWithValue("@fornecedorID", infoID);
-
-        //        cmdProdFornecedor.ExecuteNonQuery();
-        //        FecharConexao();
-        //        return true;
-        //    }
-
-        //    return false;
-        //}
-
         public bool InsertProductsFornecedor(List<Produto> produtosDB)
         {
             if (AbrirConexao())
@@ -819,10 +803,202 @@ namespace SmartRetail
             return false;
         }
 
-        public bool ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, int infoID)
+        public bool GenerateNF(int infoID, int carrinhoID)
+        {
+            if (AbrirConexao())
+            {
+                string queryVenda = "INSERT INTO Venda (carrinhoID, infoID) VALUES (@carrinhoID, @infoID);";
+                SqlCommand cmdVenda = new SqlCommand(queryVenda, connection);
+                cmdVenda.Parameters.AddWithValue("@carrinhoID", carrinhoID);
+                cmdVenda.Parameters.AddWithValue("@infoID", infoID);
+
+                if (cmdVenda.ExecuteNonQuery() > 0)
+                {
+                    FecharConexao();
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool ReturnAllClients(out List<Cliente> clientesDB, out List<InfoBasica> infoBasicasDB)
+        {
+            clientesDB = new List<Cliente>();
+            infoBasicasDB = new List<InfoBasica>();
+
+            string queryInfo = "SELECT * FROM InfoBasica WHERE funcao = 0;";
+            string queryClientes = "SELECT * FROM Cliente;";
+            
+            if (AbrirConexao())
+            {
+                SqlCommand cmdInfo = new SqlCommand(queryInfo, connection);
+                SqlDataReader readerInfo = cmdInfo.ExecuteReader();
+
+                while (readerInfo.Read())
+                {
+                    int infoID = int.Parse(readerInfo["infoID"].ToString());
+                    string nome = readerInfo["nome"].ToString();
+                    string email = readerInfo["email"].ToString();
+                    long cadastro = long.Parse(readerInfo["cadastro"].ToString());
+                    long telefone = long.Parse(readerInfo["telefone"].ToString());
+
+                    infoBasicasDB.Add(new InfoBasica()
+                    {
+                        infoID = infoID,
+                        nome = nome,
+                        email = email,
+                        cadastro = cadastro,
+                        telefone = telefone
+                    });
+                }
+                readerInfo.Close();
+
+                SqlCommand cmdClientes = new SqlCommand(queryClientes, connection);
+                SqlDataReader readerClientes = cmdClientes.ExecuteReader();
+
+                while (readerClientes.Read())
+                {
+                    int infoID = int.Parse(readerClientes["infoID"].ToString());
+                    string endereco = readerClientes["endereco_cobranca"].ToString();
+
+                    clientesDB.Add(new Cliente()
+                    {
+                        infoID = infoID,
+                        endereco_cobranca = endereco
+                    });
+                }
+                readerClientes.Close();
+
+                FecharConexao();
+
+                if (infoBasicasDB.Count() == clientesDB.Count())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool ReturnAllFornGer(out List<InfoBasica> infoBasicasDB, int funcao)
+        {
+            infoBasicasDB = new List<InfoBasica>();
+
+            string queryInfo = "SELECT * FROM InfoBasica WHERE funcao = " + funcao + ";";
+
+            if (AbrirConexao())
+            {
+                SqlCommand cmdInfo = new SqlCommand(queryInfo, connection);
+                SqlDataReader readerInfo = cmdInfo.ExecuteReader();
+
+                while (readerInfo.Read())
+                {
+                    int infoID = int.Parse(readerInfo["infoID"].ToString());
+                    string nome = readerInfo["nome"].ToString();
+                    string email = readerInfo["email"].ToString();
+                    long cadastro = long.Parse(readerInfo["cadastro"].ToString());
+                    long telefone = long.Parse(readerInfo["telefone"].ToString());
+
+                    infoBasicasDB.Add(new InfoBasica()
+                    {
+                        nome = nome,
+                        email = email,
+                        cadastro = cadastro,
+                        telefone = telefone
+                    });
+                }
+                readerInfo.Close();
+
+                FecharConexao();
+
+                if (infoBasicasDB.Count() > 0)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool ReturnAllSells(out List<Venda> vendasDB)
+        {
+            vendasDB = new List<Venda>();
+
+            List<Venda>  tmpVendas = new List<Venda>();
+
+            string queryVendas = "SELECT * FROM Venda;";
+
+            if (AbrirConexao())
+            {
+                SqlCommand cmdVendas = new SqlCommand(queryVendas, connection);
+                SqlDataReader readerVendas = cmdVendas.ExecuteReader();
+
+                while (readerVendas.Read())
+                {
+                    int infoID = int.Parse(readerVendas["infoID"].ToString());
+                    int carrinhoID = int.Parse(readerVendas["carrinhoID"].ToString());
+                    int nota_fiscal = int.Parse(readerVendas["nota_fiscal"].ToString());
+
+                    tmpVendas.Add(new Venda()
+                    {
+                        infoID = infoID,
+                        carrinhoID = carrinhoID,
+                        nota_fiscal = nota_fiscal
+                    });
+                }
+                readerVendas.Close();
+
+                Venda[] tmpVendasArray = tmpVendas.ToArray();
+
+                foreach(Venda venda in tmpVendasArray)
+                {
+                    string queryCarrinho = "SELECT * FROM Carrinho WHERE carrinhoID = " + venda.carrinhoID + ";";
+                    string queryCliente = "SELECT * FROM InfoBasica WHERE infoID = " + venda.infoID + ";";
+
+                    float preco_total = 0;
+                    string nome = string.Empty;
+
+                    SqlCommand cmdCarrinho = new SqlCommand(queryCarrinho, connection);
+                    SqlDataReader readerCarrinho = cmdCarrinho.ExecuteReader();
+
+                    if (readerCarrinho.Read())
+                    {
+                        preco_total = float.Parse(readerCarrinho["preco_total"].ToString());
+                    }
+                    readerCarrinho.Close();
+
+                    SqlCommand cmdCliente = new SqlCommand(queryCliente, connection);
+                    SqlDataReader readerCliente = cmdCliente.ExecuteReader();
+
+                    if (readerCliente.Read())
+                    {
+                        nome = readerCliente["nome"].ToString();
+                    }
+                    readerCliente.Close();
+
+                    if (preco_total > 0 && nome != string.Empty)
+                    {
+                        vendasDB.Add(new Venda()
+                        {
+                            nome = nome,
+                            preco_total = preco_total,
+                            nota_fiscal = venda.nota_fiscal
+                        });
+                    }
+                }
+                FecharConexao();
+
+                if (vendasDB.Count() > 0)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool ReturnProductsSacola(out List<Produto> produtosSacola, out float preco_total, out int carrinhoID, int infoID)
         {
             produtosSacola = new List<Produto>();
             preco_total = 0;
+            carrinhoID = 0;
 
             string queryCarrinhoID = "SELECT * FROM Cliente WHERE infoID = @infoID;";
 
@@ -836,7 +1012,7 @@ namespace SmartRetail
 
                     if (readerCarrinhoID.Read())
                     {
-                        int carrinhoID = int.Parse(readerCarrinhoID["carrinhoID"].ToString());
+                        carrinhoID = int.Parse(readerCarrinhoID["carrinhoID"].ToString());
                         readerCarrinhoID.Close();
 
                         if (carrinhoID > 0) // Se existir carrinho, retorna os produtos e qtdes da sacola
