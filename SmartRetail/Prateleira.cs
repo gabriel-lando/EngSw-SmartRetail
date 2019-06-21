@@ -16,7 +16,7 @@ namespace SmartRetail
         private List<Produto> produtos, sacola;
         private int infoID = 0;
 
-        private FacialRecognition facialRec = new FacialRecognition();
+        private readonly FacialRecognition facialRec = new FacialRecognition();
         public Prateleira()
         {
             InitializeComponent();
@@ -322,7 +322,7 @@ namespace SmartRetail
                         {
                             ResultTextBox.Visible = true;
                             ResultTextBox.ForeColor = System.Drawing.Color.Green;
-                            ResultTextBox.Text = "Produto adicionado!";
+                            ResultTextBox.Text = "Item atualizado!";
 
                             CarregaPrateleiras();
                         }
