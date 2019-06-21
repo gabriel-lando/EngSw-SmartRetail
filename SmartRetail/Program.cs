@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartRetail
@@ -40,8 +37,6 @@ namespace SmartRetail
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            //Caixa Caixa = new Caixa();
 
             Thread caixaThread = new Thread(new ThreadStart(ThreadCaixa));
             Thread totemThread = new Thread(new ThreadStart(ThreadTotem));
