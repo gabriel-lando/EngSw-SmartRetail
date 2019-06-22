@@ -18,19 +18,6 @@ namespace CreateTablesDB
             Inicializar();
         }
 
-        //private void Inicializar()
-        //{
-        //    server = "smartretail.c3nntdu4girq.sa-east-1.rds.amazonaws.com";
-        //    database = "SmartRetail";
-        //    uid = "sradmin";
-        //    password = "SmartRetail";
-        //    string connectionString;
-        //    connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-        //    database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-        //    connection = new SqlConnection(connectionString);
-        //}
-
         private void Inicializar()
         {
             server = "(localdb)\\SmartRetail";

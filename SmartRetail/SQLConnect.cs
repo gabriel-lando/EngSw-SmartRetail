@@ -14,30 +14,17 @@ namespace SmartRetail
         private string uid;
         private string password;
 
-        //Construtor
         public SQLConnect()
         {
             Inicializar();
         }
 
-        //private void Inicializar()
-        //{
-        //    server = "(localdb)\\SmartRetail";
-        //    database = "SmartRetail";
-        //    uid = "sa";
-        //    password = "admin";
-        //    string connectionString;
-        //    connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-        //    database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-        //    connection = new SqlConnection(connectionString);
-        //}
         private void Inicializar()
         {
-            server = "smartretail.c3nntdu4girq.sa-east-1.rds.amazonaws.com";
+            server = "(localdb)\\SmartRetail";
             database = "SmartRetail";
-            uid = "sradmin";
-            password = "SmartRetail";
+            uid = "sa";
+            password = "admin";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
