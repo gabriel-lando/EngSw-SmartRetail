@@ -68,7 +68,7 @@ namespace SmartRetail
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro ao encerrar a conexão com o servidor MySQL! Código: " + ex.Number);
+                MessageBox.Show("Erro ao encerrar a conexão com o SQL Server! Código: " + ex.Number);
                 return false;
             }
         }

@@ -58,7 +58,6 @@
             this.FornecedorTab = new System.Windows.Forms.TabPage();
             this.FornecedorCtrl = new System.Windows.Forms.TabControl();
             this.FornecedorCtrlHome = new System.Windows.Forms.TabPage();
-            this.LogoffForBtn = new System.Windows.Forms.PictureBox();
             this.ForCtrlHome_TextBox = new System.Windows.Forms.RichTextBox();
             this.FornecedorCtrlCadastrar = new System.Windows.Forms.TabPage();
             this.ForCtrlCad_ErrorTextBox = new System.Windows.Forms.TextBox();
@@ -74,7 +73,8 @@
             this.GerenteTab = new System.Windows.Forms.TabPage();
             this.GerenteCtrl = new System.Windows.Forms.TabControl();
             this.GerenteCtrlHome = new System.Windows.Forms.TabPage();
-            this.LogoffGerBtn = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.GerHome_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.GerenteCtrlGerProd = new System.Windows.Forms.TabPage();
             this.GerCtrlProd_ProdTable = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -132,18 +132,19 @@
             this.GerCtrlRem_Label1 = new System.Windows.Forms.Label();
             this.GerCtrlRem_ComboBox = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.LogoffForBtn = new System.Windows.Forms.PictureBox();
+            this.LogoffGerBtn = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TabCtrl.SuspendLayout();
             this.LoginPageTab.SuspendLayout();
             this.FornecedorTab.SuspendLayout();
             this.FornecedorCtrl.SuspendLayout();
             this.FornecedorCtrlHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).BeginInit();
             this.FornecedorCtrlCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ForCtrlCad_ProdTable)).BeginInit();
             this.GerenteTab.SuspendLayout();
             this.GerenteCtrl.SuspendLayout();
             this.GerenteCtrlHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).BeginInit();
             this.GerenteCtrlGerProd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlProd_ProdTable)).BeginInit();
             this.GerenteCtrlGerOfertas.SuspendLayout();
@@ -153,6 +154,9 @@
             this.GerenteCtrlCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).BeginInit();
             this.GerenteCtrlRemover.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TabCtrl
@@ -183,10 +187,10 @@
             this.LoginPageTab.Controls.Add(this.EmailTextBox);
             this.LoginPageTab.Controls.Add(this.LimparBtn);
             this.LoginPageTab.Controls.Add(this.PwdTextBox);
-            this.LoginPageTab.Location = new System.Drawing.Point(4, 5);
+            this.LoginPageTab.Location = new System.Drawing.Point(4, 9);
             this.LoginPageTab.Margin = new System.Windows.Forms.Padding(0);
             this.LoginPageTab.Name = "LoginPageTab";
-            this.LoginPageTab.Size = new System.Drawing.Size(276, 502);
+            this.LoginPageTab.Size = new System.Drawing.Size(276, 498);
             this.LoginPageTab.TabIndex = 2;
             this.LoginPageTab.Text = "LoginPageTab";
             this.LoginPageTab.UseVisualStyleBackColor = true;
@@ -199,7 +203,7 @@
             this.ErrorLoginTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ErrorLoginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorLoginTextBox.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 360);
+            this.ErrorLoginTextBox.Location = new System.Drawing.Point(8, 358);
             this.ErrorLoginTextBox.Name = "ErrorLoginTextBox";
             this.ErrorLoginTextBox.ReadOnly = true;
             this.ErrorLoginTextBox.Size = new System.Drawing.Size(260, 15);
@@ -234,7 +238,7 @@
             this.MessageLoginPage.DetectUrls = false;
             this.MessageLoginPage.Enabled = false;
             this.MessageLoginPage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MessageLoginPage.Location = new System.Drawing.Point(8, 102);
+            this.MessageLoginPage.Location = new System.Drawing.Point(8, 100);
             this.MessageLoginPage.Name = "MessageLoginPage";
             this.MessageLoginPage.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.MessageLoginPage.Size = new System.Drawing.Size(260, 105);
@@ -246,7 +250,7 @@
             // 
             this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.Location = new System.Drawing.Point(185, 427);
+            this.LoginBtn.Location = new System.Drawing.Point(185, 423);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(83, 30);
             this.LoginBtn.TabIndex = 4;
@@ -258,7 +262,7 @@
             // 
             this.EmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailTextBox.Location = new System.Drawing.Point(8, 260);
+            this.EmailTextBox.Location = new System.Drawing.Point(8, 258);
             this.EmailTextBox.MaxLength = 50;
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(260, 24);
@@ -271,7 +275,7 @@
             // 
             this.LimparBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LimparBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LimparBtn.Location = new System.Drawing.Point(8, 427);
+            this.LimparBtn.Location = new System.Drawing.Point(8, 423);
             this.LimparBtn.Name = "LimparBtn";
             this.LimparBtn.Size = new System.Drawing.Size(83, 30);
             this.LimparBtn.TabIndex = 3;
@@ -283,7 +287,7 @@
             // 
             this.PwdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PwdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PwdTextBox.Location = new System.Drawing.Point(8, 303);
+            this.PwdTextBox.Location = new System.Drawing.Point(8, 301);
             this.PwdTextBox.MaxLength = 32;
             this.PwdTextBox.Name = "PwdTextBox";
             this.PwdTextBox.Size = new System.Drawing.Size(260, 24);
@@ -297,10 +301,10 @@
             // FornecedorTab
             // 
             this.FornecedorTab.Controls.Add(this.FornecedorCtrl);
-            this.FornecedorTab.Location = new System.Drawing.Point(4, 5);
+            this.FornecedorTab.Location = new System.Drawing.Point(4, 9);
             this.FornecedorTab.Margin = new System.Windows.Forms.Padding(0);
             this.FornecedorTab.Name = "FornecedorTab";
-            this.FornecedorTab.Size = new System.Drawing.Size(276, 502);
+            this.FornecedorTab.Size = new System.Drawing.Size(276, 498);
             this.FornecedorTab.TabIndex = 0;
             this.FornecedorTab.Text = "FornecedorTab";
             this.FornecedorTab.UseVisualStyleBackColor = true;
@@ -315,7 +319,7 @@
             this.FornecedorCtrl.Multiline = true;
             this.FornecedorCtrl.Name = "FornecedorCtrl";
             this.FornecedorCtrl.SelectedIndex = 0;
-            this.FornecedorCtrl.Size = new System.Drawing.Size(276, 502);
+            this.FornecedorCtrl.Size = new System.Drawing.Size(276, 498);
             this.FornecedorCtrl.TabIndex = 0;
             this.FornecedorCtrl.SelectedIndexChanged += new System.EventHandler(this.FornecedorCtrl_SelectedIndexChanged);
             // 
@@ -327,20 +331,9 @@
             this.FornecedorCtrlHome.Location = new System.Drawing.Point(23, 4);
             this.FornecedorCtrlHome.Name = "FornecedorCtrlHome";
             this.FornecedorCtrlHome.Padding = new System.Windows.Forms.Padding(3);
-            this.FornecedorCtrlHome.Size = new System.Drawing.Size(249, 494);
+            this.FornecedorCtrlHome.Size = new System.Drawing.Size(249, 490);
             this.FornecedorCtrlHome.TabIndex = 0;
             this.FornecedorCtrlHome.Text = "Home";
-            // 
-            // LogoffForBtn
-            // 
-            this.LogoffForBtn.Image = global::SmartRetail.Properties.Resources.Logoff;
-            this.LogoffForBtn.Location = new System.Drawing.Point(217, 6);
-            this.LogoffForBtn.Name = "LogoffForBtn";
-            this.LogoffForBtn.Size = new System.Drawing.Size(26, 26);
-            this.LogoffForBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LogoffForBtn.TabIndex = 1;
-            this.LogoffForBtn.TabStop = false;
-            this.LogoffForBtn.Click += new System.EventHandler(this.LogoffForBtn_Click);
             // 
             // ForCtrlHome_TextBox
             // 
@@ -366,7 +359,7 @@
             this.FornecedorCtrlCadastrar.Controls.Add(this.ForCtrlCad_ProdTable);
             this.FornecedorCtrlCadastrar.Location = new System.Drawing.Point(23, 4);
             this.FornecedorCtrlCadastrar.Name = "FornecedorCtrlCadastrar";
-            this.FornecedorCtrlCadastrar.Size = new System.Drawing.Size(249, 494);
+            this.FornecedorCtrlCadastrar.Size = new System.Drawing.Size(249, 490);
             this.FornecedorCtrlCadastrar.TabIndex = 1;
             this.FornecedorCtrlCadastrar.Text = "Cadastrar";
             // 
@@ -379,7 +372,7 @@
             this.ForCtrlCad_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ForCtrlCad_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.ForCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(3, 449);
+            this.ForCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(3, 453);
             this.ForCtrlCad_ErrorTextBox.Name = "ForCtrlCad_ErrorTextBox";
             this.ForCtrlCad_ErrorTextBox.ReadOnly = true;
             this.ForCtrlCad_ErrorTextBox.Size = new System.Drawing.Size(243, 13);
@@ -390,7 +383,7 @@
             // ForCtrlCad_CadastrarBtn
             // 
             this.ForCtrlCad_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ForCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(171, 467);
+            this.ForCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(171, 471);
             this.ForCtrlCad_CadastrarBtn.Name = "ForCtrlCad_CadastrarBtn";
             this.ForCtrlCad_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
             this.ForCtrlCad_CadastrarBtn.TabIndex = 20;
@@ -401,7 +394,7 @@
             // ForCtrlCad_CancelBtn
             // 
             this.ForCtrlCad_CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ForCtrlCad_CancelBtn.Location = new System.Drawing.Point(3, 467);
+            this.ForCtrlCad_CancelBtn.Location = new System.Drawing.Point(3, 471);
             this.ForCtrlCad_CancelBtn.Name = "ForCtrlCad_CancelBtn";
             this.ForCtrlCad_CancelBtn.Size = new System.Drawing.Size(75, 23);
             this.ForCtrlCad_CancelBtn.TabIndex = 19;
@@ -519,6 +512,9 @@
             // GerenteCtrlHome
             // 
             this.GerenteCtrlHome.BackColor = System.Drawing.SystemColors.Control;
+            this.GerenteCtrlHome.Controls.Add(this.pictureBox1);
+            this.GerenteCtrlHome.Controls.Add(this.textBox1);
+            this.GerenteCtrlHome.Controls.Add(this.GerHome_RichTextBox);
             this.GerenteCtrlHome.Controls.Add(this.LogoffGerBtn);
             this.GerenteCtrlHome.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlHome.Name = "GerenteCtrlHome";
@@ -527,16 +523,39 @@
             this.GerenteCtrlHome.TabIndex = 0;
             this.GerenteCtrlHome.Text = "Home";
             // 
-            // LogoffGerBtn
+            // textBox1
             // 
-            this.LogoffGerBtn.Image = global::SmartRetail.Properties.Resources.Logoff;
-            this.LogoffGerBtn.Location = new System.Drawing.Point(217, 6);
-            this.LogoffGerBtn.Name = "LogoffGerBtn";
-            this.LogoffGerBtn.Size = new System.Drawing.Size(26, 26);
-            this.LogoffGerBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LogoffGerBtn.TabIndex = 0;
-            this.LogoffGerBtn.TabStop = false;
-            this.LogoffGerBtn.Click += new System.EventHandler(this.LogoffGerBtn_Click);
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Blue;
+            this.textBox1.Location = new System.Drawing.Point(6, 193);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(237, 25);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "SmartRetail";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // GerHome_RichTextBox
+            // 
+            this.GerHome_RichTextBox.AcceptsTab = true;
+            this.GerHome_RichTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.GerHome_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GerHome_RichTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.GerHome_RichTextBox.Enabled = false;
+            this.GerHome_RichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GerHome_RichTextBox.ForeColor = System.Drawing.Color.Black;
+            this.GerHome_RichTextBox.Location = new System.Drawing.Point(3, 323);
+            this.GerHome_RichTextBox.Name = "GerHome_RichTextBox";
+            this.GerHome_RichTextBox.ReadOnly = true;
+            this.GerHome_RichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.GerHome_RichTextBox.ShortcutsEnabled = false;
+            this.GerHome_RichTextBox.Size = new System.Drawing.Size(243, 168);
+            this.GerHome_RichTextBox.TabIndex = 2;
+            this.GerHome_RichTextBox.Text = "  Desenvolvido por:\n      -> Eduardo Fischer\n      -> Gabriel Lando\n      -> Rodr" +
+    "igo P. Bastos\n\n  Engenharia de Software N\n  INF-UFRGS  2019/1\n\n  © 2019 SmartRet" +
+    "ail";
+            this.GerHome_RichTextBox.WordWrap = false;
             // 
             // GerenteCtrlGerProd
             // 
@@ -544,7 +563,7 @@
             this.GerenteCtrlGerProd.Controls.Add(this.GerCtrlProd_ProdTable);
             this.GerenteCtrlGerProd.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlGerProd.Name = "GerenteCtrlGerProd";
-            this.GerenteCtrlGerProd.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlGerProd.Size = new System.Drawing.Size(249, 490);
             this.GerenteCtrlGerProd.TabIndex = 3;
             this.GerenteCtrlGerProd.Text = "Produtos";
             // 
@@ -565,7 +584,7 @@
             this.GerCtrlProd_ProdTable.Name = "GerCtrlProd_ProdTable";
             this.GerCtrlProd_ProdTable.ReadOnly = true;
             this.GerCtrlProd_ProdTable.RowHeadersVisible = false;
-            this.GerCtrlProd_ProdTable.Size = new System.Drawing.Size(249, 494);
+            this.GerCtrlProd_ProdTable.Size = new System.Drawing.Size(249, 490);
             this.GerCtrlProd_ProdTable.TabIndex = 17;
             // 
             // dataGridViewTextBoxColumn8
@@ -643,7 +662,7 @@
             this.GerenteCtrlGerOfertas.Controls.Add(this.GerCtrlOfer_OferTable);
             this.GerenteCtrlGerOfertas.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlGerOfertas.Name = "GerenteCtrlGerOfertas";
-            this.GerenteCtrlGerOfertas.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlGerOfertas.Size = new System.Drawing.Size(249, 490);
             this.GerenteCtrlGerOfertas.TabIndex = 5;
             this.GerenteCtrlGerOfertas.Text = "Ofertas";
             // 
@@ -656,7 +675,7 @@
             this.GerCtrlOfer_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.GerCtrlOfer_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GerCtrlOfer_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.GerCtrlOfer_ErrorTextBox.Location = new System.Drawing.Point(4, 448);
+            this.GerCtrlOfer_ErrorTextBox.Location = new System.Drawing.Point(4, 444);
             this.GerCtrlOfer_ErrorTextBox.Name = "GerCtrlOfer_ErrorTextBox";
             this.GerCtrlOfer_ErrorTextBox.ReadOnly = true;
             this.GerCtrlOfer_ErrorTextBox.Size = new System.Drawing.Size(241, 13);
@@ -667,7 +686,7 @@
             // GerCtrlOfer_CadastrarBtn
             // 
             this.GerCtrlOfer_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GerCtrlOfer_CadastrarBtn.Location = new System.Drawing.Point(171, 467);
+            this.GerCtrlOfer_CadastrarBtn.Location = new System.Drawing.Point(171, 463);
             this.GerCtrlOfer_CadastrarBtn.Name = "GerCtrlOfer_CadastrarBtn";
             this.GerCtrlOfer_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlOfer_CadastrarBtn.TabIndex = 23;
@@ -678,7 +697,7 @@
             // GerCtrlOfer_CancelBtn
             // 
             this.GerCtrlOfer_CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GerCtrlOfer_CancelBtn.Location = new System.Drawing.Point(3, 467);
+            this.GerCtrlOfer_CancelBtn.Location = new System.Drawing.Point(3, 463);
             this.GerCtrlOfer_CancelBtn.Name = "GerCtrlOfer_CancelBtn";
             this.GerCtrlOfer_CancelBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlOfer_CancelBtn.TabIndex = 22;
@@ -752,7 +771,7 @@
             this.GerenteCtrlConsDados.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlConsDados.Name = "GerenteCtrlConsDados";
             this.GerenteCtrlConsDados.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlConsDados.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlConsDados.Size = new System.Drawing.Size(249, 490);
             this.GerenteCtrlConsDados.TabIndex = 4;
             this.GerenteCtrlConsDados.Text = "Consultar";
             // 
@@ -762,7 +781,7 @@
             this.GerCtrlCons_ConsTable.AllowUserToDeleteRows = false;
             this.GerCtrlCons_ConsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GerCtrlCons_ConsTable.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.GerCtrlCons_ConsTable.Location = new System.Drawing.Point(3, 46);
+            this.GerCtrlCons_ConsTable.Location = new System.Drawing.Point(3, 42);
             this.GerCtrlCons_ConsTable.Name = "GerCtrlCons_ConsTable";
             this.GerCtrlCons_ConsTable.ReadOnly = true;
             this.GerCtrlCons_ConsTable.RowHeadersVisible = false;
@@ -819,7 +838,7 @@
             this.GerenteCtrlCadastrar.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlCadastrar.Name = "GerenteCtrlCadastrar";
             this.GerenteCtrlCadastrar.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlCadastrar.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlCadastrar.Size = new System.Drawing.Size(249, 490);
             this.GerenteCtrlCadastrar.TabIndex = 1;
             this.GerenteCtrlCadastrar.Text = "Cadastrar";
             // 
@@ -832,7 +851,7 @@
             this.GerCtrlCad_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.GerCtrlCad_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GerCtrlCad_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.GerCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(6, 444);
+            this.GerCtrlCad_ErrorTextBox.Location = new System.Drawing.Point(6, 440);
             this.GerCtrlCad_ErrorTextBox.Name = "GerCtrlCad_ErrorTextBox";
             this.GerCtrlCad_ErrorTextBox.ReadOnly = true;
             this.GerCtrlCad_ErrorTextBox.Size = new System.Drawing.Size(237, 13);
@@ -843,7 +862,7 @@
             // GerCtrlCad_CadastrarBtn
             // 
             this.GerCtrlCad_CadastrarBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GerCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(168, 465);
+            this.GerCtrlCad_CadastrarBtn.Location = new System.Drawing.Point(168, 461);
             this.GerCtrlCad_CadastrarBtn.Name = "GerCtrlCad_CadastrarBtn";
             this.GerCtrlCad_CadastrarBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlCad_CadastrarBtn.TabIndex = 17;
@@ -854,7 +873,7 @@
             // GerCtrlCad_ClearBtn
             // 
             this.GerCtrlCad_ClearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GerCtrlCad_ClearBtn.Location = new System.Drawing.Point(6, 465);
+            this.GerCtrlCad_ClearBtn.Location = new System.Drawing.Point(6, 461);
             this.GerCtrlCad_ClearBtn.Name = "GerCtrlCad_ClearBtn";
             this.GerCtrlCad_ClearBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlCad_ClearBtn.TabIndex = 16;
@@ -1068,7 +1087,7 @@
             this.GerenteCtrlRemover.Location = new System.Drawing.Point(23, 4);
             this.GerenteCtrlRemover.Name = "GerenteCtrlRemover";
             this.GerenteCtrlRemover.Padding = new System.Windows.Forms.Padding(3);
-            this.GerenteCtrlRemover.Size = new System.Drawing.Size(249, 494);
+            this.GerenteCtrlRemover.Size = new System.Drawing.Size(249, 490);
             this.GerenteCtrlRemover.TabIndex = 2;
             this.GerenteCtrlRemover.Text = "Remover";
             // 
@@ -1081,7 +1100,7 @@
             this.GerCtrlRem_ErrorTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.GerCtrlRem_ErrorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GerCtrlRem_ErrorTextBox.ForeColor = System.Drawing.Color.Red;
-            this.GerCtrlRem_ErrorTextBox.Location = new System.Drawing.Point(9, 431);
+            this.GerCtrlRem_ErrorTextBox.Location = new System.Drawing.Point(9, 427);
             this.GerCtrlRem_ErrorTextBox.Name = "GerCtrlRem_ErrorTextBox";
             this.GerCtrlRem_ErrorTextBox.ReadOnly = true;
             this.GerCtrlRem_ErrorTextBox.Size = new System.Drawing.Size(231, 15);
@@ -1092,7 +1111,7 @@
             // GerCtrlRem_RemoverBtn
             // 
             this.GerCtrlRem_RemoverBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GerCtrlRem_RemoverBtn.Location = new System.Drawing.Point(168, 465);
+            this.GerCtrlRem_RemoverBtn.Location = new System.Drawing.Point(168, 461);
             this.GerCtrlRem_RemoverBtn.Name = "GerCtrlRem_RemoverBtn";
             this.GerCtrlRem_RemoverBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlRem_RemoverBtn.TabIndex = 20;
@@ -1103,7 +1122,7 @@
             // GerCtrlRem_ClearBtn
             // 
             this.GerCtrlRem_ClearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GerCtrlRem_ClearBtn.Location = new System.Drawing.Point(6, 465);
+            this.GerCtrlRem_ClearBtn.Location = new System.Drawing.Point(6, 461);
             this.GerCtrlRem_ClearBtn.Name = "GerCtrlRem_ClearBtn";
             this.GerCtrlRem_ClearBtn.Size = new System.Drawing.Size(75, 23);
             this.GerCtrlRem_ClearBtn.TabIndex = 19;
@@ -1171,6 +1190,38 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // LogoffForBtn
+            // 
+            this.LogoffForBtn.Image = global::SmartRetail.Properties.Resources.Logoff;
+            this.LogoffForBtn.Location = new System.Drawing.Point(217, 6);
+            this.LogoffForBtn.Name = "LogoffForBtn";
+            this.LogoffForBtn.Size = new System.Drawing.Size(26, 26);
+            this.LogoffForBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LogoffForBtn.TabIndex = 1;
+            this.LogoffForBtn.TabStop = false;
+            this.LogoffForBtn.Click += new System.EventHandler(this.LogoffForBtn_Click);
+            // 
+            // LogoffGerBtn
+            // 
+            this.LogoffGerBtn.Image = global::SmartRetail.Properties.Resources.Logoff;
+            this.LogoffGerBtn.Location = new System.Drawing.Point(217, 6);
+            this.LogoffGerBtn.Name = "LogoffGerBtn";
+            this.LogoffGerBtn.Size = new System.Drawing.Size(26, 26);
+            this.LogoffGerBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LogoffGerBtn.TabIndex = 0;
+            this.LogoffGerBtn.TabStop = false;
+            this.LogoffGerBtn.Click += new System.EventHandler(this.LogoffGerBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SmartRetail.Properties.Resources.Icon;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 84);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 103);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1190,14 +1241,13 @@
             this.FornecedorTab.ResumeLayout(false);
             this.FornecedorCtrl.ResumeLayout(false);
             this.FornecedorCtrlHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).EndInit();
             this.FornecedorCtrlCadastrar.ResumeLayout(false);
             this.FornecedorCtrlCadastrar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ForCtrlCad_ProdTable)).EndInit();
             this.GerenteTab.ResumeLayout(false);
             this.GerenteCtrl.ResumeLayout(false);
             this.GerenteCtrlHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).EndInit();
+            this.GerenteCtrlHome.PerformLayout();
             this.GerenteCtrlGerProd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlProd_ProdTable)).EndInit();
             this.GerenteCtrlGerOfertas.ResumeLayout(false);
@@ -1211,6 +1261,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.GerCtrlCad_ProdTable)).EndInit();
             this.GerenteCtrlRemover.ResumeLayout(false);
             this.GerenteCtrlRemover.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoffForBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoffGerBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1303,6 +1356,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridView GerCtrlCons_ConsTable;
         private System.Windows.Forms.RichTextBox ForCtrlHome_TextBox;
+        private System.Windows.Forms.RichTextBox GerHome_RichTextBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

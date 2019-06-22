@@ -67,7 +67,7 @@ namespace CreateTablesDB
             }
             catch (SqlException ex)
             {
-                Console.Write("Erro ao encerrar a conexão com o servidor MySQL! Código: " + ex.Number);
+                Console.Write("Erro ao encerrar a conexão com o SQL Server! Código: " + ex.Number);
                 return false;
             }
         }
