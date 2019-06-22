@@ -6,13 +6,10 @@ O trabalho é dividido em duas principais partes:
 - **PRODUCT OWNER:** Propor uma ideia inovadora de produto de software, apresentando uma visão do produto e suas features, que devem satisfazer as restrições apresentadas e diretrizes descritas na descrição da Parte 1.
 - **DEVELOPER:** O grupo recebeu a especificação de um produto de software (Etapa 1) que outro grupo especificou e deverá desenvolver um sistema de software que implemente as funcionalidades especificadas na forma de um simulador.
 
-#### TODO:
-Muita coisa!!!
-
 #### Programação:
 - Linguagem utilizada: C#
-- IDE: [Visual Studio 2019](https://visualstudio.microsoft.com/pt-br/vs/).
-- DB: [SQL Server 2017 Express Edition](https://www.microsoft.com/pt-br/sql-server/sql-server-editions-express).
+- IDE: [Visual Studio 2019](https://visualstudio.microsoft.com/pt-br/vs/)
+- DB: [SQL Server 2017 Express Edition](https://www.microsoft.com/pt-br/sql-server/sql-server-editions-express)
 - Interface gráfica: Windows Forms
 
 #### Disciplina:
