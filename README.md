@@ -30,6 +30,7 @@ GO
 1. Com o [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/pt-br/vs/) aberto, clonar o repositório do programa.
 2. Primeiro, é necessário criar as tabelas no DB, para isso, deve-se escolher as opções de compilação **Release, Any CPU e CreateTablesDB** e Iniciar. Uma tela de comandos irá aparecer confirmando se as ações foram concluídas com sucesso.
 3. Após a criação das tabelas no DB, deve-se mudar as opções de compilação para  **Release, Any CPU e SmartRetail**. Executando, deve aparecer 4 telas, chamadas ```Caixa```, ```Totem```, ```Prateleira``` e ```App```.
+	- Obs: Para próximas execuções, pode-se executar diretamente o arquivo gerado ```SmartRetail.exe``` que se encontra em ```\SmartRetail\bin\Release\app.publish``` na pasta onde os arquivos do GitHub foram clonados (default: ```C:\Users\SEU_USUARIO\source\repos\EngSw-SmartRetail\```)
 
 ##### Utilizando o App:
 1. Primeiramente, é necessário fazer login no **App** como gerente, utilizando as seguintes credenciais:
